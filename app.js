@@ -2,15 +2,6 @@ var btscan = $('#btscan');
 var input = $(".textarea");
 
 
-// input.on('keyup',function(e){
-//     console.log(input.val());
-//      if (input.val() != null && input.val().trim() != "") {
-//         $('#txExample .hljs-string').text(input.val());
-//      }else{
-//         $('#txExample .hljs-string').text('The example content!');
-//      }
-// });
-
 $(".delete").live("click",function(){
  var notify = $(".notification.is-info")
  notify.css("visibility","hidden");
@@ -33,7 +24,6 @@ btscan.on('click', function () {
             contentType: 'application/json',
             success: function (data) {
                 btscan.removeClass('is-loading');
-                // var dataparsed=  JSON.parse(data);
                 console.log(data);
                 // showing the response
                 var showResult = $(".notification.is-info");
