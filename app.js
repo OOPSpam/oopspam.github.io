@@ -4,7 +4,7 @@ var input = $(".textarea");
 
 $(".delete").live("click",function(){
  var notify = $(".notification.is-info")
- notify.css("visibility","hidden");
+ notify.css("display","none");
  notify.text("");
 
 });
@@ -31,7 +31,7 @@ btscan.on('click', function () {
                 showResult.text("");
                 showResult.text(data['spam'] + " out of 3 recognized the content as spam");
                 showResult.append("<button class='delete'></button>");
-                showResult.css("visibility","visible")
+                showResult.css("display","block")
                 showResult.addClass("animated pulse");
                 showResult.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                 showResult.removeClass('animated pulse');
