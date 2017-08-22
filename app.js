@@ -20,7 +20,7 @@ btscan.on('click', function () {
             type: 'POST',
             url: 'https://oopspam.herokuapp.com/',
             // post payload:
-            data: JSON.stringify({ text: inputValue }),
+            data: JSON.stringify({ text: inputValue.trim() }),
             contentType: 'application/json',
             success: function (data) {
                 btscan.removeClass('is-loading');
