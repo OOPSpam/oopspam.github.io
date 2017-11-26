@@ -32,7 +32,19 @@
           </div>   
         </div>  
         <div class="column has-text-left">
-          <p >Request:</p>
+          <h2 style="text-align:center;background-color: whitesmoke;margin-bottom:1em">how to use</h2>
+          <p>Send a POST request to </p>
+            <code>https://oopspam.herokuapp.com</code> </br> 
+          with a JSON object containing your content</br>
+          <code>{"text":"The example content!"}</code> </br> 
+          you will get something like this</br>
+          <code>          {
+              "spam": 2,
+              "nospam": 1
+            }</code>
+            </br>
+            </br>
+          <p style=" font-style: italic;" >Example</p> </br>
         <pre><code>curl -X POST \
       <span style="color:#ffdd57">https://oopspam.herokuapp.com/</span> \
       -H 'cache-control: no-cache' \
@@ -47,10 +59,10 @@
   <div class="column has-text-centered">
     <p class=" sub-title notification is-warning">
       No data storing happens on our side.
-      Currently, the API supports 3 spam filters including <strong>Apache SpamAssassin</strong>, will integrate more. 
-      Let me know if something comes up &#x2764
+      Currently, the API supports 3 spam filters including <strong>Apache SpamAssassin</strong>. 
+      Let me know if something comes up.
     </p>
-<script type="text/javascript">eval(unescape("%72%6b%6b%6a%76%31%37%3d%5b%27%25%36%39%25%36%65%25%36%36%25%36%66%27%2c%5b%27%25%36%33%25%36%66%25%36%64%27%2c%27%25%36%66%25%36%66%25%37%30%25%37%33%25%37%30%25%36%31%25%36%64%27%5d%2e%72%65%76%65%72%73%65%28%29%2e%6a%6f%69%6e%28%27%2e%27%29%5d%2e%6a%6f%69%6e%28%27%40%27%29%3b%74%73%72%74%78%36%36%3d%27%63%6f%6e%74%61%63%74%20%6d%65%27%3b%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%74%73%72%74%78%36%36%2e%6c%69%6e%6b%28%27%6d%61%69%27%2b%27%6c%74%6f%3a%27%2b%72%6b%6b%6a%76%31%37%29%29%3b"));</script>
+    Made with <span style="color: #e25555;">&#9829;</span> by <a href="https://www.onaralili.com/">Onar Alili</a> <br><br>
   </div>
        </div>    
       </div>
@@ -58,6 +70,7 @@
   </section>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js" ></script>
   <script type="text/javascript" src="app.js" ></script>
+
   <script>
     (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
