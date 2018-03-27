@@ -10,6 +10,9 @@
 /*!
 site css starts
 */
+.button.is-success {
+width: 100% !important;
+}
 #btscan {
   position: absolute;
   z-index: 1;
