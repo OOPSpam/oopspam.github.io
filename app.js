@@ -2,11 +2,19 @@ var btscan = $('#btscan');
 var input = $(".textarea");
 
 
-$(".delete").live("click",function(){
- var notify = $(".notification.is-info")
- notify.css("display","none");
- notify.text("");
+// $(".delete").live("click",function(){
+//  var notify = $(".notification.is-info")
+//  notify.css("display","none");
+//  notify.text("");
 
+// });
+document.addEventListener('DOMContentLoaded', () => {
+  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+    $notification = $delete.parentNode;
+    $delete.addEventListener('click', () => {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
 });
 
 btscan.on('click', function () {
