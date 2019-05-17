@@ -1,88 +1,88 @@
 <html>
-
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="animate.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="animate.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="OOPSpam API is a powerful machine learning based multiple spam filter service.">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <title>OOPSpam multiple spam filter</title>
 </head>
+
 <body>
-  <section class="hero is-light  is-bold section">
-    <div class="hero-body">
+  <section class="hero is-light is-bold is-medium has-border-on-top">
+    <div class="hero-body" style="padding-top:4em;">
       <div class="item container has-text-centered">
-	      <div class="notification is-success animated bounceInDown">
+        <!-- <div class="notification is-success animated bounceInDown">
   🎉A new, more reliable with low-letancy version of OOPSpam API is coming. Make sure to <strong><a href="http://eepurl.com/dpupkr">subscribe</a></strong>.🎉
-</div>
-        <h1 class="title">
-          check your content with OOPSPam API
-        </h1>
-        <h2 class="subtitle">
-          OOPSpam detects the likelihood of spam more accurately. It allows you to scan your content utilizing multiple machine learning based, powerful text analyzers.
-          <p>Oh, and for <span class="tag is-warning title is-6 animated bounce">free!</span></p>
-        </h2>
-       <div class="columns">
-        <div class="column">
-           <div> 
-          <textarea class="textarea" placeholder="hey! over here, paste your content here!"></textarea>
-          <button id="btscan" class="button is-warning is-medium">scan</button>
-           </div>
-          <div class="notification is-info" style="display:none">
-            <button class="delete"></button>
-          </div>   
-        </div>  
-        <div class="column has-text-left">
-          <h2 style="text-align:center;background-color: whitesmoke;margin-bottom:1em">how to use</h2>
-          <p>Send a POST request to </p>
-            <code>https://oopspam.herokuapp.com</code> </br> 
-          with a JSON object containing your content</br>
-          <code>{"text":"The example content!"}</code> </br> 
-          you will get something like this</br>
-          <code>          {
-              "spam": 2,
-              "nospam": 1
-            }</code>
-            </br>
-            </br>
-	<p style="font-size: smaller;"><strong>Important</strong>: The API supports content only in English</p>
-	</br>
-          <p style=" font-style: italic;">Example</p> </br>
-        <pre><code>curl -X POST \
-      <span style="color:#ffdd57">https://oopspam.herokuapp.com/</span> \
-      -H 'cache-control: no-cache' \
-      -H 'content-type: application/json' \
-      -d '<span span style="color:#ffdd57">{"text":"The example content!"}</span>'</code></pre>
-        <p style="margin-top:1em">Response:</p>
-          <pre><code>          {
-            "spam": 2,
-            "nospam": 1
-          }</code></pre>
+</div> -->
+        <div class="columns is-vcentered">
+          <!-- Left-side column -->
+          <div class="column is-half">
+            <div class="content" style="color:black; font-size:28px;">
+              <span class="shadow is-success has-text-weight-bold">
+                OOPSpam API
+              </span>
+              is a powerful
+              <span class="shadow is-danger">
+                spam filter
+              </span>
+              for any content exchange such as forms, forums, blogs, social media- the limit is your creativity!
+            </div>
+            <div class="columns">
+              <div class="column is-full">
+                <p style="display:inline-flex;"><span class="checkmark"></span>Spam score</p>
+                <p style="display:inline-flex;"><span class="checkmark"></span>Machine Learning algorithm</p>
+                <p style="display:inline-flex;"><span class="checkmark"></span>Multiple blacklisted IPs lists</p>
+                <p style="display:inline-flex;"><span class="checkmark"></span>Language outlier detection algorithm</p>
+                <p style="display:inline-flex;"><span class="checkmark"></span>Spam word detection</p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-full">
+                <p>
+                  For <strong><a
+                      href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/details">documentation</a></strong> of
+                  the API parameters and response fields, along with code examples & demo
+                  as well as <strong><a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/pricing">Pricing
+                      plans</a></strong> check out <a
+                    href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/">RapidAPI page</a>.
+                </p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-full animated pulse">
+                <a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/" target="_blank">
+                  <img src="https://storage.googleapis.com/code-snippets/connect-on-rapidapi-dark.png" width="215"
+                    alt="Connect on RapidAPI">
+                </a>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <p>
+                  Questions? Please do not hesitate to contact me via <strong><a
+                      href="mailto:contact@oopspam.com">contact@oopspam.com</a></strong> or on Twitter <strong><a
+                        href="https://twitter.com/oopspamapi">@oopspamapi</a></strong>. I'll be happy to help you.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Right-side Illustration -->
+          <div class="column">
+            <img src="workflow.png" alt="An illustration on how OOPSpam spam filter works." width="700">
+          </div>
         </div>
-  <div class="column has-text-centered">
-    <p class=" sub-title notification is-warning">
-      Would you like to hear from me about new features? 🚀
-	    <a href="https://goo.gl/forms/q85Nw8GEfILFwldr2" class="button is-success">Anonymous feedback</a>
-	    <a href="http://eepurl.com/dpupkr" class="button is-success">Subscribe</a>
-    </p>
-	  developed by <a href="https://twitter.com/OnarAlili"><strong>@onaralili</strong></a> </br>
-	  <a href="https://www.paypal.me/oalili/5"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"/></a>
-  </div>
-       </div>    
       </div>
     </div>
   </section>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js" ></script>
-  <script type="text/javascript" src="app.js" ></script>
-
   <script>
     (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date(); a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-103050221-1', 'auto');
     ga('send', 'pageview');
