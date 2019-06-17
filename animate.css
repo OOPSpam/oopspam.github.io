@@ -58,12 +58,28 @@ html, body {
   /* overflow: hidden; */
 }
 .shadow.is-success {
-  -webkit-box-shadow: inset 0 -8px 0 #ffdd57;
-  box-shadow: inset 0 -8px 0 #ffdd57;
+  /* -webkit-box-shadow: inset 0 -8px 0 #ffdd57;
+  box-shadow: inset 0 -8px 0 #ffdd57; */
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  background-image: linear-gradient(118.8deg, #ffdd57 0%, #ffdd57 100%);
+}
+.shadow.is-success:hover {
+  background-size: 100% 88%;
 }
 .shadow.is-danger {
-  -webkit-box-shadow: inset 0 -8px 0 rgba(255,74,110,.2);
-  box-shadow: inset 0 -8px 0 rgba(255,74,110,.2);
+  /* -webkit-box-shadow: inset 0 -8px 0 rgba(255,74,110,.2);
+  box-shadow: inset 0 -8px 0 rgba(255,74,110,.2); */
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  background-image: linear-gradient(118.8deg, rgba(255,74,110,.2) 0%, rgba(255,74,110,.2) 100%);
+}
+.shadow.is-danger:hover {
+  background-size: 100% 88%;
 }
 .button.is-success {
   width: 100% !important;
