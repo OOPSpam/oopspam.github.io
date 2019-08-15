@@ -1,8 +1,7 @@
 <html>
-
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
-  <link rel="stylesheet" href="animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+  <link rel="stylesheet" href="/styles/main.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,110 +10,254 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <title>A powerful spam filter API for any content exchange</title>
 </head>
+
 <body>
-  <section class="hero is-light is-bold is-medium has-border-on-top">
-    <div class="hero-body" style="padding-top: 2em;padding-bottom: 4em;">
-    <a href="/blog">Blog</a>
-      <div class="item container has-text-centered">
+  <div class="navbar has-shadow">
+    <div class="container">
+      <div class="navbar-menu centered">
+        <div class="navbar-start">
+        </div>
+        <div class="navbar-end">
+          <a href="#features" class="navbar-item has-text-white">Features</a>
+          <a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/details" target="_blank" rel="noopener"
+            class="navbar-item has-text-white">
+            Docs
+            <svg class="icon icon--new-window" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <use xlink:href="#new-window"></use>
+            </svg>
+          </a>
+          <a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/pricing" target="_blank" rel="noopener"
+            class="navbar-item has-text-white">
+            Pricing
+            <svg class="icon icon--new-window" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+              <use xlink:href="#new-window"></use>
+            </svg>
+          </a>
+          <a href="#faq" class="navbar-item has-text-white">
+              FAQ
+            </a>
+          <a href="#contact" class="navbar-item has-text-white">
+            Contact
+          </a>
+          <a href="/blog" class="navbar-item has-text-white">Blog</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- The Main Section -->
+  <section id="main" class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container has-text-centered">
         <div class="columns is-vcentered">
           <!-- Left-side column -->
-          <div class="column is-half">
+          <div class="column is-half has-text-left">
             <div class="content" style="color:black; font-size:28px;">
-              <span class="shadow is-success has-text-weight-bold">
-                OOPSpam API
-              </span>
-              is a powerful
-              <span class="shadow is-danger">
-                spam filter
-              </span>
-              for any content exchange such as forms, forums, blogs, social media- the limit is your creativity!
-            </div>
-            <div class="columns">
-              <div class="column is-full">
-                <p style="display:inline-flex;"><span class="checkmark"></span>Spam score</p>
-                <p style="display:inline-flex;"><span class="checkmark"></span>Machine Learning algorithm</p>
-                <p style="display:inline-flex;"><span class="checkmark"></span>Multiple blacklisted IPs lists</p>
-                <p style="display:inline-flex;"><span class="checkmark"></span>Language outlier detection algorithm</p>
-                <p style="display:inline-flex;"><span class="checkmark"></span>Spam word detection</p>
+              <div class="content is-size-1">
+                <span class="shadow is-success has-text-weight-bold">
+                  OOPSpam API
+                </span>
+                is a powerful
+                <span class="shadow is-danger">
+                  anti-spam filter
+                </span>
               </div>
+              for any content exchange such as contact forms, comment systems, blogs, social media- the limit is your
+              creativity!
             </div>
-            <div class="columns">
-              <div class="column is-full">
-                <p>
-                  For <strong><a
-                      href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/details">documentation</a></strong> of
-                  the API parameters and response fields, along with code examples & demo
-                  as well as <strong><a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/pricing">Pricing</a></strong> check out <a
-                    href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/">RapidAPI page</a>.
-                </p>
-              </div>
-            </div>
-            <div class="columns">
-              <div class="column is-full animated pulse">
-                <a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/" target="_blank">
-                  <img src="https://storage.googleapis.com/code-snippets/connect-on-rapidapi-dark.png" width="215"
-                    alt="Connect on RapidAPI">
-                </a>
-              </div>
-            </div>
-            <div class="columns">
+            <div class="columns is-centered is-vcentered">
               <div class="column">
-                <p>
-                  Questions? Please do not hesitate to contact me via <strong><a
-                      href="mailto:contact@oopspam.com">contact@oopspam.com</a></strong> or on Twitter <strong><a
-                      href="https://twitter.com/oopspamapi">@oopspamapi</a></strong>. I'll be happy to help you.
-                </p>
+                <div class="checkout-wrapper">
+                  <div class="checkout">
+                    <a class="button is-large is-warning is-rounded"
+                      href="https://rapidapi.com/oopspam/api/oopspam-spam-filter">
+                      Get a key →
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <!-- Right-side Illustration -->
           <div class="column">
-            <img src="workflow.png" alt="An illustration on how OOPSpam spam filter works." width="700">
+            <img src="/assets/hero.svg" alt="An illustration on how OOPSpam spam filter works." width="700">
           </div>
         </div>
       </div>
     </div>
-    <div class="columns" style="background-color: black;">
-      <!-- <div class="column is-2"></div> -->
-      <div class="column">
-          <div class="columns" style="justify-content: center;">
-        <div id="mc_embed_signup" style="margin-top: 1em;">
+  </section>
+  <!-- Platforms -->
+  <section id="platforms" class="section" style="background-color: #c7d6cb">
+    <div class="container">
+        <p class="title has-text-centered is-big-title">Available for developers & WordPress users</p>
+      <div class="columns">
+        <div class="column is-4">
+          <div class="content is-vcentered has-text-centered fixed-dimension">
+          <img src="/assets/api.png" width="96" alt="an API logo">
+          <p class="desc is-size-5">Integrate to any website with the API</p>
+          <a class="button is-medium is-warning is-rounded" href="https://rapidapi.com/oopspam/api/oopspam-spam-filter">
+            Get a key →
+          </a>
+          </div>
+        </div>
+        <div class="column is-4">
+            <div class="content is-vcentered has-text-centered fixed-dimension">
+                <img src="/assets/WordPress-logo.png" width="96" alt="Wordpress logo">
+                <p class="desc is-size-5">or install OOPSpam Anti-Spam Wordpress plugin</p>
+                <a class="button is-medium is-warning is-rounded" href="https://wordpress.org/plugins/oopspam-anti-spam/">
+                  Get the plugin →
+                </a>
+            </div>
+        </div>
+        <div class="column is-4">
+            <div class="content is-vcentered has-text-centered fixed-dimension">
+                <img src="/assets/future-platform.png" width="96" alt="question mark logo">
+                <p class="desc is-size-5">we are working on new platforms</p>
+                <a class="button is-medium is-warning is-rounded" href="#newsletter">
+                  Subscribe to the newsletter ↓
+                </a>
+            </div>
+        </div>
+      </div>
+  </section>
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4">
+          <div class="content title">
+            What <span class="shadow is-success">features</span>
+            power OOPSpam Anti-Spam API?</p>
+          </div>
+        </div>
+        <div class="column is-8">
+          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Spam score</p>
+          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Machine Learning algorithm
+          </p>
+          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Multiple blacklisted IPs
+            lists</p>
+          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Language outlier detection
+            algorithm
+          </p>
+          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Spam word detection</p>
+          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Adult Content Detection</p>
+          </br>
+          <p style="display:inline-flex; font-size: 0.7cm;"><span></span>... and many more custom rules.</p>
+        </div>
+      </div>
+  </section>
+  <!-- # of spam stopped -->
+  <!-- <section id="stoppedspam" class="section" style="background-color:#ffdd575e">
+    <div class="container has-text-centered">
+      <div class="columns is-vcentered">
+        <div class="column is-full">
+          <p class="is-size-1">5,314</p>
+          <p class="is-size-4">Spam stopped</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+   <!-- FAQ -->
+   <section id="faq" class="section" style="background-color: #edb6c9">
+      <div class="container">
+        <div class="content">
+           <p class="title has-text-centered is-big-title">Frequently Asked Questions (FAQ)</p>
+        </div>
+        <div class="content has-text-centered has-text-weight-bold subtitle">
+          <details>
+            <summary>How OOPSpam Anti-Spam API works?</summary>
+            <p class="has-text-black">
+                You send the data to the API. The API analyzes the content and the IP (if provided) and make a decision based on multiple outputs from Machine Learning algorithms, Up-to-date blacklisted IPs list, Spam words, and many more custom rules.
+            </p>
+          </details>
+          <details>
+              <summary>Can I use one key for multiple websites?</summary>
+              <p class="has-text-black">
+                  Yes. Once you have a key, you can use it in our WordPress plugin as well as on any other integrated platforms.              </p>
+            </details>
+          <details>
+              <summary>How to get a key?</summary>
+             <p class="has-text-black">
+                RapidAPI marketplace handles OOPSpam Anti-Spam API's key generation. The only thing you have to do is go to <a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter">our page on RapidAPI</a> and subscribe to one of the pricing plans. Once you are subscribed, the key will be available for you on your dashboard.
+             </p>
+            </details>
+          <details>
+              <summary>What is RapidAPI?</summary>
+              <p class="has-text-black">
+                <a href="https://rapidapi.com">RapidAPI</a> is a marketplace for APIs. They handle key generation, pricing, payment and much more for API developers on their platforms.
+              </p>
+          </details>
+          <details>
+              <summary>How OOPSpam Anti-Spam API decides whether the content is spam or not?</summary>
+              <p class="has-text-black">
+                The API will return <strong>Spam Score</strong> which will be a number between 0 to 6. Besides Spam Score, It will also contain other details. It is up to you to decide your threshold based on <strong>Spam Score</strong>. Usually, a score 3 or above can be considered as spam. 
+              </p>
+          </details>
+          
+        </div>
+      </div>
+    </section>
+  <!-- Contact us -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="content">
+       <p class="has-text-centered is-size-4">Whatever question you have please contact me via <a href="mailto:contact@oopspam.com">contact@oopspam.com</a>
+      or through <a href="https://twitter.com/oopspamapi">Twitter</a>.
+      I'd be happy to help!
+      </p> 
+      </div>
+      
+    </div>
+  </section>
+  <!-- Newsletter subscribtion -->
+  <section id="newsletter" class="section">
+    <div class="container">
+      <div class="columns is-vcentered is-centered">
+        <div class="column is-half has-text-centered">
+          <p class="title">Stay in the loop!</p>
           <form
             action="https://oopspam.us12.list-manage.com/subscribe/post?u=a077b3ac05bbfee5da816cd2f&amp;id=e0a1de4cff"
             method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
             target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll" class="field is-grouped is-grouped-centered">
-              <div class="column is-narrow">
-                <p class="control has-text-centered">
-                <label class="label" style="color: white; margin-top: 0.4em;" for="mce-EMAIL">stay up to date</label>
-              </p>
-              </div>
-              <div class="column is-four-fifths">
-                <p class="control">
+            <div id="mc_embed_signup_scroll" class="field is-grouped">
+              <div class="control is-expanded">
                 <input type="email" value="" name="EMAIL" class="email input is-rounded" id="mce-EMAIL"
                   placeholder="email address" required>
-              </p>
               </div>
-              
               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
               <div style="position: absolute; left: -5000px;" aria-hidden="true">
                 <input type="text" name="b_a077b3ac05bbfee5da816cd2f_e0a1de4cff" tabindex="-1" value="">
               </div>
-              <div class="column">
-                <p class="clear control has-text-centered">
+              <div class="control">
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
                   class="button is-warning is-rounded">
-              </p>
               </div>
-              
             </div>
           </form>
-        </div>
-        <!--End mc_embed_signup-->
         </div>
       </div>
     </div>
   </section>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>OOPSpam API Anti-Spam</strong> is a product of solo-founder Onar A.
+      </p>
+      <p>
+        <a href="https://twitter.com/oopspamapi">
+          <img src="/assets/twitter-circle.svg" alt="twitter logo">
+        </a>
+        <a href="https://github.com/OOPSpam">
+          <img src="/assets/github-circle.svg" alt="github logo">
+        </a>
+        <a href="https://wordpress.org/plugins/oopspam-anti-spam/">
+          <img src="/assets/wordpress.svg" alt="wordpress logo">
+        </a>
+      </p>
+      <p>
+        <a href="terms&conditions.html">Terms Of Use</a>
+      </p>
+    </div>
+  </footer>
   <script>
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
@@ -127,4 +270,15 @@
   </script>
 </body>
 
+
 </html>
+<!-- SVG sprite sheet -->
+<svg version="1.1" width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" hidden>
+  <symbol id="new-window" viewBox="0 0 24 24">
+    <g transform="scale(0.0234375 0.0234375)">
+      <path
+        d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z">
+      </path>
+    </g>
+  </symbol>
+</svg>
