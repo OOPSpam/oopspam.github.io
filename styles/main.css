@@ -1,3 +1,12 @@
+.get-a-key {
+    color: #ffdd57;
+    border-bottom-style: dotted;
+    font-weight: bold;
+}
+.get-a-key:hover {
+    background-color: #231f20 !important;
+    color: white !important;
+}
 #faq {
     background-color: rgba(237, 182, 201, 0.2);
 }
@@ -11,7 +20,6 @@ details {
 .is-big-title {
     font-size: 2.5rem;
 }
-
 .desc {
     margin-top: 1em;
 }
@@ -97,10 +105,6 @@ details {
     width: 100% !important;
     margin: 0.2em;
   }
-  /* .subtitle {
-        margin-bottom: 4em !important;
-      } */
-      
   .textarea {
      height: 50%; 
      border-color:burlywood
