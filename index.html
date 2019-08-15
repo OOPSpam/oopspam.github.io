@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
   <link rel="stylesheet" href="/styles/main.min.css" />
@@ -34,8 +35,8 @@
             </svg>
           </a>
           <a href="#faq" class="navbar-item has-text-white">
-              FAQ
-            </a>
+            FAQ
+          </a>
           <a href="#contact" class="navbar-item has-text-white">
             Contact
           </a>
@@ -88,34 +89,35 @@
   <!-- Platforms -->
   <section id="platforms" class="section" style="background-color: #c7d6cb">
     <div class="container">
-        <p class="title has-text-centered is-big-title">Available for developers & WordPress users</p>
+      <p class="title has-text-centered is-big-title">Available for developers & WordPress users</p>
       <div class="columns">
         <div class="column is-4">
           <div class="content is-vcentered has-text-centered fixed-dimension">
-          <img src="/assets/api.png" width="96" alt="an API logo">
-          <p class="desc is-size-5">Integrate to any website with the API</p>
-          <a class="button is-medium is-warning is-rounded" href="https://rapidapi.com/oopspam/api/oopspam-spam-filter">
-            Get a key →
-          </a>
+            <img src="/assets/api.png" width="96" alt="an API logo">
+            <p class="desc is-size-5">Integrate to any website with the API</p>
+            <a class="button is-medium is-warning is-rounded"
+              href="https://rapidapi.com/oopspam/api/oopspam-spam-filter">
+              Get a key →
+            </a>
           </div>
         </div>
         <div class="column is-4">
-            <div class="content is-vcentered has-text-centered fixed-dimension">
-                <img src="/assets/Wordpress-logo.png" width="96" alt="Wordpress logo">
-                <p class="desc is-size-5">or install OOPSpam Anti-Spam Wordpress plugin</p>
-                <a class="button is-medium is-warning is-rounded" href="https://wordpress.org/plugins/oopspam-anti-spam/">
-                  Get the plugin →
-                </a>
-            </div>
+          <div class="content is-vcentered has-text-centered fixed-dimension">
+            <img src="/assets/Wordpress-logo.png" width="96" alt="Wordpress logo">
+            <p class="desc is-size-5">or install OOPSpam Anti-Spam Wordpress plugin</p>
+            <a class="button is-medium is-warning is-rounded" href="https://wordpress.org/plugins/oopspam-anti-spam/">
+              Get the plugin →
+            </a>
+          </div>
         </div>
         <div class="column is-4">
-            <div class="content is-vcentered has-text-centered fixed-dimension">
-                <img src="/assets/future-platform.png" width="96" alt="question mark logo">
-                <p class="desc is-size-5">we are working on new platforms</p>
-                <a class="button is-medium is-warning is-rounded" href="#newsletter">
-                  Subscribe to the newsletter ↓
-                </a>
-            </div>
+          <div class="content is-vcentered has-text-centered fixed-dimension">
+            <img src="/assets/future-platform.png" width="96" alt="question mark logo">
+            <p class="desc is-size-5">we are working on new platforms</p>
+            <a class="button is-medium is-warning is-rounded" href="#newsletter">
+              Subscribe to the newsletter →
+            </a>
+          </div>
         </div>
       </div>
   </section>
@@ -123,25 +125,23 @@
   <section id="features" class="section">
     <div class="container">
       <div class="columns">
-        <div class="column is-4">
-          <div class="content title">
-            What <span class="shadow is-success">features</span>
+        <div class="column is-full">
+          <div class="content title has-text-centered">
+            Which <span class="shadow is-success">measurements</span>
             power OOPSpam Anti-Spam API?</p>
           </div>
         </div>
-        <div class="column is-8">
-          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Spam score</p>
-          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Machine Learning algorithm
-          </p>
-          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Multiple blacklisted IPs
-            lists</p>
-          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Language outlier detection
-            algorithm
-          </p>
-          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Spam word detection</p>
-          <p class="is-size-5" style="display:inline-flex;"><span class="checkmark"></span>Adult Content Detection</p>
+      </div>
+      <div class="columns">
+        <div class="column is-full has-text-centered">
+          <p class="is-size-5 feature"><span class="checkmark"></span>Spam score</p>
+          <p class="is-size-5 feature"><span class="checkmark"></span>Machine Learning algorithm</p>
+          <p class="is-size-5 feature"><span class="checkmark"></span>Multiple blacklisted IPs lists</p>
+          <p class="is-size-5 feature"><span class="checkmark"></span>Language outlier detection algorithm</p>
+          <p class="is-size-5 feature"><span class="checkmark"></span>Spam word detection</p>
+          <p class="is-size-5 feature"><span class="checkmark"></span>Adult Content Detection</p>
           </br>
-          <p style="display:inline-flex; font-size: 0.7cm;"><span></span>... and many more custom rules.</p>
+          <p style="font-size: 0.7cm;">... and many more custom rules.</p>
         </div>
       </div>
   </section>
@@ -156,56 +156,65 @@
       </div>
     </div>
   </section> -->
-   <!-- FAQ -->
-   <section id="faq" class="section" style="background-color: #edb6c9">
-      <div class="container">
-        <div class="content">
-           <p class="title has-text-centered is-big-title">Frequently Asked Questions (FAQ)</p>
-        </div>
-        <div class="content has-text-centered has-text-weight-bold subtitle">
-          <details>
-            <summary>How OOPSpam Anti-Spam API works?</summary>
-            <p class="has-text-black">
-                You send the data to the API. The API analyzes the content and the IP (if provided) and make a decision based on multiple outputs from Machine Learning algorithms, Up-to-date blacklisted IPs list, Spam words, and many more custom rules.
-            </p>
-          </details>
-          <details>
-              <summary>Can I use one key for multiple websites?</summary>
-              <p class="has-text-black">
-                  Yes. Once you have a key, you can use it in our WordPress plugin as well as on any other integrated platforms.              </p>
-            </details>
-          <details>
-              <summary>How to get a key?</summary>
-             <p class="has-text-black">
-                RapidAPI marketplace handles OOPSpam Anti-Spam API's key generation. The only thing you have to do is go to <a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter">our page on RapidAPI</a> and subscribe to one of the pricing plans. Once you are subscribed, the key will be available for you on your dashboard.
-             </p>
-            </details>
-          <details>
-              <summary>What is RapidAPI?</summary>
-              <p class="has-text-black">
-                <a href="https://rapidapi.com">RapidAPI</a> is a marketplace for APIs. They handle key generation, pricing, payment and much more for API developers on their platforms.
-              </p>
-          </details>
-          <details>
-              <summary>How OOPSpam Anti-Spam API decides whether the content is spam or not?</summary>
-              <p class="has-text-black">
-                The API will return <strong>Spam Score</strong> which will be a number between 0 to 6. Besides Spam Score, It will also contain other details. It is up to you to decide your threshold based on <strong>Spam Score</strong>. Usually, a score 3 or above can be considered as spam. 
-              </p>
-          </details>
-          
-        </div>
+  <!-- FAQ -->
+  <section id="faq" class="section" style="background-color: #edb6c9">
+    <div class="container">
+      <div class="content">
+        <p class="title has-text-centered is-big-title">Frequently Asked Questions (FAQ)</p>
       </div>
-    </section>
+      <div class="content has-text-centered has-text-weight-bold subtitle">
+        <details>
+          <summary>How OOPSpam Anti-Spam API works?</summary>
+          <p class="has-text-black">
+            You send the data to the API. The API analyzes the content and the IP (if provided) and make a decision
+            based on multiple outputs from Machine Learning algorithms, Up-to-date blacklisted IPs list, Spam words, and
+            many more custom rules.
+          </p>
+        </details>
+        <details>
+          <summary>Can I use one key for multiple websites?</summary>
+          <p class="has-text-black">
+            Yes. Once you have a key, you can use it in our WordPress plugin as well as on any other integrated
+            platforms. </p>
+        </details>
+        <details>
+          <summary>How to get a key?</summary>
+          <p class="has-text-black">
+            RapidAPI marketplace handles OOPSpam Anti-Spam API's key generation. The only thing you have to do is go to
+            <a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter">our page on RapidAPI</a> and subscribe to one
+            of the pricing plans. Once you are subscribed, the key will be available for you on your dashboard.
+          </p>
+        </details>
+        <details>
+          <summary>What is RapidAPI?</summary>
+          <p class="has-text-black">
+            <a href="https://rapidapi.com">RapidAPI</a> is a marketplace for APIs. They handle key generation, pricing,
+            payment and much more for API developers on their platforms.
+          </p>
+        </details>
+        <details>
+          <summary>How OOPSpam Anti-Spam API decides whether the content is spam or not?</summary>
+          <p class="has-text-black">
+            The API will return <strong>Spam Score</strong> which will be a number between 0 to 6. Besides Spam Score,
+            It will also contain other details. It is up to you to decide your threshold based on <strong>Spam
+              Score</strong>. Usually, a score 3 or above can be considered as spam.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
   <!-- Contact us -->
   <section id="contact" class="section">
     <div class="container">
       <div class="content">
-       <p class="has-text-centered is-size-4">Whatever question you have please contact me via <a href="mailto:contact@oopspam.com">contact@oopspam.com</a>
-      or through <a href="https://twitter.com/oopspamapi">Twitter</a>.
-      I'd be happy to help!
-      </p> 
+        <p class="has-text-centered is-size-4">Whatever question you have please contact me via <a
+            href="mailto:contact@oopspam.com">contact@oopspam.com</a>
+          or through <a href="https://twitter.com/oopspamapi">Twitter</a>.
+          I'd be happy to help!
+        </p>
       </div>
-      
+
     </div>
   </section>
   <!-- Newsletter subscribtion -->
@@ -273,7 +282,8 @@
 
 </html>
 <!-- SVG sprite sheet -->
-<svg version="1.1" width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" hidden>
+<svg version="1.1" width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  hidden>
   <symbol id="new-window" viewBox="0 0 24 24">
     <g transform="scale(0.0234375 0.0234375)">
       <path
