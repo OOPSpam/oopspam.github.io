@@ -1,29 +1,32 @@
-    .feature {
-        display: block;
-        padding: 0.3em;
-    }
-    details {
-        padding:0.5em;
-    }
-    .is-big-title {
-        font-size: 2.5rem;
-    }
+#faq {
+    background-color: rgba(237, 182, 201, 0.2);
+}
+.feature {
+    display: block;
+    padding: 0.3em;
+}
+details {
+    padding:0.5em;
+}
+.is-big-title {
+    font-size: 2.5rem;
+}
 
-    .desc {
-        margin-top: 1em;
-    }
-    #features .column.is-8 p {
-        padding: 0.2em;
-    }
+.desc {
+    margin-top: 1em;
+}
+#features .column.is-8 p {
+    padding: 0.2em;
+}
 
-    #platforms .title {
-        margin-bottom: 3rem;
-    }
+#platforms .title {
+    margin-bottom: 3rem;
+}
 
-    .navbar-item .icon:only-child {
-        margin-left: 0.20rem;
-        margin-right: 0.20rem;
-    }
+.navbar-item .icon:only-child {
+    margin-left: 0.20rem;
+    margin-right: 0.20rem;
+}
   
   svg {
     fill: currentColor;
