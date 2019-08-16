@@ -20,6 +20,10 @@
 details {
     padding:0.5em;
 }
+details p {
+  line-height: 1.5;
+  padding-top: 0.5em;
+}
 .is-big-title {
     font-size: 2.5rem;
 }

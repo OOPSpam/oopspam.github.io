@@ -161,40 +161,41 @@
       <div class="content">
         <p class="title has-text-centered is-big-title">Frequently Asked Questions (FAQ)</p>
       </div>
-      <div class="content has-text-centered has-text-weight-bold subtitle">
+      <div class="content has-text-centered subtitle">
         <details>
-          <summary>How does OOPSpam API work?</summary>
-          <p class="has-text-black">
+          <summary class="has-text-weight-bold">How does OOPSpam API work?</summary>
+          <p>
               OOPSpam API uses many different <a href="#measurements">measurements</a> to determine what seems to be spam and what does not. This includes multiple outputs from Machine Learning algorithms, up-to-date blacklisted IPs lists, spam words, and many more custom rules. The user (you!) directs their content to run through OOPSpam API and will get a <strong>Spam Score</strong>. This score gives you control for how conservative or liberal you would like to mark as spam.
           </p>
         </details>
         <details>
-            <summary>Why do you provide a Spam Score instead of giving a simple ‘yes’ or ‘no’?</summary>
-            <p class="has-text-black">
+            <summary class="has-text-weight-bold">Why do you provide a Spam Score instead of giving a simple ‘yes’ or ‘no’?</summary>
+            <p>
                 Because in the real world, things are not black and white (or in this case, green and red)! What might be the best solution for one client could look very different than the next. We’ll give an example. Say you are a travel website offering high end tour packages. You unfortunately get a lot of spam in your contact form, but it’s also the biggest conversion tool you have. In this case, since missing a ‘real’ message would mean missing out on large amounts of money, you would want to be more liberal on what content you accept. On the other hand, if you have a travel blog where comments are nice to get but more inconsequential, you might want to be more conservative on what comments you accept so you don’t need to spend lots of time combing through potential real comments. We decided to provide this spam score as a way to give developers and website managers more control and ability to create something more custom to ‘WOW’ their clients .
             </p>
           </details>
           <details>
-              <summary>What does the Spam Score look like?</summary>
-              <p class="has-text-black">
+              <summary class="has-text-weight-bold">What does the Spam Score look like?</summary>
+              <p>
                   The API will return <strong>Spam Score</strong> which will be a number between 0 to 6. Besides Spam Score, It will also contain other details. It is up to you to decide your threshold based on <strong>Spam Score</strong>. Usually, a score 3 or above can be considered as spam.
               </p>
           </details>
           <details>
-              <summary>Is a request to OOPSpam API stored?</summary>
-              <p class="has-text-black">
-                  Yes. Any request to the OOPSpam API is stored by RapidAPI. However, not by OOPSpam API itself (so, we don't have your data in our database). Sometimes when a customer asks for further analyzes of the request. We can access the request data through RapidAPI Dashboard. We don't process your data in any other way.              </p>
+              <summary class="has-text-weight-bold">Is a request to OOPSpam API stored?</summary>
+              <p>
+                  We don’t have or store your data in our database, however it does run through Rapid API. Sometimes a customer may contact us to further analyze a request- this is possible on our end by accessing the requested data through the Rapid API Dashboard. We do not and will not process your data in any other way.                
+                </p>
           </details>
         <details>
-          <summary>Can I use one key for multiple websites?</summary>
-          <p class="has-text-black">
+          <summary class="has-text-weight-bold">Can I use one key for multiple websites?</summary>
+          <p>
             Yes. Once you have a key, you can use it in our WordPress plugin as well as on any other integrated
             platforms. 
           </p>
         </details>
         <details>
-          <summary>How to get a key?</summary>
-          <p class="has-text-black">
+          <summary class="has-text-weight-bold">How to get a key?</summary>
+          <p>
             RapidAPI marketplace handles OOPSpam Anti-Spam API's key generation. The only thing you have to do is go to
             <a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter">our page on RapidAPI</a> and subscribe to one
             of the pricing plans. You can learn more about how to consume and subscribe to an API <a href="https://docs.rapidapi.com/docs/basics-creating-a-project">here</a>.
