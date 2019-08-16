@@ -1,66 +1,10 @@
-var btscan = $('#btscan');
-var input = $(".textarea");
-
-
-$(".delete").live("click",function(){
- var notify = $(".notification.is-info")
- notify.css("display","none");
- notify.text("");
-});
-
-$(document).ready(function() {
-
-    // Check for click events on the navbar burger icon
-    $(".navbar-burger").click(function() {
-  
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        $(".navbar-burger").toggleClass("is-active");
-        $(".navbar-menu").toggleClass("is-active");
-  
+(function() {
+    // var burger = document.querySelector('.nav-toggle');
+    let burger = document.querySelector('#navbarBurger');
+    var menu = document.querySelector('#navigation-bar');
+    burger.addEventListener('click', function() {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
     });
-  });
-  
-btscan.on('click', function () {
-    // post a JSON payload:
-    let inputValue = input.val();
-    let notify =  $(".notification");
-    console.log(inputValue);
-    if (inputValue != null && inputValue.trim() != "") {
-        btscan.addClass('is-loading');
-        $.ajax({
-            type: 'POST',
-            url: 'https://oopspam.herokuapp.com/',
-            // post payload:
-            data: JSON.stringify({ text: inputValue.trim() }),
-            contentType: 'application/json',
-            success: function (data) {
-                btscan.removeClass('is-loading');
-                console.log(data);
-                // showing the response
-                var showResult = $(".notification.is-info");
-                
-                showResult.text("");
-                showResult.text(data['spam'] + " out of 3 recognized the content as spam");
-                showResult.append("<button class='delete'></button>");
-                showResult.css("display","block")
-                showResult.addClass("animated pulse");
-                showResult.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                showResult.removeClass('animated pulse');
-                
-                });
+})();
 
-            },
-            error: function (xhr, type) {
-                btscan.removeClass('is-loading');
-                console.log('error');
-            }
-        });
-        
-    }else{
-        input.addClass('animated pulse');
-        input.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-            input.removeClass('animated pulse');
-        });
-
-    }
-});

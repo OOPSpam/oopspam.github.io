@@ -15,9 +15,18 @@
 <body>
   <div class="navbar has-shadow">
     <div class="container">
-      <div class="navbar-menu centered">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://oopspam.com">
+              <img src="/assets/oopspamLogo.svg" alt="OOPSpam Anti-Spam API logo" width="112" height="28">
+            </a>
+            <a id="navbarBurger" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navigation-bar">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+      <div id="navigation-bar" class="navbar-menu">
         <div class="navbar-start">
-            <img src="/assets/oopspamLogo.svg" alt="OOPSpam Anti-Spam API logo" width="112" height="28">
         </div>
         <div class="navbar-end">
           <a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/details" target="_blank" rel="noopener"
@@ -270,6 +279,7 @@
     ga('create', 'UA-103050221-1', 'auto');
     ga('send', 'pageview');
   </script>
+  <script src="/scripts/app.js"></script>
 </body>
 
 
