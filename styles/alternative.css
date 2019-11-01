@@ -5,10 +5,6 @@ table > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1) {
     font-weight: initial;
 }
 
-/* section h2 {
-    margin-bottom: 1em !important;
-} */
-
 section.section {
     background-color: #f0eeee;
 }
