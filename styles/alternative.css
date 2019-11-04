@@ -8,3 +8,7 @@ table > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1) {
 section.section {
     background-color: #f0eeee;
 }
+
+.subtitle {
+    line-height: 33px;
+}
