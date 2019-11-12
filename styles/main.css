@@ -144,3 +144,11 @@ h1.title,h2.is-big-title {
   #navbarBurger {
     color:white;
   }
+
+  .not-selectable {
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
+  }
