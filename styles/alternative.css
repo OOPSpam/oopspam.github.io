@@ -12,3 +12,13 @@ section.section {
 .subtitle {
     line-height: 33px;
 }
+
+.button {
+    border-style: solid !important;
+    border-color:#fff !important;
+    border-width: 1px;
+}
+
+h1,h2 {
+    font-family: 'Playfair Display', serif !important;
+}

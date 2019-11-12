@@ -4,7 +4,7 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
   <link rel="stylesheet" href="/styles/main.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
@@ -25,7 +25,8 @@
 </head>
 
 <body>
-  <div class="navbar is-fixed-top">
+  <section class="section" style="padding-bottom:2rem;">
+    <div class="navbar is-fixed-top">
     <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="https://www.oopspam.com/">
@@ -68,15 +69,17 @@
       </div>
     </div>
   </div>
+  </section>
+  
   <!-- The Main Section -->
-  <section id="main" class="hero is-fullheight">
+  <section id="main" class="hero">
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="columns is-vcentered">
           <!-- Left-side column -->
           <div class="column is-half has-text-left">
             <div class="content">
-              <h1 class="title is-big-title">
+              <h1 class="title">
                 The better, new standard <br/> to
                 <span class="shadow is-success has-text-weight-bold">
                   stop spam content
@@ -93,7 +96,7 @@
             </h2>
             <div class="columns is-centered is-vcentered">
               <div class="column">
-                    <a class="button is-large is-warning is-rounded"
+                    <a style="font-family: 'Playfair Display',serif;" class="button is-large is-warning is-rounded"
                       href="https://rapidapi.com/oopspam/api/oopspam-spam-filter">
                       Get started for free →
                     </a>
@@ -107,16 +110,16 @@
           </div>
           <!-- Right-side Illustration -->
           <div class="column">
-            <img src="/assets/hero.svg" alt="An illustration on how OOPSpam spam filter works." width="700">
+            <img src="/assets/hero.svg" alt="An illustration on how OOPSpam spam filter works." width="450">
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- Platforms -->
-  <section id="platforms" class="section" style="background-color: #c7d6cb">
+  <section id="platforms" class="section" style="background-color: #fff">
     <div class="container">
-      <h2 class="title has-text-centered is-big-title">Available for developers & WordPress users</h2>
+      <h2 class="title has-text-centered">Available for developers & WordPress users</h2>
       <div class="columns">
         <div class="column is-4">
           <div class="content is-vcentered has-text-centered fixed-dimension">
@@ -151,16 +154,15 @@
   <!-- Features -->
   <section id="measurements" class="section">
     <div class="container">
-      <div class="columns">
-        <div class="column is-full">
-          <h2 class="content title has-text-centered is-big-title">
+      <div class="columns is-vcentered is-centered">
+        <div class="column has-text-centered">
+              <img src="/assets/Measurements.svg" alt="An illustration on how OOPSpam Anti-Spam API detects spam." width="400">
+         </div>
+        <div class="column">
+          <h2 class="content title">
             Which <span class="shadow is-success">measurements</span>
             power OOPSpam Anti-Spam API?</p>
           </h2>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column is-full has-text-centered">
           <p class="is-size-5 feature"><span class="checkmark"></span>Spam score</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Machine Learning algorithm</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Multiple blacklisted IPs lists</p>
@@ -168,17 +170,19 @@
           <p class="is-size-5 feature"><span class="checkmark"></span>Spam word detection</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Adult Content Detection</p>
           </br>
-          <p style="font-size: 0.7cm;">... and many more custom rules.</p>
+          <p style="font-size: 0.7cm; font-weight: bold;">... and many more custom rules.</p>
         </div>
+       
       </div>
+    </div>
   </section>
   <!-- FAQ -->
   <section id="faq" class="section">
     <div class="container">
-      <div class="content">
-        <h2 class="title has-text-centered is-big-title is-size-2">Frequently Asked Questions (FAQ)</h2>
-      </div>
-      <div class="content has-text-centered subtitle">
+      <div class="columns">
+        <div class="column is-10 is-offset-2">
+           <div class="content has-text-left subtitle">
+          <h2 class="title ">Frequently Asked  <span class="shadow is-success">Questions</span> (FAQ)</h2>
         <details>
           <summary class="has-text-weight-bold">How does OOPSpam API work?</summary>
           <p>
@@ -236,6 +240,8 @@
               href="https://docs.rapidapi.com/docs/basics-creating-a-project">Basics - Your First API Call</a> article.
           </p>
         </details>
+      </div>
+        </div>
       </div>
     </div>
   </section>

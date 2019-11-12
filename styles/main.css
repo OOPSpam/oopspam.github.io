@@ -14,7 +14,7 @@ line-height: 33px;
     color: white !important;
 }
 #faq {
-    background-color: rgba(237, 182, 201, 0.2);
+    background-color: #fff;
 }
 .feature {
     display: block;
@@ -26,10 +26,17 @@ details {
 details p {
   line-height: 1.5;
   padding-top: 0.5em;
+  text-align: left;
 }
 .is-big-title {
-    font-size: 3rem !important;
+    font-size: 2rem !important;
 }
+
+h1.title,h2.is-big-title {
+      font-size: 3rem !important;
+      font-family: 'Playfair Display', serif !important;
+}
+
 .desc {
     margin-top: 1em;
 }
@@ -39,6 +46,9 @@ details p {
 
 #platforms .title {
     margin-bottom: 3rem;
+}
+#measurements .title, #faq .title, #platforms .title {
+  font-family: 'Playfair Display', serif;
 }
 
 .navbar-item .icon:only-child {
@@ -89,11 +99,11 @@ details p {
   
   html, body {
     background-image: linear-gradient(141deg,#dfd8d9 0,#f5f5f5 71%,#fff 100%);
-    font-family: 'Dosis', sans-serif !important;
-  }
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    }
   .shadow.is-success {
     background-repeat: no-repeat;
-    background-size: 100% 0.2em;
+    background-size: 100% 0.5em;
     background-position: 0 88%;
     transition: background-size 0.25s ease-in;
     background-image: linear-gradient(118.8deg, #ffdd57 0%, #ffdd57 100%);
@@ -103,7 +113,7 @@ details p {
   }
   .shadow.is-danger {
     background-repeat: no-repeat;
-    background-size: 100% 0.2em;
+    background-size: 100% 0.5em;
     background-position: 0 88%;
     transition: background-size 0.25s ease-in;
     background-image: linear-gradient(118.8deg, rgba(255,74,110,.2) 0%, rgba(255,74,110,.2) 100%);
