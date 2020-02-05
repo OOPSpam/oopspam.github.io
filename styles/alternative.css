@@ -15,10 +15,13 @@ section.section {
 
 .button {
     border-style: solid !important;
-    border-color:#fff !important;
     border-width: 1px;
+    box-shadow: 2px 5px;
 }
 
 h1,h2 {
     font-family: 'Playfair Display', serif !important;
+}
+th,td {
+    white-space: nowrap;
 }

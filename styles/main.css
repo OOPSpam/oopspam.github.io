@@ -18,7 +18,19 @@ line-height: 33px;
 }
 .feature {
     display: block;
-    padding: 0.3em;
+    padding: 0.2em;
+}
+.button-has-shadow {
+  border-style: solid !important;
+  border-width: 1px;
+  box-shadow: 2px 5px;
+}
+
+.has-shape-background {
+  background-image: url('../assets/shape.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 details {
     padding:0.5em;
@@ -36,7 +48,25 @@ h1.title,h2.is-big-title {
       font-size: 3rem !important;
       font-family: 'Playfair Display', serif !important;
 }
-
+#request .column.flex-alignitems-center {
+  padding-bottom: 0rem;
+}
+#request .title {
+  margin-bottom: 2rem;
+}
+#request, #measurements {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+#request .container .columns:nth-child(2) {
+  margin-bottom: 5em;
+}
+.has-margin-right {
+  margin-right: 1em;
+}
+.flex-alignitems-center {
+  align-items: center;
+}
 .desc {
     margin-top: 1em;
 }
@@ -47,7 +77,7 @@ h1.title,h2.is-big-title {
 #platforms .title {
     margin-bottom: 3rem;
 }
-#measurements .title, #faq .title, #platforms .title {
+.title {
   font-family: 'Playfair Display', serif;
 }
 
