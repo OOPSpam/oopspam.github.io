@@ -54,10 +54,15 @@ h1.title,h2.is-big-title {
 #request .title {
   margin-bottom: 2rem;
 }
-#request, #measurements {
+/* #measurements {
   padding-bottom: 5rem;
   padding-top: 5rem;
 }
+#request {
+  padding-bottom: 4rem;
+  padding-top: 5rem;
+} */
+
 #request .container .columns:nth-child(2) {
   margin-bottom: 5em;
 }
