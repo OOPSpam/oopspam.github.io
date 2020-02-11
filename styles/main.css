@@ -58,13 +58,33 @@ h1.title,h2.is-big-title {
   padding-bottom: 5rem;
   padding-top: 5rem;
 }
+*/
 #request {
-  padding-bottom: 4rem;
-  padding-top: 5rem;
-} */
-
+  padding-bottom: 1rem;
+} 
+.pricing-table .pricing-plan {
+  border-color: black !important;
+}
+.is-active .plan-footer {
+  background-color: #ffdd57 !important;
+}
+.is-active .plan-item {
+  background: white !important;
+  border-bottom: .1rem solid #ffdd57 !important;
+}
+.is-active div {
+  background-color: #ffdd57 !important;
+}
+.is-active .plan-price-amount {
+  color: inherit !important;
+}
+.is-active .button {
+  background-color: initial !important;
+  border-color: initial !important;
+  color: initial !important;
+}
 #request .container .columns:nth-child(2) {
-  margin-bottom: 5em;
+  margin-bottom: 3rem;
 }
 .has-margin-right {
   margin-right: 1em;
