@@ -62,6 +62,15 @@ h1.title,h2.is-big-title {
 #request {
   padding-bottom: 1rem;
 } 
+.plan-price-currency {
+  vertical-align: text-top !important;
+}
+.plan-price-amount {
+  font-size: 1.25rem !important;
+}
+iframe {
+  height: 100%;
+}
 .pricing-table .pricing-plan {
   border-color: black !important;
 }
