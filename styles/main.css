@@ -194,11 +194,9 @@ iframe {
      border-color:burlywood
    } 
   
-  pre code{
-    background-color: black;
-    color:white;
-  }
-  
+   pre {
+     background-color: unset !important;
+   }
   .notification.is-info{
     position: relative;
     margin-top: -200px;

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
+    <link rel="stylesheet" href="/styles/main.min.css" />
+    <link rel="stylesheet" href="/styles/alternative.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="OOPSpam Anti-Spam API is a powerful spam-filter that allows you spam score your content for contact forms, comment systems, etc.">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@oopspamapi" />
+    <meta property="og:url" content="https://www.oopspam.com/docs.html" />
+    <meta name="og:title" content="OOPSpam Anti-Spam API documentation" />
+    <meta name="og:description" content="Our documentation. Learn how to use OOPSpam Anti-Spam API" />
+    <!-- <meta name="og:image" content="https://www.oopspam.com/assets/oopspamVSakismet.png" /> -->
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href=’https://fonts.googleapis.com’ rel=’preconnect’ crossorigin="anonymous">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link href="https://www.google-analytics.com" rel="preconnect" crossorigin="anonymous">
+    <title>OOPSpam Anti-Spam API documentation</title>
+    <!-- Start of Async Drift Code -->
+    <script>
+        "use strict";
+
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                        t[e] = t.factory(e);
+                    }), t.load = function (t) {
+                        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                        var i = document.getElementsByTagName("script")[0];
+                        i.parentNode.insertBefore(o, i);
+                    };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('m57ine8eus26');
+    </script>
+    <!-- End of Async Drift Code -->
+</head>
+
+<body>
+    <div class="navbar has-shadow">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="/assets/oopspamLogo.svg" alt="OOPSpam Anti-Spam API logo" width="112" height="28">
+                </a>
+                <a id="navbarBurger" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navigation-bar">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navigation-bar" class="navbar-menu">
+                <div class="navbar-start">
+                </div>
+                <div class="navbar-end">
+                    <a href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/details" target="_blank"
+                        rel="noopener" class="navbar-item has-text-white">
+                        Docs
+                        <svg class="icon" viewBox="0 0 48 48" focusable="false" aria-hidden="true">
+                            <use xlink:href="#new-window"></use>
+                        </svg>
+                    </a>
+                    <a href="../#pricing" class="navbar-item has-text-white">
+                        Pricing
+                    </a>
+                    <a href="#faq" class="navbar-item has-text-white">
+                        FAQ
+                    </a>
+                    <a href="#contact" class="navbar-item has-text-white">
+                        Contact
+                    </a>
+                    <a href="/blog" class="navbar-item has-text-white">Blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Main (Intro) Section -->
+    <section id="main" class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <!-- full column -->
+                    <div class="column is-full has-text-centered">
+                        <div class="content" style="color:black; font-size:16px;">
+                            <h1>OOPSpam Anti-Spam API documentation</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-full">
+                        <div class="content">
+                            <p>OOPSpam Anti-Spam API provides high accuracy based on different inputs:</p>
+                            <ul>
+                                <li>A trained machine learning algorithm checks whether the content is spam or not.</li>
+                                <li>In case the content sender&#39;s IP is passed to the API, it will be a check against
+                                    powerful, daily updated multiple blacklisted IPs.</li>
+                                <li>Adult Content Detection</li>
+                                <li>If you expect your content in a certain language, pass it to the API and the
+                                    language detection will determine whatever it matches with your content.</li>
+                                <li>In addition, the API scans your content for a pattern of spam word patterns.</li>
+                                <li>And finally a bunch of custom rules.</li>
+                            </ul>
+                            <p>The more information you provide to the API, the more accurate detection will be.</p>
+                            <p> We also have a WordPress plugin: <a
+                                    href="https://wordpress.org/plugins/oopspam-anti-spam/">https://wordpress.org/plugins/oopspam-anti-spam/</a>.
+                            </p>
+                            <h2 id="use-cases">Use cases</h2>
+                            <ul>
+                                <li>Filter spam from your contact forms</li>
+                                <li>Filter spam from your comment systems</li>
+                                <li>Filter spam from live chats</li>
+                                <li>Develop robust plugins for third-party software.</li>
+                            </ul>
+                            <h2 id="api-reference">API Reference</h2>
+                            <p class="content">
+                                The base url: <a href="https://oopspam.p.rapidapi.com/v1/spamdetection">https://oopspam.p.rapidapi.com/</a>
+                            </p>
+                            <h3 id="-v1-spamdetection-post-">/v1/spamdetection (POST)</h3>
+                            <h5 id="overview">Overview</h5>
+                            <p>The <code>/v1/spamdetection</code> endpoint analyses given parameters and returns overall
+                                spam score including detailed detection results in structured JSON.</p>
+                            <h5 id="request">Request</h5>
+                            <div class="content"
+                                style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                                <pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{</span>
+   <span style="color: #f92672">&quot;sender_ip&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;38.125.233.253&quot;</span><span style="color: #f8f8f2">,</span>
+   <span style="color: #f92672">&quot;content&quot;</span><span style="color: #f8f8f2">:</span>  <span style="color: #e6db74">&quot;Dear Agent, We are a manufacturing company which specializes in supplying Aluminum Rod with Zinc Alloy Rod to customers worldwide, based in Japan, Asia. 
+    We have been unable to follow up payments effectively for transactions with debtor customers in your country due to our distant locations, thus our reason for requesting for your services representation.&quot;</span><span style="color: #f8f8f2">,</span>
+   <span style="color: #f92672">&quot;content_lang&quot;</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;en&quot;</span><span style="color: #f8f8f2">]</span>             
+<span style="color: #f8f8f2">}</span>
+</pre>
+                            </div>
+                            <h5 id="fields">Fields</h5>
+                            <ul>
+                                <li>
+                                    <p><code>sender_ip</code> : is the IP of the original content sender. This field
+                                        value will be looked up in multiple blacklisted IPs lists that previously
+                                        detected sending spam. Although <code>sender_ip</code> is an optional field, we
+                                        recommend sending it. Don&#39;t send 127.0.0.1, it is by default blocked. </p>
+                                    <p> <strong>Important</strong>: This field should include spammer&#39;s IP, in other
+                                        words, whoever submitted regarding content to you, not your IP.</p>
+                                </li>
+                                <li>
+                                    <p><code>content</code> : is a content you would like to be analyzed.</p>
+                                </li>
+                                <li><code>content_lang</code> : <strong>(optional)</strong> In what language(s) you
+                                    expect the content to be? <br/>
+                                    Pass two-letter language(s) code to the parameter as an array. Check out <a href="#supportlang">an example request & support languages</a>.
+                                </li>
+                                <li><code>checkForLength</code> : <strong>(optional)</strong> Is a boolean value.
+                                    Whenever you send content to the API, it checks if it is more than 20 characters
+                                    long. In case the content is shorter than 20 characters than it is considered as
+                                    spam (Spam Score: 5) and returns <code>isContentTooShort:  true</code>.<br> Use
+                                    <code>checkForLength: false</code> to disable this feature. This is recommended only
+                                    for live chat systems or where you fill like no need for a length check.</li>
+                            </ul>
+                    <section id="supportlang" class="content">
+                        <p>Note on <code>content_lang</code>: If you know that you may receive content in a few languages (or single language), say English,
+                            Vietnamese, Turkish then your <code>content_lang</code> parameter should have JSON array
+                            with multi-languages <code>[&quot;en&quot;,&quot;vi&quot;, &quot;tr&quot;]</code>: </p>
+            <!-- HTML generated using hilite.me --><div class="content" style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{</span>
+   <span style="color: #f92672">&quot;sender_ip&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;38.125.233.253&quot;</span><span style="color: #f8f8f2">,</span>
+   <span style="color: #f92672">&quot;content&quot;</span><span style="color: #f8f8f2">:</span>  <span style="color: #e6db74">&quot;Dear Agent, We are a manufacturing company which specializes in supplying Aluminum Rod with Zinc Alloy Rod to customers worldwide, based in Japan, Asia.
+    We have been unable to follow up payments effectively for transactions with debtor customers in your country due to our distant locations, thus our reason for requesting for your services representation.&quot;</span><span style="color: #f8f8f2">,</span>
+   <span style="color: #f92672">&quot;content_lang&quot;</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;en&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;vi&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;tr&quot;</span><span style="color: #f8f8f2">]</span>             
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+                        <p>Following languages are supported:</p>
+                        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <thead>
+                                <tr>
+                                    <th><strong>Language</strong></th>
+                                    <th>ISO 639-1 code</th>
+                                    <th>Language</th>
+                                    <th>ISO 639-1 code</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Afrikaans</td>
+                                    <td><em>af</em></td>
+                                    <td>Japanese</td>
+                                    <td><em>ja</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Albanian</td>
+                                    <td><em>sq</em></td>
+                                    <td>Korean</td>
+                                    <td><em>ko</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Arabic</td>
+                                    <td><em>ar</em></td>
+                                    <td>Latin</td>
+                                    <td><em>la</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Basque</td>
+                                    <td><em>eu</em></td>
+                                    <td>Latvian</td>
+                                    <td><em>lv</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Belarusian</td>
+                                    <td><em>be</em></td>
+                                    <td>Lithuanian</td>
+                                    <td><em>lt</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Bengali</td>
+                                    <td><em>bn</em></td>
+                                    <td>Malay</td>
+                                    <td><em>ms</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Bokmal</td>
+                                    <td><em>nb</em></td>
+                                    <td>Norwegian</td>
+                                    <td><em>no</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Bulgarian</td>
+                                    <td><em>bg</em></td>
+                                    <td>Nynorsk</td>
+                                    <td><em>nn</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Catalan</td>
+                                    <td><em>ca</em></td>
+                                    <td>Persian</td>
+                                    <td><em>fa</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Chinese</td>
+                                    <td><em>zh-cn</em></td>
+                                    <td>Polish</td>
+                                    <td><em>pl</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Croatian</td>
+                                    <td><em>hr</em></td>
+                                    <td>Portuguese</td>
+                                    <td><em>pt</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Czech</td>
+                                    <td><em>cs</em></td>
+                                    <td>Punjabi</td>
+                                    <td><em>pa</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Danish</td>
+                                    <td><em>da</em></td>
+                                    <td>Romanian</td>
+                                    <td><em>ro</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Dutch</td>
+                                    <td><em>nl</em></td>
+                                    <td>Russian</td>
+                                    <td><em>ru</em></td>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td><em>en</em></td>
+                                    <td>Slovak</td>
+                                    <td><em>sk</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Estonian</td>
+                                    <td><em>et</em></td>
+                                    <td>Slovene</td>
+                                    <td><em>sl</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Finnish</td>
+                                    <td><em>fi</em></td>
+                                    <td>Somali</td>
+                                    <td><em>so</em></td>
+                                </tr>
+                                <tr>
+                                    <td>French</td>
+                                    <td><em>fr</em></td>
+                                    <td>Spanish</td>
+                                    <td><em>es</em></td>
+                                </tr>
+                                <tr>
+                                    <td>German</td>
+                                    <td><em>de</em></td>
+                                    <td>Swedish</td>
+                                    <td><em>sv</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Greek</td>
+                                    <td><em>el</em></td>
+                                    <td>Tagalog</td>
+                                    <td><em>tl</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Gujarati</td>
+                                    <td><em>gu</em></td>
+                                    <td>Tamil</td>
+                                    <td><em>ta</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Hebrew</td>
+                                    <td><em>he</em></td>
+                                    <td>Telugu</td>
+                                    <td><em>te</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Hindi</td>
+                                    <td><em>hi</em></td>
+                                    <td>Thai</td>
+                                    <td><em>th</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Hungarian</td>
+                                    <td><em>hu</em></td>
+                                    <td>Turkish</td>
+                                    <td><em>tr</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Icelandic</td>
+                                    <td><em>is</em></td>
+                                    <td>Urdu</td>
+                                    <td><em>ur</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Indonesian</td>
+                                    <td><em>id</em></td>
+                                    <td>Vietnamese</td>
+                                    <td><em>vi</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Irish</td>
+                                    <td><em>ga</em></td>
+                                    <td>Welsh</td>
+                                    <td><em>cy</em></td>
+                                </tr>
+                                <tr>
+                                    <td>Italian</td>
+                                    <td><em>it</em></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                            <h5 id="response">Response</h5>
+                          <div class="content" style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{</span>
+    <span style="color: #f92672">&quot;Score&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">6</span><span style="color: #f8f8f2">,</span>
+    <span style="color: #f92672">&quot;Details&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">{</span>
+        <span style="color: #f92672">&quot;isIPBlocked&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">true</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #f92672">&quot;langMatch&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">true</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #f92672">&quot;isContentSpam&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;spam&quot;</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #f92672">&quot;numberOfSpamWords&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #f92672">&quot;isContentTooShort&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">true</span><span style="color: #f8f8f2">,</span>
+        <span style="color: #f92672">&quot;isContentAdult&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">true</span>
+    <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+                            <h5 id="fields">Fields</h5>
+                            <p>In case of successful request, following structured JSON will be responded:</p>
+                            <ul>
+                                <li><code>Score</code>: An number between 0-6 representing an overall spam score based
+                                    on passed parameters. The higher this value, the more likely to be spam. A value 3 or above can be considered spam.</li>
+                                <li><code>Details</code>: A dictionary containing the result of different analyses.
+                                    <ul>
+                                        <li><code>isIPBlocked</code> : A boolean value representing whether the value of
+                                            parameter <code>sender_ip</code> IP is blacklisted.</li>
+                                        <li><code>langMatch</code> : A boolean value representing whether the value of
+                                            parameter <code>content_lang</code> matches with the detected language by
+                                            Language Detection algorithm.</li>
+                                        <li><code>isContentSpam</code> : A string containing the result of a Machine
+                                            Learning algorithm on whether the content is a <code>spam</code> or
+                                            <code>notspam</code>. </li>
+                                        <li><code>numberOfSpamWords</code> : A number representing a number of spam
+                                            words within the content.
+                                        </li>
+                                        <li><code>isContentTooShort</code>: A boolean value representing whether
+                                            the value of <code>content</code> is too short to consider a
+                                            meaningful sentence. Any content that is too short will be
+                                            considered as spam. </li>
+                                        <li><code>isContentAdult</code>: A boolean value representing whether
+                                            the value of <code>content</code> is an adult content. Any content
+                                            that is detected as adult content will be considered as spam. The
+                                            maximum spam score 6 will be returned.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <h3 id="error-handling">Error handling</h3>
+                            <p>A successful request will return HTTP status code <code>200</code>. In case you
+                                didn&#39;t include necessary headers in your requests such as an API key which you will
+                                get status code <code>401</code> (Unauthorized) with an explanatory <code>message</code>
+                                as the part of response&#39;s body. Other possible errors can be :</p>
+                            <ul>
+                                <li>An invalid JSON format</li>
+                                <li>Generic error message</li>
+                            </ul>
+                            <p>With all (error) cases, you will get a JSON object with an error <code>code</code> and
+                                <code>message</code> which looks like this:</p>
+                           <div class="content" style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{</span>
+   <span style="color: #f92672">&quot;code&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&quot;5740538&quot;</span><span style="color: #f8f8f2">,</span>
+   <span style="color: #f92672">&quot;message&quot;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&quot;Invalid JSON format. Please verify and resubmit.&quot;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div>
+
+                            <h2 id="limitations">Limitations</h2>
+                            <ul>
+                                <li>To check against blacklisted IPs ( <code>sender_ip</code>) only IPv4 is supported.
+                                    IPv6 will be ignored. </li>
+                            </ul>
+                            <h2 id="tips">Tips</h2>
+                            <ul>
+                                <li>Responded <code>Score</code> parameter value ranges from 0 to 6.
+                                    <strong>A value 3 or above can be considered spam.</strong></li>
+                                <li>Make async HTTP request instead of sync since the system check
+                                    <code>sender_ip</code> against multiple blacklisted IPs lists until it finds it.
+                                </li>
+                                <li>Don&#39;t send <em>127.0.0.1</em>, <em>::1</em>, 1.1.1.1 as a value of
+                                    <code>sender_ip</code>, they are by default blocked.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact us -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="content">
+                <p class="has-text-centered is-size-4">Whatever question you have please contact us via <a
+                        href="mailto:contact@oopspam.com">contact@oopspam.com</a>
+                    or through <a href="https://twitter.com/oopspamapi">Twitter</a>.
+                    I'd be happy to help!
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <a href="https://twitter.com/oopspamapi">
+                    <img src="/assets/twitter-circle.svg" alt="twitter logo">
+                </a>
+                <a href="https://github.com/OOPSpam">
+                    <img src="/assets/github-circle.svg" alt="github logo">
+                </a>
+                <a href="https://wordpress.org/plugins/oopspam-anti-spam/">
+                    <img src="/assets/wordpress.svg" alt="wordpress logo">
+                </a>
+            </p>
+            <p>
+                <a href="terms&conditions.html">Terms</a> |
+                <a href="privacypolicy.html">Privacy Policy</a>
+            </p>
+            <p>
+                Made with ❤️ in Rome, Italy
+            </p>
+        </div>
+    </footer>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-103050221-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src="/scripts/app.min.js"></script>
+</body>
+
+</html>
+<!-- SVG sprite sheet -->
+<svg version="1.1" width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    hidden>
+    <symbol id="new-window" viewBox="0 0 24 24">
+        <g transform="scale(0.0234375 0.0234375)">
+            <path
+                d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z">
+            </path>
+        </g>
+    </symbol>
+</svg>
