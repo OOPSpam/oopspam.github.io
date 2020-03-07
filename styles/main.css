@@ -81,7 +81,7 @@ iframe {
   background: white !important;
   border-bottom: .1rem solid #ffdd57 !important;
 }
-.is-active div {
+.pricing-table .is-active div {
   background-color: #ffdd57 !important;
 }
 .is-active .plan-price-amount {
