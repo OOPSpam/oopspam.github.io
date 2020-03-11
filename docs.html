@@ -143,19 +143,19 @@
                             <div class="content"
                                 style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
                                 <pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{</span>
-   <span style="color: #f92672">&quot;sender_ip&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;38.125.233.253&quot;</span><span style="color: #f8f8f2">,</span>
+   <span style="color: #f92672">&quot;senderIP&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;38.125.233.253&quot;</span><span style="color: #f8f8f2">,</span>
    <span style="color: #f92672">&quot;content&quot;</span><span style="color: #f8f8f2">:</span>  <span style="color: #e6db74">&quot;Dear Agent, We are a manufacturing company which specializes in supplying Aluminum Rod with Zinc Alloy Rod to customers worldwide, based in Japan, Asia. 
     We have been unable to follow up payments effectively for transactions with debtor customers in your country due to our distant locations, thus our reason for requesting for your services representation.&quot;</span><span style="color: #f8f8f2">,</span>
-   <span style="color: #f92672">&quot;content_lang&quot;</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;en&quot;</span><span style="color: #f8f8f2">]</span>             
+   <span style="color: #f92672">&quot;contentLang&quot;</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;en&quot;</span><span style="color: #f8f8f2">]</span>             
 <span style="color: #f8f8f2">}</span>
 </pre>
                             </div>
                             <h5 id="fields">Fields</h5>
                             <ul>
                                 <li>
-                                    <p><code>sender_ip</code> : is the IP of the original content sender. This field
+                                    <p><code>senderIP</code> : is the IP of the original content sender. This field
                                         value will be looked up in multiple blacklisted IPs lists that previously
-                                        detected sending spam. Although <code>sender_ip</code> is an optional field, we
+                                        detected sending spam. Although <code>senderIP</code> is an optional field, we
                                         recommend sending it. Don&#39;t send 127.0.0.1, it is by default blocked. </p>
                                     <p> <strong>Important</strong>: This field should include spammer&#39;s IP, in other
                                         words, whoever submitted regarding content to you, not your IP.</p>
@@ -163,7 +163,7 @@
                                 <li>
                                     <p><code>content</code> : is a content you would like to be analyzed.</p>
                                 </li>
-                                <li><code>content_lang</code> : <strong>(optional)</strong> In what language(s) you
+                                <li><code>contentLang</code> : <strong>(optional)</strong> In what language(s) you
                                     expect the content to be? <br/>
                                     Pass two-letter language(s) code to the parameter as an array. Check out <a href="#supportlang">an example request & support languages</a>.
                                 </li>
@@ -175,14 +175,14 @@
                                     for live chat systems or where you fill like no need for a length check.</li>
                             </ul>
                     <section id="supportlang" class="content">
-                        <p>Note on <code>content_lang</code>: If you know that you may receive content in a few languages (or single language), say English,
-                            Vietnamese, Turkish then your <code>content_lang</code> parameter should have JSON array
+                        <p>Note on <code>contentLang</code>: If you know that you may receive content in a few languages (or single language), say English,
+                            Vietnamese, Turkish then your <code>contentLang</code> parameter should have JSON array
                             with multi-languages <code>[&quot;en&quot;,&quot;vi&quot;, &quot;tr&quot;]</code>: </p>
             <!-- HTML generated using hilite.me --><div class="content" style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f8f8f2">{</span>
-   <span style="color: #f92672">&quot;sender_ip&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;38.125.233.253&quot;</span><span style="color: #f8f8f2">,</span>
+   <span style="color: #f92672">&quot;senderIP&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;38.125.233.253&quot;</span><span style="color: #f8f8f2">,</span>
    <span style="color: #f92672">&quot;content&quot;</span><span style="color: #f8f8f2">:</span>  <span style="color: #e6db74">&quot;Dear Agent, We are a manufacturing company which specializes in supplying Aluminum Rod with Zinc Alloy Rod to customers worldwide, based in Japan, Asia.
     We have been unable to follow up payments effectively for transactions with debtor customers in your country due to our distant locations, thus our reason for requesting for your services representation.&quot;</span><span style="color: #f8f8f2">,</span>
-   <span style="color: #f92672">&quot;content_lang&quot;</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;en&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;vi&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;tr&quot;</span><span style="color: #f8f8f2">]</span>             
+   <span style="color: #f92672">&quot;contentLang&quot;</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;en&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;vi&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;tr&quot;</span><span style="color: #f8f8f2">]</span>             
 <span style="color: #f8f8f2">}</span>
 </pre></div>
                         <p>Following languages are supported:</p>
@@ -388,9 +388,9 @@
                                 <li><code>Details</code>: A dictionary containing the result of different analyses.
                                     <ul>
                                         <li><code>isIPBlocked</code> : A boolean value representing whether the value of
-                                            parameter <code>sender_ip</code> IP is blacklisted.</li>
+                                            parameter <code>senderIP</code> IP is blacklisted.</li>
                                         <li><code>langMatch</code> : A boolean value representing whether the value of
-                                            parameter <code>content_lang</code> matches with the detected language by
+                                            parameter <code>contentLang</code> matches with the detected language by
                                             Language Detection algorithm.</li>
                                         <li><code>isContentSpam</code> : A string containing the result of a Machine
                                             Learning algorithm on whether the content is a <code>spam</code> or
@@ -428,7 +428,7 @@
 
                             <h2 id="limitations">Limitations</h2>
                             <ul>
-                                <li>To check against blacklisted IPs ( <code>sender_ip</code>) only IPv4 is supported.
+                                <li>To check against blacklisted IPs ( <code>senderIP</code>) only IPv4 is supported.
                                     IPv6 will be ignored. </li>
                             </ul>
                             <h2 id="tips">Tips</h2>
@@ -436,10 +436,10 @@
                                 <li>Responded <code>Score</code> parameter value ranges from 0 to 6.
                                     <strong>A value 3 or above can be considered spam.</strong></li>
                                 <li>Make async HTTP request instead of sync since the system check
-                                    <code>sender_ip</code> against multiple blacklisted IPs lists until it finds it.
+                                    <code>senderIP</code> against multiple blacklisted IPs lists until it finds it.
                                 </li>
                                 <li>Don&#39;t send <em>127.0.0.1</em>, <em>::1</em>, 1.1.1.1 as a value of
-                                    <code>sender_ip</code>, they are by default blocked.</li>
+                                    <code>senderIP</code>, they are by default blocked.</li>
                             </ul>
                         </div>
                     </div>
