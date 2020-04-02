@@ -75,31 +75,19 @@ iframe {
   border-color: black !important;
 }
 
-/* .is-active .plan-footer {
-  background-color: #ffdd57 !important;
-} */
-
-/*
-.is-active .plan-item {
-  background: white !important;
-  border-bottom: .1rem solid #ffdd57 !important;
-}
-.pricing-table .is-active div {
-  background-color: #ffdd57 !important;
-}*/
 .is-active .plan-header,.is-active .plan-price {
   background-color: unset !important;
 }
 .is-active .plan-item {
   border-bottom: .1rem solid #ffdd57 !important;
 }
-.is-active {
+.pricing-table .is-active {
   background-color: #ffdd57 !important;
 } 
 .is-active .plan-price-amount {
   color: inherit !important;
 }
-.is-active .button {
+.pricing-table .is-active .button {
   background-color: initial !important;
   border-color: initial !important;
   color: initial !important;
