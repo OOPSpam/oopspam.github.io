@@ -104,6 +104,9 @@ iframe {
 .desc {
     margin-top: 1em;
 }
+.docs h1, .docs h2, .docs h3, .docs h4 {
+  font-family: 'Playfair Display',serif;
+}
 #measurements .column.is-8 p {
     padding: 0.2em;
 }
