@@ -136,7 +136,7 @@
                             <ul>
                                 <li>
                                     <p><code>senderIP</code> : is the IP of the original content sender. This field
-                                        value will be looked up in multiple blacklisted IPs lists that previously
+                                        value will be looked up in multiple blocklisted IPs lists that previously
                                         detected sending spam. Although <code>senderIP</code> is an optional field, we
                                         recommend sending it. Don&#39;t send 127.0.0.1, it is by default blocked. </p>
                                     <p> <strong>Important</strong>: This field should include spammer&#39;s IP, in other
@@ -370,7 +370,7 @@
                                 <li><code>Details</code>: A dictionary containing the result of different analyses.
                                     <ul>
                                         <li><code>isIPBlocked</code> : A boolean value representing whether the value of
-                                            parameter <code>senderIP</code> IP is blacklisted.</li>
+                                            parameter <code>senderIP</code> IP is blocklisted.</li>
                                         <li><code>langMatch</code> : A boolean value representing whether the value of
                                             parameter <code>contentLang</code> matches with the detected language by
                                             Language Detection algorithm.</li>
@@ -410,7 +410,7 @@
 
                             <h2 id="limitations">Limitations</h2>
                             <ul>
-                                <li>To check against blacklisted IPs ( <code>senderIP</code>) only IPv4 is supported.
+                                <li>To check against blocklisted IPs ( <code>senderIP</code>) only IPv4 is supported.
                                     IPv6 will be ignored. </li>
                             </ul>
                             <h2 id="tips">Tips</h2>
@@ -418,7 +418,7 @@
                                 <li>Responded <code>Score</code> parameter value ranges from 0 to 6.
                                     <strong>A value 3 or above can be considered spam.</strong></li>
                                 <li>Make async HTTP request instead of sync since the system check
-                                    <code>senderIP</code> against multiple blacklisted IPs lists until it finds it.
+                                    <code>senderIP</code> against multiple blocklisted IPs lists until it finds it.
                                 </li>
                                 <li>Don&#39;t send <em>127.0.0.1</em>, <em>::1</em>, 1.1.1.1 as a value of
                                     <code>senderIP</code>, they are by default blocked.</li>
