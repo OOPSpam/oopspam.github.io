@@ -117,6 +117,10 @@
                             <p class="content">
                                 Also make sure check out <a href="#tips">Tips</a> section.
                             </p>
+                            <p>                           
+                                <strong>Important</strong> Flag a content spam solely based on Score (aka Spam Score). We recommend assuming Spam Score 3 or higher to be spam.
+                            </p>                            
+                            <hr>
                             <h3 id="-v1-spamdetection-post-">/v1/spamdetection (POST)</h3>
                             <h5 id="overview">Overview</h5>
                             <p>The <code>/v1/spamdetection</code> endpoint analyses given parameters and returns overall
@@ -366,7 +370,7 @@
                             <p>In case of successful request, following structured JSON will be responded:</p>
                             <ul>
                                 <li><code>Score</code>: An number between 0-6 representing an overall spam score based
-                                    on passed parameters. The higher this value, the more likely to be spam. A value 3 or above can be considered spam.</li>
+                                    on passed parameters. The higher this value, the more likely to be spam. A value 3 or higher can be considered spam.</li>
                                 <li><code>Details</code>: A dictionary containing the result of different analyses.
                                     <ul>
                                         <li><code>isIPBlocked</code> : A boolean value representing whether the value of
@@ -416,9 +420,9 @@
                             <h2 id="tips">Tips</h2>
                             <ul>
                                 <li>Responded <code>Score</code> parameter value ranges from 0 to 6.
-                                    <strong>A value 3 or above can be considered spam.</strong></li>
-                                <li>Make async HTTP request instead of sync since the system check
-                                    <code>senderIP</code> against multiple blocklisted IPs lists until it finds it.
+                                    <strong>A value 3 or higher can be considered spam.</strong></li>
+                                <li>Make async HTTP request instead of sync as the system check
+                                    <code>senderIP</code> against multiple blocklisted IPs lists until it finds it. The latency is low tho (currently 565ms).
                                 </li>
                                 <li>Don&#39;t send <em>127.0.0.1</em>, <em>::1</em>, 1.1.1.1 as a value of
                                     <code>senderIP</code>, they are by default blocked.</li>
