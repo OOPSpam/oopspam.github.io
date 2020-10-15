@@ -135,13 +135,14 @@
    <span style="color: #f92672">&quot;content&quot;</span><span style="color: #f8f8f2">:</span>  <span style="color: #e6db74">&quot;Dear Agent, We are a manufacturing company which specializes in supplying Aluminum Rod with Zinc Alloy Rod to customers worldwide, based in Japan, Asia. 
     We have been unable to follow up payments effectively for transactions with debtor customers in your country due to our distant locations, thus our reason for requesting for your services representation.&quot;</span><span style="color: #f8f8f2">,</span>
    <span style="color: #f92672">&quot;contentLang&quot;</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;en&quot;</span><span style="color: #f8f8f2">]</span>             
+   <span style="color: #f92672">&quot;allowedCountries&quot;</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;it&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;us&quot;</span><span style="color: #f8f8f2">]</span>             
 <span style="color: #f8f8f2">}</span>
 </pre>
                             </div>
                             <h5 id="fields">Fields</h5>
                             <ul>
                                 <li>
-                                    <p><code>senderIP</code> : is the IP of the original content sender. This field
+                                    <p><code>senderIP</code> : is the IP of the original content/message sender. This field
                                         value will be looked up in multiple blocklisted IPs lists that previously
                                         detected sending spam. Although <code>senderIP</code> is an optional field, we
                                         recommend sending it. Don&#39;t send 127.0.0.1, it is by default blocked. </p>
@@ -151,7 +152,7 @@
                                 <li>
                                     <p><code>content</code> : is a content you would like to be analyzed.</p>
                                 </li>
-                                <li><code>contentLang</code> : <strong>(optional)</strong> In what language(s) you
+                                <li><code>contentLang</code> : <strong>(optional)</strong> Block messages based on a content language. Let us know in what language(s) you
                                     expect the content to be? <br/>
                                     Pass two-letter language(s) code to the parameter as an array. Check out <a href="#supportlang">an example request & support languages</a>.
                                 </li>
@@ -161,6 +162,9 @@
                                     spam (Spam Score: 5) and returns <code>isContentTooShort:  true</code>.<br> Use
                                     <code>checkForLength: false</code> to disable this feature. This is recommended only
                                     for live chat systems or where you fill like no need for a length check.</li>
+                                <li><code>allowedCountries</code> : <strong>(optional)</strong> Block messages from a country or countries. All you need to do is <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank">pass the two-letter country code</a> as an array. Reminder: <code>senderIP</code> is required for this to work.
+                                    
+                                    </li>
                             </ul>
                     <section id="supportlang" class="content">
                         <p>Note on <code>contentLang</code>: If you know that you may receive content in a few languages (or single language), say English,
@@ -171,6 +175,7 @@
    <span style="color: #f92672">&quot;content&quot;</span><span style="color: #f8f8f2">:</span>  <span style="color: #e6db74">&quot;Dear Agent, We are a manufacturing company which specializes in supplying Aluminum Rod with Zinc Alloy Rod to customers worldwide, based in Japan, Asia.
     We have been unable to follow up payments effectively for transactions with debtor customers in your country due to our distant locations, thus our reason for requesting for your services representation.&quot;</span><span style="color: #f8f8f2">,</span>
    <span style="color: #f92672">&quot;contentLang&quot;</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;en&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;vi&quot;</span><span style="color: #f8f8f2">,</span> <span style="color: #e6db74">&quot;tr&quot;</span><span style="color: #f8f8f2">]</span>             
+   <span style="color: #f92672">&quot;allowedCountries&quot;</span> <span style="color: #f8f8f2">:</span> <span style="color: #f8f8f2">[</span><span style="color: #e6db74">&quot;it&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;us&quot;</span><span style="color: #f8f8f2">]</span>             
 <span style="color: #f8f8f2">}</span>
 </pre></div>
                         <p>Following languages are supported:</p>
@@ -363,7 +368,7 @@
         <span style="color: #f92672">&quot;isContentSpam&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #e6db74">&quot;spam&quot;</span><span style="color: #f8f8f2">,</span>
         <span style="color: #f92672">&quot;numberOfSpamWords&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">,</span>
         <span style="color: #f92672">&quot;isContentTooShort&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">true</span><span style="color: #f8f8f2">,</span>
-        <span style="color: #f92672">&quot;isContentAdult&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">true</span>
+        <span style="color: #f92672">&quot;countryMatch&quot;</span><span style="color: #f8f8f2">:</span> <span style="color: #66d9ef">true</span>
     <span style="color: #f8f8f2">}</span>
 <span style="color: #f8f8f2">}</span>
 </pre></div>
@@ -390,10 +395,7 @@
                                             the value of <code>content</code> is too short to consider a
                                             meaningful sentence. Any content that is too short will be
                                             considered as spam. </li>
-                                        <li><code>isContentAdult</code>: A boolean value representing whether
-                                            the value of <code>content</code> is an adult content. Any content
-                                            that is detected as adult content will be considered as spam. The
-                                            maximum spam score 6 will be returned.</li>
+                                        <li><code>countryMatch</code>: A boolean value representing whether an IP (the value of <code>senderIP</code>) originates from one of the countries you passed through <code>allowedCountries</code> parameter. The maximum spam score of 6 will be returned in case of a mismatch.</li>
                                     </ul>
                                 </li>
                             </ul>
