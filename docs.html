@@ -152,7 +152,7 @@
                                 <li>
                                     <p><code>content</code> : is a content you would like to be analyzed.</p>
                                 </li>
-                                <li><code>contentLang</code> : <strong>(optional)</strong> Block messages based on a content language. Let us know in what language(s) you
+                                <li><code>contentLang</code> : <strong>(optional)</strong> Block content based on a content language. Let us know in what language(s) you
                                     expect the content to be? <br/>
                                     Pass two-letter language(s) code to the parameter as an array. Check out <a href="#supportlang">an example request & support languages</a>.
                                 </li>
@@ -162,7 +162,7 @@
                                     spam (Spam Score: 5) and returns <code>isContentTooShort:  true</code>.<br> Use
                                     <code>checkForLength: false</code> to disable this feature. This is recommended only
                                     for live chat systems or where you fill like no need for a length check.</li>
-                                <li><code>allowedCountries</code> : <strong>(optional)</strong> Block messages from a country or countries. All you need to do is <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank">pass the two-letter country code</a> as an array. Reminder: <code>senderIP</code> is required for this to work.
+                                <li><code>allowedCountries</code> : <strong>(optional)</strong> Allow content only from a certain country or countries. All you need to do is <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank">pass the two-letter country code</a> as an array. Reminder: <code>senderIP</code> is required for this to work.
                                     
                                     </li>
                             </ul>
@@ -395,7 +395,7 @@
                                             the value of <code>content</code> is too short to consider a
                                             meaningful sentence. Any content that is too short will be
                                             considered as spam. </li>
-                                        <li><code>countryMatch</code>: A boolean value representing whether an IP (the value of <code>senderIP</code>) originates from one of the countries you passed through <code>allowedCountries</code> parameter. The maximum spam score of 6 will be returned in case of a mismatch.</li>
+                                        <li><code>countryMatch</code>: A boolean value representing whether an IP (the value of <code>senderIP</code>) originates from one of the countries you passed through <code>allowedCountries</code> parameter. In case of a mismatch, returns the maximum spam score of 6.</li>
                                     </ul>
                                 </li>
                             </ul>
