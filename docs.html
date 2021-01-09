@@ -142,27 +142,26 @@
                             <h5 id="fields">Fields</h5>
                             <ul>
                                 <li>
-                                    <p><code>senderIP</code> : is the IP of the original content/message sender. This field
+                                    <p><code>senderIP</code> : <strong>(optional)</strong> is the IP of the original content/message sender. This field
                                         value will be looked up in multiple blocklisted IPs lists that previously
                                         detected sending spam. Although <code>senderIP</code> is an optional field, we
                                         recommend sending it. Don&#39;t send 127.0.0.1, it is by default blocked. </p>
                                     <p> <strong>Important</strong>: This field should include spammer&#39;s IP, in other
-                                        words, whoever submitted regarding content to you, not your IP.</p>
+                                        words, whoever submitted regarding content to you.</p>
                                 </li>
                                 <li>
-                                    <p><code>content</code> : is a content you would like to be analyzed.</p>
+                                    <p><code>content</code> : <strong>(required)</strong> is a content you would like to be analyzed.</p>
                                 </li>
-                                <li><code>contentLang</code> : <strong>(optional)</strong> Block content based on a content language. Let us know in what language(s) you
-                                    expect the content to be? <br/>
-                                    Pass two-letter language(s) code to the parameter as an array. Check out <a href="#supportlang">an example request & support languages</a>.
+                                <li><code>contentLang</code> : <strong>(optional)</strong> Block content based on a content/message language. Let us know in what language(s) you
+                                    expect the content to be by passing two-letter language(s) code to the parameter as an array. Check out <a href="#supportlang">an example request & supported languages</a>.
                                 </li>
                                 <li><code>checkForLength</code> : <strong>(optional)</strong> Is a boolean value.
                                     Whenever you send content to the API, it checks if it is more than 20 characters
-                                    long. In case the content is shorter than 20 characters than it is considered as
-                                    spam (Spam Score: 5) and returns <code>isContentTooShort:  true</code>.<br> Use
+                                    long. In case the content is shorter than 20 characters then it is considered as
+                                    spam (Spam Score 5) and returns <code>isContentTooShort:  true</code>.<br> Use
                                     <code>checkForLength: false</code> to disable this feature. This is recommended only
                                     for live chat systems or where you fill like no need for a length check.</li>
-                                <li><code>allowedCountries</code> : <strong>(optional)</strong> Allow content only from a certain country or countries. All you need to do is <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank">pass the two-letter country code</a> as an array. Reminder: <code>senderIP</code> is required for this to work.
+                                <li><code>allowedCountries</code> : <strong>(optional)</strong> Allow content/message only from a certain country or countries. All you need to do is <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank">pass the two-letter country code</a> as an array. Reminder: <code>senderIP</code> is required for this to work.
                                     
                                     </li>
                             </ul>
@@ -425,7 +424,7 @@
                                 <li>Responded <code>Score</code> parameter value ranges from 0 to 6.
                                     <strong>A value 3 or higher can be considered spam.</strong></li>
                                 <li>Make async HTTP request instead of sync as the system check
-                                    <code>senderIP</code> against multiple blocklisted IPs lists until it finds it. The latency is low tho (currently 565ms).
+                                    <code>senderIP</code> against multiple blocklisted IPs lists until it finds it.
                                 </li>
                                 <li>Don&#39;t send <em>127.0.0.1</em>, <em>::1</em>, 1.1.1.1 as a value of
                                     <code>senderIP</code>, they are by default blocked.</li>
