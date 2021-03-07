@@ -9,19 +9,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="A new generation, highly accurate OOPSpam Anti-Spam WordPress plugin to filter Gravity Forms and comment system spam.">
+    content="A new generation, highly accurate OOPSpam Anti-Spam WordPress plugin to filter Ninja Forms and comment system spam.">
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@oopspamapi" />
-  <meta property="og:url" content="https://www.oopspam.com/anti-spam-filter-for-gravity-forms.html" />
-  <meta name="og:title" content="A Better Anti-Spam Filter for Gravity Forms" />
+  <meta property="og:url" content="https://www.oopspam.com/anti-spam-filter-for-Ninja-forms.html" />
+  <meta name="og:title" content="A Better Anti-Spam Filter for Ninja Forms" />
   <meta name="og:description"
-    content="A new generation, highly accurate OOPSpam Anti-Spam WordPress plugin to filter Gravity Forms and comment system spam." />
-  <meta name="og:image" content="https://www.oopspam.com/assets/gf-oopspam-wordpress-plugin.jpg" />
+    content="A new generation, highly accurate OOPSpam Anti-Spam WordPress plugin to filter Ninja Forms and comment system spam." />
+  <meta name="og:image" content="https://www.oopspam.com/assets/nj-oopspam-wordpress-plugin.jpg" />
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link href=’https://fonts.googleapis.com’ rel=’preconnect’ crossorigin="anonymous">
-  <title>A Better Anti-Spam Filter for Gravity Forms</title>
+  <title>A Better Anti-Spam Filter for Ninja Forms</title>
   <!-- Start of Async Drift Code -->
   <script>
     "use strict";
@@ -54,45 +54,8 @@
 </head>
 
 <body>
-  <section class="section" style="padding-bottom:2rem;padding-right: 0;padding-left: 0; background-color:inherit;">
-    <div class="notification is-warning" style="margin-bottom: 0;padding-bottom: 10px;padding-top: 10px;text-align: center;">
-      🔥 New! Direct access to the API instead of RapidAPI? Try <a href="https://app.oopspam.com">OOPSpam Dashboard [beta]</a>.
-    </div>
-    <div class="navbar is-fixed-top">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://www.oopspam.com/">
-            <img src="/assets/oopspamLogo.svg" alt="OOPSpam logo" width="112" height="28">
-          </a>
-          <a id="navbarBurger" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-            data-target="navigation-bar">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <div id="navigation-bar" class="navbar-menu">
-          <div class="navbar-start">
-          </div>
-          <div class="navbar-end">
-            <a href="/docs.html" class="navbar-item has-text-white">
-              Docs
-           </a>
-            <a href="./#pricing" class="navbar-item has-text-white">
-              Pricing
-            </a>
-            <a href="./#faq" class="navbar-item has-text-white">
-              FAQ
-            </a>
-            <a href="/blog" class="navbar-item has-text-white">Blog</a>
-            <a href="./#contact" class="navbar-item has-text-white">
-              Contact
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ {% include "partials/navigation.njk" %}
+
   <!-- The Main (Intro) Section -->
   <section id="main" class="hero">
     <div class="hero-body">
@@ -101,7 +64,7 @@
           <!-- full column -->
           <div class="column is-full has-text-centered">
             <div class="content" style="color:black; font-size:16px;">
-              <h1>Never see spam from your Gravity Forms</h1>
+              <h1>Never see spam from your Ninja Forms</h1>
             </div>
             <div class="columns is-centered is-vcentered">
               <div class="column">
@@ -214,7 +177,7 @@
     <div class="container">
       <div class="columns is-vcentered is-centered">
         <div class="column is-half has-text-centered">
-          <p class="title">Your search for Gravity Forms spam protection is over</p>
+          <p class="title">Your search for Ninja Forms spam protection is over</p>
           <div class="content">
             <div class="columns is-centered is-vcentered">
               <div class="column">
@@ -282,29 +245,8 @@
       </div>
     </div>
   </section>
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <a href="https://twitter.com/oopspamapi">
-          <img src="/assets/twitter-circle.svg" alt="twitter logo">
-        </a>
-        <a href="https://github.com/OOPSpam">
-          <img src="/assets/github-circle.svg" alt="github logo">
-        </a>
-        <a href="https://wordpress.org/plugins/oopspam-anti-spam/">
-          <img src="/assets/wordpress.svg" alt="wordpress logo">
-        </a>
-      </p>
-      <p>
-        <a href="terms&conditions.html">Terms</a> |
-        <a href="privacypolicy.html">Privacy Policy</a>
-      </p>
-      <p>
-        Made with ❤️ in Rome, Italy
-      </p>
-    </div>
-  </footer>
-  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3b790ba0ac554400a51b9371382ef393"}'></script><!-- End Cloudflare Web Analytics -->
+  {% include "partials/footer.njk" %}
+ <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3b790ba0ac554400a51b9371382ef393"}'></script><!-- End Cloudflare Web Analytics -->
   <script async src="/scripts/app.min.js"></script>
 </body>
 
