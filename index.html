@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" />
   <link rel="stylesheet" href="/styles/bulma-pricingtable.min.css" />
   <link rel="stylesheet" href="/styles/main.min.css" />
-  <link rel="stylesheet" href="/styles/pageclip.css" media="screen">
+  <link rel="stylesheet" href="/styles/contact.css">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900&display=swap" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -569,6 +569,43 @@
       </div>
     </div>
   </section>
+    <!-- Contact form -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="columns is-vcentered is-centered">
+        <div class="column is-half ">
+          <h2 class="title has-text-centered">Contact us</h2>
+          <p class="subtitle has-text-centered" style="padding-top:10px;">Got any questions? Don't hesitate to reach out.</p>
+       <div id="contact-container">
+        <form id="contact_form" action="https://send.pageclip.co/6VQOCpPadnwmSw4oqnINMl2QKUEbILRk/contact-form"
+            class="pageclip-form" method="post">
+
+            <div class="name">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="Fred Armisen" name="name" id="name_input" required>
+            </div>
+            <div class="email">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="fred@mail.com" name="email" id="email_input" required>
+            </div>
+
+            <div class="message">
+                <textarea name="message" placeholder="Your Message" id="message_input" cols="30" rows="5"
+                    required></textarea>
+            </div>
+
+            <div class="submit">
+                <button id="form_button" class="pageclip-form__submit button is-warning is-rounded button-has-shadow" type="submit">
+                    <span>Submit</span>
+                </button>
+            </div>
+
+        </form>
+    </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Newsletter subscribtion -->
   <section id="newsletter" class="section">
     <div class="container">
@@ -599,7 +636,6 @@
       </div>
     </div>
   </section>
-
   <footer class="footer">
     <div class="content has-text-centered">
       <p>

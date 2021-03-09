@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-    <!-- <style>
-        .pageclip-form__submit::after {
-  border-color: rgba(0, 255, 0, 0.8);
-  border-left-color: blue;
-}
-    </style> -->
+    <link rel="stylesheet" href="/styles/contact.css">
 </head>
-<body>
-    <form action="https://send.pageclip.co/6VQOCpPadnwmSw4oqnINMl2QKUEbILRk/contact-form" class="pageclip-form" method="post">
-        <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-      
-        <!-- It looks like you are creating a contact form. These email and subject fields are special -->
-        <!-- See https://pageclip.co/docs#special-fields for more info -->
-        <input type="email" name="email" value="roscoe@example.com" />
-        <input type="text" name="subject" value="A contact subject" />
-      
-        <!-- This button will have a loading spinner. Keep the inner span for best results. -->
-        <button type="submit" class="button pageclip-form__submit">
-          <span>Send</span>
-        </button>
-      </form>
 
+<body>
+
+    <div id="container">
+        <form id="contact_form" action="https://send.pageclip.co/6VQOCpPadnwmSw4oqnINMl2QKUEbILRk/contact-form"
+            class="pageclip-form" method="post">
+
+            <div class="name">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="Fred Armisen" name="name" id="name_input" required>
+            </div>
+            <div class="email">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="fred@mail.com" name="email" id="email_input" required>
+            </div>
+
+            <div class="message">
+                <textarea name="message" placeholder="Your Message" id="message_input" cols="30" rows="5"
+                    required></textarea>
+            </div>
+
+            <div class="submit">
+                <button id="form_button" class="pageclip-form__submit" type="submit">
+                    <span>Submit</span>
+                </button>
+            </div>
+
+        </form>
+    </div>
 
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
+
 </html>

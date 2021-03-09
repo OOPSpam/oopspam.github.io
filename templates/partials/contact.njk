@@ -2,26 +2,35 @@
   <section id="contact" class="section">
     <div class="container">
       <div class="columns is-vcentered is-centered">
-        <div class="column is-half has-text-centered">
-          <h2 class="title">Contact us</h2>
-          <p class="content">Got any questions? Don't hesitate to reach out.</p>
-            <form action="https://send.pageclip.co/6VQOCpPadnwmSw4oqnINMl2QKUEbILRk/contact-form" class="pageclip-form" method="post">
+        <div class="column is-half ">
+          <h2 class="title has-text-centered">Contact us</h2>
+          <p class="subtitle has-text-centered" style="padding-top:10px;">Got any questions? Don't hesitate to reach out.</p>
+       <div id="contact-container">
+        <form id="contact_form" action="https://send.pageclip.co/6VQOCpPadnwmSw4oqnINMl2QKUEbILRk/contact-form"
+            class="pageclip-form" method="post">
 
-            <!-- This will be used in the email's reply-to field. Must have name="email" -->
-            <label for="email">Your email</label>
-            <input type="email" name="email" value="your email"/>
+            <div class="name">
+                <label for="name">Full Name</label>
+                <input type="text" placeholder="Fred Armisen" name="name" id="name_input" required>
+            </div>
+            <div class="email">
+                <label for="email">Email Address</label>
+                <input type="email" placeholder="fred@mail.com" name="email" id="email_input" required>
+            </div>
 
-            <!-- This will be used in the email's subject. Must have name="subject" -->
-            <label for="subject">Subject</label>
-            <input type="text" name="subject" value="Subject"/>
+            <div class="message">
+                <textarea name="message" placeholder="Your Message" id="message_input" cols="30" rows="5"
+                    required></textarea>
+            </div>
 
-            <label for="body">Message body</label>
-            <textarea name="body">Message body</textarea>
+            <div class="submit">
+                <button id="form_button" class="pageclip-form__submit button is-warning is-rounded button-has-shadow" type="submit">
+                    <span>Submit</span>
+                </button>
+            </div>
 
-            <button class="pageclip-form__submit" type="button">
-                <span>Submit</span>
-            </button>
-            </form>
+        </form>
+    </div>
         </div>
       </div>
     </div>
