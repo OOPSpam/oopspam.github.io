@@ -2,6 +2,9 @@
   overflow: visible;
 }
 
+/* padding-top: 1em;
+text-align: center; */
+
 
  #contact-container input, #contact-container select, #contact-container textarea {
   color: #5A5A5A;
@@ -38,7 +41,7 @@
 
 #contact-container .email {
 	float: right;
-	width: 45%;
+	/* width: 45%; */
 }
 
 #contact-container input[type='text'], #contact-container [type='email'], #contact-container select, #contact-container textarea {
@@ -77,7 +80,7 @@
 
 #contact-container .name {
 	float: left;
-	width: 45%;
+	/* width: 45%; */
 }
 
 
