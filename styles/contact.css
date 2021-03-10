@@ -2,8 +2,10 @@
   overflow: visible;
 }
 
-/* padding-top: 1em;
-text-align: center; */
+.pageclip-form__success__message {
+padding-top: 1em;
+text-align: center;
+}
 
 
  #contact-container input, #contact-container select, #contact-container textarea {
