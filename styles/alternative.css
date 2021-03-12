@@ -9,6 +9,10 @@ section.section {
     background-color: #f0eeee;
 }
 
+#newsletter {
+    background-color: #fff;
+}
+
 .subtitle {
     line-height: 33px;
 }
