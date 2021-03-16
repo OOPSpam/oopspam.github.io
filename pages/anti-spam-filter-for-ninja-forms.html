@@ -22,35 +22,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link href=’https://fonts.googleapis.com’ rel=’preconnect’ crossorigin="anonymous">
   <title>A Better Anti-Spam Filter for Ninja Forms</title>
-  <!-- Start of Async Drift Code -->
-  <script>
-    "use strict";
-
-    !function () {
-      var t = window.driftt = window.drift = window.driftt || [];
-      if (!t.init) {
-        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-        t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
-          t.factory = function (e) {
-            return function () {
-              var n = Array.prototype.slice.call(arguments);
-              return n.unshift(e), t.push(n), t;
-            };
-          }, t.methods.forEach(function (e) {
-            t[e] = t.factory(e);
-          }), t.load = function (t) {
-            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-            var i = document.getElementsByTagName("script")[0];
-            i.parentNode.insertBefore(o, i);
-          };
-      }
-    }();
-    drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('m57ine8eus26');
-  </script>
-  <!-- End of Async Drift Code -->
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/a077b3ac05bbfee5da816cd2f/495051715f7cd48fb5fdfea48.js");</script>
+  {% include "partials/headScript.njk" %}
 </head>
 
 <body>
