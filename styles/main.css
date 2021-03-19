@@ -82,9 +82,9 @@ iframe {
 .pricing-table .is-active {
   background-color: #ffdd57 !important;
 } 
-.is-active .plan-price-amount {
-  color: inherit !important;
-}
+/* .is-active .plan-price-amount {
+  color: black !important;
+} */
 .pricing-table .is-active .button {
   background-color: initial !important;
   border-color: initial !important;
@@ -215,4 +215,12 @@ iframe {
     -ms-user-select:none; 
     user-select:none;
     -o-user-select:none;
+  }
+
+  .has-text-strike {
+    text-decoration: line-through;
+  }
+
+  .has-warning-boxshadow {
+    box-shadow: 0px 0px 3px 3px #dbb41a;
   }
