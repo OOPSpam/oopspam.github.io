@@ -99,8 +99,8 @@ text-align: center;
 
 
 
-#contact-container #form_button {
-  /* background: none;
+/* #contact-container #form_button {
+   background: none;
   border: solid 2px #474544;
   color: black;
   cursor: pointer;
@@ -108,15 +108,15 @@ text-align: center;
   font-family: 'Helvetica', Arial, sans-serif;
   font-size: 0.875em;
   font-weight: bold;
-  outline: none; */
+  outline: none; 
   padding: 20px 35px;
-  /* text-transform: uppercase;
+  text-transform: uppercase;
   -webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
 	-o-transition: all 0.3s;
-	transition: all 0.3s; */
-}
+	transition: all 0.3s; 
+} */
 
 /* #contact-container #form_button:hover {
   background: #474544;
