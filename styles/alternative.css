@@ -1,3 +1,8 @@
+.bg-wave {
+    background-image: url('/assets/alternative/scene.svg'); 
+    background-size: cover;
+}
+
 table tbody th {
     font-weight: 900;
 }
@@ -5,8 +10,12 @@ table > thead:nth-child(1) > tr:nth-child(1) > th:nth-child(1) {
     font-weight: initial;
 }
 
-section.section {
-    background-color: #f0eeee;
+section.section, #quick-comparison {
+    background-color: #fff;
+}
+
+.alternative .navigation {
+    padding-bottom: 0 !important;
 }
 
 #newsletter {
@@ -17,10 +26,11 @@ section.section {
     line-height: 33px;
 }
 
-.button {
+.alternative .button {
     border-style: solid !important;
     border-width: 1px;
     box-shadow: 2px 5px;
+    border-color: black !important;
 }
 
 h1,h2 {

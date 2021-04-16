@@ -8,13 +8,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="OOPSpam Anti-Spam API is a powerful spam-filter that allows you spam score your content for contact forms, comment systems, etc.">
+    content="Switching from Akismet to OOPSpam - saves you money, gives you high accuracy, and a privacy-friendly spam filter.">
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@oopspamapi" />
     <meta property="og:url" content="https://www.oopspam.com/akismet-alternative.html"/>
-    <meta name="og:title" content="An Akismet alternative OOPSpam Anti-Spam" />
-    <meta name="og:description" content="An Akismet alternative that's accurate, doesn't overflow your database and respects your privacy." />
+    <meta name="og:title" content="A Better Akismet Alternative - OOPSpam" />
+    <meta name="og:description" content="Switching from Akismet to OOPSpam - saves you money, gives you high accuracy, and a privacy-friendly spam filter." />
     <meta name="og:image" content="https://www.oopspam.com/assets/oopspamVSakismet.png" />
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -26,7 +26,7 @@
 <body class="alternative">
  {% include "partials/navigation.njk" %}
   <!-- The Main (Intro) Section -->
-  <section id="main" class="hero">
+  <section id="main" class="hero bg-wave">
     <div class="hero-body">
       <div class="container">
         <div class="columns">
@@ -34,7 +34,7 @@
           <div class="column is-full has-text-centered">
             <div class="content" style="color:black; font-size:16px;">
                 <h1 class="title">Looking for an Akismet alternative?</h1>
-            </h2 class="subtitle">That's accurate, doesn't overflow your database and respects your privacy?</h2>
+            <p class="has-text-weight-light is-size-5 content">Try OOPSpam: <span class="checkmark"></span> high accuracy <span class="checkmark"></span> privacy <span class="checkmark"></span> affordable</p>
             </div>
             <div class="columns is-centered is-vcentered">
               <div class="column">
@@ -42,8 +42,8 @@
                   <div class="column"></div>
                   <div class="column">
                     <a class="button is-medium is-warning is-rounded"
-                      href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/">
-                      Get an API key for free→
+                      href="https://app.oopspam.com/Identity/Account/Register">
+                      Get an API key for free. No CC required →
                     </a>
                    
                   </div>
@@ -70,7 +70,7 @@
     <div class="hero-body">
       <div class="container">
       <div class="content has-text-centered">
-        <h2>Why choose OOPSpam over and Akismet?</h2>
+        <h2>Why choose OOPSpam over Akismet?</h2>
       </div>
       <div class="columns">
         <div class="column"></div>
@@ -105,7 +105,7 @@
               <td>Yes</td>
             </tr>
               <tr>
-                <th>WordPress plugin</th>
+                <th>WordPress plugin <p class="has-text-weight-normal"><small>(comment and contact form filtering)</small></p></th>
                 <td>Yes</td>
                 <td>Yes</td>
               </tr>
@@ -130,12 +130,12 @@
                   <td>No</td>
             </tr>
             <tr>
-              <th>Spam filter by language</th>
+              <th>Spam filtering by language</th>
               <td>Yes</td>
               <td>No</td>
           </tr>
           <tr>
-            <th>Spam filter by country</th>
+            <th>Spam filtering by country</th>
             <td>Yes</td>
             <td>No</td>
         </tr>
@@ -153,19 +153,39 @@
       
     </div>
     </div>
+     <!-- spam-score section -->
+     <section id="spam-score" class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-half">
+            <img src="assets/spamScore.png"  loading="lazy" width="400px" alt="Spam Score response of OOPSpam Anti-Spam">
+        </div>
+          <div class="column is-half">
+              <h2 class="title is-spaced">Take control with Spam Score</h2>
+              <div class="content subtitle">
+                 <p class="is-size-5">Have you had a legitimate content detected as spam by Akismet? </p> 
+                <p>
+                 With OOPSpam, you get an actual Spam Score for the content you send to us. Arrange your spam filtering sensitive level to avoid missed opportunities.
+                </p>
+                 </div>
+        
+        </div>
+        
+        </div>
+    </section>
   </section>
       <!-- detailed-spam-score section -->
       <section id="detailed-spamscore" class="section" >
         <div class="container">
           <div class="columns is-vcentered">
             <div class="column is-half">
-              <h2 class="title is-spaced">Detailed spam report</h2>
+              <h2 class="title is-spaced">Know why it is spam</h2>
               <div class="content subtitle">
-                  Unlike Akismet where the only response you get is Spam or Not Spam, OOPSpam Anti-Spam sends you a detailed report so that you know why you got that Spam Score.              
+                  Akismet lets you know if a message is Spam or Not Spam. OOPSpam sends you a detailed report so that you know why you got that Spam Score. This helps you understand the kind of spam you get and fight them effectively.            
                 </div>
           </div>
             <div class="column is-half">
-              <img src="assets/spamScoreReport.png" width="450px" alt="">
+              <img src="assets/spamScoreReport.png" loading="lazy" width="400px" alt="OOPSpam Spam Score example">
             </div>
            
           </div>
@@ -175,55 +195,38 @@
    <section id="unlimited-websites" class="section">
     <div class="container">
       <div class="columns is-vcentered">
-        <div class="column is-half">
-          <img src="assets/unlimitedWebsites.png" alt="Infinite loop in Java">
+        <div class="column is-half has-text-centered">
+          <img src="assets/THREE.png" loading="lazy" alt="three diamonds">
         </div>
         <div class="column is-half">
-            <h2 class="title is-spaced">Unlimited websites for $19/mo</h2>
+            <h2 class="title is-spaced">Get more for less</h2>
             <div class="content subtitle">
-                Start with $19 instead of $50 per month. Use the <abbr title="Application programming interface">API</abbr> on unlimited websites. We don't charge per site usage no matter you are a business or a freelancer with multiple websites.</div>
+                Start with $19 instead of $50 per month. Use your API key on unlimited websites. We don't charge per site usage no matter you are a business or a freelancer with multiple websites.</div>
         </div>
       </div>
       </div>
   </section>
-     <!-- spam-score section -->
-     <section id="spam-score" class="section">
-      <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column is-half">
-              <h2 class="title is-spaced">Take control with Spam Score</h2>
-              <div class="content subtitle">
-                 <p class="is-size-5">Have you had a legitimate content detected as spam by Akismet? </p> 
-                <p>
-                 With us, you get an actual Spam Score for the content you send to us. Arrange your sensitive level and avoid misdetection.
-                </p>
-                 </div>
-        
-        </div>
-        <div class="column is-half">
-            <img src="assets/spamScore.png"  width="450px" alt="Spam Score response of OOPSpam Anti-Spam">
-        </div>
-        </div>
-    </section>
+    
       <!-- wordpress section -->
       <section id="wordpress" class="section">
         <div class="container">
           <div class="columns is-vcentered">
             <div class="column is-half">
-              <img src="assets/WordPress.png"  alt="A word WordPress">
-          </div>
+              <h2 class="title is-spaced">WordPress plugin</h2>
+              <div class="content subtitle">
+                 <p class="is-size-5">Moving from Akismet WordPress plugin? </p> 
+                <p>
+                  We got you covered. Try <a href="https://wordpress.org/plugins/oopspam-anti-spam/">OOPSpam WordPress plugin</a>.
+                  No more overflowing your database with logs. We don't keep any logs neither in your database nor ours. A minimal configuration plugin brings OOPSpam Anti-Spam <abbr title="Application programming interface">API</abbr>'s high accuracy to the WordPress platform.
+                  </a>.
+                </p>
+                 </div>
+        
+        </div>
             <div class="column is-half">
-                <h2 class="title is-spaced">We also have a WordPress plugin</h2>
-                <div class="content subtitle">
-                   <p class="is-size-5">Moving from Akismet WordPress plugin? </p> 
-                  <p>
-                    We got you covered. We do <a href="https://wordpress.org/plugins/oopspam-anti-spam/">have a WordPress plugin</a>.
-                    No more overflowing your database with logs. We don't keep any logs neither in your database nor ours. A minimal configuration plugin brings OOPSpam Anti-Spam <abbr title="Application programming interface">API</abbr>'s accuracy to the WordPress platform.
-                    </a>.
-                  </p>
-                   </div>
-          
+              <img loading="lazy" src="assets/alternative/oopspam-wordpress.png"   alt="OOPSpam WordPress Plugin screenshot">
           </div>
+       
          
           </div>
       </section>
@@ -232,15 +235,18 @@
   <section id="privacy" class="section">
     <div class="container">
       <div class="columns is-vcentered">
-        <div class="column is-half">
-            <h2 class="title is-spaced">Privacy-friendly anti-spam <abbr title="Application programming interface">API</abbr></h2>
-            <div class="content subtitle">
-                Unlike Akismet, OOPSpam Anti-Spam asks only for minimal data. No need to send us your server details. We don't even know where you are using our API.
-            </div>
+        
+        <div class="column is-half ">
+            <img loading="lazy" src="assets/alternative/privacy.png" width="400px" alt="lock icon">
         </div>
+
         <div class="column is-half">
-            <img src="assets/request.png" alt="OOPSpam Anti-Spam API request example in JSON">
-        </div>
+          <h2 class="title is-spaced">Privacy-friendly spam filtering <abbr title="Application programming interface">API</abbr></h2>
+          <div class="content subtitle">
+            We are GDPR-compliant. That means you are too. We respect your and your website visitors' privacy. 
+We don't keep logs by default. OOPSpam Anti-Spam asks only for minimal data while providing high accuracy. 
+          </div>
+      </div>
       </div>
       </div>
   </section>
@@ -250,64 +256,51 @@
       <div class="container">
         <div class="columns is-vcentered">
           <div class="column is-half">
-            <img src="assets/emailUs.png" alt="">
+            <h2 class="title is-spaced">24/7 customer support</h2>
+            <div class="content subtitle">
+              <p>
+                We reply fast. <a href="https://oopspam.com/#contact">Contact us</a> for any questions or concerns.
+              </p>
+               </div>
+        </div>
+          <div class="column is-half has-text-centered">
+            <img src="assets/alternative/two-people.png" loading="lazy" alt="two people" width="450px;">
           </div>
-          <div class="column is-half">
-              <h2 class="title is-spaced">24/7 customer support</h2>
-              <div class="content subtitle">
-                <p>
-                  We reply fast. <a href="mailto:contact@oopspam.com">Email us</a> for any questions or concerns.
-                </p>
-                 </div>
-          </div>
+         
         </div>
         </div>
     </section>
      <!-- get started -->
-  <section id="get-started" class="section has-background-grey-lighter">
+  <section id="get-started" class="section has-background-white-ter">
       <div class="container">
-        <div class="columns is-vcentered is-centered">
-          <div class="column is-half has-text-centered">
-            <p class="title">Your search for an Akismet alternative is over</p>
-            <div class="content">
+        <div class="columns is-centered is-vcentered">
+          <div class="column">
+            <p class="title has-text-centered" style="padding-bottom: 0.7em;">Your search for an Akismet alternative is over</p>
+            <div class="columns">
+              <div class="column"></div>
+              <div class="column">
                 <a class="button is-medium is-warning is-rounded"
-                  href="https://rapidapi.com/oopspam/api/oopspam-spam-filter/">
-                  Get started for free
+                  href="https://app.oopspam.com/Identity/Account/Register">
+                  Get an API key for free. No CC required →
                 </a>
+               
               </div>
+             <div class="column">
+                <a class="button is-medium is-warning is-rounded"
+                href="https://wordpress.org/plugins/oopspam-anti-spam/">
+                Get OOPSpam Anti-Spam WordPress plugin→
+              </a>
+              
+             </div>
+             <div class="column"></div>
+            </div>
+           
           </div>
+          
         </div>
       </div>
     </section>
-  <!-- Newsletter subscribtion -->
-  <section id="newsletter" class="section">
-    <div class="container">
-      <div class="columns is-vcentered is-centered">
-        <div class="column is-half has-text-centered">
-          <p class="title">Stay in the loop!</p>
-          <form
-            action="https://oopspam.us12.list-manage.com/subscribe/post?u=a077b3ac05bbfee5da816cd2f&amp;id=e0a1de4cff"
-            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-            target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll" class="field is-grouped">
-              <div class="control is-expanded">
-                <input type="email" value="" name="EMAIL" class="email input is-rounded" id="mce-EMAIL"
-                  placeholder="email address" required>
-              </div>
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_a077b3ac05bbfee5da816cd2f_e0a1de4cff" tabindex="-1" value="">
-              </div>
-              <div class="control">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                  class="button is-warning is-rounded">
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+  {% include "partials/newsletter.njk" %}
   {% include "partials/footer.njk" %}
   <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3b790ba0ac554400a51b9371382ef393"}'></script><!-- End Cloudflare Web Analytics -->
   <script async src="/scripts/app.min.js"></script>
