@@ -5,6 +5,7 @@
     let planIntervalMonthly = document.querySelector('.plan-interval .monthly');
     let planIntervalYearly = document.querySelector('.plan-interval .yearly');
 
+    if (planIntervalMonthly != null & planIntervalYearly != null) {
     planIntervalMonthly.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -20,6 +21,7 @@
       planIntervalMonthly.classList.remove("is-warning", "is-selected");
       updatePricing("year");
     });
+  }
 
 
 
