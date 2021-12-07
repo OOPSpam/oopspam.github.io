@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="/styles/bulma-pricingtable.min.css" />
   <link rel="stylesheet" href="/styles/main.min.css" />
   <link rel="stylesheet" href="/styles/contact.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet"> 
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
@@ -28,7 +30,7 @@
     <div class="notification is-warning is-hidden" style="margin-bottom: 0;padding-bottom: 10px;text-align: center;">
 
     </div>
-    <div class="navbar is-fixed-top">
+    <div class="navbar is-fixed-top is-transparent">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
@@ -45,22 +47,24 @@
           <div class="navbar-start">
           </div>
           <div class="navbar-end">
-            <a href="/docs" class="navbar-item has-text-white">
+            <a href="/docs" class="navbar-item  has-text-black">
               Docs
            </a>
-            <a href="./#pricing" class="navbar-item has-text-white">
+            <a href="./#pricing" class="navbar-item  has-text-black">
               Pricing
             </a>
-            <a href="./#faq" class="navbar-item has-text-white">
-              FAQ
-            </a>
-            <a href="/blog" class="navbar-item has-text-white">Blog</a>
-            <a href="./#contact" class="navbar-item has-text-white">
-              ✉️ Contact
+            
+            <a href="/blog" class="navbar-item  has-text-black">Blog</a>
+            <a href="./#contact" class="navbar-item has-text-black">
+              Contact
             </a>
             <div class="navbar-item">
-            <a href="https://app.oopspam.com/Identity/Account/Register" class="button is-warning is-outlined">
-              Sign Up
+               <a href="https://app.oopspam.com/Identity/Account/Login" class="has-text-black button is-warning is-outlined">
+              Log in
+            </a>
+            <div class="navbar-item">
+             <a href="https://app.oopspam.com/Identity/Account/Register" class="has-text-black button is-warning is-bg-orange">
+              Get started
             </a>
             </div>
           </div>
@@ -76,19 +80,19 @@
           <!-- Left-side column -->
           <div class="column is-5 has-text-left">
             <div class="content">
-              <h1 class="title">
-                Tired of <br /> getting
-                <!-- <span class="shadow is-success has-text-weight-bold"> -->
-                  spam messages?
-                <!-- </span> -->
+              <h1 class="is-size-2" style="font-family: 'Playfair Display',serif;">
+                Automate & Scale Your
+                <span class="shadow is-success has-text-weight-bold">
+                  Spam Protection
+                </span>
               </h1>
             </div>
             <h2 class="subtitle">
-              OOPSpam API stops bots and manual spam from reaching you or your customer with high accuracy and privacy.
+              OOPSpam API stops bots and manual spam from reaching your customers with high accuracy and privacy.
             </h2>
             <div class="columns is-centered is-vcentered">
               <div class="column">
-                <a style="font-family: 'Playfair Display',serif;" class="button-has-shadow button is-medium is-warning is-rounded"
+                <a class="button-has-shadow button is-medium is-warning is-rounded is-bg-orange"
                   href="https://app.oopspam.com/Identity/Account/Register">
                   Try OOPSpam for free →
                 </a>
@@ -102,7 +106,7 @@
           </div>
           <!-- Right-side Illustration -->
           <div class="column">
-            <img loading="lazy" src="/assets/request_response.png" alt="OOPSpam API request & response example" width="800">
+            <img loading="lazy" src="/assets/Oopspam-request-response.png" alt="OOPSpam API request & response example" width="650">
           </div>
         </div>
       </div>
@@ -111,61 +115,113 @@
     <!-- Use Cases -->
   <section id="use-cases" class="section">
     <div class="container">
-      <h2 class="title has-text-centered">Endless Use Cases</h2>
+      <h2 class="title has-text-centered has-text-black pt-3 pb-3">Endless Use Cases</h2>
       <div class="columns">
-        <div class="column is-4">
+        <div class="column is-3 is-flex is-flex-direction-column">
           <div class="content is-vcentered has-text-centered fixed-dimension">
-            <img loading="lazy" src="/assets/form.png" width="90" alt="">
-            <p class="desc is-size-5">Contact Form</p>
-            <p>Never see spam from your contact form</p>
+            <img loading="lazy" src="/assets/Icon_ContactForm.png" width="60" alt="">
+            <p class="desc is-size-5 has-text-black">Contact Form</p>
+            <p class="mt-auto">Never see spam from your contact form</p>
           </div>
         </div>
-        <div class="column is-4">
+        <div class="column is-3 is-flex is-flex-direction-column">
           <div class="content is-vcentered has-text-centered fixed-dimension">
-            <img loading="lazy" src="/assets/comment-1.png" width="90" alt="">
-            <p class="desc is-size-5">Comment System</p>
-            <p>
+            <img loading="lazy" src="/assets/Icon_Messaging.png" width="90" alt="">
+            <p class="desc is-size-5 has-text-black">Comments & Reviews</p>
+            <p class="mt-auto">
               Have a spam-free discussion with your visitors
             </p>
           </div>
         </div>
-        <div class="column is-4">
+        <div class="column is-3 is-flex is-flex-direction-column">
           <div class="content is-vcentered has-text-centered fixed-dimension">
-            <img loading="lazy" src="/assets/conversation.png" width="90" alt="">
-            <p class="desc is-size-5">Private & Live Chats</p>
-            <p>
+            <img loading="lazy" src="/assets/Icon_ChatSystem.png" width="90" alt="">
+            <p class="desc is-size-5 has-text-black">Private & Live Chats</p>
+            <p class="mt-auto">
               Prevent bots or humans from spamming your customers
             </p>
           </div>
         </div>
-      </div>
-      <div class="columns">
-        <div class="column"></div>
-        <div class="column is-two-thirds">
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img class="is-rounded" src="/assets/Peter.jpg" alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <span>Peter Bethke</span> <strong>@ Cellainc.com</strong>
-                    <br>
-                    After looking at several APIs for spam detection, we decided on OOPSpam and have not regretted that decision. The API is well documented, fast, and the developer has been very responsive and proactive. <strong>Highly recommended</strong>.
-                    </p>
-                </div>
-              </div>
-            </article>
+        <div class="column is-3 is-flex is-flex-direction-column">
+          <div class="content is-vcentered has-text-centered fixed-dimension">
+            <img loading="lazy" src="/assets/Icon_Email.png" width="90" alt="">
+            <p class="desc is-size-5 has-text-black">Email</p>
+            <p class="mt-auto">
+              Scan email content for spam and phishing
+            </p>
           </div>
         </div>
-        <div class="column"></div>
       </div>
   </section>
+
+    <!-- New testiomanl -->
+<section class="hero">
+  <div class=" hero-body">
+    <h2 class="title has-text-centered has-text-black pt-3 pb-3">What People Are Saying</h2>
+    <div class="columns">
+      <div class="column">
+        <div class="box ">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <img class="is-rounded" src="/assets/Peter.jpg" alt="" style=" filter: grayscale(100%);">
+              </figure>
+            </div>
+            <div class="media-content">
+              <div class="content">
+                  <small class="is-orange-underline has-text-weight-bold">Peter Bethke | Web agency</small>
+                  <p class="is-size-5 pt-3">
+                  After looking at several APIs for spam detection, we decided on OOPSpam and have not regretted that decision. <strong>The API is well documented, fast, and the developer has been very responsive and proactive</strong>. Highly recommended.
+                  </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <img loading="lazy" class="is-rounded" src="/assets/Rebecca.png" alt="" style=" filter: grayscale(100%);">
+              </figure>
+            </div>
+            <div class="media-content">
+              <div class="content">
+                  <small class="is-orange-underline has-text-weight-bold">Rebecca Shiles | E-commerce</small> 
+                  <p class="is-size-5 pt-3">
+                    <strong>It is powerful but also endlessly customizable</strong> and the few questions we had were answered promptly and the support staff went above and beyond to help us with the integration.
+                  </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <img class="is-rounded" src="/assets/Vu.png" alt="Image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <div class="content">
+                  <small class="is-orange-underline has-text-weight-bold">Vu Nguyen - Web agency</small>
+                  <p class="is-size-5 pt-3">
+                  <strong>OOPSpam helped us (and our clients) to flag many spam messages correctly.</strong> The support is very responsive to our requests and feedback. We strongly recommend OOPSpam for anyone who values their time and resources.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- Request & Response -->
-  <section id="request" class="section is-mobile" >
+  <section id="request" class="section is-mobile my-5" >
     <div class="container">
       <div class="columns is-vcentered is-centered is-8 is-variable">
         <div class="column has-text-centered">
@@ -173,7 +229,7 @@
             width="450">
         </div>
         <div class="column">
-          <h2 class="title content">Remove noise and focus on </br> what matters</h2>
+          <h2 class="title content has-text-black">Remove noise and focus on </br> what matters</h2>
           <div class="columns is-multiline is-1 is-variable is-mobile" style="text-align: left;">
             <div class="column is-full is-inline-flex flex-alignitems-center">
               <img loading="lazy" src="assets/aim.png" width="40px" alt="" class="has-margin-right" />
@@ -202,29 +258,45 @@
           </div>
         </div>
       </div>
-      <div class="columns">
-        <div class="column is-full">
-          <p class="has-text-centered">
-            <a class="button is-medium is-warning is-rounded button-has-shadow"
-              href="https://app.oopspam.com/#test-with-your-data">
-              Test with your data now →
-            </a>
+    </div>
+  </section>
+  <section id="testyourdata" class="section is-mobile my-5" >
+    <div class="container">
+      <div class="columns is-vcentered is-centered is-8 is-variable">
+        <div class="column">
+          <h2 class="title content has-text-black">Save time before integrating OOPSpam API. <br> Paste and see the result.</h2>
+          <div class="columns is-multiline is-1 is-variable is-mobile" style="text-align: left;">
+            <div class="column is-full is-inline-flex flex-alignitems-center">
+              <div class="content is-size-5">
+                Use our dashboard to test with your data before going through API integration. Simply paste your data and see how it works for you.
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-full">
+              <p class="has-text-left pt-5">
+                <a class="button is-medium is-warning is-rounded button-has-shadow is-bg-orange"
+                  href="https://app.oopspam.com/#test-with-your-data">
+                  Test your data now →
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column has-text-centered">
+          <img loading="lazy" src="/assets/TestGraphic.png" alt="OOPSpam Dashboard - Test with your data" width="450">
         </div>
       </div>
+      
     </div>
   </section>
   <section id="customers" class="section has-background-black">
     <div class="container">
-      <h2 class="title is-size-3 has-text-centered has-text-white">OOPSpam is helping to keep hundreds of businesses spam-free every day.</h2>
+      <h2 class="title is-size-3 has-text-centered has-text-white pb-6">OOPSpam is helping to keep hundreds of businesses spam-free every day</h2>
       <div class="columns">
         <div class="column is-full">
           <div class="content is-flex-desktop is-justify-content-center is-align-content-center  has-text-centered is-hidden-touch">
-              <img class="p-3" src="/assets/cs/cos.png" loading="lazy" alt="">
-              <img class="p-3" src="/assets/cs/me.png" loading="lazy" alt="">
-              <img class="p-3" src="/assets/cs/moreapp.png" loading="lazy" alt="">
-              <img class="p-3" src="/assets/cs/newmediaretailer.png" loading="lazy" alt="">
-              <img class="p-3" src="/assets/cs/project-trillio.png" loading="lazy" alt="">
-              <img class="p-3" src="/assets/cs/bigbear.png" loading="lazy" alt="">
+              <img class="p-3" src="/assets/cs/AllTogether.png" loading="lazy" alt="OOPSpam customers logo">
           </div>
           <div class="content is-flex-desktop is-justify-content-center is-align-content-center is-hidden-desktop">
             <img src="/assets/cs/mobile-view.png" loading="lazy" alt="">
@@ -236,17 +308,18 @@
 
  
   <!-- Measurements -->
-  <section id="measurements" class="section">
+  <section id="measurements" class="section my-5">
     <div class="container">
       <div class="columns is-vcentered is-centered">
         <div class="column">
-          <h2 class="content title">
-             A single <span class="shadow is-success">spam detection API</span> with powerful analyses.
+          <h2 class="content title has-text-black">
+             <!-- A single <span class="shadow is-success">spam detection API</span> with powerful analyses -->
+             A simple API with powerful analysis to <span class="shadow is-success">automate your spam detection</span>.
           </h2>
           <p class="is-size-5 feature"><span class="checkmark"></span>Spam score</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Machine Learning models</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Multiple blocklisted IPs lists</p>
-          <p class="is-size-5 feature"><span class="checkmark"></span>Language outlier detection algorithm</p>
+          <p class="is-size-5 feature"><span class="checkmark"></span>Language detection</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Advanced content analysis</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Spam word pattern detection</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Country Restrictions</p>
@@ -265,19 +338,19 @@
    <!-- Platforms -->
    <section id="platforms" class="section">
     <div class="container">
-      <h2 class="title has-text-centered">Built for developers. Trusted by businesses.</h2>
+      <h2 class="title has-text-centered has-text-black pt-3 pb-3">Built for developers. Trusted by businesses.</h2>
       <div class="columns">
         <div class="column is-3">
           <div class="content is-vcentered has-text-centered fixed-dimension">
-            <img loading="lazy" src="/assets/icons8-ok-100.png" width="90" alt="">
-            <p class="desc is-size-5">99.999% API Success Rate</p>
+            <img loading="lazy" src="/assets/icons/Icon_1.png" width="90" alt="">
+            <p class="desc is-size-5 has-text-black">99.999% API Success Rate</p>
             <p>All errors are reported by an error tracking system and fixed promptly.</p>
           </div>
         </div>
         <div class="column is-3">
           <div class="content is-vcentered has-text-centered fixed-dimension">
-            <img loading="lazy" src="/assets/icons8-privacy-100.png" width="90" alt="">
-            <p class="desc is-size-5">Privacy-friendly</p>
+            <img loading="lazy" src="/assets/icons/Icon_2.png" width="90" alt="">
+            <p class="desc is-size-5 has-text-black">Privacy-friendly</p>
             <p>
               No data stored, no user exploited. OOPSpam is GDPR compliant.
             </p>
@@ -286,84 +359,39 @@
    
         <div class="column is-3">
           <div class="content is-vcentered has-text-centered fixed-dimension">
-            <img loading="lazy"src="/assets/icons8-infinity-100.png" width="90" alt="">
-            <p class="desc is-size-5">Unlimited Websites</p>
+            <img loading="lazy"src="/assets/icons/Icon_3.png" width="90" alt="">
+            <p class="desc is-size-5 has-text-black">Unlimited Websites</p>
             <p>Every plan comes with unlimited integration. Use on as many websites as you want.</p>
           </div>
         </div>
         <div class="column is-3">
           <div class="content is-vcentered has-text-centered fixed-dimension">
-            <img loading="lazy" src="/assets/24support.png" width="90" alt="">
-            <p class="desc is-size-5">24/7 support</p>
+            <img loading="lazy" src="/assets/icons/Icon_4.png" width="90" alt="">
+            <p class="desc is-size-5 has-text-black">24/7 support</p>
             <p>Get help whenever you need it from our always-on team.</p>
           </div>
         </div>
       </div>
-      <div class="columns">
-        <div class="column"></div>
-        <div class="column is-two-thirds">
-          <div class="box">
-            <article class="media">
-              <div class="media-left">
-                <figure class="image is-64x64">
-                  <img loading="lazy" class="is-rounded" src="/assets/Rebecca.png" alt="Image">
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <span>Rebecca Shiles</span> <strong>@ The Kelly Companies</strong>
-                    <br>
-                    When we were looking for a spam detection solution, we really struggled to find something that would integrate seamlessly with our proprietary e-commerce system. We were delighted to find OOPSpam and found its documentation, technical support, and pricing to be an excellent fit. It is <strong>powerful</strong> but also <strong>endlessly customizable</strong> and the few questions we had were answered promptly and the <strong>support staff went above and beyond to help us with the integration</strong>.
-                    </p>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="column"></div>
-      </div>
-      <div class="columns">
+      <div class="columns pt-3">
         <div class="column is-full">
           <p class="has-text-centered">
-            <a class="button is-medium is-warning is-rounded button-has-shadow"
+            <a class="button is-medium is-warning is-rounded button-has-shadow is-bg-orange"
               href="https://oopspam.com/docs">
               Visit documentation →
             </a>
         </div>
       </div>
   </section>
-      <!-- App integrations -->
-      <section id="app-integration" class="section is-mobile p-0 my-6" >
-        <img loading="lazy" class="is-fullwidth" src="/assets/op-app-integration.png" alt="OOPSpam and integrated apps logo" />
-      </section>
-      <section id="app-intro" class="section is-mobile " >
-       <div class="container">
-          <div class="columns">
-            <div class="column is-full has-text-centered">
-              <h2 class="title has-text-centered ">Drag & drop OOPSpam to your favorite apps and services</h2>
-              <div class="content">
-                <p class="subtitle">Are you getting spam from your automated workflows? Stop spam content by dragging and dropping our spam filter app to your flow with ease. No code required. </p>
-                <a class="button is-medium is-warning is-rounded button-has-shadow is-size-7-mobile"
-                  href="https://www.integromat.com/en/integrations/oopspam-anti-spam">
-                  Connect OOPSpam to 650+ apps with Integromat
-                </a>
-              </div>
-                
-            </div>
-          </div>
-        </div>
-      </section>
-  <!-- Pricing -->
-  <section id="pricing" class="section">
+   <!-- Pricing -->
+   <section id="pricing" class="section">
     <div class="container">
       <div class="columns">
         <div class="column is-full">
-          <h2 class="title has-text-centered">Simple, transparent pricing.</h2>
+          <h2 class="title has-text-centered has-text-black">Simple, transparent pricing.</h2>
           <h3 class="subtitle has-text-centered" style="padding:0.7em;">Start with free 40 spam checks — no credit card required</h3>
           <div class="buttons has-addons is-centered plan-interval">
             <span class="button monthly">Monthly</span>
-            <span class="button is-warning is-selected yearly">Yearly / 2 months FREE</span>
+            <span class="button is-warning is-selected yearly is-bg-orange">Yearly / 2 months FREE</span>
           </div>
           <div class="pricing-table">
             <div class="pricing-plan">
@@ -390,7 +418,7 @@
                 <div class="plan-item">E-mail Support</div>
               </div>
               <div class="plan-footer">
-                <a class="button is-medium is-warning button-has-shadow"
+                <a class="button is-medium is-warning button-has-shadow is-bg-orange"
                 href="https://app.oopspam.com/Identity/Account/Register">
                 Start & test for free
                 </a>
@@ -399,7 +427,7 @@
           
             <div class="pricing-plan has-warning-boxshadow">
               <div class="plan-header">Agency</div>
-              <small style="text-align: center; font-size:10px; background-color: #fadc56; font-weight: bold;">MOST POPULAR</small>
+              <small class="is-bg-orange" style="text-align: center; font-size:10px; font-weight: bold;">MOST POPULAR</small>
               <div class="columns is-flex is-centered">
                 <figure class="image is-128x128 is-inline-block ">
                   <img loading="lazy" class="is-rounded" src="/assets/TWO.png" alt="Image">
@@ -422,7 +450,7 @@
                 <div class="plan-item">Priority E-mail Support</div>
               </div>
               <div class="plan-footer">
-                <a class="button is-medium is-warning button-has-shadow"
+                <a class="button is-medium is-warning button-has-shadow is-bg-orange"
                 href="https://app.oopspam.com/Identity/Account/Register">
                 Start & test for free
                 </a>
@@ -453,7 +481,7 @@
                 <div class="plan-item">Priority E-mail & Call Support</div>
               </div>
               <div class="plan-footer">
-                <a class="button is-medium is-warning button-has-shadow"
+                <a class="button is-medium is-warning button-has-shadow is-bg-orange"
                 href="https://app.oopspam.com/Identity/Account/Register">
                 Start & test for free
                 </a>
@@ -467,8 +495,8 @@
                 <img loading="lazy" class="is-rounded" src="/assets/ENT.png" alt="Image">
               </figure>
               </div>
-              <div class="plan-price"><span class="plan-price-amount">
-<a class="button is-small is-warning button-has-shadow" href="./#contact">
+              <div class="plan-price"><span class="plan-price-amount is-bg-orange">
+<a class="button is-small is-warning button-has-shadow is-bg-orange" href="./#contact">
                 Contact sales
                 </a>
 
@@ -488,41 +516,16 @@
           </div>
           </div>
         </div>
-        <div class="columns" style="padding:0.7em;">
-          <div class="column"></div>
-          <div class="column is-two-thirds">
-            <div class="box">
-              <article class="media">
-                <div class="media-left">
-                  <figure class="image is-64x64">
-                    <img class="is-rounded" src="/assets/Vu.png" alt="Image">
-                  </figure>
-                </div>
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <span>Vu Nguyen</span> <strong>@ Nilead.com</strong>
-                      <br>
-                      We tried various methods including but not limited to Captcha, Honeypot, ... but there were still a number of spam messages that got passed our system. We found OOPSpam and started using it from the early day, and has helped us (and our clients) to flag many spam messages correctly. The support is very responsive to our requests and feedback. <strong>We strongly recommend OOPSpam for anyone who values their time and resources</strong>.
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="column"></div>
-        </div>
       </div>
     </div>
   </section>
- 
   <!-- FAQ -->
   <section id="faq" class="section">
     <div class="container">
       <div class="columns">
         <div class="column is-10 is-offset-2">
           <div class="content has-text-left subtitle">
-            <h2 class="title ">Frequently Asked <span class="shadow is-success">Questions</span> (FAQ)</h2>
+            <h2 class="title has-text-black">Frequently Asked <span class="shadow is-success">Questions</span> (FAQ)</h2>
             <details>
               <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
                 class="has-text-weight-bold not-selectable">How does OOPSpam API work?</summary>
@@ -635,7 +638,7 @@
     <div class="container">
       <div class="columns is-vcentered is-centered">
         <div class="column is-half has-text-centered">
-          <p class="title">Join a new age of spam prevention</p>
+          <p class="title has-text-black">Join a new age of spam prevention</p>
           <div class="content">
               <a class="button is-medium is-default is-rounded button-has-shadow is-size-6-mobile"
                 href="https://app.oopspam.com/Identity/Account/Register">
@@ -651,7 +654,7 @@
     <div class="container">
       <div class="columns is-vcentered is-centered">
         <div class="column is-half ">
-          <h2 class="title has-text-centered">Contact us</h2>
+          <h2 class="title has-text-centered has-text-black">Contact us</h2>
           <p class="subtitle has-text-centered" style="padding-top:10px;">Got any questions? Don't hesitate to reach out.</p>
           <div class="content has-text-centered">
           <a href="mailto:contact@oopspam.com">contact@oopspam.com</a>
@@ -681,7 +684,7 @@
             </div>
 
             <div class="submit">
-                <button id="form_button" class="pageclip-form__submit button is-warning is-rounded button-has-shadow" type="submit">
+                <button id="form_button" class="is-bg-orange pageclip-form__submit button is-warning is-rounded button-has-shadow" type="submit">
                     <span>Submit</span>
                 </button>
             </div>
@@ -745,8 +748,8 @@
       <input type="hidden"
              name="successRedirectUrl"
       >
-      <button type="submit" class="is-flex button is-warning is-rounded button-has-shadow"
-              style="border-style: none !important; border-radius: 290486px !important;background-color: rgb(255, 221, 87); color: rgb(0, 0, 0); font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif;"
+      <button type="submit" class="has-text-weight-normal is-flex button is-warning is-rounded button-has-shadow is-bg-orange"
+              style="border-style: none !important; border-radius: 290486px !important; "
       >
         Subscribe
       </button>
