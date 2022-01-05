@@ -10,14 +10,14 @@
       e.preventDefault();
       e.stopPropagation();
       planIntervalMonthly.classList.toggle("is-warning", "is-selected");
-      planIntervalYearly.classList.remove("is-warning", "is-selected");
+      planIntervalYearly.classList.remove("is-warning", "is-selected", "is-bg-orange");
       updatePricing("month");
     });
 
     planIntervalYearly.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      planIntervalYearly.classList.toggle("is-warning", "is-selected");
+      planIntervalYearly.classList.toggle("is-warning", "is-selected", "is-bg-orange");
       planIntervalMonthly.classList.remove("is-warning", "is-selected");
       updatePricing("year");
     });

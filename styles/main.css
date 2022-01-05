@@ -235,7 +235,8 @@ iframe {
   }
 
   #navbarBurger {
-    color:white;
+    color: black;
+    background-color: #ffdd57;
   }
 
   .not-selectable {
