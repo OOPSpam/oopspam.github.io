@@ -82,14 +82,7 @@ h1.title,h2.is-big-title {
 #request .title {
   margin-bottom: 2rem;
 }
-/* #measurements {
-  padding-bottom: 5rem;
-  padding-top: 5rem;
-}
-*/
-#request {
-  padding-bottom: 1rem;
-} 
+
 .plan-price-currency {
   vertical-align: text-top !important;
 }
