@@ -23,54 +23,107 @@
 </head>
 
 <body>
+<div class="app-container">
 {% include "partials/navigation.njk" %}
-<!-- is-hidden -->
+
+<main class="app-content">
+  <!-- is-hidden -->
 <section id="notify ">
 <div class="notification  is-hidden" style="text-align: center; background-color: #fcdc56;">
   </div>
 </section>
+
   <!-- The Main Section -->
-  <section id="main" class="hero">
-    <div class="hero-body">
-      <div class="container has-text-centered">
+  <section id="main" class=" is-hero" style="background-color: #FBFBED;">
+    <!-- <div class="hero-body"> -->
+      <div class="container has-text-centered is-fluid px-0">
         <div class="columns is-vcentered">
           <!-- Left-side column -->
-          <div class="column is-5 has-text-left">
-            <div class="content">
-              <h1 class="is-size-2" style="font-family: 'Playfair Display',serif;">
-                Automate & Scale Your
-                <span class="shadow is-success has-text-weight-bold">
-                  Spam Protection
+          <div class="column is-5 has-text-left is-5-fullhd is-offset-1-fullhd p-6">
+            <!-- <div class="content"> -->
+              <div class="content is-flex is-flex-direction-column mb-0">
+                <h2 class="has-text-black is-flex is-flex-direction-row  is-flex-wrap-nowrap is-size-4  has-text-weight-bold mb-0" 
+                style="font-family: 'Playfair Display',serif;">
+                   
+ <span class="shadow is-success  is-size-4">                    
+  Your 
+                   <!-- </span> -->
+                  <!-- <span class="shadow is-success  is-size-4"> -->
+                   Privacy
+                  <!-- </span> -->
+                   & 
+                  <!-- <span class="shadow is-success  is-size-3"> -->
+                     Accessibility-Friendly
+                  </span>
+                  
+                  <!-- <span class=" is-size-3"> -->
+                      
+                  <!-- </span>  -->
+                </h2>
+                <h1 class="has-text-black title has-text-weight-bold mt-0" style="font-family: 'Playfair Display',serif;">
+                  Anti-Spam Solution.
+                </h1>
+              </div>
+              <!-- <h1 class="is-size-1 has-text-weight-bold" style="font-family: 'Playfair Display',serif;"> -->
+                <!-- <span class=" is-size-3">
+                  Your
+                </span> 
+                <span class="shadow is-success  is-size-3">
+                  Privacy
                 </span>
-              </h1>
-            </div>
+                  
+                 <span class=" is-size-3">
+                  &
+                </span> 
+                 <span class="shadow is-success  is-size-3">
+                  Accessibility
+                </span>
+                
+                <span class=" is-size-3">
+                  -Friendly 
+                </span> 
+                <br> -->
+                  
+                <!-- Anti-Spam Solution.
+                
+              </h1>  -->
+            <!-- </div> -->
             <h2 class="subtitle">
-              OOPSpam API stops bots and manual spam from reaching your customers with high accuracy and privacy.
+              The most robust spam protection utilizing AI and a cocktail of unique measurements to safeguard your customers.
             </h2>
-            <div class="columns is-centered is-vcentered mt-6">
-              <div class="column">
-                <a class="button-has-shadow button is-medium is-warning is-rounded is-bg-orange"
+            <div class="is-flex is-flex-direction-column  is-flex-wrap-wrap">
+              <div class="control mb-5">
+                <a class="button-has-shadow button   is-warning is-rounded is-bg-orange" style="border:solid; border-width: 1px;"
                   href="https://app.oopspam.com/Identity/Account/Register">
                   Try OOPSpam for free →
                 </a>
               </div>
+              <div class="control ">
+                <a class="button-has-shadow button is-rounded " style="border:solid; border-width: 1px; background-image: unset;"
+                  href="https://app.oopspam.com/Identity/Account/Register">
+                  Try our WordPress plugin for free →
+                </a>
+              </div>
             </div>
-            <div class="columns is-centered is-vcentered">
-              <div class="column has-text-grey">
-                 ✓ No credit card required   ✓ Cancel anytime
+            <div class="columns is-centered is-vcentered mt-3">
+              <div class="column has-text-grey has-text-left  is-flex flex-direction-row is-flex-wrap-wrap ">
+                 <span class="has-text-black mr-2"><img src="/assets/checkbox.svg" width="12px"/> No credit card required</span>   
+                 <span class="has-text-black"><img src="/assets/checkbox.svg" width="12px"/>  Cancel anytime</span>
               </div>
             </div>
           </div>
           <!-- Right-side Illustration -->
-          <div class="column">
-            <img loading="lazy" src="/assets/Oopspam-request-response.png" alt="OOPSpam API request & response example" width="650">
+          <div class="column is-flex is-justify-content-flex-end">
+            <div class="media has-text-right">
+               <img class="" loading="lazy" src="/assets/OOPSpamHero_mobile.png" alt="OOPSpam API request & response example">
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    <!-- </div> -->
   </section>
   
-  <section id="customers" class="section has-background-black my-6" style="padding-top:5em; padding-bottom:5em;">
+  <section id="customers" class="section has-background-black mb-6" style="padding-top:5em; padding-bottom:5em;">
     <div class="container">
       <h2 class="title is-size-3 has-text-centered has-text-white pb-6">OOPSpam is helping to keep hundreds of businesses spam-free every day</h2>
       <div class="columns">
@@ -105,21 +158,15 @@
       </div>
   </section>
 
-  
-  
-   
-  </div>
-
-
    <!-- Request & Response -->
    <section id="request" class="section is-mobile my-6" >
     <div class="container">
       <div class="columns is-vcentered is-centered is-8 is-variable">
         <div class="column is-5 has-text-centered">
-          <img loading="lazy" src="/assets/OopsSpam_FilterIllustration.png" alt="OOPSpam filtering comments illustration"
-            width="350">
+          <img loading="lazy" src="/assets/Oopspam-request-response.png" alt="OOPSpam filtering comments illustration"
+            >
         </div>
-        <div class="column is-2"></div>
+        <div class="column is-1"></div>
         <div class="column is-5">
           <h2 class="title content has-text-black">Remove noise and focus on </br> what matters</h2>
           <div class="columns is-multiline is-1 is-variable is-mobile" style="text-align: left;">
@@ -128,7 +175,7 @@
               <div><h4 class="content subtitle is-4">
                 High accuracy
               </h4>
-              We've caught over 65M spam. You're protected from both human and bot spammers.
+              We've caught over 100M spam. You're protected from both human and bot spammers.
             </div>
             </div>
             <div class="column is-full is-inline-flex flex-alignitems-center my-3">
@@ -169,8 +216,8 @@
           </h2>
           <small>You send a simple API request. We do powerful analyses to <span class="shadow is-success">guarantee a spam-free experience for you</span>.</small>
           <p class="is-size-5 feature"><span class="checkmark"></span>Spam score</p>
-          <p class="is-size-5 feature"><span class="checkmark"></span>Machine Learning models</p>
-          <p class="is-size-5 feature"><span class="checkmark"></span>Multiple blocklisted IPs lists</p>
+          <p class="is-size-5 feature"><span class="checkmark"></span>Machine Learning model</p>
+          <p class="is-size-5 feature"><span class="checkmark"></span>Multiple blocked email & IP lists</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Advanced content analyses</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Spam word pattern detection</p>
           <p class="is-size-5 feature"><span class="checkmark"></span>Auto-improvement model</p>
@@ -515,7 +562,7 @@
           </div>
           </div>
         </div>
-        <p class="p-3" style="text-align: center;"><small >Just need less than 15K API calls? <a href="https://www.oopspam.com/#contact">Contact us</a> for Starter plan.</small></p>
+        <p class="p-3" style="text-align: center;"><small >Just need less than 15K API calls? <a href="https://www.oopspam.com/#contact">Contact us</a> for our Starter plan.</small></p>
 
       </div>
     </div>
@@ -650,9 +697,10 @@
       </div>
     </div>
   </section>
-  {% include "partials/contact.njk" %}
+  {% include "partials/contact.njk" %}</main >
   {% include "partials/footer.njk" %}
   {% include "partials/footerScript.njk" %}
+</div>
 </body>
 
 
