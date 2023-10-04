@@ -3,6 +3,10 @@
     background-size: cover;
 }
 
+.is-borderless td, .is-borderless th {
+    border: none;
+  }
+  
 table tbody th {
     font-weight: 900;
 }
