@@ -3,6 +3,9 @@
   src: url(../assets/fonts/PlayfairDisplay-Medium.ttf);
 }
 
+.is-borderless td, .is-borderless th {
+  border: none;
+}
 
 #main h2 {
 line-height: 33px;
