@@ -20,7 +20,12 @@
   <title>A Better Akismet Alternative</title>
   
 </head>
-
+<style>
+  .table td,
+  .table th {
+    padding: 1em 0.75em !important;
+}
+</style>
 <body class="alternative">
   <header class="section navigation pb-0 has-shadow"  style=" background-color:inherit;">
     <div class="navbar is-fixed-top is-transparent">
@@ -114,10 +119,10 @@
       <div class="content has-text-centered">
         <h2>Why choose OOPSpam over Akismet?</h2>
       </div>
-      <div class="columns">
-        <div class="column is-3"></div>
-        <div class="column is-7" style="overflow-x: auto;">
- <table class="table is-striped is-bordered is-hoverable" >
+      <div class="columns"  style="overflow-y: auto;">
+        <div class="column"></div>
+        <div class="column">
+ <table class="table is-striped is-bordered is-hoverable is-borderless" >
           <thead>
             <tr>
               <th class="has-text-centered" style="padding: 3em;">Features</th>
@@ -134,13 +139,21 @@
           <tbody>
             <tr>
               <th><abbr title="Application programming interface">API</abbr> for non-WordPress sites</th>
-              <td>Yes</td>
-              <td>Yes</td>
+              <td class="has-text-centered is-flex is-vcentered">
+                <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+              </td>
+              <td>
+                <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+              </td>
             </tr>
               <tr>
                 <th>WordPress plugin <p class="has-text-weight-normal"></p></th>
-                <td>Yes</td>
-                <td>Yes</td>
+                <td class="has-text-centered is-flex is-vcentered">
+                  <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+                </td>
+                <td>
+                  <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+                </td>
               </tr>
               <tr>
                   <th>Unlimited websites with 100K API calls
@@ -151,38 +164,71 @@
               </tr>
             <tr>
                 <th>Spam Score</th>
-                <td>Yes</td>
-                <td>No</td>
+                <td class="has-text-centered is-flex is-vcentered">
+                  <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+                </td>
+                <td >
+                  <svg color="red" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><g transform="matrix(0 1 -1 0 17 0)"><path d="m5.5 11.5 6-6"/><path d="m5.5 5.5 6 6"/></g></g></svg>
+                </td>
             </tr>
             <tr>
               <th>Detailed spam report</th>
-              <td>Yes</td>
-              <td>No</td>
+              <td class="has-text-centered is-flex is-vcentered">
+                <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+              </td>
+              <td >
+                <svg color="red" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><g transform="matrix(0 1 -1 0 17 0)"><path d="m5.5 11.5 6-6"/><path d="m5.5 5.5 6 6"/></g></g></svg>
+              </td>
           </tr>
             <tr>
                 <th>Privacy-friendly</th>
-                  <td>Yes</td>
-                  <td>No</td>
+                <td class="has-text-centered is-flex is-vcentered">
+                  <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+                </td>
+                <td >
+                  <svg color="red" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><g transform="matrix(0 1 -1 0 17 0)"><path d="m5.5 11.5 6-6"/><path d="m5.5 5.5 6 6"/></g></g></svg>
+                </td>
             </tr>
             <tr>
               <th>Spam filtering by language</th>
-              <td>Yes</td>
-              <td>No</td>
+              <td class="has-text-centered is-flex is-vcentered">
+                <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+              </td>
+              <td >
+                <svg color="red" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><g transform="matrix(0 1 -1 0 17 0)"><path d="m5.5 11.5 6-6"/><path d="m5.5 5.5 6 6"/></g></g></svg>
+              </td>
           </tr>
           <tr>
             <th>Spam filtering by country</th>
-            <td>Yes</td>
-            <td>No</td>
+            <td class="has-text-centered is-flex is-vcentered">
+              <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+            </td>
+            <td >
+              <svg color="red" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><g transform="matrix(0 1 -1 0 17 0)"><path d="m5.5 11.5 6-6"/><path d="m5.5 5.5 6 6"/></g></g></svg>
+            </td>
         </tr>
+        <tr>
+          <th>Domain Reputation Check</th>
+          <td class="has-text-centered is-flex is-vcentered">
+            <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+          </td>
+          <td>
+            <svg color="red" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><g transform="matrix(0 1 -1 0 17 0)"><path d="m5.5 11.5 6-6"/><path d="m5.5 5.5 6 6"/></g></g></svg>
+          </td>
+      </tr>
             <tr>
                 <th>24/7 Customer Support</th>
-                <td>Yes</td>
-                <td>No</td>
+                <td class="has-text-centered is-flex is-vcentered">
+                  <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><path d="m5.5 9.5 2 2 5-5"/></g></svg>
+                </td>
+                <td >
+                  <svg color="red" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 2)"><circle cx="8.5" cy="8.5" r="8"/><g transform="matrix(0 1 -1 0 17 0)"><path d="m5.5 11.5 6-6"/><path d="m5.5 5.5 6 6"/></g></g></svg>
+                </td>
             </tr>
           </tbody>
         </table>
         </div>
-        <div class="column is-2"></div>
+        <div class="column "></div>
       </div>
        
       
@@ -262,9 +308,9 @@
           <div class="column is-half">
               <h2 class="title is-spaced">Take control with Spam Score</h2>
               <div class="content subtitle">
-                 <p class="is-size-5">Have you had a legitimate content detected as spam by Akismet? </p> 
+                 <p class="is-size-5">Have you had a legitimate message flagged as spam by Akismet? </p> 
                 <p>
-                 With OOPSpam, you get an actual Spam Score for the content you send to us. Use <code>Score</code> to adjust sensitive level of your spam protection.
+                  OOPSpam is a score-based spam filter. It assigns a spam score to each submission to forms. Control the spam filter with the sensitivity level to avoid missing opportunities.
                 </p>
                  </div>
         </div>
@@ -279,8 +325,7 @@
             <div class="column is-half">
               <h2 class="title is-spaced">Know why it is spam</h2>
               <div class="content subtitle">
-                  Akismet lets you know if a message is Spam or Not Spam. OOPSpam sends you a detailed report so that you know why you got that Spam Score. This helps you understand the kind of spam you get and fight them effectively.            
-                </div>
+                Akismet tells you if a message is spam. OOPSpam goes a step further by giving you a detailed report explaining why a message was marked as spam. This helps you understand your spam better and how to deal with it.                </div>
           </div>
             <div class="column is-half">
               <img src="assets/spamScoreReport.png" loading="lazy" width="400px" alt="OOPSpam Spam Score example">
@@ -346,8 +391,7 @@
         <div class="column is-half">
           <h2 class="title is-spaced">Privacy-friendly spam filtering <abbr title="Application programming interface">API</abbr></h2>
           <div class="content subtitle">
-            We are GDPR-compliant. We respect your and your website visitors' privacy. 
-We don't keep logs by default. OOPSpam Anti-Spam asks only for minimal data while providing high accuracy. 
+            We are GDPR compliant. We respect your privacy and the privacy of your website visitors. We don't keep logs by default. OOPSpam Anti-Spam asks for minimal data while providing high accuracy.
           </div>
       </div>
       </div>
