@@ -1,6 +1,6 @@
 @font-face {
   font-family: Playfair Display;
-  src: url(../assets/fonts/PlayfairDisplay-Medium.ttf);
+  src: url(./fonts/PlayfairDisplay-Medium.ttf);
 }
 
 #main h2 {
