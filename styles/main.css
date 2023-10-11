@@ -3,6 +3,9 @@
   src: url(./fonts/PlayfairDisplay-Medium.ttf);
 }
 
+h1, h2, p, .subtitle {
+  color:black;
+}
 #main h2 {
 line-height: 33px;
 }
@@ -164,11 +167,12 @@ iframe {
   
   .checkmark {
     display:inline-block;
-    width: 27px;
-    height: 20px;
+    height: 21px;
+    width: 26px;
     -ms-transform: rotate(45deg); /* IE 9 */
     -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
     transform: rotate(45deg);
+
   }
   
   .checkmark::after {
@@ -176,7 +180,7 @@ iframe {
     position: absolute;
     width: 6px;
     height: 3px;
-    background-color: green;
+    background-color: black;
     left: 8px;
     top: 16px;
 }
@@ -185,7 +189,7 @@ iframe {
     position: absolute;
     width: 3px;
     height: 13px;
-    background-color: green;
+    background-color: black;
     left: 14px;
     top: 6px;
 }

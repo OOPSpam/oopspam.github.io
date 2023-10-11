@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="201px" height="175px" viewBox="0 0 201 175" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 6</title>
+    <g id="Landing-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Updated-Landing-Page" transform="translate(-256.000000, -4001.000000)">
+            <g id="Group-6" transform="translate(256.000000, 4001.000000)">
+                <g id="Group-2" fill="#FCDD56">
+                    <ellipse id="Oval" cx="64.4651163" cy="64.2133333" rx="64.4651163" ry="64.2133333"></ellipse>
+                </g>
+                <g id="Group" transform="translate(55.255814, 29.813333)" stroke="#000000" stroke-width="5">
+                    <path d="M47.5814365,76.4811548 L65.424452,93.6276871 L95.1628113,53.6191117 M71.3721239,0 C53.4159705,16.3862458 29.5025789,25.3736465 4.74233874,25.0415579 C1.59273055,34.2624216 -0.00809044983,43.9065965 3.07449889e-05,53.611491 C3.07449889e-05,96.2263394 30.3252579,132.028299 71.3721239,142.186667 C112.41899,132.03592 142.744186,96.2339601 142.744186,53.6191117 C142.744186,43.6360196 141.078838,34.0263408 138.001909,25.0339372 L136.796514,25.0339372 C111.451502,25.0339372 88.4221165,15.5233273 71.3721239,0 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

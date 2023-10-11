@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="224px" height="178px" viewBox="0 0 224 178" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 12</title>
+    <g id="Landing-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Updated-Landing-Page" transform="translate(-618.000000, -4802.000000)">
+            <g id="Group-12" transform="translate(618.000000, 4802.000000)">
+                <g id="Group-2" fill="#FCDD56">
+                    <circle id="Oval" cx="69" cy="69" r="69"></circle>
+                </g>
+                <g id="Group" transform="translate(37.000000, 13.000000)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+                    <polygon id="Path" points="0 93.4615385 87.8181818 0 69 68.5384615 138 68.5384615 50.1818182 162 69 93.4615385"></polygon>
+                </g>
+                <g id="Group-3" transform="translate(159.000000, 49.000000)" stroke="#000000" stroke-linejoin="round" stroke-width="4.32395">
+                    <line x1="30.3591181" y1="38.1725504" x2="65" y2="38.1725504" id="Path-4"></line>
+                    <line x1="27.0351678" y1="26.4573684" x2="41.1619567" y2="16.2125622" id="Path-3"></line>
+                    <line x1="17.4653667" y1="21.1772596" x2="24.722138" y2="0" id="Path-2"></line>
+                    <line x1="6.98396857" y1="21.1772596" x2="0" y2="10.5886298" id="Path-5"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

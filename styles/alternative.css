@@ -3,6 +3,9 @@
     background-size: cover;
 }
 
+h1, h2, p, .subtitle {
+    color:black !important;
+  }
 .is-borderless td, .is-borderless th {
     border: none;
   }
