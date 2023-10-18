@@ -36,7 +36,7 @@ section.section, #quick-comparison {
 .alternative .button {
     border-style: solid !important;
     border-width: 1px;
-    box-shadow: 2px 5px;
+    box-shadow: 2px 5px black;
     border-color: black !important;
 }
 
