@@ -7,21 +7,64 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="Switching from reCAPTCHA to OOPSpam - stop bots and manual spam from reaching you or your customer. All with high accuracy, privacy, and accessibility.">
+    content="Switching from hCaptcha to OOPSpam - stop bots and manual spam from reaching you or your customer. All with high accuracy, privacy, and accessibility.">
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@oopspamapi" />
-  <meta property="og:url" content="https://www.oopspam.com/recaptcha-alternative.html"/>
-  <meta name="og:title" content="reCAPTCHA alternative - OOPSpam" />
-  <meta name="og:description" content="Switching from reCAPTCHA to OOPSpam - stop bots and manual spam from reaching you or your customer. All with high accuracy, privacy, and accessibility." />
-  <meta name="og:image" content="https://www.oopspam.com/assets/oopspam-vs-recaptcha.png" />
+  <meta property="og:url" content="https://www.oopspam.com/hcaptcha-alternative.html"/>
+  <meta name="og:title" content="hCaptcha alternative - OOPSpam" />
+  <meta name="og:description" content="Switching from hCaptcha to OOPSpam - stop bots and manual spam from reaching you or your customer. All with high accuracy, privacy, and accessibility." />
+  <meta name="og:image" content="https://www.oopspam.com/assets/oopspam-vs-hcaptcha.png" />
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <title>A Better reCAPTCHA Alternative</title>
-  {% include "partials/headScript.njk" %}
+  <title>A Better hCaptcha Alternative</title>
+  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
 </head>
 
 <body class="alternative">
- {% include "partials/navigation.njk" %}
+  <header class="section navigation pb-0 has-shadow"  style=" background-color:inherit;">
+    <div class="navbar is-fixed-top is-transparent">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="/assets/oopspamLogo.svg" alt="OOPSpam logo" width="112" height="28">
+          </a>
+          <a id="navbarBurger" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navigation-bar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navigation-bar" class="navbar-menu">
+          <div class="navbar-start">
+          </div>
+          <div class="navbar-end">
+            <a href="/help" class="navbar-item  has-text-black">
+              Docs
+           </a>
+            <a href="./#pricing" class="navbar-item  has-text-black">
+              Pricing
+            </a>
+            
+            <a href="/blog" class="navbar-item  has-text-black">Blog</a>
+            <a href="./#contact" class="navbar-item has-text-black">
+              Contact
+            </a>
+            <div class="navbar-item">
+               <a href="https://app.oopspam.com/Identity/Account/Login" class="has-text-black button is-warning is-outlined">
+              Log in
+            </a>
+            </div>
+            <div class="navbar-item">
+             <a href="https://app.oopspam.com/Identity/Account/Register" class="has-text-black button is-warning is-bg-orange">
+              Get started
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
  <img width="100%" src="/assets/alternative/lp-top.svg"/>
   <!-- The Main (Intro) Section -->
   <section id="main" class="hero">
@@ -31,7 +74,7 @@
           <!-- full column -->
           <div class="column is-full has-text-centered">
             <div class="content" style="color:black; font-size:16px;">
-                <h1 class="title">Looking for a reCAPTCHA alternative?</h1>
+                <h1 class="title">Looking for a hCaptcha alternative?</h1>
                 <h2 class="subtitle pt-5 has-text-black">Upgrade to <span class="shadow is-success">OOPSpam</span>  for uncompromised privacy, seamless accessibility, and optimal website performance - because your online presence deserves the best.</h2>
                 <p class="has-text-weight-light is-size-5 content"> <span style="margin-right: 0.5em; border: solid 1px;
                   border-radius: 6px;
@@ -102,7 +145,7 @@
                 <div class="content">
                   <small class="is-orange-underline has-text-weight-bold">nahnufitness | <a href="https://wordpress.org/support/topic/great-support-and-product-21/">source</a></small> 
                     <p class="is-size-5 pt-3">
-                      I signed up for a test and joined a paid program right away. All the spam emails getting through reCaptcha and Captcha have now stopped. Loved how easy it was to work with Elementor Forms.                    </p>
+                      I signed up for a test and joined a paid program right away. All the spam emails getting through hCaptcha and Captcha have now stopped. Loved how easy it was to work with Elementor Forms.                    </p>
                 </div>
               </div>
             </article>
@@ -120,7 +163,7 @@
                 <div class="content">
                     <small class="is-orange-underline has-text-weight-bold">squarecandy  | <a href="https://wordpress.org/support/topic/great-service-438/">source</a></small> 
                     <p class="is-size-5 pt-3">
-                      This is a great plugin with a very responsive and knowledgable support team. Works well for default comment fields, WPForms and WooCommerce. Has some other integrations but those are the ones we tried. If you have any doubts, just go back into your logs of spam that slipped through reCAPTCHA and Akismet and a honeypot… pick a message and enter the data on the app.oopspam.com dashboard you can edit the test data right there and it will show you what spam score their system would give that message.
+                      This is a great plugin with a very responsive and knowledgable support team. Works well for default comment fields, WPForms and WooCommerce. Has some other integrations but those are the ones we tried. If you have any doubts, just go back into your logs of spam that slipped through hCaptcha and Akismet and a honeypot… pick a message and enter the data on the app.oopspam.com dashboard you can edit the test data right there and it will show you what spam score their system would give that message.
                     </p>
                 </div>
               </div>
@@ -137,9 +180,9 @@
               </div>
               <div class="media-content">
                 <div class="content">
-                  <small class="is-orange-underline has-text-weight-bold">tageins | <a href="https://wordpress.org/support/topic/great-replacement-for-recaptcha/">source</a></small> 
+                  <small class="is-orange-underline has-text-weight-bold">tageins | <a href="https://wordpress.org/support/topic/great-replacement-for-hCaptcha/">source</a></small> 
                     <p class="is-size-5 pt-3">
-                      This tool works out of the box. I used it to replace reCaptcha, which is not working according to data protection laws in Germany. It is very easy to handle and install, you don’t need to add fields etc. to your forms. The free version lets you have a look at the efficiency of the tool.
+                      This tool works out of the box. I used it to replace hCaptcha, which is not working according to data protection laws in Germany. It is very easy to handle and install, you don’t need to add fields etc. to your forms. The free version lets you have a look at the efficiency of the tool.
 Works perfectly with different forms like Elementor, Formidable etc.
                     </p>
                 </div>
@@ -195,7 +238,7 @@ Works perfectly with different forms like Elementor, Formidable etc.
               <h2 class="title is-spaced">The same feature you like and more
               </h2>
               <div class="content subtitle">
-                Just like reCAPTCHA, OOPSpam returns a spam score, giving you more control over your spam protection. Set the spam sensitivity level to avoid missed opportunities. You can also block messages by country and language. All this and more without your visitors having to solve a puzzle.
+                Just like hCaptcha, OOPSpam returns a spam score, giving you more control over your spam protection. Set the spam sensitivity level to avoid missed opportunities. You can also block messages by country and language. All this and more without your visitors having to solve a puzzle.
                  </div>
         
         </div>
@@ -210,7 +253,7 @@ Works perfectly with different forms like Elementor, Formidable etc.
             <div class="column is-half">
               <h2 class="title is-spaced">Detailed spam report</h2>
               <div class="content subtitle">
-                Unlike reCAPTCHA where the only response you get is Score, OOPSpam Anti-Spam sends you a detailed report so that you know why you got that Spam Score.
+                Unlike hCaptcha where the only response you get is Score, OOPSpam Anti-Spam sends you a detailed report so that you know why you got that Spam Score.
               </div>
           </div>
             <div class="column is-half has-text-centered">
@@ -269,7 +312,7 @@ Works perfectly with different forms like Elementor, Formidable etc.
       <div class="container">
         <div class="columns is-vcentered is-centered">
           <div class="column is-half has-text-centered">
-            <p class="title">Your search for a reCAPTCHA alternative is over</p>
+            <p class="title">Your search for a hCaptcha alternative is over</p>
             <div class="content">
                 <a class="button has-text-black is-medium is-warning is-rounded is-size-7-mobile"
                   href="https://app.oopspam.com/Identity/Account/Register">
@@ -280,7 +323,86 @@ Works perfectly with different forms like Elementor, Formidable etc.
         </div>
       </div>
     </section>
-  {% include "partials/footer.njk" %}
-  {% include "partials/footerScript.njk" %}
+  <footer class="footer has-background-black" style="margin-top:2em;">
+      <div class="content has-text-centered has-text-white">
+        <div class="columns">
+          
+          <div class="column">
+            <h6 class="has-text-white is-bold has-text-left">Resources</h6>
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-warning" href="https://www.oopspam.com/affiliate">Affiliate Program</a></li>
+              <li><a class="has-text-warning" href="https://www.oopspam.com/blog">Blog</a></li>
+              <li><a class="has-text-warning" href="https://www.oopspam.com/docs">Documentation</a></li>
+              <li><a class="has-text-warning" href="https://www.oopspam.com/#faq">FAQ</a></li>
+              <li><a class="has-text-warning" href="https://status.oopspam.com/">Status</a></li>
+              <li><a class="has-text-warning" href="https://www.oopspam.com/#contact">Contact us</a></li>
+              <li><a class="has-text-warning" href="about">👋 About</a></li>
+            </ul>
+          </div>
+           <div class="column">
+            <a  href="/tools/"><h6 class="has-text-white is-bold has-text-left">Free Tools</h6></a>
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-warning" href="https://www.oopspam.com/tools/spam-words-checker">Spam Words Checker</a></li>
+              <li><a class="has-text-warning" href="https://www.oopspam.com/tools/domain-reputation-checker">Domain Reputation Checker</a></li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <h6 class="has-text-white is-bold has-text-left">How we compare</h6>    
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-warning" href="https://www.oopspam.com/akismet-alternative">Alternative to Akismet</a></li>
+              <li><a class="has-text-warning" href="https://www.oopspam.com/recaptcha-alternative">Alternative to reCAPTCHA</a></li>
+               <li><a class="has-text-warning" href="https://www.oopspam.com/cleantalk-alternative">Alternative to CleanTalk</a></li>
+            </ul>
+          </div>
+
+          <div class="column">
+                  <h6 class="has-text-white is-bold has-text-left">Integration</h6>    
+                  <ul class="has-text-left" style="list-style-type:none; margin:0;">
+                    <li><a class="has-text-warning" href="https://wordpress.org/plugins/oopspam-anti-spam/">WordPress</a></li>
+                    <li><a class="has-text-warning" href="https://www.oopspam.com/anti-spam-filter-for-gravity-forms">Gravity Forms</a></li>
+                  <li><a class="has-text-warning" href="https://www.oopspam.com/anti-spam-filter-for-ninja-forms">Ninja Forms</a></li>
+                  <li><a class="has-text-warning" href="https://www.oopspam.com/spam-filter-for-contactform7">Contact Form 7</a></li>
+                  <li><a class="has-text-warning" href="https://www.oopspam.com/blog/spam-protection-for-elementor-forms">Elementor Forms</a></li>
+                  <li><a class="has-text-white" href="https://www.oopspam.com/#contact">📣Let us know your integration</a></li>
+                  </ul>
+          </div>
+
+          <div class="column">
+            <h6 class="has-text-white is-bold has-text-left">Legal</h6>    
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-warning" href="https://www.oopspam.com/terms&conditions">Terms of use</a></li>
+              <li><a class="has-text-warning" href="https://www.oopspam.com/privacypolicy">Privacy Policy</a></li>
+              <li><a class="has-text-warning" href="https://www.oopspam.com/gdpr">GDPR</a></li>
+              <li><a class="has-text-warning" href="https://www.oopspam.com/dpa">DPA</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+   
+    </footer>
+    <div class="has-background-black has-text-white bottom">
+      <div class="container is-fluid">
+        <div class="columns">
+          <div class="column">
+            <p class="has-text-white">© 2017 - 2023 OOPSpam LLC</p>
+          </div>
+          <div class="column has-text-right">
+             <a href="https://twitter.com/oopspamapi">
+                            <img src="/assets/twitter-circle.svg" alt="twitter logo">
+                            </a>
+                            <a href="https://github.com/OOPSpam">
+                            <img src="/assets/github-circle.svg" alt="github logo">
+                            </a>
+                            <a href="https://wordpress.org/plugins/oopspam-anti-spam/">
+                            <img src="/assets/wordpress.svg" alt="wordpress logo">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+<script async src="/scripts/app.min.js"></script>
 </body>
 </html>
