@@ -22,7 +22,7 @@ gulp.task('sitemap', function() {
   ];
   return gulp.src(sources, { base: './' })
         .pipe(sitemap({
-                siteUrl: 'http://www.oopspam.com'
+                siteUrl: 'https://www.oopspam.com'
         }))
         .pipe(gulp.dest('./'))
 });
