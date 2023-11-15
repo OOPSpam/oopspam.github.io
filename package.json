@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-save": "^1.3.0",
+    "gulp-sitemap": "^8.0.0"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
