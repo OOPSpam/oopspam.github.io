@@ -2,16 +2,26 @@
   font-family: Playfair Display;
   src: url(./fonts/PlayfairDisplay-Medium.ttf);
 }
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url(./fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url(./fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'Open Sans SemiBold';
+  src: url(./fonts/OpenSans-SemiBold.ttf);
+}
 
-h1, h2, p, .subtitle {
-  color:black;
+p, .subtitle, small, span, .content, .plan-item, .plan-price {
+  color:black !important;
 }
 #main h2 {
 line-height: 33px;
 }
-#navigation-bar {
-    /* background-color: #231f20; */
-}
+
 .get-a-key {
     color: #ffdd57;
     border-bottom-style: dotted;
@@ -53,6 +63,9 @@ a {
   transition: background-size .25s ease-in;
   background-image: linear-gradient(118.8deg,#ffdd57 0,#ffdd57 100%);
 }
+a {
+  color: #0340c4;
+}
 
 footer a, .bottom a, .navbar a {
   background-repeat:unset;
@@ -83,6 +96,20 @@ details p {
 }
 .is-big-title {
     font-size: 2rem !important;
+}
+
+.is-opensans-bold {
+  font-family: 'Open Sans Bold', serif !important;
+}
+.is-opensans-regular {
+  font-family: 'Open Sans Regular', serif !important;
+}
+.is-opensans-semibold {
+  font-family: 'Open Sans SemiBold', serif !important;
+}
+
+.is-playfair {
+  font-family: 'Playfair Display', serif !important;
 }
 
 h1.title,h2.is-big-title {

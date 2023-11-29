@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
     <link rel="stylesheet" href="/styles/main.min.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="OOPSpam is fully compliant with GDPR. Here we explain how GDPR affects you as an anti spam filter and how we help.">
-    <meta property="og:description" content="OOPSpam is fully compliant with GDPR. Here we explain how GDPR affects you as an anti spam filter and how we help.">
-    <meta name="twitter:description" content="OOPSpam is fully compliant with GDPR. Here we explain how GDPR affects you as an anti spam filter and how we help.">
+    <meta name="description"
+        content="OOPSpam is fully compliant with GDPR. Here we explain how GDPR affects you as an anti spam filter and how we help.">
+    <meta property="og:description"
+        content="OOPSpam is fully compliant with GDPR. Here we explain how GDPR affects you as an anti spam filter and how we help.">
+    <meta name="twitter:description"
+        content="OOPSpam is fully compliant with GDPR. Here we explain how GDPR affects you as an anti spam filter and how we help.">
     <meta name="og:image" content="https://www.oopspam.com/assets/oopspam-og-image.png" />
     <meta name="twitter:image" content="https://www.oopspam.com/assets/oopspam.png" />
     <meta property="og:title" content="About | OOPSpam">
@@ -16,82 +20,292 @@
     <title>About | OOPSpam</title>
     {% include "partials/headScript.njk" %}
 </head>
+
 <body class="alternative">
-{% include "partials/navigation.njk" %}
-<style>
-    .navigation {
-        padding-bottom: 0 !important;
-    }
-</style>
-<section class="section" style="background-image: url(/assets/alternative/scene.svg);
-background-size: contain;background-repeat: no-repeat;">
-<div class="my-6">
-    <h1 class="title has-text-centered ">Changing the way we fight spam</h1> 
-    <h3 class="subtitle has-text-centered">An independent, bootstrapped and profitable company</h3> 
-</div>
+    {% include "partials/navigation.njk" %}
+    <style>
+        .navigation {
+            padding-bottom: 0 !important;
+        }
+        section {
+            padding-top: 95px !important;
+            padding-bottom: 95px !important;
+        }
+        .is-shadow {
+            box-shadow: black 8.95px 7.95px 2.6px;
+        }
 
-    <div class="columns">
-        <div class="column">
-            <h2 class="title has-text-centered">Who We Are</h2> 
-            <h3 class="subtitle has-text-centered pb-5">OOPSpam team is led by two.👋</h3> 
+        .navbar-item a.is-bg-orange {
+            background-color: #FBFBED !important;
+            border: solid;
+            border-width: 2px;
+        }
+    </style>
+    <section class="section" style="background-image: url(/assets/about/HeaderBackground.jpg);
+background-size: cover;background-repeat: no-repeat;">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-flex is-flex-direction-column is-align-items-center">
+                    <div class="my-6">
+                        <h1 class="title has-text-centered" style="color:white;">Stopping spam the best way possible:
+                            <br> no captcha and no data-collection.</h1>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </section>
+    <section class="section" style="border-bottom: solid; 
+border-bottom-color: black; background-color: #FBFBED;">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-flex is-flex-direction-column is-align-items-center">
 
-    <div class="container"> 
-        <div class="columns">
-            <div class="column is-flex is-flex-direction-column is-align-items-center">
-                <!-- <figure class="image pb-5 pt-5 is-flex is-justify-content-center is-align-content-center"> -->
-                    <img class="pb-5" alt="Onar" loading="lazy" src="/assets/about/Onar.png" style=" filter: drop-shadow(0.5em 0.5em 0rem #ffdd57);" />
-                <!-- </figure> -->
-                <div class="content box has-text-justified" style="font-size: 1.15rem !important;">
-                    <p><a href="https://twitter.com/OnarAlili">Onar</a> has done academic research and development on cybersecurity and its applications in Sapienza Università di Roma. He was part of a team working on major cybersecurity projects like <a href="https://www.panoptesec.eu/">PANOPTESEC Project</a> which is funded by the European Commission. Onar is the founder, engineer at <a href="https://oopspam.com">OOPSpam</a>.</p>
+
+                </div>
+                <div class="column is-6 is-flex is-flex-direction-column is-align-items-center has-text-centered">
+                    <h3 class="is-size-4  has-text-black is-opensans-semibold">Since being founded in 2017, OOPSpam has
+                        been a trusted solution to stop spam for small businesses to enterprise.</h3>
+                </div>
+                <div class="column is-flex is-flex-direction-column is-align-items-center">
+
                 </div>
             </div>
-            <div class="column is-flex is-flex-direction-column is-align-items-center">
-                <!-- <figure class="image pb-5 pt-5 is-flex is-justify-content-center is-align-content-center"> -->
-                    <img class="pb-5" alt="Daniella" loading="lazy" src="/assets/about/Daniella.png" style="filter: drop-shadow(0.5em 0.5em 0rem #ffdd57);" />
-                <!-- </figure> -->
-                <div class="content box has-text-justified" style="font-size: 1.15rem !important;">
-<p><a href="https://daniellaattinella.com/">Daniella</a> has over 10 years of experience as an art director. She’s developed branding systems across the board from a massive Cat Video Festival to SaaS products, and is a published illustrator. Danielle is a visual designer and copywriter at OOPSpam.</p>
-                    </div>
-            </div>
-        </div>            
-    </div>    
-   
-</section>
-<section class="section">
-    <div class="columns">
-        <div class="column">
-            <h2 class="title has-text-centered">The Story, Vision & Privacy</h2> 
         </div>
-    </div>
+    </section>
+    <section class="section" style="border-bottom: solid;
+border-bottom-color: black;">
+        <div class="container ">
+            <div class="columns">
+                <div class="column is-flex is-flex-direction-column is-align-items-center">
+                    <img src="/assets/about/CocktailofIngredients.svg" width="196" alt="" />
 
-    <div class="container"> 
-        <div class="columns">
-            <div class="column is-flex is-flex-direction-column is-align-items-center">
-                <!-- <figure class="image pb-5 is-flex is-justify-content-center is-align-content-center"> -->
-                    <img class="pb-5" loading="lazy" src="/assets/about/OnarSpeaking.png" style=" filter: drop-shadow(0.5em 0.5em 0rem #ffdd57);"/>
-                <!-- </figure> -->
-                <div class="content has-text-justified box" style="font-size: 1.15rem !important;">
-                        <p>The project started as part of academic research in 2017, Italy. The same year, We published it with online communities. <strong>Our goal was, and still is, to have an anti-spam solution which respects people’s privacy while providing high accuracy.</strong>
-                            Some of the users reached out to us and asked for more features, wanting to support the project. So, we started working on a commercial version and made it live in May 2019. Now, we work on it full-time, <strong>protecting thousands of websites from spam every day</strong>.</p>
-                    </div>
+                </div>
+                <div class="column is-8 is-flex is-flex-direction-column is-align-items-left">
+                    <h3 class=" is-opensans-semibold has-text-black" style="font-size: 24px;">A cocktail of unique
+                        measurements means cutting edge spam protection.</h3>
+                    <p class="pt-6 is-opensans-regular has-text-black" style="font-size: 20px;">We are nerds about spam
+                        protection, and know the solution is multifaceted. We could talk your head off at a party about
+                        it (psst captcha’s are not the answer!). There are many factors to being able to detect if a
+                        message is spam and we’ve been tweaking, adding and perfecting our API since the launch.</p>
+                </div>
             </div>
-            <div class="column is-flex is-flex-direction-column is-align-items-center">
-                <!-- <figure class="image pb-5 is-flex is-justify-content-center is-align-content-center"> -->
-                    <img class="pb-5" loading="lazy" src="/assets/about/Us_SF.png" style=" filter: drop-shadow(0.5em 0.5em 0rem #ffdd57);"/>
-                <!-- </figure> -->
-                <div class="content  has-text-justified box" style="font-size: 1.15rem !important;">
-<p><strong>We are committed to keeping OOPSpam simple, privacy-friendly, and accurate.</strong> As an independent and bootstrapped company, we have no horse in the ad-tech, data-harvesting industry. We avoid doing unethical marketing practices. Our main channels to get customers are word of mouth and engaging with the communities on different platforms. We are intent to keep it this way.</p>
-                    </div>
-            </div>
-        </div>            
-    </div>    
-   
-</section>
-{% include "partials/footer.njk" %}
-{% include "partials/footerScript.njk" %}
+            <div class="columns pt-6 ">
+                <div class="column is-flex is-flex-direction-column is-align-items-center">
+                    <img src="/assets/about/Privacy.svg" width="265" alt="" />
 
-                
+                </div>
+                <div class="column is-8 is-flex is-flex-direction-column is-align-items-left">
+                    <p class="pt-6 is-opensans-regular has-text-black" style="font-size: 20px;">Not only did we want to
+                        develop a lightweight reliable and user-friendly spam filter, we wanted to do it in a way others
+                        were not—specifically on the topic of privacy and data collection. Especially considering spam
+                        protection is often an important part of a company’s cybersecurity plan.
+                    </p>
+                </div>
+
+
+            </div>
+            <p class=" is-hidden-mobile  pt-6 has-text-black is-opensans-semibold" style="font-size: 20px; margin: 0px 70px 0px 70px;">Being bootstrapped means we are
+                able to stick to our values of data privacy, which is increasingly hard to find in the anti-spam space.
+                Trust us- if the price is very low, there is a reason for it! We wish more people were aware of the bad
+                practices done by many options out there. But rest assured we do not store any of your customer’s data!
+            </p>
+            <p class="  is-hidden-tablet  pt-6 has-text-black is-opensans-semibold" style="font-size: 20px;">Being bootstrapped means we are
+                able to stick to our values of data privacy, which is increasingly hard to find in the anti-spam space.
+                Trust us- if the price is very low, there is a reason for it! We wish more people were aware of the bad
+                practices done by many options out there. But rest assured we do not store any of your customer’s data!
+            </p>
+        </div>
+
+    </section>
+
+    <section class="section" style="border-bottom: solid; border-bottom-color: black; background-color: #FBFBED;">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-flex is-flex-direction-column is-align-items-center">
+                    <div class="mb-6">
+                        <h2 class="is-playfair is-size-1 has-text-centered has-text-black">Spam Detection API Use Cases
+                        </h2>
+                        <h3 class="is-opensans-regular has-text-centered has-text-black pt-2" style="font-size: 20px;">
+                            Our Anti-spam API is used in a wide range of cases—here are a few. </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column  is-flex is-flex-direction-column is-align-items-center has-text-centered">
+                    <img src="/assets/about/Icon_ContactForms.svg" alt="">
+                    <p class="my-4 is-opensans-bold has-text-black" style="font-size: 30px;">Contact Forms</p>
+                </div>
+                <div class="column  is-flex is-flex-direction-column is-align-items-center has-text-centered">
+                    <img src="/assets/about/Icon_Reviews.svg" alt="">
+                    <p class="my-4 is-opensans-bold has-text-black" style="font-size: 30px;">Comment and <br> Review
+                        Systems</p>
+                </div>
+                <div class="column  is-flex is-flex-direction-column is-align-items-center has-text-centered">
+                    <img src="/assets/about/Icon_Signup.svg" alt="">
+                    <p class="my-4 is-opensans-bold has-text-black" style="font-size: 30px;">Sign Up Forms</p>
+
+                </div>
+                <div class="column  is-flex is-flex-direction-column is-align-items-center has-text-centered">
+                    <img src="/assets/about/Icon_Ecommerce.svg" alt="">
+                    <p class="my-4 is-opensans-bold has-text-black" style="font-size: 30px;">E-commerce Protection</p>
+
+                </div>
+            </div>
+            <div class="columns pt-6 mt-6 mb-0 ">
+                <div class="column mb-4 is-flex is-flex-direction-column is-align-items-center has-text-centered">
+                    <a style="background-image: unset;" href="https://wordpress.org/plugins/oopspam-anti-spam/"> <img src="/assets/about/Logo_Wordpress.svg" alt="WordPress logo"></a>
+                </div>
+                <div class="column mb-4 is-flex is-flex-direction-column is-align-items-center has-text-centered">  <a style="background-image: unset;"
+                    href="https://bubble.io/plugin/oopspam-spam-detection-1582908608700x936823858020745200"><img src="/assets/about/Logo_Bubble.svg" alt="Bubble logo"></a></div>
+                <div class="column mb-4 is-flex is-flex-direction-column is-align-items-center has-text-centered">
+                    <a style="background-image: unset;" href="https://zapier.com/apps/oopspam/integrations"><img src="/assets/about/Logo_Zapier.svg" alt="Zapier logo"></a>
+                </div>
+                <div class="column mb-4 is-flex is-flex-direction-column is-align-items-center has-text-centered"><a style="background-image: unset;"
+                    href="https://www.make.com/en/integrations/oopspam-anti-spam"> <img src="/assets/about/Logo_Make.svg" alt="Make logo"></a></div>
+
+            </div>
+            <p class="has-text-black is-opensans-semibold has-text-centered pt-5" style="font-size: 24px;">We’ve already
+                integrated OOPSpam API to <a href="https://wordpress.org/plugins/oopspam-anti-spam/">WordPress</a>, <a
+                    href="https://zapier.com/apps/oopspam/integrations">Zapier</a>, <a
+                    href="https://www.make.com/en/integrations/oopspam-anti-spam">Make</a> and <a
+                    href="https://bubble.io/plugin/oopspam-spam-detection-1582908608700x936823858020745200">Bubble</a>
+                platforms for you.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" style=" background-color: #FCDD56;">
+        <div class="container ">
+            <div class="columns">
+                <div class="column is-flex is-flex-direction-column is-align-items-center">
+                    <img src="/assets/about/OnarAlili_BW.png" width="156" alt="headshot of Onar">
+                    <div class=" has-text-centered">
+                        <h2 class="is-playfair is-size-1 has-text-centered has-text-black has-text-weight-bold">Our
+                            Backstory</h2>
+                        <p class="is-opensans-regular has-text-centered has-text-black " style="font-size: 20px;">
+                            Written by Founder, Onar Alili</p>
+                        <img class="mt-4" src="/assets/about/ItalyBlack.svg" width="66" alt="map of Italy">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column  is-flex is-flex-direction-column is-align-items-center has-text-centered content">
+                    <p class="mt-4 is-opensans-semibold " style="font-size: 24px;">We launched OOPSpam while I was
+                        completing my Master’s Degree at La Sapienza University in Rome, Italy. My thesis was in
+                        cybersecurity working on the PANOPTESEC Project funded by the European Commission.
+                    </p>
+                    <p class="mt-4 is-opensans-semibold" style="font-size: 24px;">Cybersecurity was a topic I focused on
+                        and OOPSpam started at a school project. I decided to post it as an open source tool for others
+                        to use. Soon after, I was approached by an agency asking for some extra features and wanting to
+                        pay. This led to first launching on Rapid API and the evolution of more features, the branding
+                        by my partner Daniella Attinella and a journey of learning more about marketing than I ever
+                        expected to as a Software Engineer. The positive feedback has been encouraging and it is fun to
+                        keep adding to the accuracy and performance of the API.
+                    </p>
+                    <hr style="width: 114px;
+                    border-radius: 12em;
+                    border: none;
+                    height: 3px;
+                    color: black;
+                    background-color: black;">
+                </div>
+            </div>
+            <div class="columns ">
+                <div class="column  is-flex is-flex-direction-column is-align-items-center has-text-centered">
+                    <img src="/assets/about/MinnesotaBlack.svg" alt="map of Minnesota">
+                </div>
+            </div>
+            <p class="  is-opensans-semibold has-text-centered" style="font-size: 24px;">
+                Currently OOPSpam’s main office is located along the mighty Mississippi River in Minnesota
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-flex is-flex-direction-column is-align-items-center">
+                    <div style="margin-bottom: 50px;">
+                        <h2 class="is-playfair is-size-1 has-text-centered has-text-black has-text-weight-bold">Popular
+                            Posts</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-5">
+                <div class="column m-3 is-shadow is-flex is-flex-direction-column is-align-items-center has-text-centered p-0"
+                    style="border:solid;border-color: black;">
+                    <a href="https://www.oopspam.com/blog/stop-bot-signups" target="_blank">
+                        <figure class="image ">
+                            <img src="https://www.oopspam.com/blog/assets/posts/spam-signups/meta.png"
+                                alt="">
+                        </figure>
+                        <div class="content has-text-black">
+                            <p class="p-3 has-text-left  is-opensans-semibold" style="font-size: 23px;">
+                                How to minimize damage from fake sign-ups: practical measures ->
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column m-3 is-shadow is-flex is-flex-direction-column is-align-items-center has-text-centered p-0"
+                    style="border:solid;border-color: black;">
+                    <a href="https://www.oopspam.com/blog/hcaptcha-performance-analyses" target="_blank">
+                        <figure class="image ">
+                            <img src="https://www.oopspam.com/blog/assets/posts/hcaptcha/hcaptcha-meta.png"
+                                alt="">
+                        </figure>
+                        <div class="content has-text-black">
+                            <p class="p-3 has-text-left  is-opensans-semibold" style="font-size: 23px;">
+                                Does hCaptcha slow down your website? ->
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="column m-3  is-shadow is-flex is-flex-direction-column is-align-items-center has-text-centered p-0"
+                    style="border:solid;border-color: black;">
+                    <a href="https://www.oopspam.com/blog/accessible-forms" target="_blank">
+                        <figure class="image ">
+                            <img src="https://www.oopspam.com/blog/assets/posts/accessible-form/meta.png"
+                                alt="">
+                        </figure>
+                        <div class="content has-text-black">
+                            <p class="p-3 has-text-left  is-opensans-semibold" style="font-size: 23px;">
+                                How to build accessible forms ->
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join to OOPSpam -->
+    <section id="get-started" class="section" style="background-color: rgb(255, 221, 87);">
+
+        <div class="container">
+
+            <div class="columns is-vcentered is-centered">
+
+                <div class="column is-half has-text-centered">
+                    <img src="/assets/about/Gem.svg" style=" width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    margin: -130px 0 0 -25px;" alt="" />
+
+                    <p class="title has-text-black ">Cutting Edge Spam Protection</p>
+                    <div class="content pt-3">
+                        <a  class="button-has-shadow has-text-black button is-rounded " style="border:solid; border-width: 1px; background-image: unset;"
+                            href="https://app.oopspam.com/Identity/Account/Register">
+                            Get started with free spam checks
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include "partials/footer.njk" %}
+    {% include "partials/footerScript.njk" %}
+
+
 </body>
+
 </html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="123px" height="109px" viewBox="0 0 123 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 13</title>
+    <g id="About-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Old-About-Page-Copy" transform="translate(-249.000000, -1887.000000)" stroke="#000000">
+            <g id="Group-13" transform="translate(249.000000, 1887.000000)">
+                <rect id="Rectangle" stroke-width="2" fill="#FCDD56" x="5" y="5" width="97" height="103" rx="5"></rect>
+                <rect id="Rectangle" stroke-width="2" fill="#FFFFFF" x="1" y="1" width="97" height="103" rx="5"></rect>
+                <rect id="Rectangle" stroke-width="2" fill="#FCDD56" x="25" y="73" width="50" height="13" rx="6.5"></rect>
+                <line x1="15" y1="53.5" x2="83" y2="54" id="Path-47" stroke-width="2"></line>
+                <line x1="15" y1="63.5" x2="66" y2="64" id="Path-47" stroke-width="2"></line>
+                <line x1="15" y1="43.5" x2="83" y2="43.5" id="Path-47" stroke-width="2"></line>
+                <line x1="15" y1="33.5" x2="83" y2="33.5" id="Path-47" stroke-width="2"></line>
+                <line x1="15" y1="22.5" x2="83" y2="22.5" id="Path-47" stroke-width="2"></line>
+                <g id="Group-11" transform="translate(66.229919, 8.357658)">
+                    <polygon id="Path-48" stroke-width="2" fill="#FCDD56" points="46.6325378 0 3.05578613 43.8464279 0 55.654213 11.3696899 52.3486099 55.1889954 8.13777924"></polygon>
+                    <polygon id="Path-49" stroke-width="2" fill="#FFFFFF" stroke-linejoin="round" points="3.05578613 43.8464279 11.3696899 52.3486099 0 55.654213"></polygon>
+                    <line x1="3.05578613" y1="43.8464279" x2="11.3696899" y2="52.3486099" id="Path-50"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
