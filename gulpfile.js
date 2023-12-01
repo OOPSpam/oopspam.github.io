@@ -7,6 +7,8 @@ const fs = require('fs');
 const path = require('path');
 const syncRequest = require('sync-request');
 const sleep = require('sleep');
+const replace = require('gulp-replace');
+
 require('dotenv').config();
 
 gulp.task('build', function () {
@@ -32,6 +34,7 @@ gulp.task('sitemap', function () {
         .pipe(sitemap({
             siteUrl: 'https://www.oopspam.com'
         }))
+        .pipe(replace('.html', ''))
         .pipe(gulp.dest('./'))
 });
 
