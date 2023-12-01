@@ -175,7 +175,7 @@
         </div>
       </div>
       <div class="mb-5">
-        <h2 class="is-size-5 ">All integrations</h2>
+        <h2 class="is-size-5 has-text-black ">All integrations <small class="has-text-grey-dark" id="integration-count"></small></h2>
         <br>
         <div class="tags are-large">
           <a href="javascript:void(0)" onclick="filter(event)" id="forms" class="filter button is-light tag">Forms & Surveys</a>
@@ -236,24 +236,26 @@
   {% include "partials/footer.njk" %}
   {% include "partials/footerScript.njk" %}
   <script>
-    // document.querySelectorAll('.filter').forEach(function (filterBtn) {
       function filter(src) {
-        // filterBtn.addEventListener("click", function (src) {
           src.preventDefault();
-          document.querySelectorAll('.filter').forEach(btn => btn.style.backgroundColor = "unset");
+          document.querySelectorAll('.filter').forEach(btn => btn.style.backgroundColor = "#f5f5f5");
           document.querySelectorAll('.integration-box').forEach(int => int.classList.remove("is-hidden"));
           const selectedCategory = src.currentTarget.id;
             src.currentTarget.style.backgroundColor = "#fcdc56";
+            let count =  0;
             document.querySelectorAll(".integration-box").forEach(function (box) {
               if (!box.classList.contains(selectedCategory)) {
                 box.classList.add("is-hidden");
+              } else {
+                count ++;
               }
             })
-        // })
+            document.querySelector("#integration-count").textContent = "(Total: "+ count+ ")";
         return false;
       }
-       
-      // });
+      document.addEventListener("DOMContentLoaded", function(){
+        document.querySelector("#integration-count").textContent =  "(Total: "+ document.querySelectorAll(".integration-box ").length + ")";
+    });
   </script>
 </div>
 </body>

@@ -219,7 +219,7 @@
         </div>
       </div>
       <div class="mb-5">
-        <h2 class="is-size-5 ">All integrations</h2>
+        <h2 class="is-size-5 has-text-black ">All integrations <small class="has-text-grey-dark" id="integration-count"></small></h2>
         <br>
         <div class="tags are-large">
           <a href="javascript:void(0)" onclick="filter(event)" id="forms" class="filter button is-light tag">Forms & Surveys</a>
@@ -10792,7 +10792,7 @@ We analyse your online data in realtime and show you the businesses who visited 
           </div>
 
           <div class="column">
-            <a  href="/compare/"><h6 class="has-text-white is-bold has-text-left">How we compare</h6></a>
+            <a  href="/compare/"><h6 class="has-text-white is-bold has-text-left">How We Compare</h6></a>
             <ul class="has-text-left" style="list-style-type:none; margin:0;">
               <li><a class="has-text-warning" href="https://www.oopspam.com/akismet-alternative">Alternative to Akismet</a></li>
               <li><a class="has-text-warning" href="https://www.oopspam.com/recaptcha-alternative">Alternative to reCAPTCHA</a></li>
@@ -10802,13 +10802,14 @@ We analyse your online data in realtime and show you the businesses who visited 
           </div>
 
           <div class="column">
-                  <h6 class="has-text-white is-bold has-text-left">Integration</h6>    
+                  <h6 class="has-text-white is-bold has-text-left">Integrations</h6>    
                   <ul class="has-text-left" style="list-style-type:none; margin:0;">
                     <li><a class="has-text-warning" href="https://wordpress.org/plugins/oopspam-anti-spam/">WordPress</a></li>
                     <li><a class="has-text-warning" href="https://www.oopspam.com/anti-spam-filter-for-gravity-forms">Gravity Forms</a></li>
                   <li><a class="has-text-warning" href="https://www.oopspam.com/anti-spam-filter-for-ninja-forms">Ninja Forms</a></li>
                   <li><a class="has-text-warning" href="https://www.oopspam.com/spam-filter-for-contactform7">Contact Form 7</a></li>
                   <li><a class="has-text-warning" href="https://www.oopspam.com/blog/spam-protection-for-elementor-forms">Elementor Forms</a></li>
+                  <li><a class="has-text-warning" href="/integrations">View all integrations</a></li>
                   <li><a class="has-text-white" href="https://www.oopspam.com/#contact">📣Let us know your integration</a></li>
                   </ul>
           </div>
@@ -10851,24 +10852,26 @@ We analyse your online data in realtime and show you the businesses who visited 
   <script async defer src="https://scripts.withcabin.com/hello.js"></script>
 <script async src="/scripts/app.min.js"></script>
   <script>
-    // document.querySelectorAll('.filter').forEach(function (filterBtn) {
       function filter(src) {
-        // filterBtn.addEventListener("click", function (src) {
           src.preventDefault();
-          document.querySelectorAll('.filter').forEach(btn => btn.style.backgroundColor = "unset");
+          document.querySelectorAll('.filter').forEach(btn => btn.style.backgroundColor = "#f5f5f5");
           document.querySelectorAll('.integration-box').forEach(int => int.classList.remove("is-hidden"));
           const selectedCategory = src.currentTarget.id;
             src.currentTarget.style.backgroundColor = "#fcdc56";
+            let count =  0;
             document.querySelectorAll(".integration-box").forEach(function (box) {
               if (!box.classList.contains(selectedCategory)) {
                 box.classList.add("is-hidden");
+              } else {
+                count ++;
               }
             })
-        // })
+            document.querySelector("#integration-count").textContent = "(Total: "+ count+ ")";
         return false;
       }
-       
-      // });
+      document.addEventListener("DOMContentLoaded", function(){
+        document.querySelector("#integration-count").textContent =  "(Total: "+ document.querySelectorAll(".integration-box ").length + ")";
+    });
   </script>
 </div>
 </body>
