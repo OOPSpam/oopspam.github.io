@@ -68,8 +68,6 @@ gulp.task('integrationMulti', function () {
                                 const responseBody = getTemplate.getBody('utf8');
                                 var templateData = [];
 
-
-                                // console.log( responseBody);
                                 if (responseBody && responseBody.trim() !== '') {
                                     const template = JSON.parse(responseBody);
                                     templateData.htmlContent = "";
@@ -165,7 +163,7 @@ gulp.task('integrationMulti', function () {
                     
                     <main class="app-content">
                     <!-- The Main Section -->
-                      <section id="main" class=" is-hero" style="background-color: #FBFBED;">    
+                      <section id="main" class="section is-hero" style="background-color: #FBFBED;">    
                           <div class="container has-text-centered is-fluid px-0">
                             <div class="columns is-vcentered">
                            
@@ -182,7 +180,7 @@ gulp.task('integrationMulti', function () {
                                   </div>
                                   <div class="is-flex is-flex-direction-column  is-flex-wrap-wrap  ">
                                     <div class="control">
-                                    <a class="button-has-shadow button has-text-black  is-warning is-rounded is-bg-orange" style="border:solid; border-width: 1px;"
+                                    <a rel="nofollow noopener noreferrer" class="button-has-shadow button has-text-black  is-warning is-rounded is-bg-orange" style="border:solid; border-width: 1px;"
                                         href="${app.url}">
                                         View on Zapier →
                                     </a>
@@ -191,8 +189,8 @@ gulp.task('integrationMulti', function () {
                                 </div>
                                          </div>
                              
-                              <div class="column is-flex is-justify-content-flex-end">
-                                   <img style="max-width: 50%;" class="" loading="lazy" src="/assets/header.png" alt="OOPSpam illustration">
+                              <div class="column">
+                                   <img class="" loading="lazy" src="/assets/IntegrationsHeader.svg" alt="OOPSpam illustration">
                               </div>
                     
                             </div>
@@ -210,7 +208,7 @@ gulp.task('integrationMulti', function () {
                                     <img src="../assets/oopspam-logo.svg" width="64" alt="OOPSpam icon" />
                                     <h3 class="has-text-black">OOPSpam</h3>
                                     <p>OOPSpam is a privacy friendly and accessible anti-spam solution. OOPSpam helps you protect your business from annoying spam.
-                                    Daily updated millions of blocked emails, IPs and a machine learning to help you fight spam in your automated flow.</p>
+                                    Daily updated millions of blocked emails, IPs and the machine learning to help you fight spam in your automated flow.</p>
                                 </div>
                                 <div class="column content is-flex is-flex-direction-column is-align-items-center">
                                     <img src="${app.image}" width="64" alt="${app.title} icon" />
@@ -249,7 +247,7 @@ gulp.task('integrationMulti', function () {
                       <div class="columns is-vcentered is-centered">
                         <div class="column has-text-centered">
                           <h2 class="title has-text-black">How people use OOPSpam</h2>
-                          <p class="subtitle has-text-black py-3">To stop spam on its track, just drop OOPSpam app into your automation flow.</p>
+                          <p class="subtitle has-text-black py-3">To stop spam in its track, just drop OOPSpam app into your automation flow.</p>
                           <div class="columns">
                               <div class="column content is-flex is-flex-direction-column is-align-items-center">
                                   <img class="m-5" src="../assets/integration/world.png" width="128" alt="" />
@@ -408,14 +406,14 @@ gulp.task('integrationMulti', function () {
         Promise.all([
             generatePagesFor("customer-support", 1),
             generatePagesFor("customer-support", 2),
-            generatePagesFor("reviews", 1),
-            generatePagesFor("forms", 1),
+            generatePagesFor("reviews", 1)
+            ,generatePagesFor("forms", 1),
             generatePagesFor("forms", 2),
             generatePagesFor("forms", 3)
             
         ])
         .then(() => {
-            gulp.src('pages/integrations/*.+(html|nunjucks)')
+            gulp.src('pages/integrations/index.html')
                         .pipe(data(function () {
                             return {
                                 appsData1: integrations
