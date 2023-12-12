@@ -7,18 +7,18 @@
   <link rel="stylesheet" href="/styles/alternative.min.css" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="reCaptcha vs. hCaptcha: Features, Pricing, and More">
+  <meta name="description" content="hCaptcha vs. Cloudflare's Turnstile: Features, Pricing, and More">
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@oopspamapi" />
-  <meta property="og:url" content="https://www.oopspam.com/compare/reCaptcha-vs-hCaptcha" />
-  <meta name="og:title" content="reCaptcha vs. hCaptcha [Compare Pricing & Features in 2023]" />
-  <meta name="og:description" content="reCaptcha vs. hCaptcha: Features, Pricing, and More" />
+  <meta property="og:url" content="https://www.oopspam.com/compare/hcaptcha-vs-turnstile" />
+  <meta name="og:title" content="hCaptcha vs. Turnstile [Compare Pricing & Features in 2023]" />
+  <meta name="og:description" content="hCaptcha vs. Turnstile: Features, Pricing, and More" />
   <meta name="og:image" content="https://www.oopspam.com/assets/oopspam-og-image.png" />
 
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-  <title>reCaptcha vs. hCaptcha [Compare Pricing & Features in 2023]</title>
-  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
+  <title>hCaptcha vs. Turnstile [Compare Pricing & Features in 2023]</title>
+  {% include "partials/headScript.njk" %}
 </head>
 <style>
   .table td,
@@ -28,51 +28,7 @@
 </style>
 
 <body class="alternative">
-   <header class="section navigation pb-0 has-shadow"  style=" background-color:inherit;">
-    <div class="navbar is-fixed-top is-transparent">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <img src="/assets/oopspamLogo.svg" alt="OOPSpam logo" width="112" height="28">
-          </a>
-          <a id="navbarBurger" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-            data-target="navigation-bar">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <div id="navigation-bar" class="navbar-menu">
-          <div class="navbar-start">
-          </div>
-          <div class="navbar-end">
-            <a href="/help" class="navbar-item  has-text-black">
-              Docs
-           </a>
-            <a href="/integrations" class="navbar-item  has-text-black">
-              Integrations
-           </a>
-            <a href="./#pricing" class="navbar-item  has-text-black">
-              Pricing
-            </a>
-            <a href="./#contact" class="navbar-item has-text-black">
-              Contact
-            </a>
-            <div class="navbar-item">
-               <a href="https://app.oopspam.com/Identity/Account/Login" class="has-text-black button is-warning is-outlined">
-              Log in
-            </a>
-            </div>
-            <div class="navbar-item">
-             <a href="https://app.oopspam.com/Identity/Account/Register" class="has-text-black button is-warning is-bg-orange">
-              Get started
-            </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  {% include "partials/navigation.njk" %}
   <img alt="" width="100%" src="/assets/alternative/lp-top.svg" />
   <!-- The Main (Intro) Section -->
   <section id="main" class="hero">
@@ -82,9 +38,9 @@
           <!-- full column -->
           <div class="column is-full has-text-centered">
             <div class="content" style="color:black; font-size:16px;">
-              <h1 class="title has-text-black">reCaptcha vs. hCaptcha</h1>
-              <h2 class="subtitle is-family-sans-serif has-text-weight-normal pt-5 has-text-black">Compare reCaptcha vs.
-                hCaptcha features, pricing, and more.</h2>
+              <h1 class="title has-text-black">hCaptcha vs. Turnstile</h1>
+              <h2 class="subtitle is-family-sans-serif has-text-weight-normal pt-5 has-text-black">Compare hCaptcha vs.
+                Turnstile features, pricing, and more.</h2>
 
             </div>
           </div>
@@ -104,10 +60,10 @@
                 <tr>
                   <th class="has-text-centered" style="padding: 3em;">Features</th>
                   <th class="has-text-centered is-size-5">
-                    reCaptcha
+                    hCaptcha
                   </th>
                   <th class="has-text-centered is-centered is-vcentered is-size-5">
-                    hCaptcha
+                    Turnstile
                   </th>
                 </tr>
               </thead>
@@ -116,6 +72,15 @@
                   <th>Official WordPress plugin <p class="has-text-weight-normal"></p>
                   </th>
                   <td class="has-text-centered is-flex is-vcentered is-justify-content-center ">
+                    <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                      <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" transform="translate(2 2)">
+                        <circle cx="8.5" cy="8.5" r="8" />
+                        <path d="m5.5 9.5 2 2 5-5" />
+                      </g>
+                    </svg>
+                  </td>
+                  <td class="has-text-centered  is-vcentered">
                     <svg color="red" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
                       <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
                         stroke-linejoin="round" transform="translate(2 2)">
@@ -127,22 +92,13 @@
                       </g>
                     </svg>
                   </td>
-                  <td class="has-text-centered  is-vcentered">
-                    <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
-                      <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" transform="translate(2 2)">
-                        <circle cx="8.5" cy="8.5" r="8" />
-                        <path d="m5.5 9.5 2 2 5-5" />
-                      </g>
-                    </svg>
-                  </td>
                 </tr>
                 <tr>
                   <th>Is it free?
                   </th>
                   <td class="has-text-centered is-flex is-vcentered is-justify-content-center">up to 1M requests per
                     month</td>
-                  <td class="has-text-centered  is-vcentered ">up to 1M requests per month</td>
+                    <td class="has-text-centered  is-vcentered ">Up to 10 websites</td>
                 </tr>
                 <tr>
                   <th>Spam Score</th>
@@ -156,11 +112,14 @@
                     </svg>
                   </td>
                   <td class="has-text-centered  is-vcentered ">
-                    <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                    <svg color="red" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
                       <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
                         stroke-linejoin="round" transform="translate(2 2)">
                         <circle cx="8.5" cy="8.5" r="8" />
-                        <path d="m5.5 9.5 2 2 5-5" />
+                        <g transform="matrix(0 1 -1 0 17 0)">
+                          <path d="m5.5 11.5 6-6" />
+                          <path d="m5.5 5.5 6 6" />
+                        </g>
                       </g>
                     </svg>
                   </td>
@@ -216,23 +175,20 @@
                 <tr>
                   <th>Website performance impact</th>
                   <td class="has-text-centered is-flex is-vcentered is-justify-content-center">
-                    <a href="https://www.oopspam.com/blog/recaptcha-performance-analyses">More</a>
+                    <a href="https://www.oopspam.com/blog/hcaptcha-performance-analyses">More</a>
                   </td>
                   <td class="has-text-centered  is-vcentered ">
-                    <a href="https://www.oopspam.com/blog/hcaptcha-performance-analyses">Slightly less</a>
+                    Slightly less
                   </td>
                 </tr>
                 <tr>
                   <th>Privacy-friendly</th>
                   <td class="has-text-centered is-flex is-vcentered is-justify-content-center">
-                    <svg color="red" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                    <svg color="green" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
                       <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
                         stroke-linejoin="round" transform="translate(2 2)">
                         <circle cx="8.5" cy="8.5" r="8" />
-                        <g transform="matrix(0 1 -1 0 17 0)">
-                          <path d="m5.5 11.5 6-6" />
-                          <path d="m5.5 5.5 6 6" />
-                        </g>
+                        <path d="m5.5 9.5 2 2 5-5" />
                       </g>
                     </svg>
                   </td>
@@ -303,13 +259,13 @@
                 <tr>
                   <th>Owned by
                   </th>
-                  <td class="has-text-centered is-flex is-vcentered is-justify-content-center">Google</td>
-                  <td class="has-text-centered  is-vcentered ">Intuition Machines</td>
+                  <td class="has-text-centered is-flex is-vcentered is-justify-content-center">Intuition Machines</td>
+                  <td class="has-text-centered  is-vcentered ">Cloudflare</td>
                 </tr>
                 <tr>
                   <th>Customer Support</th>
                   <td class="has-text-centered is-flex is-vcentered is-justify-content-center">Help documentation</td>
-                  <td class="has-text-centered  is-vcentered ">Email Support</td>
+                  <td class="has-text-centered  is-vcentered ">Help documentation, community forum</td>
                 </tr>
               </tbody>
             </table>
@@ -331,23 +287,21 @@
             <div class="columns ">
               <div class="column is-2"></div>
               <div class="column  " style="text-align: center;">
-                <h3 class="is-size-5  has-text-black mb-6">reCaptcha - Alternatives</h2>
+                <h3 class="is-size-5  has-text-black mb-6">hCaptcha - Alternatives</h2>
                   <ul class="is-size-5 ml-0" style="list-style: none; line-height: 36px;">
-                    <li><a href="../recaptcha-alternative">reCaptcha vs OOPSpam</a></li>
-                    <li><a href="recaptcha-vs-akismet">reCaptcha vs Akismet</a></li>
-                    <li><a href="recaptcha-vs-cleantalk">reCaptcha vs CleanTalk</a></li>
-                    <li><a href="reCaptcha-vs-hCaptcha">reCaptcha vs hCaptcha</a></li>
-                    <li><a href="recaptcha-vs-turnstile">reCaptcha vs Turnstile</a></li>
+                    <li><a href="../hCaptcha-alternative">hCaptcha vs OOPSpam</a></li>
+                    <li><a href="hCaptcha-vs-akismet">hCaptcha vs Akismet</a></li>
+                    <li><a href="hCaptcha-vs-cleantalk">hCaptcha vs CleanTalk</a></li>
+                    <li><a href="hcaptcha-vs-turnstile">hCaptcha vs Turnstile</a></li>
                   </ul>
               </div>
               <div class="column" style="text-align: center;">
-                <h3 class="is-size-5 has-text-black mb-6 ">hCaptcha - Alternatives</h2>
+                <h3 class="is-size-5 has-text-black mb-6 ">Turnstile - Alternatives</h2>
                   <ul class="is-size-5 ml-0" style="list-style: none; line-height: 36px;">
-                    <li><a href="../hcaptcha-alternative">hCaptcha vs OOPSpam</a></li>
-                    <li><a href="hcaptcha-vs-akismet">hCaptcha vs Akismet</a></li>
-                    <li><a href="hcaptcha-vs-cleantalk">hCaptcha vs CleanTalk</a></li>
-                    <li><a href="hcaptcha-vs-akismet">hCaptcha vs reCaptcha</a></li>
-                    <li><a href="hcaptcha-vs-turnstile">hCaptcha vs Turnstile</a></li>
+                    <li><a href="../turnstile-alternative">Turnstile vs OOPSpam</a></li>
+                    <li><a href="turnstile-vs-akismet">Turnstile vs Akismet</a></li>
+                    <li><a href="turnstile-vs-cleantalk">Turnstile vs CleanTalk</a></li>
+                    <li><a href="hcaptcha-vs-turnstile">Turnstile vs hCaptcha</a></li>
                   </ul>
               </div>
               <div class="column is-2"></div>
@@ -364,7 +318,7 @@
       <div class="columns is-centered is-vcentered">
         <div class="column">
           <p class="title has-text-centered" style="padding-bottom: 0.7em;">Looking for a better alternative to
-            reCaptcha & hCaptcha? Try OOPSpam!</p>
+            hCaptcha & Turnstile? Try OOPSpam!</p>
           <div class="columns">
             <div class="column"></div>
             <div class="column has-text-centered">
@@ -386,91 +340,8 @@
       </div>
     </div>
   </section>
-  <footer class="footer has-background-black" >
-      <div class="content has-text-centered has-text-white">
-        <div class="columns">
-          
-          <div class="column">
-            <h6 class="has-text-white is-bold has-text-left">Resources</h6>
-            <ul class="has-text-left" style="list-style-type:none; margin:0;">
-              <li><a class="has-text-warning" href="https://www.oopspam.com/affiliate">Affiliate Program</a></li>
-              <li><a class="has-text-warning" href="https://www.oopspam.com/blog">Blog</a></li>
-              <li><a class="has-text-warning" href="https://www.oopspam.com/docs">Documentation</a></li>
-              <li><a class="has-text-warning" href="https://www.oopspam.com/#faq">FAQ</a></li>
-              <li><a class="has-text-warning" href="https://status.oopspam.com/">Status</a></li>
-              <li><a class="has-text-warning" href="https://www.oopspam.com/#contact">Contact us</a></li>
-              <li><a class="has-text-warning" href="about">👋 About</a></li>
-            </ul>
-          </div>
-           <div class="column">
-            <a  href="/tools/"><h6 class="has-text-white is-bold has-text-left">Free Tools</h6></a>
-            <ul class="has-text-left" style="list-style-type:none; margin:0;">
-              <li><a class="has-text-warning" href="https://www.oopspam.com/tools/spam-words-checker">Spam Words Checker</a></li>
-              <li><a class="has-text-warning" href="https://www.oopspam.com/tools/domain-reputation-checker">Domain Reputation Checker</a></li>
-              <li><a class="has-text-warning" href="https://www.oopspam.com/tools/disposable-email-checker">Disposable Email and Domain Checker</a></li>
-            </ul>
-          </div>
-
-          <div class="column">
-            <a  href="/compare/"><h6 class="has-text-white is-bold has-text-left">How We Compare</h6></a>
-            <ul class="has-text-left" style="list-style-type:none; margin:0;">
-              <li><a class="has-text-warning" href="https://www.oopspam.com/akismet-alternative">Alternative to Akismet</a></li>
-              <li><a class="has-text-warning" href="https://www.oopspam.com/recaptcha-alternative">Alternative to reCAPTCHA</a></li>
-             <li><a class="has-text-warning" href="https://www.oopspam.com/hcaptcha-alternative">Alternative to hCAPTCHA</a></li>
-               <li><a class="has-text-warning" href="https://www.oopspam.com/cleantalk-alternative">Alternative to CleanTalk</a></li>
-            </ul>
-          </div>
-
-          <div class="column">
-                  <h6 class="has-text-white is-bold has-text-left">Integrations</h6>    
-                  <ul class="has-text-left" style="list-style-type:none; margin:0;">
-                    <li><a class="has-text-warning" href="https://wordpress.org/plugins/oopspam-anti-spam/">WordPress</a></li>
-                    <li><a class="has-text-warning" href="https://www.oopspam.com/anti-spam-filter-for-gravity-forms">Gravity Forms</a></li>
-                  <li><a class="has-text-warning" href="https://www.oopspam.com/anti-spam-filter-for-ninja-forms">Ninja Forms</a></li>
-                  <li><a class="has-text-warning" href="https://www.oopspam.com/spam-filter-for-contactform7">Contact Form 7</a></li>
-                  <li><a class="has-text-warning" href="https://www.oopspam.com/blog/spam-protection-for-elementor-forms">Elementor Forms</a></li>
-                  <li><a class="has-text-warning" href="/integrations">View all integrations</a></li>
-                  <li><a class="has-text-white" href="https://www.oopspam.com/#contact">📣Let us know your integration</a></li>
-                  </ul>
-          </div>
-
-          <div class="column">
-            <h6 class="has-text-white is-bold has-text-left">Legal</h6>    
-            <ul class="has-text-left" style="list-style-type:none; margin:0;">
-              <li><a class="has-text-warning" href="https://www.oopspam.com/terms">Terms of use</a></li>
-              <li><a class="has-text-warning" href="https://www.oopspam.com/privacypolicy">Privacy Policy</a></li>
-              <li><a class="has-text-warning" href="https://www.oopspam.com/gdpr">GDPR</a></li>
-              <li><a class="has-text-warning" href="https://www.oopspam.com/dpa">DPA</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-   
-    </footer>
-    <div class="has-background-black has-text-white bottom">
-      <div class="container is-fluid">
-        <div class="columns">
-          <div class="column">
-            <p class="has-text-white">© 2017 - 2023 OOPSpam LLC</p>
-          </div>
-          <div class="column has-text-right" style="display: flex;
-  align-items: center; justify-content: end;">
-             <a class="p-1" href="https://twitter.com/oopspamapi">
-                            <img  src="/assets/x-logo.svg" alt="x logo">
-                            </a>
-                            <a class="p-1"  href="https://github.com/OOPSpam">
-                            <img src="/assets/github-circle.svg" alt="github logo">
-                            </a>
-                            <a class="p-1"  href="https://wordpress.org/plugins/oopspam-anti-spam/">
-                            <img src="/assets/wordpress.svg" alt="wordpress logo">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  <script async defer src="https://scripts.withcabin.com/hello.js"></script>
-<script async src="/scripts/app.min.js"></script>
+  {% include "partials/footer.njk" %}
+  {% include "partials/footerScript.njk" %}
 </body>
 
 </html>
