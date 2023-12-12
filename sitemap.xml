@@ -21,7 +21,7 @@
         <loc>https://www.oopspam.com/akismet-alternative</loc>
     
         
-        <lastmod>2023-11-16T16:53:00.376Z</lastmod>
+        <lastmod>2023-12-12T20:33:21.551Z</lastmod>
     
     </url>
     <url>
@@ -29,7 +29,7 @@
         <loc>https://www.oopspam.com/anti-spam-filter-for-gravity-forms</loc>
     
         
-        <lastmod>2023-11-16T18:22:09.849Z</lastmod>
+        <lastmod>2023-12-11T16:30:25.960Z</lastmod>
     
     </url>
     <url>
@@ -37,7 +37,7 @@
         <loc>https://www.oopspam.com/anti-spam-filter-for-ninja-forms</loc>
     
         
-        <lastmod>2023-11-16T18:22:09.849Z</lastmod>
+        <lastmod>2023-12-11T16:28:24.038Z</lastmod>
     
     </url>
     <url>
@@ -45,7 +45,7 @@
         <loc>https://www.oopspam.com/cleantalk-alternative</loc>
     
         
-        <lastmod>2023-11-16T16:53:00.374Z</lastmod>
+        <lastmod>2023-12-12T20:33:21.551Z</lastmod>
     
     </url>
     <url>
@@ -69,7 +69,7 @@
         <loc>https://www.oopspam.com/hcaptcha-alternative</loc>
     
         
-        <lastmod>2023-11-16T19:30:11.526Z</lastmod>
+        <lastmod>2023-12-12T20:33:21.555Z</lastmod>
     
     </url>
     <url>
@@ -77,7 +77,7 @@
         <loc>https://www.oopspam.com/</loc>
     
         
-        <lastmod>2023-11-29T23:05:46.415Z</lastmod>
+        <lastmod>2023-12-11T16:27:40.069Z</lastmod>
     
     </url>
     <url>
@@ -93,7 +93,7 @@
         <loc>https://www.oopspam.com/recaptcha-alternative</loc>
     
         
-        <lastmod>2023-11-16T19:29:48.987Z</lastmod>
+        <lastmod>2023-12-12T20:33:21.551Z</lastmod>
     
     </url>
     <url>
@@ -101,7 +101,7 @@
         <loc>https://www.oopspam.com/spam-filter-for-contactform7</loc>
     
         
-        <lastmod>2023-11-16T18:22:09.850Z</lastmod>
+        <lastmod>2023-12-11T16:28:24.038Z</lastmod>
     
     </url>
     <url>
@@ -110,6 +110,14 @@
     
         
         <lastmod>2023-11-30T15:16:15.322Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>https://www.oopspam.com/turnstile-alternative</loc>
+    
+        
+        <lastmod>2023-12-12T21:11:24.766Z</lastmod>
     
     </url>
     <url>
@@ -149,7 +157,7 @@
         <loc>https://www.oopspam.com/compare/akismet-vs-cleantalk</loc>
     
         
-        <lastmod>2023-11-16T16:53:00.381Z</lastmod>
+        <lastmod>2023-12-12T21:12:33.578Z</lastmod>
     
     </url>
     <url>
@@ -157,7 +165,7 @@
         <loc>https://www.oopspam.com/compare/hcaptcha-vs-akismet</loc>
     
         
-        <lastmod>2023-11-16T19:29:48.988Z</lastmod>
+        <lastmod>2023-12-12T21:13:11.641Z</lastmod>
     
     </url>
     <url>
@@ -165,7 +173,15 @@
         <loc>https://www.oopspam.com/compare/hcaptcha-vs-cleantalk</loc>
     
         
-        <lastmod>2023-11-16T19:29:48.990Z</lastmod>
+        <lastmod>2023-12-12T21:13:51.714Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>https://www.oopspam.com/compare/hcaptcha-vs-turnstile</loc>
+    
+        
+        <lastmod>2023-12-12T21:07:58.209Z</lastmod>
     
     </url>
     <url>
@@ -173,7 +189,7 @@
         <loc>https://www.oopspam.com/compare/</loc>
     
         
-        <lastmod>2023-11-10T21:50:42.715Z</lastmod>
+        <lastmod>2023-12-12T21:08:50.395Z</lastmod>
     
     </url>
     <url>
@@ -181,7 +197,7 @@
         <loc>https://www.oopspam.com/compare/reCaptcha-vs-hCaptcha</loc>
     
         
-        <lastmod>2023-11-16T19:29:48.988Z</lastmod>
+        <lastmod>2023-12-12T21:15:49.817Z</lastmod>
     
     </url>
     <url>
@@ -189,7 +205,7 @@
         <loc>https://www.oopspam.com/compare/recaptcha-vs-akismet</loc>
     
         
-        <lastmod>2023-11-16T19:29:48.987Z</lastmod>
+        <lastmod>2023-12-12T21:14:27.725Z</lastmod>
     
     </url>
     <url>
@@ -197,7 +213,31 @@
         <loc>https://www.oopspam.com/compare/recaptcha-vs-cleantalk</loc>
     
         
-        <lastmod>2023-11-16T19:29:48.993Z</lastmod>
+        <lastmod>2023-12-12T21:15:07.139Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>https://www.oopspam.com/compare/recaptcha-vs-turnstile</loc>
+    
+        
+        <lastmod>2023-12-12T21:06:38.297Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>https://www.oopspam.com/compare/turnstile-vs-akismet</loc>
+    
+        
+        <lastmod>2023-12-12T21:08:06.676Z</lastmod>
+    
+    </url>
+    <url>
+        
+        <loc>https://www.oopspam.com/compare/turnstile-vs-cleantalk</loc>
+    
+        
+        <lastmod>2023-12-12T21:04:23.095Z</lastmod>
     
     </url>
     <url>
@@ -205,7 +245,7 @@
         <loc>https://www.oopspam.com/integrations/</loc>
     
         
-        <lastmod>2023-11-30T17:10:12.657Z</lastmod>
+        <lastmod>2023-12-12T21:16:06.547Z</lastmod>
     
     </url>
     <url>
@@ -213,7 +253,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-123formbuilder</loc>
     
         
-        <lastmod>2023-11-29T23:02:51.899Z</lastmod>
+        <lastmod>2023-12-01T22:13:42.746Z</lastmod>
     
     </url>
     <url>
@@ -221,7 +261,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-360scoreme</loc>
     
         
-        <lastmod>2023-11-29T23:57:58.834Z</lastmod>
+        <lastmod>2023-12-01T22:25:59.031Z</lastmod>
     
     </url>
     <url>
@@ -229,7 +269,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-4screens</loc>
     
         
-        <lastmod>2023-11-29T22:55:13.795Z</lastmod>
+        <lastmod>2023-12-01T22:11:30.038Z</lastmod>
     
     </url>
     <url>
@@ -237,7 +277,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-97display</loc>
     
         
-        <lastmod>2023-11-29T23:04:12.334Z</lastmod>
+        <lastmod>2023-12-01T22:15:11.629Z</lastmod>
     
     </url>
     <url>
@@ -245,7 +285,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-Climbo</loc>
     
         
-        <lastmod>2023-11-29T23:56:53.109Z</lastmod>
+        <lastmod>2023-12-01T22:24:53.539Z</lastmod>
     
     </url>
     <url>
@@ -253,7 +293,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-abcsubmit</loc>
     
         
-        <lastmod>2023-11-29T23:09:45.069Z</lastmod>
+        <lastmod>2023-12-01T22:19:35.673Z</lastmod>
     
     </url>
     <url>
@@ -261,7 +301,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-acquire</loc>
     
         
-        <lastmod>2023-11-29T23:06:32.783Z</lastmod>
+        <lastmod>2023-12-01T22:26:52.146Z</lastmod>
     
     </url>
     <url>
@@ -269,7 +309,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-adept-autotext</loc>
     
         
-        <lastmod>2023-11-29T23:06:47.783Z</lastmod>
+        <lastmod>2023-12-01T22:27:06.931Z</lastmod>
     
     </url>
     <url>
@@ -277,7 +317,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-adpage</loc>
     
         
-        <lastmod>2023-11-29T23:08:13.384Z</lastmod>
+        <lastmod>2023-12-01T22:17:55.805Z</lastmod>
     
     </url>
     <url>
@@ -285,7 +325,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-agolix</loc>
     
         
-        <lastmod>2023-11-29T23:04:20.806Z</lastmod>
+        <lastmod>2023-12-01T22:15:20.877Z</lastmod>
     
     </url>
     <url>
@@ -293,7 +333,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-aidaform</loc>
     
         
-        <lastmod>2023-11-29T23:03:53.258Z</lastmod>
+        <lastmod>2023-12-01T22:14:50.518Z</lastmod>
     
     </url>
     <url>
@@ -301,7 +341,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-aiva</loc>
     
         
-        <lastmod>2023-11-29T23:56:10.472Z</lastmod>
+        <lastmod>2023-12-01T22:20:15.064Z</lastmod>
     
     </url>
     <url>
@@ -309,7 +349,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-algomo</loc>
     
         
-        <lastmod>2023-11-29T23:01:13.666Z</lastmod>
+        <lastmod>2023-12-01T22:23:36.394Z</lastmod>
     
     </url>
     <url>
@@ -317,7 +357,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-alive5</loc>
     
         
-        <lastmod>2023-11-29T23:01:28.655Z</lastmod>
+        <lastmod>2023-12-01T22:23:52.486Z</lastmod>
     
     </url>
     <url>
@@ -325,7 +365,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-alloy-navigator-express</loc>
     
         
-        <lastmod>2023-11-29T23:06:39.224Z</lastmod>
+        <lastmod>2023-12-01T22:26:58.493Z</lastmod>
     
     </url>
     <url>
@@ -333,7 +373,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-alloy-navigator</loc>
     
         
-        <lastmod>2023-11-29T23:06:37.084Z</lastmod>
+        <lastmod>2023-12-01T22:26:56.380Z</lastmod>
     
     </url>
     <url>
@@ -341,7 +381,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-answerconnect</loc>
     
         
-        <lastmod>2023-11-29T22:59:15.696Z</lastmod>
+        <lastmod>2023-12-01T22:21:26.973Z</lastmod>
     
     </url>
     <url>
@@ -349,7 +389,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-answerforce</loc>
     
         
-        <lastmod>2023-11-29T22:59:41.716Z</lastmod>
+        <lastmod>2023-12-01T22:21:54.727Z</lastmod>
     
     </url>
     <url>
@@ -357,7 +397,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-answering-service-care</loc>
     
         
-        <lastmod>2023-11-29T23:05:56.550Z</lastmod>
+        <lastmod>2023-12-01T22:26:15.919Z</lastmod>
     
     </url>
     <url>
@@ -365,7 +405,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-ape-mobile</loc>
     
         
-        <lastmod>2023-11-29T23:09:13.062Z</lastmod>
+        <lastmod>2023-12-01T22:19:00.894Z</lastmod>
     
     </url>
     <url>
@@ -373,7 +413,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-appbot</loc>
     
         
-        <lastmod>2023-11-29T23:56:48.897Z</lastmod>
+        <lastmod>2023-12-01T22:24:49.333Z</lastmod>
     
     </url>
     <url>
@@ -381,7 +421,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-appfollow</loc>
     
         
-        <lastmod>2023-11-29T23:56:44.676Z</lastmod>
+        <lastmod>2023-12-01T22:24:45.099Z</lastmod>
     
     </url>
     <url>
@@ -389,7 +429,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-appyreward</loc>
     
         
-        <lastmod>2023-11-29T22:54:37.186Z</lastmod>
+        <lastmod>2023-12-01T22:10:50.358Z</lastmod>
     
     </url>
     <url>
@@ -397,7 +437,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-array</loc>
     
         
-        <lastmod>2023-11-29T23:55:54.946Z</lastmod>
+        <lastmod>2023-12-01T22:19:58.855Z</lastmod>
     
     </url>
     <url>
@@ -405,7 +445,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-arrivala</loc>
     
         
-        <lastmod>2023-11-29T23:57:03.707Z</lastmod>
+        <lastmod>2023-12-01T22:25:04.088Z</lastmod>
     
     </url>
     <url>
@@ -413,7 +453,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-artibotai</loc>
     
         
-        <lastmod>2023-11-29T22:59:07.249Z</lastmod>
+        <lastmod>2023-12-01T22:21:17.663Z</lastmod>
     
     </url>
     <url>
@@ -421,7 +461,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-asknicely</loc>
     
         
-        <lastmod>2023-11-29T23:04:03.864Z</lastmod>
+        <lastmod>2023-12-01T22:15:02.356Z</lastmod>
     
     </url>
     <url>
@@ -429,7 +469,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-aunoa</loc>
     
         
-        <lastmod>2023-11-29T23:07:07.025Z</lastmod>
+        <lastmod>2023-12-01T22:27:26.002Z</lastmod>
     
     </url>
     <url>
@@ -437,7 +477,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-award-force</loc>
     
         
-        <lastmod>2023-11-29T23:07:41.308Z</lastmod>
+        <lastmod>2023-12-01T22:17:20.494Z</lastmod>
     
     </url>
     <url>
@@ -445,7 +485,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-barbuck-talkingforms</loc>
     
         
-        <lastmod>2023-11-29T23:56:21.211Z</lastmod>
+        <lastmod>2023-12-01T22:20:26.569Z</lastmod>
     
     </url>
     <url>
@@ -453,7 +493,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-barochat</loc>
     
         
-        <lastmod>2023-11-29T23:06:24.236Z</lastmod>
+        <lastmod>2023-12-01T22:26:43.696Z</lastmod>
     
     </url>
     <url>
@@ -461,7 +501,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-basin</loc>
     
         
-        <lastmod>2023-11-29T23:03:29.976Z</lastmod>
+        <lastmod>2023-12-01T22:14:24.872Z</lastmod>
     
     </url>
     <url>
@@ -469,7 +509,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-beau</loc>
     
         
-        <lastmod>2023-11-29T22:55:41.866Z</lastmod>
+        <lastmod>2023-12-01T22:12:00.323Z</lastmod>
     
     </url>
     <url>
@@ -477,7 +517,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-beekai</loc>
     
         
-        <lastmod>2023-11-29T22:56:09.843Z</lastmod>
+        <lastmod>2023-12-01T22:12:30.406Z</lastmod>
     
     </url>
     <url>
@@ -485,7 +525,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-bestomer</loc>
     
         
-        <lastmod>2023-11-29T23:06:41.359Z</lastmod>
+        <lastmod>2023-12-01T22:27:00.610Z</lastmod>
     
     </url>
     <url>
@@ -493,7 +533,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-bevy-design</loc>
     
         
-        <lastmod>2023-11-29T22:56:11.983Z</lastmod>
+        <lastmod>2023-12-01T22:12:32.732Z</lastmod>
     
     </url>
     <url>
@@ -501,7 +541,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-birdeye</loc>
     
         
-        <lastmod>2023-11-29T23:56:38.282Z</lastmod>
+        <lastmod>2023-12-01T22:24:38.730Z</lastmod>
     
     </url>
     <url>
@@ -509,7 +549,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-birdseed</loc>
     
         
-        <lastmod>2023-11-29T23:00:15.893Z</lastmod>
+        <lastmod>2023-12-01T22:22:32.273Z</lastmod>
     
     </url>
     <url>
@@ -517,7 +557,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-bizratings</loc>
     
         
-        <lastmod>2023-11-29T23:57:24.899Z</lastmod>
+        <lastmod>2023-12-01T22:25:25.206Z</lastmod>
     
     </url>
     <url>
@@ -525,7 +565,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-blitzllama</loc>
     
         
-        <lastmod>2023-11-29T23:09:21.614Z</lastmod>
+        <lastmod>2023-12-01T22:19:10.131Z</lastmod>
     
     </url>
     <url>
@@ -533,7 +573,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-bolddesk</loc>
     
         
-        <lastmod>2023-11-29T23:00:58.615Z</lastmod>
+        <lastmod>2023-12-01T22:23:19.908Z</lastmod>
     
     </url>
     <url>
@@ -541,7 +581,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-bonsai</loc>
     
         
-        <lastmod>2023-11-29T23:04:01.735Z</lastmod>
+        <lastmod>2023-12-01T22:15:00.009Z</lastmod>
     
     </url>
     <url>
@@ -549,7 +589,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-boom-form</loc>
     
         
-        <lastmod>2023-11-29T23:09:10.938Z</lastmod>
+        <lastmod>2023-12-01T22:18:58.596Z</lastmod>
     
     </url>
     <url>
@@ -557,7 +597,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-botsify</loc>
     
         
-        <lastmod>2023-11-29T23:01:15.798Z</lastmod>
+        <lastmod>2023-12-01T22:23:38.666Z</lastmod>
     
     </url>
     <url>
@@ -565,7 +605,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-botstar</loc>
     
         
-        <lastmod>2023-11-29T23:00:11.622Z</lastmod>
+        <lastmod>2023-12-01T22:22:27.599Z</lastmod>
     
     </url>
     <url>
@@ -573,7 +613,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-brewsurvey</loc>
     
         
-        <lastmod>2023-11-29T22:55:26.690Z</lastmod>
+        <lastmod>2023-12-01T22:11:44.045Z</lastmod>
     
     </url>
     <url>
@@ -581,7 +621,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-cabinpanda</loc>
     
         
-        <lastmod>2023-11-29T22:55:18.087Z</lastmod>
+        <lastmod>2023-12-01T22:11:34.717Z</lastmod>
     
     </url>
     <url>
@@ -589,7 +629,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-callexa-feedback</loc>
     
         
-        <lastmod>2023-11-29T23:09:34.409Z</lastmod>
+        <lastmod>2023-12-01T22:19:23.982Z</lastmod>
     
     </url>
     <url>
@@ -597,7 +637,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-callpaas</loc>
     
         
-        <lastmod>2023-11-29T23:06:54.202Z</lastmod>
+        <lastmod>2023-12-01T22:27:13.296Z</lastmod>
     
     </url>
     <url>
@@ -605,7 +645,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-cayzu</loc>
     
         
-        <lastmod>2023-11-29T23:06:28.518Z</lastmod>
+        <lastmod>2023-12-01T22:26:47.919Z</lastmod>
     
     </url>
     <url>
@@ -613,7 +653,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-centiment</loc>
     
         
-        <lastmod>2023-11-29T22:55:46.195Z</lastmod>
+        <lastmod>2023-12-01T22:12:04.915Z</lastmod>
     
     </url>
     <url>
@@ -621,7 +661,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-channel-talk</loc>
     
         
-        <lastmod>2023-11-29T22:59:54.499Z</lastmod>
+        <lastmod>2023-12-01T22:22:08.804Z</lastmod>
     
     </url>
     <url>
@@ -629,7 +669,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chaport</loc>
     
         
-        <lastmod>2023-11-29T22:59:56.638Z</lastmod>
+        <lastmod>2023-12-01T22:22:11.107Z</lastmod>
     
     </url>
     <url>
@@ -637,7 +677,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chargedesk</loc>
     
         
-        <lastmod>2023-11-29T23:00:13.754Z</lastmod>
+        <lastmod>2023-12-01T22:22:29.886Z</lastmod>
     
     </url>
     <url>
@@ -645,7 +685,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chat-agents</loc>
     
         
-        <lastmod>2023-11-29T23:01:49.901Z</lastmod>
+        <lastmod>2023-12-01T22:24:15.921Z</lastmod>
     
     </url>
     <url>
@@ -653,7 +693,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chat-tonic</loc>
     
         
-        <lastmod>2023-11-29T23:06:09.268Z</lastmod>
+        <lastmod>2023-12-01T22:26:28.592Z</lastmod>
     
     </url>
     <url>
@@ -661,7 +701,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chataibot</loc>
     
         
-        <lastmod>2023-11-29T23:06:19.934Z</lastmod>
+        <lastmod>2023-12-01T22:26:39.480Z</lastmod>
     
     </url>
     <url>
@@ -669,7 +709,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chatbot</loc>
     
         
-        <lastmod>2023-11-29T22:56:57.137Z</lastmod>
+        <lastmod>2023-12-01T22:21:08.401Z</lastmod>
     
     </url>
     <url>
@@ -677,7 +717,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chatbutlerai</loc>
     
         
-        <lastmod>2023-11-29T23:07:09.164Z</lastmod>
+        <lastmod>2023-12-01T22:27:28.121Z</lastmod>
     
     </url>
     <url>
@@ -685,7 +725,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chatlio</loc>
     
         
-        <lastmod>2023-11-29T23:00:32.973Z</lastmod>
+        <lastmod>2023-12-01T22:22:51.972Z</lastmod>
     
     </url>
     <url>
@@ -693,7 +733,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chatra</loc>
     
         
-        <lastmod>2023-11-29T22:59:33.192Z</lastmod>
+        <lastmod>2023-12-01T22:21:45.516Z</lastmod>
     
     </url>
     <url>
@@ -701,7 +741,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chatrhub</loc>
     
         
-        <lastmod>2023-11-29T23:06:34.938Z</lastmod>
+        <lastmod>2023-12-01T22:26:54.269Z</lastmod>
     
     </url>
     <url>
@@ -709,7 +749,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chayall</loc>
     
         
-        <lastmod>2023-11-29T23:06:52.057Z</lastmod>
+        <lastmod>2023-12-01T22:27:11.160Z</lastmod>
     
     </url>
     <url>
@@ -717,7 +757,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-checkmarket</loc>
     
         
-        <lastmod>2023-11-29T23:08:00.526Z</lastmod>
+        <lastmod>2023-12-01T22:17:41.296Z</lastmod>
     
     </url>
     <url>
@@ -725,7 +765,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-chipbot</loc>
     
         
-        <lastmod>2023-11-29T23:01:32.886Z</lastmod>
+        <lastmod>2023-12-01T22:23:57.088Z</lastmod>
     
     </url>
     <url>
@@ -733,7 +773,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-classmarker</loc>
     
         
-        <lastmod>2023-11-29T23:07:49.855Z</lastmod>
+        <lastmod>2023-12-01T22:17:28.972Z</lastmod>
     
     </url>
     <url>
@@ -741,7 +781,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-clickdesk</loc>
     
         
-        <lastmod>2023-11-29T23:01:11.533Z</lastmod>
+        <lastmod>2023-12-01T22:23:34.066Z</lastmod>
     
     </url>
     <url>
@@ -749,7 +789,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-cloudform</loc>
     
         
-        <lastmod>2023-11-29T22:54:35.022Z</lastmod>
+        <lastmod>2023-12-01T22:10:47.986Z</lastmod>
     
     </url>
     <url>
@@ -757,7 +797,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-cloutly</loc>
     
         
-        <lastmod>2023-11-29T23:57:07.944Z</lastmod>
+        <lastmod>2023-12-01T22:25:08.312Z</lastmod>
     
     </url>
     <url>
@@ -765,7 +805,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-coach-catalyst</loc>
     
         
-        <lastmod>2023-11-29T23:07:15.603Z</lastmod>
+        <lastmod>2023-12-01T22:16:55.147Z</lastmod>
     
     </url>
     <url>
@@ -773,7 +813,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-cognito-forms</loc>
     
         
-        <lastmod>2023-11-29T23:02:26.335Z</lastmod>
+        <lastmod>2023-12-01T22:13:14.868Z</lastmod>
     
     </url>
     <url>
@@ -781,7 +821,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-collect-chat</loc>
     
         
-        <lastmod>2023-11-29T23:04:39.877Z</lastmod>
+        <lastmod>2023-12-01T22:15:41.724Z</lastmod>
     
     </url>
     <url>
@@ -789,7 +829,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-comm100</loc>
     
         
-        <lastmod>2023-11-29T23:01:54.175Z</lastmod>
+        <lastmod>2023-12-01T22:24:20.510Z</lastmod>
     
     </url>
     <url>
@@ -797,7 +837,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-commcare</loc>
     
         
-        <lastmod>2023-11-29T23:05:13.823Z</lastmod>
+        <lastmod>2023-12-01T22:16:23.144Z</lastmod>
     
     </url>
     <url>
@@ -805,7 +845,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-communityforce</loc>
     
         
-        <lastmod>2023-11-29T22:54:48.028Z</lastmod>
+        <lastmod>2023-12-01T22:11:02.043Z</lastmod>
     
     </url>
     <url>
@@ -813,7 +853,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-compass-wave</loc>
     
         
-        <lastmod>2023-11-29T23:56:29.763Z</lastmod>
+        <lastmod>2023-12-01T22:20:35.758Z</lastmod>
     
     </url>
     <url>
@@ -821,7 +861,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-contact-us-dot-com</loc>
     
         
-        <lastmod>2023-11-29T22:54:45.862Z</lastmod>
+        <lastmod>2023-12-01T22:10:59.731Z</lastmod>
     
     </url>
     <url>
@@ -829,7 +869,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-content-snare</loc>
     
         
-        <lastmod>2023-11-29T23:03:38.443Z</lastmod>
+        <lastmod>2023-12-01T22:14:34.306Z</lastmod>
     
     </url>
     <url>
@@ -837,7 +877,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-convert-forms</loc>
     
         
-        <lastmod>2023-11-29T23:04:46.228Z</lastmod>
+        <lastmod>2023-12-01T22:15:49.261Z</lastmod>
     
     </url>
     <url>
@@ -845,7 +885,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-convertcalculator</loc>
     
         
-        <lastmod>2023-11-29T23:04:18.678Z</lastmod>
+        <lastmod>2023-12-01T22:15:18.557Z</lastmod>
     
     </url>
     <url>
@@ -853,7 +893,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-convertflow</loc>
     
         
-        <lastmod>2023-11-29T23:03:40.562Z</lastmod>
+        <lastmod>2023-12-01T22:14:36.597Z</lastmod>
     
     </url>
     <url>
@@ -861,7 +901,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-convolo-leads</loc>
     
         
-        <lastmod>2023-11-29T23:07:28.456Z</lastmod>
+        <lastmod>2023-12-01T22:17:07.809Z</lastmod>
     
     </url>
     <url>
@@ -869,7 +909,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-cool-tabs</loc>
     
         
-        <lastmod>2023-11-29T22:54:39.343Z</lastmod>
+        <lastmod>2023-12-01T22:10:52.683Z</lastmod>
     
     </url>
     <url>
@@ -877,7 +917,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-coreo</loc>
     
         
-        <lastmod>2023-11-29T22:54:32.789Z</lastmod>
+        <lastmod>2023-12-01T22:10:45.630Z</lastmod>
     
     </url>
     <url>
@@ -885,7 +925,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-crisp</loc>
     
         
-        <lastmod>2023-11-29T22:56:54.720Z</lastmod>
+        <lastmod>2023-12-01T22:21:06.077Z</lastmod>
     
     </url>
     <url>
@@ -893,7 +933,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-customer-guru</loc>
     
         
-        <lastmod>2023-11-29T23:08:51.743Z</lastmod>
+        <lastmod>2023-12-01T22:18:37.544Z</lastmod>
     
     </url>
     <url>
@@ -901,7 +941,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-customerly</loc>
     
         
-        <lastmod>2023-11-29T23:00:20.175Z</lastmod>
+        <lastmod>2023-12-01T22:22:37.171Z</lastmod>
     
     </url>
     <url>
@@ -909,7 +949,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-custplace</loc>
     
         
-        <lastmod>2023-11-29T23:57:18.551Z</lastmod>
+        <lastmod>2023-12-01T22:25:18.870Z</lastmod>
     
     </url>
     <url>
@@ -917,7 +957,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-cxera</loc>
     
         
-        <lastmod>2023-11-29T23:07:04.884Z</lastmod>
+        <lastmod>2023-12-01T22:27:23.883Z</lastmod>
     
     </url>
     <url>
@@ -925,7 +965,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-datascope-forms</loc>
     
         
-        <lastmod>2023-11-29T23:04:41.997Z</lastmod>
+        <lastmod>2023-12-01T22:15:44.052Z</lastmod>
     
     </url>
     <url>
@@ -933,7 +973,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-decisionvault</loc>
     
         
-        <lastmod>2023-11-29T23:09:19.488Z</lastmod>
+        <lastmod>2023-12-01T22:19:07.809Z</lastmod>
     
     </url>
     <url>
@@ -941,7 +981,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-delighted</loc>
     
         
-        <lastmod>2023-11-29T23:02:58.248Z</lastmod>
+        <lastmod>2023-12-01T22:13:50.087Z</lastmod>
     
     </url>
     <url>
@@ -949,7 +989,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-deskdirector</loc>
     
         
-        <lastmod>2023-11-29T23:02:04.834Z</lastmod>
+        <lastmod>2023-12-01T22:24:32.146Z</lastmod>
     
     </url>
     <url>
@@ -957,7 +997,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-deskmoz</loc>
     
         
-        <lastmod>2023-11-29T23:01:30.768Z</lastmod>
+        <lastmod>2023-12-01T22:23:54.810Z</lastmod>
     
     </url>
     <url>
@@ -965,7 +1005,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-deskpro</loc>
     
         
-        <lastmod>2023-11-29T23:00:41.448Z</lastmod>
+        <lastmod>2023-12-01T22:23:01.252Z</lastmod>
     
     </url>
     <url>
@@ -973,7 +1013,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-deskuio-integrations</loc>
     
         
-        <lastmod>2023-11-29T23:06:07.171Z</lastmod>
+        <lastmod>2023-12-01T22:26:26.489Z</lastmod>
     
     </url>
     <url>
@@ -981,7 +1021,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-devicemagic</loc>
     
         
-        <lastmod>2023-11-29T23:04:27.161Z</lastmod>
+        <lastmod>2023-12-01T22:15:27.857Z</lastmod>
     
     </url>
     <url>
@@ -989,7 +1029,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-dixa</loc>
     
         
-        <lastmod>2023-11-29T23:00:18.027Z</lastmod>
+        <lastmod>2023-12-01T22:22:34.814Z</lastmod>
     
     </url>
     <url>
@@ -997,7 +1037,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-docketwise</loc>
     
         
-        <lastmod>2023-11-29T23:04:50.487Z</lastmod>
+        <lastmod>2023-12-01T22:15:53.896Z</lastmod>
     
     </url>
     <url>
@@ -1005,7 +1045,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-document360</loc>
     
         
-        <lastmod>2023-11-29T23:00:24.445Z</lastmod>
+        <lastmod>2023-12-01T22:22:41.793Z</lastmod>
     
     </url>
     <url>
@@ -1013,7 +1053,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-docupletionforms</loc>
     
         
-        <lastmod>2023-11-29T22:54:43.681Z</lastmod>
+        <lastmod>2023-12-01T22:10:57.431Z</lastmod>
     
     </url>
     <url>
@@ -1021,7 +1061,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-doopoll</loc>
     
         
-        <lastmod>2023-11-29T22:55:15.940Z</lastmod>
+        <lastmod>2023-12-01T22:11:32.363Z</lastmod>
     
     </url>
     <url>
@@ -1029,7 +1069,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-dragn-survey</loc>
     
         
-        <lastmod>2023-11-29T23:08:17.645Z</lastmod>
+        <lastmod>2023-12-01T22:18:00.436Z</lastmod>
     
     </url>
     <url>
@@ -1037,7 +1077,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-drift</loc>
     
         
-        <lastmod>2023-11-29T22:56:52.605Z</lastmod>
+        <lastmod>2023-12-01T22:21:03.807Z</lastmod>
     
     </url>
     <url>
@@ -1045,7 +1085,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-easyfeedback</loc>
     
         
-        <lastmod>2023-11-29T23:09:42.929Z</lastmod>
+        <lastmod>2023-12-01T22:19:33.339Z</lastmod>
     
     </url>
     <url>
@@ -1053,7 +1093,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-easypromos</loc>
     
         
-        <lastmod>2023-11-29T23:55:46.362Z</lastmod>
+        <lastmod>2023-12-01T22:19:49.561Z</lastmod>
     
     </url>
     <url>
@@ -1061,7 +1101,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-elements-financial-advisor</loc>
     
         
-        <lastmod>2023-11-29T23:08:15.513Z</lastmod>
+        <lastmod>2023-12-01T22:17:58.090Z</lastmod>
     
     </url>
     <url>
@@ -1069,7 +1109,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-elevatie</loc>
     
         
-        <lastmod>2023-11-29T23:57:48.249Z</lastmod>
+        <lastmod>2023-12-01T22:25:48.451Z</lastmod>
     
     </url>
     <url>
@@ -1077,7 +1117,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-elfsight</loc>
     
         
-        <lastmod>2023-11-29T23:03:27.860Z</lastmod>
+        <lastmod>2023-12-01T22:14:22.577Z</lastmod>
     
     </url>
     <url>
@@ -1085,7 +1125,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-enalyzer</loc>
     
         
-        <lastmod>2023-11-29T23:05:03.232Z</lastmod>
+        <lastmod>2023-12-01T22:16:07.745Z</lastmod>
     
     </url>
     <url>
@@ -1093,7 +1133,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-evaluagent</loc>
     
         
-        <lastmod>2023-11-29T23:06:13.503Z</lastmod>
+        <lastmod>2023-12-01T22:26:32.810Z</lastmod>
     
     </url>
     <url>
@@ -1101,7 +1141,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-evolution-forms</loc>
     
         
-        <lastmod>2023-11-29T23:56:34.050Z</lastmod>
+        <lastmod>2023-12-01T22:20:40.416Z</lastmod>
     
     </url>
     <url>
@@ -1109,7 +1149,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-expertconnect</loc>
     
         
-        <lastmod>2023-11-29T23:01:37.119Z</lastmod>
+        <lastmod>2023-12-01T22:24:01.689Z</lastmod>
     
     </url>
     <url>
@@ -1117,7 +1157,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-facilitybot</loc>
     
         
-        <lastmod>2023-11-29T23:07:02.752Z</lastmod>
+        <lastmod>2023-12-01T22:27:21.766Z</lastmod>
     
     </url>
     <url>
@@ -1125,7 +1165,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-fastfield</loc>
     
         
-        <lastmod>2023-11-29T23:03:19.390Z</lastmod>
+        <lastmod>2023-12-01T22:14:13.297Z</lastmod>
     
     </url>
     <url>
@@ -1133,7 +1173,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-feathery</loc>
     
         
-        <lastmod>2023-11-29T23:04:58.996Z</lastmod>
+        <lastmod>2023-12-01T22:16:03.126Z</lastmod>
     
     </url>
     <url>
@@ -1141,7 +1181,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-feedier</loc>
     
         
-        <lastmod>2023-11-29T23:08:36.853Z</lastmod>
+        <lastmod>2023-12-01T22:18:21.375Z</lastmod>
     
     </url>
     <url>
@@ -1149,7 +1189,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-feefo</loc>
     
         
-        <lastmod>2023-11-29T23:04:33.514Z</lastmod>
+        <lastmod>2023-12-01T22:15:34.766Z</lastmod>
     
     </url>
     <url>
@@ -1157,7 +1197,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-fera</loc>
     
         
-        <lastmod>2023-11-29T23:56:59.477Z</lastmod>
+        <lastmod>2023-12-01T22:24:59.858Z</lastmod>
     
     </url>
     <url>
@@ -1165,7 +1205,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-fieldgoal</loc>
     
         
-        <lastmod>2023-11-29T22:55:11.641Z</lastmod>
+        <lastmod>2023-12-01T22:11:27.708Z</lastmod>
     
     </url>
     <url>
@@ -1173,7 +1213,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-fillout</loc>
     
         
-        <lastmod>2023-11-29T23:03:08.817Z</lastmod>
+        <lastmod>2023-12-01T22:14:01.729Z</lastmod>
     
     </url>
     <url>
@@ -1181,7 +1221,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-fiveoak</loc>
     
         
-        <lastmod>2023-11-29T23:57:12.209Z</lastmod>
+        <lastmod>2023-12-01T22:25:12.527Z</lastmod>
     
     </url>
     <url>
@@ -1189,7 +1229,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-florm</loc>
     
         
-        <lastmod>2023-11-29T23:56:08.349Z</lastmod>
+        <lastmod>2023-12-01T22:20:12.776Z</lastmod>
     
     </url>
     <url>
@@ -1197,7 +1237,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-form-data</loc>
     
         
-        <lastmod>2023-11-29T23:05:39.146Z</lastmod>
+        <lastmod>2023-12-01T22:16:50.900Z</lastmod>
     
     </url>
     <url>
@@ -1205,7 +1245,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-form-designer</loc>
     
         
-        <lastmod>2023-11-29T23:09:04.520Z</lastmod>
+        <lastmod>2023-12-01T22:18:51.713Z</lastmod>
     
     </url>
     <url>
@@ -1213,7 +1253,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formafzar</loc>
     
         
-        <lastmod>2023-11-29T23:05:34.934Z</lastmod>
+        <lastmod>2023-12-01T22:16:46.320Z</lastmod>
     
     </url>
     <url>
@@ -1221,7 +1261,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formaloo</loc>
     
         
-        <lastmod>2023-11-29T23:03:42.686Z</lastmod>
+        <lastmod>2023-12-01T22:14:38.898Z</lastmod>
     
     </url>
     <url>
@@ -1229,7 +1269,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formbackend</loc>
     
         
-        <lastmod>2023-11-29T23:08:49.621Z</lastmod>
+        <lastmod>2023-12-01T22:18:35.191Z</lastmod>
     
     </url>
     <url>
@@ -1237,7 +1277,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formcan</loc>
     
         
-        <lastmod>2023-11-29T23:08:04.830Z</lastmod>
+        <lastmod>2023-12-01T22:17:45.892Z</lastmod>
     
     </url>
     <url>
@@ -1245,7 +1285,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formcarry</loc>
     
         
-        <lastmod>2023-11-29T23:04:16.556Z</lastmod>
+        <lastmod>2023-12-01T22:15:16.283Z</lastmod>
     
     </url>
     <url>
@@ -1253,7 +1293,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formcrafts</loc>
     
         
-        <lastmod>2023-11-29T23:04:44.117Z</lastmod>
+        <lastmod>2023-12-01T22:15:46.403Z</lastmod>
     
     </url>
     <url>
@@ -1261,7 +1301,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formdesk</loc>
     
         
-        <lastmod>2023-11-29T23:08:45.355Z</lastmod>
+        <lastmod>2023-12-01T22:18:30.495Z</lastmod>
     
     </url>
     <url>
@@ -1269,7 +1309,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formidable</loc>
     
         
-        <lastmod>2023-11-29T23:02:37.013Z</lastmod>
+        <lastmod>2023-12-01T22:13:26.579Z</lastmod>
     
     </url>
     <url>
@@ -1277,7 +1317,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formilla-da47618</loc>
     
         
-        <lastmod>2023-11-29T23:00:07.321Z</lastmod>
+        <lastmod>2023-12-01T22:22:23.037Z</lastmod>
     
     </url>
     <url>
@@ -1285,7 +1325,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formitize</loc>
     
         
-        <lastmod>2023-11-29T23:07:54.122Z</lastmod>
+        <lastmod>2023-12-01T22:17:34.337Z</lastmod>
     
     </url>
     <url>
@@ -1293,7 +1333,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formium</loc>
     
         
-        <lastmod>2023-11-29T23:08:06.960Z</lastmod>
+        <lastmod>2023-12-01T22:17:48.225Z</lastmod>
     
     </url>
     <url>
@@ -1301,7 +1341,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formkeep</loc>
     
         
-        <lastmod>2023-11-29T23:04:54.746Z</lastmod>
+        <lastmod>2023-12-01T22:15:58.581Z</lastmod>
     
     </url>
     <url>
@@ -1309,7 +1349,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formless</loc>
     
         
-        <lastmod>2023-11-29T23:05:07.466Z</lastmod>
+        <lastmod>2023-12-01T22:16:12.411Z</lastmod>
     
     </url>
     <url>
@@ -1317,7 +1357,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formlets</loc>
     
         
-        <lastmod>2023-11-29T23:07:45.556Z</lastmod>
+        <lastmod>2023-12-01T22:17:24.737Z</lastmod>
     
     </url>
     <url>
@@ -1325,7 +1365,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formly</loc>
     
         
-        <lastmod>2023-11-29T23:09:02.398Z</lastmod>
+        <lastmod>2023-12-01T22:18:49.440Z</lastmod>
     
     </url>
     <url>
@@ -1333,7 +1373,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formplus</loc>
     
         
-        <lastmod>2023-11-29T23:08:55.996Z</lastmod>
+        <lastmod>2023-12-01T22:18:42.187Z</lastmod>
     
     </url>
     <url>
@@ -1341,7 +1381,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formpress</loc>
     
         
-        <lastmod>2023-11-29T23:55:48.550Z</lastmod>
+        <lastmod>2023-12-01T22:19:51.971Z</lastmod>
     
     </url>
     <url>
@@ -1349,7 +1389,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-forms-for-slack</loc>
     
         
-        <lastmod>2023-11-29T23:03:32.091Z</lastmod>
+        <lastmod>2023-12-01T22:14:27.187Z</lastmod>
     
     </url>
     <url>
@@ -1357,7 +1397,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formsapp</loc>
     
         
-        <lastmod>2023-11-29T23:03:04.561Z</lastmod>
+        <lastmod>2023-12-01T22:13:57.045Z</lastmod>
     
     </url>
     <url>
@@ -1365,7 +1405,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formsite</loc>
     
         
-        <lastmod>2023-11-29T23:02:56.134Z</lastmod>
+        <lastmod>2023-12-01T22:13:47.405Z</lastmod>
     
     </url>
     <url>
@@ -1373,7 +1413,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formsonfire</loc>
     
         
-        <lastmod>2023-11-29T23:08:58.124Z</lastmod>
+        <lastmod>2023-12-01T22:18:44.781Z</lastmod>
     
     </url>
     <url>
@@ -1381,7 +1421,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formspark</loc>
     
         
-        <lastmod>2023-11-29T23:03:02.466Z</lastmod>
+        <lastmod>2023-12-01T22:13:54.758Z</lastmod>
     
     </url>
     <url>
@@ -1389,7 +1429,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formsquash</loc>
     
         
-        <lastmod>2023-11-29T23:09:15.214Z</lastmod>
+        <lastmod>2023-12-01T22:19:03.243Z</lastmod>
     
     </url>
     <url>
@@ -1397,7 +1437,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-formstack</loc>
     
         
-        <lastmod>2023-11-29T23:02:43.399Z</lastmod>
+        <lastmod>2023-12-01T22:13:33.564Z</lastmod>
     
     </url>
     <url>
@@ -1405,7 +1445,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-freescout</loc>
     
         
-        <lastmod>2023-11-29T23:00:54.322Z</lastmod>
+        <lastmod>2023-12-01T22:23:15.319Z</lastmod>
     
     </url>
     <url>
@@ -1413,7 +1453,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-freshdesk</loc>
     
         
-        <lastmod>2023-11-29T22:56:37.814Z</lastmod>
+        <lastmod>2023-12-01T22:20:47.493Z</lastmod>
     
     </url>
     <url>
@@ -1421,7 +1461,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-freshreview</loc>
     
         
-        <lastmod>2023-11-29T23:57:46.123Z</lastmod>
+        <lastmod>2023-12-01T22:25:46.336Z</lastmod>
     
     </url>
     <url>
@@ -1429,7 +1469,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-froged</loc>
     
         
-        <lastmod>2023-11-29T23:01:00.828Z</lastmod>
+        <lastmod>2023-12-01T22:23:22.241Z</lastmod>
     
     </url>
     <url>
@@ -1437,7 +1477,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-frontlead</loc>
     
         
-        <lastmod>2023-11-29T22:56:29.168Z</lastmod>
+        <lastmod>2023-12-01T22:12:51.348Z</lastmod>
     
     </url>
     <url>
@@ -1445,7 +1485,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-frontrow</loc>
     
         
-        <lastmod>2023-11-29T23:57:44.003Z</lastmod>
+        <lastmod>2023-12-01T22:25:44.229Z</lastmod>
     
     </url>
     <url>
@@ -1453,7 +1493,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-fulcrum</loc>
     
         
-        <lastmod>2023-11-29T23:05:28.627Z</lastmod>
+        <lastmod>2023-12-01T22:16:39.290Z</lastmod>
     
     </url>
     <url>
@@ -1461,7 +1501,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-fusedesk</loc>
     
         
-        <lastmod>2023-11-29T23:01:09.380Z</lastmod>
+        <lastmod>2023-12-01T22:23:31.756Z</lastmod>
     
     </url>
     <url>
@@ -1469,7 +1509,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-fynzo-survey</loc>
     
         
-        <lastmod>2023-11-29T23:55:57.084Z</lastmod>
+        <lastmod>2023-12-01T22:20:01.190Z</lastmod>
     
     </url>
     <url>
@@ -1477,7 +1517,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-g2-crowd</loc>
     
         
-        <lastmod>2023-11-29T23:56:40.423Z</lastmod>
+        <lastmod>2023-12-01T22:24:40.862Z</lastmod>
     
     </url>
     <url>
@@ -1485,7 +1525,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-gatherup</loc>
     
         
-        <lastmod>2023-11-29T23:04:14.444Z</lastmod>
+        <lastmod>2023-12-01T22:15:13.932Z</lastmod>
     
     </url>
     <url>
@@ -1493,7 +1533,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-gestioo</loc>
     
         
-        <lastmod>2023-11-29T23:00:37.230Z</lastmod>
+        <lastmod>2023-12-01T22:22:56.585Z</lastmod>
     
     </url>
     <url>
@@ -1501,7 +1541,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-getform</loc>
     
         
-        <lastmod>2023-11-29T23:03:23.632Z</lastmod>
+        <lastmod>2023-12-01T22:14:17.896Z</lastmod>
     
     </url>
     <url>
@@ -1509,7 +1549,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-getsitecontrol</loc>
     
         
-        <lastmod>2023-11-29T23:03:55.374Z</lastmod>
+        <lastmod>2023-12-01T22:14:52.814Z</lastmod>
     
     </url>
     <url>
@@ -1517,7 +1557,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-gist</loc>
     
         
-        <lastmod>2023-11-29T22:59:17.815Z</lastmod>
+        <lastmod>2023-12-01T22:21:29.261Z</lastmod>
     
     </url>
     <url>
@@ -1525,7 +1565,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-gocanvas</loc>
     
         
-        <lastmod>2023-11-29T23:03:10.923Z</lastmod>
+        <lastmod>2023-12-01T22:14:04.036Z</lastmod>
     
     </url>
     <url>
@@ -1533,7 +1573,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-goformz</loc>
     
         
-        <lastmod>2023-11-29T23:07:19.885Z</lastmod>
+        <lastmod>2023-12-01T22:16:59.362Z</lastmod>
     
     </url>
     <url>
@@ -1541,7 +1581,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-good-grants</loc>
     
         
-        <lastmod>2023-11-29T23:08:53.866Z</lastmod>
+        <lastmod>2023-12-01T22:18:39.847Z</lastmod>
     
     </url>
     <url>
@@ -1549,7 +1589,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-google-forms</loc>
     
         
-        <lastmod>2023-11-29T23:02:09.138Z</lastmod>
+        <lastmod>2023-12-01T22:12:56.064Z</lastmod>
     
     </url>
     <url>
@@ -1557,7 +1597,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-grab-your-reviews</loc>
     
         
-        <lastmod>2023-11-29T23:56:55.219Z</lastmod>
+        <lastmod>2023-12-01T22:24:55.650Z</lastmod>
     
     </url>
     <url>
@@ -1565,7 +1605,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-grade-us</loc>
     
         
-        <lastmod>2023-11-29T23:56:46.783Z</lastmod>
+        <lastmod>2023-12-01T22:24:47.216Z</lastmod>
     
     </url>
     <url>
@@ -1573,7 +1613,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-gravity-forms</loc>
     
         
-        <lastmod>2023-11-29T23:02:13.454Z</lastmod>
+        <lastmod>2023-12-01T22:13:00.676Z</lastmod>
     
     </url>
     <url>
@@ -1581,7 +1621,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-greetly</loc>
     
         
-        <lastmod>2023-11-29T23:07:32.768Z</lastmod>
+        <lastmod>2023-12-01T22:17:12.039Z</lastmod>
     
     </url>
     <url>
@@ -1589,7 +1629,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-groopit</loc>
     
         
-        <lastmod>2023-11-29T22:54:52.330Z</lastmod>
+        <lastmod>2023-12-01T22:11:06.738Z</lastmod>
     
     </url>
     <url>
@@ -1597,7 +1637,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-groove</loc>
     
         
-        <lastmod>2023-11-29T22:59:26.834Z</lastmod>
+        <lastmod>2023-12-01T22:21:38.511Z</lastmod>
     
     </url>
     <url>
@@ -1605,7 +1645,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-growform</loc>
     
         
-        <lastmod>2023-11-29T23:04:37.762Z</lastmod>
+        <lastmod>2023-12-01T22:15:39.400Z</lastmod>
     
     </url>
     <url>
@@ -1613,7 +1653,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-guestmeter</loc>
     
         
-        <lastmod>2023-11-29T23:57:50.368Z</lastmod>
+        <lastmod>2023-12-01T22:25:50.562Z</lastmod>
     
     </url>
     <url>
@@ -1621,7 +1661,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-halda</loc>
     
         
-        <lastmod>2023-11-29T23:09:27.965Z</lastmod>
+        <lastmod>2023-12-01T22:19:17.131Z</lastmod>
     
     </url>
     <url>
@@ -1629,7 +1669,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-happydesk</loc>
     
         
-        <lastmod>2023-11-29T23:07:11.315Z</lastmod>
+        <lastmod>2023-12-01T22:27:30.223Z</lastmod>
     
     </url>
     <url>
@@ -1637,7 +1677,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-happyforms</loc>
     
         
-        <lastmod>2023-11-29T23:04:56.870Z</lastmod>
+        <lastmod>2023-12-01T22:16:00.865Z</lastmod>
     
     </url>
     <url>
@@ -1645,7 +1685,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-happyfox-chat</loc>
     
         
-        <lastmod>2023-11-29T23:01:17.988Z</lastmod>
+        <lastmod>2023-12-01T22:23:40.977Z</lastmod>
     
     </url>
     <url>
@@ -1653,7 +1693,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-happyfox</loc>
     
         
-        <lastmod>2023-11-29T22:59:37.450Z</lastmod>
+        <lastmod>2023-12-01T22:21:50.088Z</lastmod>
     
     </url>
     <url>
@@ -1661,7 +1701,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-headlessforms</loc>
     
         
-        <lastmod>2023-11-29T23:55:44.234Z</lastmod>
+        <lastmod>2023-12-01T22:19:47.264Z</lastmod>
     
     </url>
     <url>
@@ -1669,7 +1709,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-hearme-cxm-platform</loc>
     
         
-        <lastmod>2023-11-29T22:54:30.648Z</lastmod>
+        <lastmod>2023-12-01T22:10:43.271Z</lastmod>
     
     </url>
     <url>
@@ -1677,7 +1717,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-hello-customer</loc>
     
         
-        <lastmod>2023-11-29T23:56:23.340Z</lastmod>
+        <lastmod>2023-12-01T22:20:28.899Z</lastmod>
     
     </url>
     <url>
@@ -1685,7 +1725,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-hellosells</loc>
     
         
-        <lastmod>2023-11-29T23:00:28.702Z</lastmod>
+        <lastmod>2023-12-01T22:22:47.390Z</lastmod>
     
     </url>
     <url>
@@ -1693,7 +1733,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-help-scout</loc>
     
         
-        <lastmod>2023-11-29T22:56:39.930Z</lastmod>
+        <lastmod>2023-12-01T22:20:49.803Z</lastmod>
     
     </url>
     <url>
@@ -1701,7 +1741,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-helpcrunch</loc>
     
         
-        <lastmod>2023-11-29T22:59:48.105Z</lastmod>
+        <lastmod>2023-12-01T22:22:01.624Z</lastmod>
     
     </url>
     <url>
@@ -1709,7 +1749,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-helpdesk</loc>
     
         
-        <lastmod>2023-11-29T22:59:28.955Z</lastmod>
+        <lastmod>2023-12-01T22:21:40.873Z</lastmod>
     
     </url>
     <url>
@@ -1717,7 +1757,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-helpjuice</loc>
     
         
-        <lastmod>2023-11-29T23:00:26.570Z</lastmod>
+        <lastmod>2023-12-01T22:22:45.084Z</lastmod>
     
     </url>
     <url>
@@ -1725,7 +1765,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-helpspace</loc>
     
         
-        <lastmod>2023-11-29T23:00:43.604Z</lastmod>
+        <lastmod>2023-12-01T22:23:03.574Z</lastmod>
     
     </url>
     <url>
@@ -1733,7 +1773,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-helpspot</loc>
     
         
-        <lastmod>2023-11-29T23:00:47.884Z</lastmod>
+        <lastmod>2023-12-01T22:23:08.277Z</lastmod>
     
     </url>
     <url>
@@ -1741,7 +1781,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-helpy-pro</loc>
     
         
-        <lastmod>2023-11-29T23:06:49.922Z</lastmod>
+        <lastmod>2023-12-01T22:27:09.053Z</lastmod>
     
     </url>
     <url>
@@ -1749,7 +1789,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-heyform</loc>
     
         
-        <lastmod>2023-11-29T22:54:26.329Z</lastmod>
+        <lastmod>2023-12-01T22:10:38.406Z</lastmod>
     
     </url>
     <url>
@@ -1757,7 +1797,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-hrblade</loc>
     
         
-        <lastmod>2023-11-29T22:55:35.272Z</lastmod>
+        <lastmod>2023-12-01T22:11:53.324Z</lastmod>
     
     </url>
     <url>
@@ -1765,7 +1805,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-hulkapps-product-reviews-ca19171</loc>
     
         
-        <lastmod>2023-11-29T23:57:14.314Z</lastmod>
+        <lastmod>2023-12-01T22:25:14.642Z</lastmod>
     
     </url>
     <url>
@@ -1773,7 +1813,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-iformbuilder</loc>
     
         
-        <lastmod>2023-11-29T23:08:43.232Z</lastmod>
+        <lastmod>2023-12-01T22:18:28.216Z</lastmod>
     
     </url>
     <url>
@@ -1781,7 +1821,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-incontrol</loc>
     
         
-        <lastmod>2023-11-29T22:55:50.522Z</lastmod>
+        <lastmod>2023-12-01T22:12:09.538Z</lastmod>
     
     </url>
     <url>
@@ -1789,7 +1829,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-indemandly</loc>
     
         
-        <lastmod>2023-11-29T23:05:45.479Z</lastmod>
+        <lastmod>2023-12-01T22:26:05.368Z</lastmod>
     
     </url>
     <url>
@@ -1797,7 +1837,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-informizely</loc>
     
         
-        <lastmod>2023-11-29T23:56:03.855Z</lastmod>
+        <lastmod>2023-12-01T22:20:08.118Z</lastmod>
     
     </url>
     <url>
@@ -1805,7 +1845,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-inputkit</loc>
     
         
-        <lastmod>2023-11-29T23:09:30.137Z</lastmod>
+        <lastmod>2023-12-01T22:19:19.426Z</lastmod>
     
     </url>
     <url>
@@ -1813,7 +1853,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-inquizit</loc>
     
         
-        <lastmod>2023-11-29T22:56:31.365Z</lastmod>
+        <lastmod>2023-12-01T22:12:53.656Z</lastmod>
     
     </url>
     <url>
@@ -1821,7 +1861,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-insided</loc>
     
         
-        <lastmod>2023-11-29T22:59:11.468Z</lastmod>
+        <lastmod>2023-12-01T22:21:22.344Z</lastmod>
     
     </url>
     <url>
@@ -1829,7 +1869,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-instapage</loc>
     
         
-        <lastmod>2023-11-29T23:02:49.781Z</lastmod>
+        <lastmod>2023-12-01T22:13:40.434Z</lastmod>
     
     </url>
     <url>
@@ -1837,7 +1877,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-intely</loc>
     
         
-        <lastmod>2023-11-29T22:54:56.618Z</lastmod>
+        <lastmod>2023-12-01T22:11:11.382Z</lastmod>
     
     </url>
     <url>
@@ -1845,7 +1885,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-interact</loc>
     
         
-        <lastmod>2023-11-29T23:02:45.545Z</lastmod>
+        <lastmod>2023-12-01T22:13:35.846Z</lastmod>
     
     </url>
     <url>
@@ -1853,7 +1893,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-interactive-calculator</loc>
     
         
-        <lastmod>2023-11-29T23:07:47.677Z</lastmod>
+        <lastmod>2023-12-01T22:17:26.858Z</lastmod>
     
     </url>
     <url>
@@ -1861,7 +1901,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-intercom</loc>
     
         
-        <lastmod>2023-11-29T22:56:35.700Z</lastmod>
+        <lastmod>2023-12-01T22:20:45.171Z</lastmod>
     
     </url>
     <url>
@@ -1869,7 +1909,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-interwoo</loc>
     
         
-        <lastmod>2023-11-29T22:55:37.412Z</lastmod>
+        <lastmod>2023-12-01T22:11:55.667Z</lastmod>
     
     </url>
     <url>
@@ -1877,7 +1917,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-invgate-service-desk</loc>
     
         
-        <lastmod>2023-11-29T23:00:03.078Z</lastmod>
+        <lastmod>2023-12-01T22:22:18.170Z</lastmod>
     
     </url>
     <url>
@@ -1885,7 +1925,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-involveme</loc>
     
         
-        <lastmod>2023-11-29T23:03:06.679Z</lastmod>
+        <lastmod>2023-12-01T22:13:59.401Z</lastmod>
     
     </url>
     <url>
@@ -1893,7 +1933,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-issuetrak</loc>
     
         
-        <lastmod>2023-11-29T23:01:26.504Z</lastmod>
+        <lastmod>2023-12-01T22:23:50.231Z</lastmod>
     
     </url>
     <url>
@@ -1901,7 +1941,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-iterate</loc>
     
         
-        <lastmod>2023-11-29T23:07:43.432Z</lastmod>
+        <lastmod>2023-12-01T22:17:22.612Z</lastmod>
     
     </url>
     <url>
@@ -1909,7 +1949,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-iubenda</loc>
     
         
-        <lastmod>2023-11-29T23:04:52.612Z</lastmod>
+        <lastmod>2023-12-01T22:15:56.233Z</lastmod>
     
     </url>
     <url>
@@ -1917,7 +1957,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-ivanti-service-desk</loc>
     
         
-        <lastmod>2023-11-29T23:06:43.500Z</lastmod>
+        <lastmod>2023-12-01T22:27:02.713Z</lastmod>
     
     </url>
     <url>
@@ -1925,7 +1965,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-ivanti-service-manager</loc>
     
         
-        <lastmod>2023-11-29T23:06:30.651Z</lastmod>
+        <lastmod>2023-12-01T22:26:50.031Z</lastmod>
     
     </url>
     <url>
@@ -1933,7 +1973,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-jira-service-management</loc>
     
         
-        <lastmod>2023-11-29T22:56:42.047Z</lastmod>
+        <lastmod>2023-12-01T22:20:52.121Z</lastmod>
     
     </url>
     <url>
@@ -1941,7 +1981,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-jitbit-helpdesk</loc>
     
         
-        <lastmod>2023-11-29T23:00:30.858Z</lastmod>
+        <lastmod>2023-12-01T22:22:49.678Z</lastmod>
     
     </url>
     <url>
@@ -1949,7 +1989,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-jotform-enterprise</loc>
     
         
-        <lastmod>2023-11-29T23:03:21.517Z</lastmod>
+        <lastmod>2023-12-01T22:14:15.580Z</lastmod>
     
     </url>
     <url>
@@ -1957,7 +1997,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-jotform</loc>
     
         
-        <lastmod>2023-11-29T23:02:15.618Z</lastmod>
+        <lastmod>2023-12-01T22:13:02.996Z</lastmod>
     
     </url>
     <url>
@@ -1965,7 +2005,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-k12-insight-engage</loc>
     
         
-        <lastmod>2023-11-29T23:55:52.827Z</lastmod>
+        <lastmod>2023-12-01T22:19:56.544Z</lastmod>
     
     </url>
     <url>
@@ -1973,7 +2013,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-kayako</loc>
     
         
-        <lastmod>2023-11-29T22:59:58.768Z</lastmod>
+        <lastmod>2023-12-01T22:22:13.515Z</lastmod>
     
     </url>
     <url>
@@ -1981,7 +2021,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-keeping</loc>
     
         
-        <lastmod>2023-11-29T23:00:22.294Z</lastmod>
+        <lastmod>2023-12-01T22:22:39.496Z</lastmod>
     
     </url>
     <url>
@@ -1989,7 +2029,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-kickofflabs</loc>
     
         
-        <lastmod>2023-11-29T23:05:22.328Z</lastmod>
+        <lastmod>2023-12-01T22:16:32.380Z</lastmod>
     
     </url>
     <url>
@@ -1997,7 +2037,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-kizeo-forms</loc>
     
         
-        <lastmod>2023-11-29T23:09:38.657Z</lastmod>
+        <lastmod>2023-12-01T22:19:28.680Z</lastmod>
     
     </url>
     <url>
@@ -2005,7 +2045,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-knowledgeowl</loc>
     
         
-        <lastmod>2023-11-29T23:01:47.760Z</lastmod>
+        <lastmod>2023-12-01T22:24:13.614Z</lastmod>
     
     </url>
     <url>
@@ -2013,7 +2053,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-kommunicate</loc>
     
         
-        <lastmod>2023-11-29T23:00:39.344Z</lastmod>
+        <lastmod>2023-12-01T22:22:58.913Z</lastmod>
     
     </url>
     <url>
@@ -2021,7 +2061,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-kustomer</loc>
     
         
-        <lastmod>2023-11-29T22:59:31.066Z</lastmod>
+        <lastmod>2023-12-01T22:21:43.198Z</lastmod>
     
     </url>
     <url>
@@ -2029,7 +2069,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-kwes</loc>
     
         
-        <lastmod>2023-11-29T23:08:02.655Z</lastmod>
+        <lastmod>2023-12-01T22:17:43.595Z</lastmod>
     
     </url>
     <url>
@@ -2037,7 +2077,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-landing-page-robot-by-marcom-rob</loc>
     
         
-        <lastmod>2023-11-29T23:56:27.620Z</lastmod>
+        <lastmod>2023-12-01T22:20:33.488Z</lastmod>
     
     </url>
     <url>
@@ -2045,7 +2085,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-layerise</loc>
     
         
-        <lastmod>2023-11-29T23:00:50.031Z</lastmod>
+        <lastmod>2023-12-01T22:23:10.625Z</lastmod>
     
     </url>
     <url>
@@ -2053,7 +2093,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-leadboxer</loc>
     
         
-        <lastmod>2023-11-29T23:56:18.980Z</lastmod>
+        <lastmod>2023-12-01T22:20:24.286Z</lastmod>
     
     </url>
     <url>
@@ -2061,7 +2101,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-leadgen</loc>
     
         
-        <lastmod>2023-11-29T23:07:37.039Z</lastmod>
+        <lastmod>2023-12-01T22:17:16.273Z</lastmod>
     
     </url>
     <url>
@@ -2069,7 +2109,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-leadpages</loc>
     
         
-        <lastmod>2023-11-29T23:02:34.894Z</lastmod>
+        <lastmod>2023-12-01T22:13:24.261Z</lastmod>
     
     </url>
     <url>
@@ -2077,7 +2117,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-leadquizzes3</loc>
     
         
-        <lastmod>2023-11-29T23:03:49.026Z</lastmod>
+        <lastmod>2023-12-01T22:14:45.859Z</lastmod>
     
     </url>
     <url>
@@ -2085,7 +2125,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-lex-reception</loc>
     
         
-        <lastmod>2023-11-29T23:00:05.198Z</lastmod>
+        <lastmod>2023-12-01T22:22:20.500Z</lastmod>
     
     </url>
     <url>
@@ -2093,7 +2133,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-liveagent</loc>
     
         
-        <lastmod>2023-11-29T22:59:45.992Z</lastmod>
+        <lastmod>2023-12-01T22:21:59.355Z</lastmod>
     
     </url>
     <url>
@@ -2101,7 +2141,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-livechat</loc>
     
         
-        <lastmod>2023-11-29T22:56:48.378Z</lastmod>
+        <lastmod>2023-12-01T22:20:59.171Z</lastmod>
     
     </url>
     <url>
@@ -2109,7 +2149,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-local-reviews</loc>
     
         
-        <lastmod>2023-11-29T23:57:41.889Z</lastmod>
+        <lastmod>2023-12-01T22:25:42.110Z</lastmod>
     
     </url>
     <url>
@@ -2117,7 +2157,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-loop-experience-platform-ca15319</loc>
     
         
-        <lastmod>2023-11-29T22:56:22.722Z</lastmod>
+        <lastmod>2023-12-01T22:12:44.318Z</lastmod>
     
     </url>
     <url>
@@ -2125,7 +2165,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-macorva</loc>
     
         
-        <lastmod>2023-11-29T22:55:28.823Z</lastmod>
+        <lastmod>2023-12-01T22:11:46.330Z</lastmod>
     
     </url>
     <url>
@@ -2133,7 +2173,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-magpi</loc>
     
         
-        <lastmod>2023-11-29T23:56:14.753Z</lastmod>
+        <lastmod>2023-12-01T22:20:19.670Z</lastmod>
     
     </url>
     <url>
@@ -2141,7 +2181,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-malcolm</loc>
     
         
-        <lastmod>2023-11-29T23:01:24.376Z</lastmod>
+        <lastmod>2023-12-01T22:23:47.920Z</lastmod>
     
     </url>
     <url>
@@ -2149,7 +2189,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-mavenoid</loc>
     
         
-        <lastmod>2023-11-29T23:05:41.262Z</lastmod>
+        <lastmod>2023-12-01T22:26:01.149Z</lastmod>
     
     </url>
     <url>
@@ -2157,7 +2197,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-medallia-agent-connect</loc>
     
         
-        <lastmod>2023-11-29T23:56:31.925Z</lastmod>
+        <lastmod>2023-12-01T22:20:38.101Z</lastmod>
     
     </url>
     <url>
@@ -2165,7 +2205,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-mediabrains-businesschatter-ca14</loc>
     
         
-        <lastmod>2023-11-29T23:57:56.718Z</lastmod>
+        <lastmod>2023-12-01T22:25:56.921Z</lastmod>
     
     </url>
     <url>
@@ -2173,7 +2213,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-meetingpulse</loc>
     
         
-        <lastmod>2023-11-29T22:56:20.597Z</lastmod>
+        <lastmod>2023-12-01T22:12:42.024Z</lastmod>
     
     </url>
     <url>
@@ -2181,7 +2221,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-mention</loc>
     
         
-        <lastmod>2023-11-29T23:56:51.004Z</lastmod>
+        <lastmod>2023-12-01T22:24:51.444Z</lastmod>
     
     </url>
     <url>
@@ -2189,7 +2229,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-mightyforms</loc>
     
         
-        <lastmod>2023-11-29T23:05:18.090Z</lastmod>
+        <lastmod>2023-12-01T22:16:27.809Z</lastmod>
     
     </url>
     <url>
@@ -2197,7 +2237,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-mindbehind</loc>
     
         
-        <lastmod>2023-11-29T23:02:06.972Z</lastmod>
+        <lastmod>2023-12-01T22:24:34.499Z</lastmod>
     
     </url>
     <url>
@@ -2205,7 +2245,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-missive</loc>
     
         
-        <lastmod>2023-11-29T22:59:13.578Z</lastmod>
+        <lastmod>2023-12-01T22:21:24.625Z</lastmod>
     
     </url>
     <url>
@@ -2213,7 +2253,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-mojo-helpdesk</loc>
     
         
-        <lastmod>2023-11-29T23:00:00.907Z</lastmod>
+        <lastmod>2023-12-01T22:22:15.871Z</lastmod>
     
     </url>
     <url>
@@ -2221,7 +2261,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-moreapp</loc>
     
         
-        <lastmod>2023-11-29T23:05:01.114Z</lastmod>
+        <lastmod>2023-12-01T22:16:05.438Z</lastmod>
     
     </url>
     <url>
@@ -2229,7 +2269,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-mypresences</loc>
     
         
-        <lastmod>2023-11-29T23:57:31.295Z</lastmod>
+        <lastmod>2023-12-01T22:25:31.536Z</lastmod>
     
     </url>
     <url>
@@ -2237,7 +2277,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-naturalforms</loc>
     
         
-        <lastmod>2023-11-29T23:08:09.083Z</lastmod>
+        <lastmod>2023-12-01T22:17:50.558Z</lastmod>
     
     </url>
     <url>
@@ -2245,7 +2285,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-neetochat</loc>
     
         
-        <lastmod>2023-11-29T23:05:54.442Z</lastmod>
+        <lastmod>2023-12-01T22:26:13.809Z</lastmod>
     
     </url>
     <url>
@@ -2253,7 +2293,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-neetodesk</loc>
     
         
-        <lastmod>2023-11-29T23:01:58.444Z</lastmod>
+        <lastmod>2023-12-01T22:24:25.186Z</lastmod>
     
     </url>
     <url>
@@ -2261,7 +2301,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-neetoform</loc>
     
         
-        <lastmod>2023-11-29T23:09:51.931Z</lastmod>
+        <lastmod>2023-12-01T22:19:42.601Z</lastmod>
     
     </url>
     <url>
@@ -2269,7 +2309,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-nelio-forms</loc>
     
         
-        <lastmod>2023-11-29T22:55:56.990Z</lastmod>
+        <lastmod>2023-12-01T22:12:16.478Z</lastmod>
     
     </url>
     <url>
@@ -2277,7 +2317,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-nicereply</loc>
     
         
-        <lastmod>2023-11-29T23:05:11.703Z</lastmod>
+        <lastmod>2023-12-01T22:16:20.815Z</lastmod>
     
     </url>
     <url>
@@ -2285,7 +2325,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-ninjaforms</loc>
     
         
-        <lastmod>2023-11-29T23:02:32.746Z</lastmod>
+        <lastmod>2023-12-01T22:13:21.976Z</lastmod>
     
     </url>
     <url>
@@ -2293,7 +2333,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-nocodeform</loc>
     
         
-        <lastmod>2023-11-29T22:54:41.484Z</lastmod>
+        <lastmod>2023-12-01T22:10:55.085Z</lastmod>
     
     </url>
     <url>
@@ -2301,7 +2341,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-noora</loc>
     
         
-        <lastmod>2023-11-29T23:01:52.028Z</lastmod>
+        <lastmod>2023-12-01T22:24:18.246Z</lastmod>
     
     </url>
     <url>
@@ -2309,7 +2349,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-novusbot</loc>
     
         
-        <lastmod>2023-11-29T23:01:34.999Z</lastmod>
+        <lastmod>2023-12-01T22:23:59.416Z</lastmod>
     
     </url>
     <url>
@@ -2317,7 +2357,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-obeatow</loc>
     
         
-        <lastmod>2023-11-29T22:55:52.664Z</lastmod>
+        <lastmod>2023-12-01T22:12:11.814Z</lastmod>
     
     </url>
     <url>
@@ -2325,7 +2365,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-olark</loc>
     
         
-        <lastmod>2023-11-29T22:59:35.309Z</lastmod>
+        <lastmod>2023-12-01T22:21:47.827Z</lastmod>
     
     </url>
     <url>
@@ -2333,7 +2373,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-omniconvert</loc>
     
         
-        <lastmod>2023-11-29T23:55:59.217Z</lastmod>
+        <lastmod>2023-12-01T22:20:03.469Z</lastmod>
     
     </url>
     <url>
@@ -2341,7 +2381,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-omniengage</loc>
     
         
-        <lastmod>2023-11-29T22:56:16.297Z</lastmod>
+        <lastmod>2023-12-01T22:12:37.461Z</lastmod>
     
     </url>
     <url>
@@ -2349,7 +2389,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-onboardio</loc>
     
         
-        <lastmod>2023-11-29T23:00:56.465Z</lastmod>
+        <lastmod>2023-12-01T22:23:17.630Z</lastmod>
     
     </url>
     <url>
@@ -2357,7 +2397,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-onelocal-localreviews</loc>
     
         
-        <lastmod>2023-11-29T23:08:26.178Z</lastmod>
+        <lastmod>2023-12-01T22:18:09.808Z</lastmod>
     
     </url>
     <url>
@@ -2365,7 +2405,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-onsite-support</loc>
     
         
-        <lastmod>2023-11-29T23:01:41.379Z</lastmod>
+        <lastmod>2023-12-01T22:24:06.411Z</lastmod>
     
     </url>
     <url>
@@ -2373,7 +2413,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-optinmonster</loc>
     
         
-        <lastmod>2023-11-29T23:02:54.022Z</lastmod>
+        <lastmod>2023-12-01T22:13:45.028Z</lastmod>
     
     </url>
     <url>
@@ -2381,7 +2421,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-outgrow</loc>
     
         
-        <lastmod>2023-11-29T23:03:00.354Z</lastmod>
+        <lastmod>2023-12-01T22:13:52.450Z</lastmod>
     
     </url>
     <url>
@@ -2389,7 +2429,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-paperform</loc>
     
         
-        <lastmod>2023-11-29T23:02:39.151Z</lastmod>
+        <lastmod>2023-12-01T22:13:28.941Z</lastmod>
     
     </url>
     <url>
@@ -2397,7 +2437,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-paperless-forms</loc>
     
         
-        <lastmod>2023-11-29T22:55:03.061Z</lastmod>
+        <lastmod>2023-12-01T22:11:18.452Z</lastmod>
     
     </url>
     <url>
@@ -2405,7 +2445,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-parallel</loc>
     
         
-        <lastmod>2023-11-29T23:08:41.107Z</lastmod>
+        <lastmod>2023-12-01T22:18:25.926Z</lastmod>
     
     </url>
     <url>
@@ -2413,7 +2453,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-phedone</loc>
     
         
-        <lastmod>2023-11-29T23:07:00.593Z</lastmod>
+        <lastmod>2023-12-01T22:27:19.643Z</lastmod>
     
     </url>
     <url>
@@ -2421,7 +2461,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-pie-forms-ca162932</loc>
     
         
-        <lastmod>2023-11-29T22:55:59.124Z</lastmod>
+        <lastmod>2023-12-01T22:12:18.750Z</lastmod>
     
     </url>
     <url>
@@ -2429,7 +2469,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-pipelyne</loc>
     
         
-        <lastmod>2023-11-29T23:09:36.539Z</lastmod>
+        <lastmod>2023-12-01T22:19:26.322Z</lastmod>
     
     </url>
     <url>
@@ -2437,7 +2477,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-pipeoneme</loc>
     
         
-        <lastmod>2023-11-29T23:05:49.789Z</lastmod>
+        <lastmod>2023-12-01T22:26:09.583Z</lastmod>
     
     </url>
     <url>
@@ -2445,7 +2485,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-planso</loc>
     
         
-        <lastmod>2023-11-29T23:05:32.828Z</lastmod>
+        <lastmod>2023-12-01T22:16:43.952Z</lastmod>
     
     </url>
     <url>
@@ -2453,7 +2493,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-platoforms</loc>
     
         
-        <lastmod>2023-11-29T23:07:26.318Z</lastmod>
+        <lastmod>2023-12-01T22:17:05.708Z</lastmod>
     
     </url>
     <url>
@@ -2461,7 +2501,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-plumsail-forms</loc>
     
         
-        <lastmod>2023-11-29T23:08:24.047Z</lastmod>
+        <lastmod>2023-12-01T22:18:07.492Z</lastmod>
     
     </url>
     <url>
@@ -2469,7 +2509,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-pluspoint</loc>
     
         
-        <lastmod>2023-11-29T23:57:35.524Z</lastmod>
+        <lastmod>2023-12-01T22:25:35.760Z</lastmod>
     
     </url>
     <url>
@@ -2477,7 +2517,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-pointerpro</loc>
     
         
-        <lastmod>2023-11-29T23:03:34.211Z</lastmod>
+        <lastmod>2023-12-01T22:14:29.530Z</lastmod>
     
     </url>
     <url>
@@ -2485,7 +2525,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-polly</loc>
     
         
-        <lastmod>2023-11-29T22:55:20.229Z</lastmod>
+        <lastmod>2023-12-01T22:11:37.077Z</lastmod>
     
     </url>
     <url>
@@ -2493,7 +2533,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-porsline</loc>
     
         
-        <lastmod>2023-11-29T23:09:40.794Z</lastmod>
+        <lastmod>2023-12-01T22:19:30.997Z</lastmod>
     
     </url>
     <url>
@@ -2501,7 +2541,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-precisefp</loc>
     
         
-        <lastmod>2023-11-29T23:04:05.984Z</lastmod>
+        <lastmod>2023-12-01T22:15:04.631Z</lastmod>
     
     </url>
     <url>
@@ -2509,7 +2549,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-pressnxpress</loc>
     
         
-        <lastmod>2023-11-29T23:56:01.353Z</lastmod>
+        <lastmod>2023-12-01T22:20:05.745Z</lastmod>
     
     </url>
     <url>
@@ -2517,7 +2557,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-prima-law</loc>
     
         
-        <lastmod>2023-11-29T23:09:25.841Z</lastmod>
+        <lastmod>2023-12-01T22:19:14.798Z</lastmod>
     
     </url>
     <url>
@@ -2525,7 +2565,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-pro-forms</loc>
     
         
-        <lastmod>2023-11-29T22:56:14.136Z</lastmod>
+        <lastmod>2023-12-01T22:12:35.078Z</lastmod>
     
     </url>
     <url>
@@ -2533,7 +2573,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-productroad</loc>
     
         
-        <lastmod>2023-11-29T23:06:45.650Z</lastmod>
+        <lastmod>2023-12-01T22:27:04.824Z</lastmod>
     
     </url>
     <url>
@@ -2541,7 +2581,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-pulsedesk</loc>
     
         
-        <lastmod>2023-11-29T23:02:00.582Z</lastmod>
+        <lastmod>2023-12-01T22:24:27.489Z</lastmod>
     
     </url>
     <url>
@@ -2549,7 +2589,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-pure-chat</loc>
     
         
-        <lastmod>2023-11-29T22:59:02.904Z</lastmod>
+        <lastmod>2023-12-01T22:21:13.035Z</lastmod>
     
     </url>
     <url>
@@ -2557,7 +2597,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-qualaroo</loc>
     
         
-        <lastmod>2023-11-29T23:56:06.182Z</lastmod>
+        <lastmod>2023-12-01T22:20:10.442Z</lastmod>
     
     </url>
     <url>
@@ -2565,7 +2605,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-qualtrics</loc>
     
         
-        <lastmod>2023-11-29T23:03:13.039Z</lastmod>
+        <lastmod>2023-12-01T22:14:06.371Z</lastmod>
     
     </url>
     <url>
@@ -2573,7 +2613,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-questionpro</loc>
     
         
-        <lastmod>2023-11-29T23:05:37.052Z</lastmod>
+        <lastmod>2023-12-01T22:16:48.595Z</lastmod>
     
     </url>
     <url>
@@ -2581,7 +2621,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-questionscout</loc>
     
         
-        <lastmod>2023-11-29T23:04:35.630Z</lastmod>
+        <lastmod>2023-12-01T22:15:37.067Z</lastmod>
     
     </url>
     <url>
@@ -2589,7 +2629,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-questionto</loc>
     
         
-        <lastmod>2023-11-29T23:05:58.675Z</lastmod>
+        <lastmod>2023-12-01T22:26:18.024Z</lastmod>
     
     </url>
     <url>
@@ -2597,7 +2637,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-quicksearch</loc>
     
         
-        <lastmod>2023-11-29T22:55:05.199Z</lastmod>
+        <lastmod>2023-12-01T22:11:20.781Z</lastmod>
     
     </url>
     <url>
@@ -2605,7 +2645,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-quicktapsurvey</loc>
     
         
-        <lastmod>2023-11-29T23:09:00.271Z</lastmod>
+        <lastmod>2023-12-01T22:18:47.150Z</lastmod>
     
     </url>
     <url>
@@ -2613,7 +2653,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-quill-forms</loc>
     
         
-        <lastmod>2023-11-29T23:08:19.772Z</lastmod>
+        <lastmod>2023-12-01T22:18:02.794Z</lastmod>
     
     </url>
     <url>
@@ -2621,7 +2661,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-quiz-maker</loc>
     
         
-        <lastmod>2023-11-29T23:04:08.094Z</lastmod>
+        <lastmod>2023-12-01T22:15:06.994Z</lastmod>
     
     </url>
     <url>
@@ -2629,7 +2669,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-qvalon</loc>
     
         
-        <lastmod>2023-11-29T22:55:44.018Z</lastmod>
+        <lastmod>2023-12-01T22:12:02.646Z</lastmod>
     
     </url>
     <url>
@@ -2637,7 +2677,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-qwary</loc>
     
         
-        <lastmod>2023-11-29T23:07:13.479Z</lastmod>
+        <lastmod>2023-12-01T22:16:53.030Z</lastmod>
     
     </url>
     <url>
@@ -2645,7 +2685,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-rannko</loc>
     
         
-        <lastmod>2023-11-29T23:57:37.647Z</lastmod>
+        <lastmod>2023-12-01T22:25:37.880Z</lastmod>
     
     </url>
     <url>
@@ -2653,7 +2693,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-rapidoreach</loc>
     
         
-        <lastmod>2023-11-29T23:55:50.676Z</lastmod>
+        <lastmod>2023-12-01T22:19:54.246Z</lastmod>
     
     </url>
     <url>
@@ -2661,7 +2701,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-ratecard</loc>
     
         
-        <lastmod>2023-11-29T23:09:49.514Z</lastmod>
+        <lastmod>2023-12-01T22:19:40.327Z</lastmod>
     
     </url>
     <url>
@@ -2669,7 +2709,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-ratemyagent</loc>
     
         
-        <lastmod>2023-11-29T23:02:02.705Z</lastmod>
+        <lastmod>2023-12-01T22:24:29.787Z</lastmod>
     
     </url>
     <url>
@@ -2677,7 +2717,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-reamaze</loc>
     
         
-        <lastmod>2023-11-29T22:59:24.345Z</lastmod>
+        <lastmod>2023-12-01T22:21:36.222Z</lastmod>
     
     </url>
     <url>
@@ -2685,7 +2725,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-record</loc>
     
         
-        <lastmod>2023-11-29T23:06:05.073Z</lastmod>
+        <lastmod>2023-12-01T22:26:24.373Z</lastmod>
     
     </url>
     <url>
@@ -2693,7 +2733,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-reeview</loc>
     
         
-        <lastmod>2023-11-29T23:57:27.016Z</lastmod>
+        <lastmod>2023-12-01T22:25:27.290Z</lastmod>
     
     </url>
     <url>
@@ -2701,7 +2741,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-refiner</loc>
     
         
-        <lastmod>2023-11-29T23:07:17.739Z</lastmod>
+        <lastmod>2023-12-01T22:16:57.251Z</lastmod>
     
     </url>
     <url>
@@ -2709,7 +2749,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-reform</loc>
     
         
-        <lastmod>2023-11-29T23:05:05.350Z</lastmod>
+        <lastmod>2023-12-01T22:16:10.052Z</lastmod>
     
     </url>
     <url>
@@ -2717,7 +2757,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-refundmeio</loc>
     
         
-        <lastmod>2023-11-29T23:06:22.094Z</lastmod>
+        <lastmod>2023-12-01T22:26:41.587Z</lastmod>
     
     </url>
     <url>
@@ -2725,7 +2765,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-rentcheck</loc>
     
         
-        <lastmod>2023-11-29T23:00:52.202Z</lastmod>
+        <lastmod>2023-12-01T22:23:13.011Z</lastmod>
     
     </url>
     <url>
@@ -2733,7 +2773,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-replain</loc>
     
         
-        <lastmod>2023-11-29T23:00:35.102Z</lastmod>
+        <lastmod>2023-12-01T22:22:54.300Z</lastmod>
     
     </url>
     <url>
@@ -2741,7 +2781,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-reputationlync-da78768</loc>
     
         
-        <lastmod>2023-11-29T23:56:57.338Z</lastmod>
+        <lastmod>2023-12-01T22:24:57.751Z</lastmod>
     
     </url>
     <url>
@@ -2749,7 +2789,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-responsesuite</loc>
     
         
-        <lastmod>2023-11-29T23:08:11.211Z</lastmod>
+        <lastmod>2023-12-01T22:17:53.499Z</lastmod>
     
     </url>
     <url>
@@ -2757,7 +2797,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-responsly</loc>
     
         
-        <lastmod>2023-11-29T23:05:43.367Z</lastmod>
+        <lastmod>2023-12-01T22:26:03.253Z</lastmod>
     
     </url>
     <url>
@@ -2765,7 +2805,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-retamo</loc>
     
         
-        <lastmod>2023-11-29T23:57:29.166Z</lastmod>
+        <lastmod>2023-12-01T22:25:29.423Z</lastmod>
     
     </url>
     <url>
@@ -2773,7 +2813,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-retently</loc>
     
         
-        <lastmod>2023-11-29T23:05:09.581Z</lastmod>
+        <lastmod>2023-12-01T22:16:18.539Z</lastmod>
     
     </url>
     <url>
@@ -2781,7 +2821,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-retine</loc>
     
         
-        <lastmod>2023-11-29T22:56:03.411Z</lastmod>
+        <lastmod>2023-12-01T22:12:23.428Z</lastmod>
     
     </url>
     <url>
@@ -2789,7 +2829,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-reve-chat</loc>
     
         
-        <lastmod>2023-11-29T23:05:52.306Z</lastmod>
+        <lastmod>2023-12-01T22:26:11.692Z</lastmod>
     
     </url>
     <url>
@@ -2797,7 +2837,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-review-judge</loc>
     
         
-        <lastmod>2023-11-29T23:57:54.602Z</lastmod>
+        <lastmod>2023-12-01T22:25:54.800Z</lastmod>
     
     </url>
     <url>
@@ -2805,7 +2845,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-reviewinc</loc>
     
         
-        <lastmod>2023-11-29T23:57:05.832Z</lastmod>
+        <lastmod>2023-12-01T22:25:06.202Z</lastmod>
     
     </url>
     <url>
@@ -2813,7 +2853,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-reviewpoint</loc>
     
         
-        <lastmod>2023-11-29T23:57:39.765Z</lastmod>
+        <lastmod>2023-12-01T22:25:39.992Z</lastmod>
     
     </url>
     <url>
@@ -2821,7 +2861,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-reviewrail</loc>
     
         
-        <lastmod>2023-11-29T23:57:20.668Z</lastmod>
+        <lastmod>2023-12-01T22:25:20.974Z</lastmod>
     
     </url>
     <url>
@@ -2829,7 +2869,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-reviews360</loc>
     
         
-        <lastmod>2023-11-29T23:57:33.413Z</lastmod>
+        <lastmod>2023-12-01T22:25:33.645Z</lastmod>
     
     </url>
     <url>
@@ -2837,7 +2877,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-riddle-quiz-maker</loc>
     
         
-        <lastmod>2023-11-29T23:04:29.275Z</lastmod>
+        <lastmod>2023-12-01T22:15:30.130Z</lastmod>
     
     </url>
     <url>
@@ -2845,7 +2885,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-rival</loc>
     
         
-        <lastmod>2023-11-29T22:56:07.692Z</lastmod>
+        <lastmod>2023-12-01T22:12:28.094Z</lastmod>
     
     </url>
     <url>
@@ -2853,7 +2893,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-saastic</loc>
     
         
-        <lastmod>2023-11-29T23:57:01.593Z</lastmod>
+        <lastmod>2023-12-01T22:25:01.977Z</lastmod>
     
     </url>
     <url>
@@ -2861,7 +2901,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-samanage</loc>
     
         
-        <lastmod>2023-11-29T22:59:22.015Z</lastmod>
+        <lastmod>2023-12-01T22:21:33.895Z</lastmod>
     
     </url>
     <url>
@@ -2869,7 +2909,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-sametrica-forms</loc>
     
         
-        <lastmod>2023-11-29T23:56:12.619Z</lastmod>
+        <lastmod>2023-12-01T22:20:17.335Z</lastmod>
     
     </url>
     <url>
@@ -2877,7 +2917,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-satismeter</loc>
     
         
-        <lastmod>2023-11-29T23:03:51.139Z</lastmod>
+        <lastmod>2023-12-01T22:14:48.202Z</lastmod>
     
     </url>
     <url>
@@ -2885,7 +2925,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-saysimple-ca1</loc>
     
         
-        <lastmod>2023-11-29T23:01:22.231Z</lastmod>
+        <lastmod>2023-12-01T22:23:45.524Z</lastmod>
     
     </url>
     <url>
@@ -2893,7 +2933,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-scoremyreviews</loc>
     
         
-        <lastmod>2023-11-29T23:57:16.431Z</lastmod>
+        <lastmod>2023-12-01T22:25:16.745Z</lastmod>
     
     </url>
     <url>
@@ -2901,7 +2941,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-screendesk</loc>
     
         
-        <lastmod>2023-11-29T23:05:47.587Z</lastmod>
+        <lastmod>2023-12-01T22:26:07.480Z</lastmod>
     
     </url>
     <url>
@@ -2909,7 +2949,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-second-street</loc>
     
         
-        <lastmod>2023-11-29T23:09:06.645Z</lastmod>
+        <lastmod>2023-12-01T22:18:53.992Z</lastmod>
     
     </url>
     <url>
@@ -2917,7 +2957,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-sendpointio</loc>
     
         
-        <lastmod>2023-11-29T22:55:31.002Z</lastmod>
+        <lastmod>2023-12-01T22:11:48.667Z</lastmod>
     
     </url>
     <url>
@@ -2925,7 +2965,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-serviceaide</loc>
     
         
-        <lastmod>2023-11-29T23:01:39.227Z</lastmod>
+        <lastmod>2023-12-01T22:24:04.069Z</lastmod>
     
     </url>
     <url>
@@ -2933,7 +2973,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-servicebell</loc>
     
         
-        <lastmod>2023-11-29T23:01:45.604Z</lastmod>
+        <lastmod>2023-12-01T22:24:11.265Z</lastmod>
     
     </url>
     <url>
@@ -2941,7 +2981,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-servicepro</loc>
     
         
-        <lastmod>2023-11-29T23:06:02.915Z</lastmod>
+        <lastmod>2023-12-01T22:26:22.250Z</lastmod>
     
     </url>
     <url>
@@ -2949,7 +2989,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-showroom</loc>
     
         
-        <lastmod>2023-11-29T23:56:16.869Z</lastmod>
+        <lastmod>2023-12-01T22:20:21.991Z</lastmod>
     
     </url>
     <url>
@@ -2957,7 +2997,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-sightmill</loc>
     
         
-        <lastmod>2023-11-29T23:05:30.744Z</lastmod>
+        <lastmod>2023-12-01T22:16:41.620Z</lastmod>
     
     </url>
     <url>
@@ -2965,7 +3005,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-signalzen</loc>
     
         
-        <lastmod>2023-11-29T23:06:15.611Z</lastmod>
+        <lastmod>2023-12-01T22:26:34.925Z</lastmod>
     
     </url>
     <url>
@@ -2973,7 +3013,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-signupanywhere</loc>
     
         
-        <lastmod>2023-11-29T23:07:30.631Z</lastmod>
+        <lastmod>2023-12-01T22:17:09.932Z</lastmod>
     
     </url>
     <url>
@@ -2981,7 +3021,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-simplesat</loc>
     
         
-        <lastmod>2023-11-29T23:04:25.044Z</lastmod>
+        <lastmod>2023-12-01T22:15:25.549Z</lastmod>
     
     </url>
     <url>
@@ -2989,7 +3029,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-simplex</loc>
     
         
-        <lastmod>2023-11-29T22:55:54.855Z</lastmod>
+        <lastmod>2023-12-01T22:12:14.120Z</lastmod>
     
     </url>
     <url>
@@ -2997,7 +3037,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-smartsurvey</loc>
     
         
-        <lastmod>2023-11-29T23:08:38.979Z</lastmod>
+        <lastmod>2023-12-01T22:18:23.648Z</lastmod>
     
     </url>
     <url>
@@ -3005,7 +3045,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-smithai-chat</loc>
     
         
-        <lastmod>2023-11-29T22:59:52.356Z</lastmod>
+        <lastmod>2023-12-01T22:22:06.448Z</lastmod>
     
     </url>
     <url>
@@ -3013,7 +3053,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-snappy</loc>
     
         
-        <lastmod>2023-11-29T23:06:26.371Z</lastmod>
+        <lastmod>2023-12-01T22:26:45.810Z</lastmod>
     
     </url>
     <url>
@@ -3021,7 +3061,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-snipform</loc>
     
         
-        <lastmod>2023-11-29T22:54:58.769Z</lastmod>
+        <lastmod>2023-12-01T22:11:13.778Z</lastmod>
     
     </url>
     <url>
@@ -3029,7 +3069,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-social-intents</loc>
     
         
-        <lastmod>2023-11-29T22:59:50.230Z</lastmod>
+        <lastmod>2023-12-01T22:22:04.096Z</lastmod>
     
     </url>
     <url>
@@ -3037,7 +3077,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-sogolytics</loc>
     
         
-        <lastmod>2023-11-29T23:07:24.185Z</lastmod>
+        <lastmod>2023-12-01T22:17:03.584Z</lastmod>
     
     </url>
     <url>
@@ -3045,7 +3085,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-sotellus</loc>
     
         
-        <lastmod>2023-11-29T23:56:42.556Z</lastmod>
+        <lastmod>2023-12-01T22:24:42.983Z</lastmod>
     
     </url>
     <url>
@@ -3053,7 +3093,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-spacio</loc>
     
         
-        <lastmod>2023-11-29T23:07:34.897Z</lastmod>
+        <lastmod>2023-12-01T22:17:14.151Z</lastmod>
     
     </url>
     <url>
@@ -3061,7 +3101,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-sparkchart</loc>
     
         
-        <lastmod>2023-11-29T22:55:09.482Z</lastmod>
+        <lastmod>2023-12-01T22:11:25.419Z</lastmod>
     
     </url>
     <url>
@@ -3069,7 +3109,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-speak4</loc>
     
         
-        <lastmod>2023-11-29T23:09:17.348Z</lastmod>
+        <lastmod>2023-12-01T22:19:05.527Z</lastmod>
     
     </url>
     <url>
@@ -3077,7 +3117,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-splite</loc>
     
         
-        <lastmod>2023-11-29T22:54:28.508Z</lastmod>
+        <lastmod>2023-12-01T22:10:40.896Z</lastmod>
     
     </url>
     <url>
@@ -3085,7 +3125,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-sprig</loc>
     
         
-        <lastmod>2023-11-29T23:05:26.526Z</lastmod>
+        <lastmod>2023-12-01T22:16:36.982Z</lastmod>
     
     </url>
     <url>
@@ -3093,7 +3133,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-squarespace</loc>
     
         
-        <lastmod>2023-11-29T23:02:17.785Z</lastmod>
+        <lastmod>2023-12-01T22:13:05.331Z</lastmod>
     
     </url>
     <url>
@@ -3101,7 +3141,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-starloop</loc>
     
         
-        <lastmod>2023-11-29T23:57:22.779Z</lastmod>
+        <lastmod>2023-12-01T22:25:23.091Z</lastmod>
     
     </url>
     <url>
@@ -3109,7 +3149,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-startquestion</loc>
     
         
-        <lastmod>2023-11-29T23:08:34.726Z</lastmod>
+        <lastmod>2023-12-01T22:18:19.071Z</lastmod>
     
     </url>
     <url>
@@ -3117,7 +3157,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-stonly</loc>
     
         
-        <lastmod>2023-11-29T23:00:09.461Z</lastmod>
+        <lastmod>2023-12-01T22:22:25.313Z</lastmod>
     
     </url>
     <url>
@@ -3125,7 +3165,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-submittable</loc>
     
         
-        <lastmod>2023-11-29T23:03:44.790Z</lastmod>
+        <lastmod>2023-12-01T22:14:41.230Z</lastmod>
     
     </url>
     <url>
@@ -3133,7 +3173,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-supercat</loc>
     
         
-        <lastmod>2023-11-29T22:55:39.717Z</lastmod>
+        <lastmod>2023-12-01T22:11:57.978Z</lastmod>
     
     </url>
     <url>
@@ -3141,7 +3181,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-supportbee</loc>
     
         
-        <lastmod>2023-11-29T23:00:45.742Z</lastmod>
+        <lastmod>2023-12-01T22:23:05.942Z</lastmod>
     
     </url>
     <url>
@@ -3149,7 +3189,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-supporthunt</loc>
     
         
-        <lastmod>2023-11-29T23:01:56.311Z</lastmod>
+        <lastmod>2023-12-01T22:24:22.792Z</lastmod>
     
     </url>
     <url>
@@ -3157,7 +3197,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-suprforms</loc>
     
         
-        <lastmod>2023-11-29T22:54:50.180Z</lastmod>
+        <lastmod>2023-12-01T22:11:04.361Z</lastmod>
     
     </url>
     <url>
@@ -3165,7 +3205,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surecritic</loc>
     
         
-        <lastmod>2023-11-29T23:57:10.090Z</lastmod>
+        <lastmod>2023-12-01T22:25:10.429Z</lastmod>
     
     </url>
     <url>
@@ -3173,7 +3213,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-survalyzer-next-generation-ca793</loc>
     
         
-        <lastmod>2023-11-29T22:54:54.480Z</lastmod>
+        <lastmod>2023-12-01T22:11:09.044Z</lastmod>
     
     </url>
     <url>
@@ -3181,7 +3221,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-survey-mechanics</loc>
     
         
-        <lastmod>2023-11-29T22:55:24.506Z</lastmod>
+        <lastmod>2023-12-01T22:11:41.716Z</lastmod>
     
     </url>
     <url>
@@ -3189,7 +3229,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-survey2connect</loc>
     
         
-        <lastmod>2023-11-29T22:56:18.436Z</lastmod>
+        <lastmod>2023-12-01T22:12:39.746Z</lastmod>
     
     </url>
     <url>
@@ -3197,7 +3237,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveybot</loc>
     
         
-        <lastmod>2023-11-29T22:55:07.341Z</lastmod>
+        <lastmod>2023-12-01T22:11:23.134Z</lastmod>
     
     </url>
     <url>
@@ -3205,7 +3245,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveycto</loc>
     
         
-        <lastmod>2023-11-29T23:07:51.990Z</lastmod>
+        <lastmod>2023-12-01T22:17:31.358Z</lastmod>
     
     </url>
     <url>
@@ -3213,7 +3253,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveygizmo</loc>
     
         
-        <lastmod>2023-11-29T23:03:17.272Z</lastmod>
+        <lastmod>2023-12-01T22:14:10.996Z</lastmod>
     
     </url>
     <url>
@@ -3221,7 +3261,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveylab</loc>
     
         
-        <lastmod>2023-11-29T22:55:33.139Z</lastmod>
+        <lastmod>2023-12-01T22:11:50.977Z</lastmod>
     
     </url>
     <url>
@@ -3229,7 +3269,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveymethods</loc>
     
         
-        <lastmod>2023-11-29T23:09:23.718Z</lastmod>
+        <lastmod>2023-12-01T22:19:12.440Z</lastmod>
     
     </url>
     <url>
@@ -3237,7 +3277,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveymonkey</loc>
     
         
-        <lastmod>2023-11-29T23:02:28.456Z</lastmod>
+        <lastmod>2023-12-01T22:13:17.190Z</lastmod>
     
     </url>
     <url>
@@ -3245,7 +3285,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveynuts</loc>
     
         
-        <lastmod>2023-11-29T23:09:32.270Z</lastmod>
+        <lastmod>2023-12-01T22:19:21.706Z</lastmod>
     
     </url>
     <url>
@@ -3253,7 +3293,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveypal</loc>
     
         
-        <lastmod>2023-11-29T23:08:21.901Z</lastmod>
+        <lastmod>2023-12-01T22:18:05.130Z</lastmod>
     
     </url>
     <url>
@@ -3261,7 +3301,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveyrock</loc>
     
         
-        <lastmod>2023-11-29T22:56:01.272Z</lastmod>
+        <lastmod>2023-12-01T22:12:21.108Z</lastmod>
     
     </url>
     <url>
@@ -3269,7 +3309,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveysensum</loc>
     
         
-        <lastmod>2023-11-29T23:55:42.106Z</lastmod>
+        <lastmod>2023-12-01T22:19:44.926Z</lastmod>
     
     </url>
     <url>
@@ -3277,7 +3317,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-surveysparrow</loc>
     
         
-        <lastmod>2023-11-29T23:03:36.321Z</lastmod>
+        <lastmod>2023-12-01T22:14:31.881Z</lastmod>
     
     </url>
     <url>
@@ -3285,7 +3325,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-survicate</loc>
     
         
-        <lastmod>2023-11-29T23:03:59.617Z</lastmod>
+        <lastmod>2023-12-01T22:14:57.416Z</lastmod>
     
     </url>
     <url>
@@ -3293,7 +3333,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-survio</loc>
     
         
-        <lastmod>2023-11-29T22:55:22.368Z</lastmod>
+        <lastmod>2023-12-01T22:11:39.417Z</lastmod>
     
     </url>
     <url>
@@ -3301,7 +3341,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-swipe-pages</loc>
     
         
-        <lastmod>2023-11-29T23:03:15.152Z</lastmod>
+        <lastmod>2023-12-01T22:14:08.697Z</lastmod>
     
     </url>
     <url>
@@ -3309,7 +3349,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-swype</loc>
     
         
-        <lastmod>2023-11-29T23:56:25.478Z</lastmod>
+        <lastmod>2023-12-01T22:20:31.190Z</lastmod>
     
     </url>
     <url>
@@ -3317,7 +3357,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-sysaid</loc>
     
         
-        <lastmod>2023-11-29T23:01:07.238Z</lastmod>
+        <lastmod>2023-12-01T22:23:29.463Z</lastmod>
     
     </url>
     <url>
@@ -3325,7 +3365,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-tactful-ucx</loc>
     
         
-        <lastmod>2023-11-29T23:06:56.328Z</lastmod>
+        <lastmod>2023-12-01T22:27:15.426Z</lastmod>
     
     </url>
     <url>
@@ -3333,7 +3373,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-talkative</loc>
     
         
-        <lastmod>2023-11-29T23:06:58.459Z</lastmod>
+        <lastmod>2023-12-01T22:27:17.532Z</lastmod>
     
     </url>
     <url>
@@ -3341,7 +3381,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-talkie</loc>
     
         
-        <lastmod>2023-11-29T23:06:11.375Z</lastmod>
+        <lastmod>2023-12-01T22:26:30.695Z</lastmod>
     
     </url>
     <url>
@@ -3349,7 +3389,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-tally</loc>
     
         
-        <lastmod>2023-11-29T23:02:30.576Z</lastmod>
+        <lastmod>2023-12-01T22:13:19.613Z</lastmod>
     
     </url>
     <url>
@@ -3357,7 +3397,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-tango</loc>
     
         
-        <lastmod>2023-11-29T22:59:39.590Z</lastmod>
+        <lastmod>2023-12-01T22:21:52.432Z</lastmod>
     
     </url>
     <url>
@@ -3365,7 +3405,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-tapform</loc>
     
         
-        <lastmod>2023-11-29T22:56:27.040Z</lastmod>
+        <lastmod>2023-12-01T22:12:48.986Z</lastmod>
     
     </url>
     <url>
@@ -3373,7 +3413,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-tawk-to</loc>
     
         
-        <lastmod>2023-11-29T22:56:44.161Z</lastmod>
+        <lastmod>2023-12-01T22:20:54.502Z</lastmod>
     
     </url>
     <url>
@@ -3381,7 +3421,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-teamwork-desk</loc>
     
         
-        <lastmod>2023-11-29T22:59:05.122Z</lastmod>
+        <lastmod>2023-12-01T22:21:15.354Z</lastmod>
     
     </url>
     <url>
@@ -3389,7 +3429,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-tender-support</loc>
     
         
-        <lastmod>2023-11-29T23:06:00.809Z</lastmod>
+        <lastmod>2023-12-01T22:26:20.143Z</lastmod>
     
     </url>
     <url>
@@ -3397,7 +3437,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-textline</loc>
     
         
-        <lastmod>2023-11-29T22:56:59.276Z</lastmod>
+        <lastmod>2023-12-01T22:21:10.712Z</lastmod>
     
     </url>
     <url>
@@ -3405,7 +3445,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-the-review-solution</loc>
     
         
-        <lastmod>2023-11-29T23:57:52.488Z</lastmod>
+        <lastmod>2023-12-01T22:25:52.680Z</lastmod>
     
     </url>
     <url>
@@ -3413,7 +3453,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-tidio</loc>
     
         
-        <lastmod>2023-11-29T22:56:46.262Z</lastmod>
+        <lastmod>2023-12-01T22:20:56.797Z</lastmod>
     
     </url>
     <url>
@@ -3421,7 +3461,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-transform</loc>
     
         
-        <lastmod>2023-11-29T23:09:47.202Z</lastmod>
+        <lastmod>2023-12-01T22:19:38.015Z</lastmod>
     
     </url>
     <url>
@@ -3429,7 +3469,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-trengo</loc>
     
         
-        <lastmod>2023-11-29T22:59:09.358Z</lastmod>
+        <lastmod>2023-12-01T22:21:20.046Z</lastmod>
     
     </url>
     <url>
@@ -3437,7 +3477,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-trustpilot</loc>
     
         
-        <lastmod>2023-11-29T23:56:36.161Z</lastmod>
+        <lastmod>2023-12-01T22:24:36.614Z</lastmod>
     
     </url>
     <url>
@@ -3445,7 +3485,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-typeform</loc>
     
         
-        <lastmod>2023-11-29T23:02:11.291Z</lastmod>
+        <lastmod>2023-12-01T22:12:58.378Z</lastmod>
     
     </url>
     <url>
@@ -3453,7 +3493,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-ucalc</loc>
     
         
-        <lastmod>2023-11-29T23:08:28.280Z</lastmod>
+        <lastmod>2023-12-01T22:18:12.180Z</lastmod>
     
     </url>
     <url>
@@ -3461,7 +3501,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-unbounce</loc>
     
         
-        <lastmod>2023-11-29T23:02:19.913Z</lastmod>
+        <lastmod>2023-12-01T22:13:07.818Z</lastmod>
     
     </url>
     <url>
@@ -3469,7 +3509,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-upvoty</loc>
     
         
-        <lastmod>2023-11-29T23:05:20.209Z</lastmod>
+        <lastmod>2023-12-01T22:16:30.081Z</lastmod>
     
     </url>
     <url>
@@ -3477,7 +3517,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-userecho</loc>
     
         
-        <lastmod>2023-11-29T23:06:17.809Z</lastmod>
+        <lastmod>2023-12-01T22:26:37.032Z</lastmod>
     
     </url>
     <url>
@@ -3485,7 +3525,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-userflow</loc>
     
         
-        <lastmod>2023-11-29T22:59:19.914Z</lastmod>
+        <lastmod>2023-12-01T22:21:31.577Z</lastmod>
     
     </url>
     <url>
@@ -3493,7 +3533,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-vanilla</loc>
     
         
-        <lastmod>2023-11-29T22:59:43.851Z</lastmod>
+        <lastmod>2023-12-01T22:21:57.059Z</lastmod>
     
     </url>
     <url>
@@ -3501,7 +3541,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-videoask</loc>
     
         
-        <lastmod>2023-11-29T23:02:47.652Z</lastmod>
+        <lastmod>2023-12-01T22:13:38.152Z</lastmod>
     
     </url>
     <url>
@@ -3509,7 +3549,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-videopeel</loc>
     
         
-        <lastmod>2023-11-29T23:08:30.404Z</lastmod>
+        <lastmod>2023-12-01T22:18:14.486Z</lastmod>
     
     </url>
     <url>
@@ -3517,7 +3557,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-voiceform</loc>
     
         
-        <lastmod>2023-11-29T23:07:58.386Z</lastmod>
+        <lastmod>2023-12-01T22:17:38.955Z</lastmod>
     
     </url>
     <url>
@@ -3525,7 +3565,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-waiverfile</loc>
     
         
-        <lastmod>2023-11-29T23:07:22.036Z</lastmod>
+        <lastmod>2023-12-01T22:17:01.476Z</lastmod>
     
     </url>
     <url>
@@ -3533,7 +3573,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-walla-form</loc>
     
         
-        <lastmod>2023-11-29T23:04:10.212Z</lastmod>
+        <lastmod>2023-12-01T22:15:09.300Z</lastmod>
     
     </url>
     <url>
@@ -3541,7 +3581,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-watermelon</loc>
     
         
-        <lastmod>2023-11-29T23:01:20.104Z</lastmod>
+        <lastmod>2023-12-01T22:23:43.237Z</lastmod>
     
     </url>
     <url>
@@ -3549,7 +3589,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-weavely</loc>
     
         
-        <lastmod>2023-11-29T22:56:24.878Z</lastmod>
+        <lastmod>2023-12-01T22:12:46.670Z</lastmod>
     
     </url>
     <url>
@@ -3557,7 +3597,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-webask</loc>
     
         
-        <lastmod>2023-11-29T22:55:48.338Z</lastmod>
+        <lastmod>2023-12-01T22:12:07.204Z</lastmod>
     
     </url>
     <url>
@@ -3565,7 +3605,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-webbymize</loc>
     
         
-        <lastmod>2023-11-29T22:56:05.553Z</lastmod>
+        <lastmod>2023-12-01T22:12:25.772Z</lastmod>
     
     </url>
     <url>
@@ -3573,7 +3613,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-wherewolf</loc>
     
         
-        <lastmod>2023-11-29T23:08:32.538Z</lastmod>
+        <lastmod>2023-12-01T22:18:16.762Z</lastmod>
     
     </url>
     <url>
@@ -3581,7 +3621,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-wiin</loc>
     
         
-        <lastmod>2023-11-29T22:54:24.184Z</lastmod>
+        <lastmod>2023-12-01T22:10:36.046Z</lastmod>
     
     </url>
     <url>
@@ -3589,7 +3629,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-willo</loc>
     
         
-        <lastmod>2023-11-29T23:04:48.358Z</lastmod>
+        <lastmod>2023-12-01T22:15:51.591Z</lastmod>
     
     </url>
     <url>
@@ -3597,7 +3637,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-wisepops</loc>
     
         
-        <lastmod>2023-11-29T23:03:46.910Z</lastmod>
+        <lastmod>2023-12-01T22:14:43.559Z</lastmod>
     
     </url>
     <url>
@@ -3605,7 +3645,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-wispform</loc>
     
         
-        <lastmod>2023-11-29T23:03:57.498Z</lastmod>
+        <lastmod>2023-12-01T22:14:55.144Z</lastmod>
     
     </url>
     <url>
@@ -3613,7 +3653,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-wizu</loc>
     
         
-        <lastmod>2023-11-29T22:55:00.911Z</lastmod>
+        <lastmod>2023-12-01T22:11:16.084Z</lastmod>
     
     </url>
     <url>
@@ -3621,7 +3661,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-woobox</loc>
     
         
-        <lastmod>2023-11-29T23:05:15.939Z</lastmod>
+        <lastmod>2023-12-01T22:16:25.466Z</lastmod>
     
     </url>
     <url>
@@ -3629,7 +3669,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-wootric</loc>
     
         
-        <lastmod>2023-11-29T23:03:25.746Z</lastmod>
+        <lastmod>2023-12-01T22:14:20.232Z</lastmod>
     
     </url>
     <url>
@@ -3637,7 +3677,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-wotnot</loc>
     
         
-        <lastmod>2023-11-29T23:01:02.973Z</lastmod>
+        <lastmod>2023-12-01T22:23:24.604Z</lastmod>
     
     </url>
     <url>
@@ -3645,7 +3685,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-wpforms</loc>
     
         
-        <lastmod>2023-11-29T23:02:22.062Z</lastmod>
+        <lastmod>2023-12-01T22:13:10.228Z</lastmod>
     
     </url>
     <url>
@@ -3653,7 +3693,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-ws-form</loc>
     
         
-        <lastmod>2023-11-29T23:04:31.394Z</lastmod>
+        <lastmod>2023-12-01T22:15:32.477Z</lastmod>
     
     </url>
     <url>
@@ -3661,7 +3701,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-wufoo</loc>
     
         
-        <lastmod>2023-11-29T23:02:24.196Z</lastmod>
+        <lastmod>2023-12-01T22:13:12.544Z</lastmod>
     
     </url>
     <url>
@@ -3669,7 +3709,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-yay-forms</loc>
     
         
-        <lastmod>2023-11-29T23:07:39.172Z</lastmod>
+        <lastmod>2023-12-01T22:17:18.385Z</lastmod>
     
     </url>
     <url>
@@ -3677,7 +3717,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-yesinsights</loc>
     
         
-        <lastmod>2023-11-29T23:09:08.761Z</lastmod>
+        <lastmod>2023-12-01T22:18:56.326Z</lastmod>
     
     </url>
     <url>
@@ -3685,7 +3725,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-youengage</loc>
     
         
-        <lastmod>2023-11-29T23:05:24.440Z</lastmod>
+        <lastmod>2023-12-01T22:16:34.666Z</lastmod>
     
     </url>
     <url>
@@ -3693,7 +3733,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-zendesk</loc>
     
         
-        <lastmod>2023-11-29T22:56:33.560Z</lastmod>
+        <lastmod>2023-12-01T22:20:42.788Z</lastmod>
     
     </url>
     <url>
@@ -3701,7 +3741,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-zenloop</loc>
     
         
-        <lastmod>2023-11-29T23:08:47.481Z</lastmod>
+        <lastmod>2023-12-01T22:18:32.861Z</lastmod>
     
     </url>
     <url>
@@ -3709,7 +3749,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-ziwo</loc>
     
         
-        <lastmod>2023-11-29T23:01:43.505Z</lastmod>
+        <lastmod>2023-12-01T22:24:08.803Z</lastmod>
     
     </url>
     <url>
@@ -3717,7 +3757,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-zoho-desk</loc>
     
         
-        <lastmod>2023-11-29T22:56:50.490Z</lastmod>
+        <lastmod>2023-12-01T22:21:01.524Z</lastmod>
     
     </url>
     <url>
@@ -3725,7 +3765,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-zoho-forms</loc>
     
         
-        <lastmod>2023-11-29T23:02:41.280Z</lastmod>
+        <lastmod>2023-12-01T22:13:31.249Z</lastmod>
     
     </url>
     <url>
@@ -3733,7 +3773,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-zoho-survey</loc>
     
         
-        <lastmod>2023-11-29T23:04:22.932Z</lastmod>
+        <lastmod>2023-12-01T22:15:23.197Z</lastmod>
     
     </url>
     <url>
@@ -3741,7 +3781,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-zonka-feedback</loc>
     
         
-        <lastmod>2023-11-29T23:07:56.254Z</lastmod>
+        <lastmod>2023-12-01T22:17:36.645Z</lastmod>
     
     </url>
     <url>
@@ -3749,7 +3789,7 @@
         <loc>https://www.oopspam.com/integrations/spam-protection-for-zyratalk</loc>
     
         
-        <lastmod>2023-11-29T23:01:05.097Z</lastmod>
+        <lastmod>2023-12-01T22:23:27.038Z</lastmod>
     
     </url>
 </urlset>
