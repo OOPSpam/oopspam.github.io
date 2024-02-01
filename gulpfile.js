@@ -39,7 +39,7 @@ gulp.task('sitemap', function () {
 });
 
 
-gulp.task('integrationMulti', function () {
+gulp.task('integrationMulti', function (callback) {
     try {
         const clientId = process.env.CLIENT_ID;
         
@@ -293,7 +293,7 @@ gulp.task('integrationMulti', function () {
                       <div class="level is-mobile" style="padding-top: 2.5em;">
                         <div class="level-item has-text-left ">
                           <div>
-                            <p class="title has-text-white">1M+</p>
+                            <p class="title has-text-white">1.5M+</p>
                             <p class="heading has-text-white">protected websites</p>
                           </div>
                         </div>
@@ -305,7 +305,7 @@ gulp.task('integrationMulti', function () {
                         </div>
                         <div class="level-item has-text-left">
                           <div>
-                            <p class="title has-text-white">150M+</p>
+                            <p class="title has-text-white">500M+</p>
                             <p class="heading has-text-white">caught spam</p>
                           </div>
                         </div>
@@ -431,6 +431,7 @@ gulp.task('integrationMulti', function () {
                         }))
                         // output files in app folder
                         .pipe(gulp.dest('./integrations'))
+                        .on('end', callback);  // Signal async completion
         });
         
 

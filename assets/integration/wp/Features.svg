@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="260px" height="310px" viewBox="0 0 260 310" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 17</title>
+    <g id="Wordpress-PAge" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Medium-Copy-7" transform="translate(-293.000000, -2393.000000)">
+            <g id="Group-17" transform="translate(297.000000, 2393.000000)">
+                <polygon id="Path-66" fill="#FCDD56" points="38 259.10236 38 193 94.2368924 222.823962 130.569792 209.204721 134 309"></polygon>
+                <polygon id="Path-67" stroke="#979797" stroke-width="1.10483394" fill="#FCDD56" points="133.425628 309 224 254.841891 224 193 165.099804 222.823962 130 209.204721"></polygon>
+                <polygon id="Path-59" stroke="#000000" stroke-width="2.20966787" points="130 209.528697 222.019234 164 253 176.253696 165.005633 223"></polygon>
+                <polygon id="Path-60" stroke="#000000" stroke-width="2.20966787" points="37.0876869 163 16 136.020261 109.575701 97 134 123.714253"></polygon>
+                <polygon id="Path-61" stroke="#000000" stroke-width="2.20966787" points="134 123.714253 157.606525 97 246 138.617932 223.22132 163"></polygon>
+                <line x1="130" y1="209" x2="133" y2="124" id="Path-62" stroke="#000000" stroke-width="2.20966787"></line>
+                <line x1="130" y1="209" x2="133" y2="308" id="Path-63" stroke="#000000" stroke-width="2.20966787"></line>
+                <polyline id="Path-64" stroke="#000000" stroke-width="2.20966787" points="225 193 225 254.841891 134 309"></polyline>
+                <polyline id="Path-65" stroke="#000000" stroke-width="2.20966787" points="38 193 38 259.10236 134 309"></polyline>
+                <path d="M27.8286126,37.9560423 C61.6838306,20.9693423 173.72197,-8.81995738 144.842757,20.1224066 C115.963544,49.0647706 110.718265,85.9758262 144.842757,67.5202984 C178.967249,49.0647706 275.933463,33.0938817 215.717179,89.9596332 C155.500895,146.825385 186.815847,134.252981 207.123947,123.69383 C227.432047,113.134678 237.242238,121.465484 224.281784,140.153413 C215.641481,152.612032 207.727211,164.817232 200.538974,176.769013 L130.225017,209 L51.8326379,166.346915 C86.9807262,133.021055 86.9807262,120.910842 51.8326379,130.016273 C-0.889494493,143.674421 31.0672172,94.5926757 64.9224352,59.7590725 C98.7776532,24.9254693 -6.02660543,54.9427422 27.8286126,37.9560423 Z" id="Path-68" fill-opacity="0.1" fill="#724904"></path>
+                <circle id="Oval" fill="#000000" cx="58" cy="66" r="7"></circle>
+                <path d="M93.5,197 C110.344685,197 124,183.344685 124,166.5 C124,149.655315 110.344685,136 93.5,136 C76.6553151,136 63,149.655315 63,166.5 C63,183.344685 76.6553151,197 93.5,197 Z" id="Oval" stroke="#000000" stroke-width="1.10483394" stroke-dasharray="4.41933574076995"></path>
+                <polygon id="Path-58" stroke="#000000" stroke-width="2.20966787" fill="#FFFFFF" points="37.2731966 164 0 174.283266 94.5839422 223 131 209.528697"></polygon>
+                <path d="M132,44 C139.731986,44 146,37.7319865 146,30 C146,22.2680135 139.731986,16 132,16 C124.268014,16 118,22.2680135 118,30 C118,37.7319865 124.268014,44 132,44 Z" id="Oval" stroke="#000000" stroke-width="1.10483394" stroke-dasharray="4.41933574076995"></path>
+                <circle id="Oval" fill="#000000" cx="152" cy="186" r="7"></circle>
+                <circle id="Oval" fill="#000000" cx="204" cy="63" r="5"></circle>
+                <path d="M76.491596,142.202453 L84.7824495,111.886496 C84.9434124,111.297926 85.5510285,110.951283 86.1395981,111.112246 C86.3334519,111.165261 86.5091735,111.270149 86.6478435,111.415615 L108.672947,134.520256 C109.09397,134.961915 109.077241,135.661257 108.635582,136.08228 C108.494026,136.217222 108.319188,136.312171 108.128927,136.357429 L77.8129706,143.568745 C77.219351,143.709951 76.6236576,143.343196 76.4824521,142.749577 C76.4395742,142.569321 76.4427186,142.381175 76.491596,142.202453 Z" id="Path-69" stroke="#000000" stroke-width="2.20966787" fill="#FFFFFF"></path>
+                <circle id="Oval" stroke="#000000" stroke-width="0.61711445" fill="#000000" cx="152" cy="83" r="26.6914428"></circle>
+                <circle id="Oval" stroke="#000000" stroke-width="1.10483394" fill="#FBFBED" cx="150" cy="81" r="26.447583"></circle>
+                <g id="Group-11" transform="translate(135.000000, 67.000000)" stroke="#000000">
+                    <path d="M29.8951661,0.828625451 L30.1713745,17.4026288 L0.828625451,17.6788372 L0.828625451,0.828625451 L29.8951661,0.828625451 Z" id="Rectangle" stroke-width="1.6572509" fill="#FBFBED"></path>
+                    <ellipse id="Oval" stroke-width="1.10483394" stroke-linejoin="round" cx="14.9464286" cy="9.25373134" rx="6.08928571" ry="5.98770852"></ellipse>
+                    <line x1="19.375" y1="5.98770852" x2="9.96428571" y2="13.6915911" id="Path-71" stroke-width="1.32402193"></line>
+                    <line x1="0.553571429" y1="0" x2="0.553571429" y2="31" id="Path-78" stroke-width="1.6572509"></line>
+                </g>
+                <circle id="Oval" stroke="#000000" stroke-width="0.61711445" fill="#000000" cx="83" cy="136" r="34.6914428"></circle>
+                <circle id="Oval" stroke="#000000" stroke-width="1.10483394" fill="#FBFBED" cx="80" cy="134" r="34.447583"></circle>
+                <circle id="Oval" stroke="#000000" stroke-width="0.61711445" fill="#000000" cx="82" cy="20" r="18.6914428"></circle>
+                <circle id="Oval" stroke="#000000" stroke-width="1.10483394" fill="#FBFBED" cx="81" cy="19" r="18.447583"></circle>
+                <g id="Group-12" transform="translate(178.000000, 125.000000)" stroke="#000000">
+                    <ellipse id="Oval" stroke-width="0.61711445" fill="#000000" cx="27.106383" cy="26.0543478" rx="24.5850598" ry="24.6370949"></ellipse>
+                    <ellipse id="Oval" stroke-width="1.10483394" fill="#FBFBED" cx="24.893617" cy="24.9456522" rx="24.3412001" ry="24.3932352"></ellipse>
+                </g>
+                <g id="Group-8" transform="translate(84.000000, 69.000000)" fill="#000000">
+                    <rect id="Rectangle" x="0" y="6.8" width="17" height="3.4"></rect>
+                    <polygon id="Rectangle" transform="translate(8.500000, 8.500000) rotate(90.000000) translate(-8.500000, -8.500000) " points="-5.46687657e-15 6.8 17 6.8 17 10.2 -5.46687657e-15 10.2"></polygon>
+                </g>
+                <g id="Group-8" transform="translate(146.000000, 143.000000)" fill="#000000">
+                    <rect id="Rectangle" x="0" y="4.90909091" width="12" height="2.18181818"></rect>
+                    <polygon id="Rectangle" transform="translate(6.000000, 6.000000) rotate(90.000000) translate(-6.000000, -6.000000) " points="-8.89489681e-15 4.90909091 12 4.90909091 12 7.09090909 -8.89489681e-15 7.09090909"></polygon>
+                </g>
+                <g id="Group-15" transform="translate(53.000000, 113.000000)">
+                    <g id="Group-13" transform="translate(6.668420, 0.000000)" stroke="#000000">
+                        <g id="Group-9" stroke-width="1.85134335">
+                            <ellipse id="Oval" cx="19.4495593" cy="19.5" rx="19.4495593" ry="19.5"></ellipse>
+                            <path d="M4.44561355,7.8 C8.35076809,9.28571429 13.3791379,10.0285714 19.530723,10.0285714 C25.6823081,10.0285714 30.6565687,9.28571429 34.453505,7.8" id="Path-17"></path>
+                            <path d="M4.44561355,30.0857143 C8.35076809,31.5714286 13.3791379,32.3142857 19.530723,32.3142857 C25.6823081,32.3142857 30.6565687,31.5714286 34.453505,30.0857143" id="Path-17" transform="translate(19.449559, 31.200000) scale(1, -1) translate(-19.449559, -31.200000) "></path>
+                            <ellipse id="Oval" cx="19.4495593" cy="19.5" rx="8.3355254" ry="19.5"></ellipse>
+                            <line x1="0" y1="19.5" x2="38.8991185" y2="19.5" id="Path-18"></line>
+                        </g>
+                        <g id="Group-10" transform="translate(27.785085, 17.087630)">
+                            <path d="M0,20.2527754 L1.31911937,2.04995678 C1.40284643,0.894588737 2.36461003,2.12794229e-16 3.52300786,0 L17.3368271,0 C18.557193,2.19911637e-16 19.546495,0.989302003 19.546495,2.20966787 L19.546495,13.8666308 C19.546495,15.0869967 18.557193,16.0762987 17.3368271,16.0762987 L3.33421016,16.0762987 L3.33421016,16.0762987 L0,20.2527754 Z" id="Path-55" stroke-width="1.10483394" fill="#FBFBED" stroke-linejoin="round" transform="translate(9.773248, 10.126388) scale(-1, 1) translate(-9.773248, -10.126388) "></path>
+                            <polyline id="Path-56" stroke-width="1.6572509" points="4.95269134 11.3266558 8.71173653 4.34844151 12.1465286 11.3266558"></polyline>
+                            <line x1="6.11271863" y1="9.09808437" x2="10.5583322" y2="9.09808437" id="Path-70" stroke-width="1.6572509"></line>
+                        </g>
+                    </g>
+                    <path d="M0,26.1975481 L1.31911937,7.99472955 C1.40284643,6.83936151 2.36461003,5.94477277 3.52300786,5.94477277 L17.3368271,5.94477277 C18.557193,5.94477277 19.546495,6.93407478 19.546495,8.15444065 L19.546495,19.8114036 C19.546495,21.0317694 18.557193,22.0210714 17.3368271,22.0210714 L3.33421016,22.0210714 L3.33421016,22.0210714 L0,26.1975481 Z" id="Path-55" stroke="#000000" stroke-width="1.10483394" fill="#FBFBED" stroke-linejoin="round"></path>
+                    <image id="Bitmap" x="5.55701693" y="8.99481027" width="8.89122709" height="10.0285714" xlink:href="data:image/png;base64,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"></image>
+                </g>
+                <g id="Group-8" transform="translate(189.000000, 92.000000)" fill="#000000">
+                    <rect id="Rectangle" x="0" y="4.90909091" width="12" height="2.18181818"></rect>
+                    <polygon id="Rectangle" transform="translate(6.000000, 6.000000) rotate(90.000000) translate(-6.000000, -6.000000) " points="-8.89489681e-15 4.90909091 12 4.90909091 12 7.09090909 -8.89489681e-15 7.09090909"></polygon>
+                </g>
+                <g id="Group-8" transform="translate(84.000000, 69.000000)" fill="#000000">
+                    <rect id="Rectangle" x="0" y="6.8" width="17" height="3.4"></rect>
+                    <polygon id="Rectangle" transform="translate(8.500000, 8.500000) rotate(90.000000) translate(-8.500000, -8.500000) " points="-5.46687657e-15 6.8 17 6.8 17 10.2 -5.46687657e-15 10.2"></polygon>
+                </g>
+                <text id="@" font-family="OpenSans-Regular, Open Sans" font-size="23.2015126" font-weight="normal" fill="#000000">
+                    <tspan x="71" y="26">@</tspan>
+                </text>
+                <rect id="Rectangle" stroke="#000000" stroke-width="1.6572509" x="189" y="140" width="28" height="19" rx="2.20966787"></rect>
+                <line x1="202.5" y1="139.769012" x2="202.5" y2="136.5" id="Path-72" stroke="#000000" stroke-width="1.10483394"></line>
+                <circle id="Oval" stroke="#000000" stroke-width="1.6572509" cx="203" cy="134" r="2.17137455"></circle>
+                <g id="Group-14" transform="translate(192.000000, 150.000000)" stroke="#000000" stroke-width="1.10483394">
+                    <rect id="Rectangle" x="0.552416968" y="0.552416968" width="19.8951661" height="4.89516606" rx="2.20966787"></rect>
+                    <line x1="10.5" y1="0.6" x2="10.5" y2="4.8" id="Path-73"></line>
+                    <line x1="7.03864047" y1="0.6" x2="7.03864047" y2="4.8" id="Path-74"></line>
+                    <line x1="3.86842105" y1="0.6" x2="3.86842105" y2="4.8" id="Path-75"></line>
+                    <line x1="14.0109257" y1="0.6" x2="14.0109257" y2="4.8" id="Path-76"></line>
+                    <line x1="17.6842105" y1="0.6" x2="17.6842105" y2="4.8" id="Path-77"></line>
+                </g>
+                <circle id="Oval" stroke="#000000" stroke-width="1.10483394" cx="199" cy="146" r="2.44758303"></circle>
+                <circle id="Oval" stroke="#000000" stroke-width="1.10483394" cx="207" cy="146" r="2.44758303"></circle>
+                <rect id="Rectangle" stroke="#000000" stroke-width="1.6572509" x="217.828625" y="143.828625" width="2.3427491" height="9.3427491" rx="1.10483394"></rect>
+                <rect id="Rectangle" stroke="#000000" stroke-width="1.6572509" x="185.828625" y="143.828625" width="2.3427491" height="9.3427491" rx="1.10483394"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
