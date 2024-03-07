@@ -15,6 +15,50 @@
   src: url(./fonts/OpenSans-SemiBold.ttf);
 }
 
+#main {
+  background-size: 100% 100%;
+background-position: 0px 0px;
+background-image: linear-gradient(180deg, #F2F2BEFF 0%, #FBFBED 40%);
+}
+.is-light-button {
+  background-repeat: no-repeat;
+background-size: 100% .5em;
+background-position: 0 113%;
+transition: background-size .25s ease-in;
+background-image: unset;
+box-shadow: 1px 2px;
+border: solid;
+border-width: thin;
+border-radius: 9999px;
+padding-left: calc(0.5em + .25em);
+padding-right: calc(0.5em + .25em);
+}
+#stats {
+  background-image: url(/assets/bg.svg);
+background-position: 50% 0;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: scroll;
+padding-top: 180px;
+}
+@media screen and (max-width: 767px) {
+  #stats .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+#stats {
+  background-color: black;
+  background-image: none;
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: scroll;
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+
+}
+
 p, .subtitle, small, span, .content, .plan-item, .plan-price {
   color:black !important;
 }
