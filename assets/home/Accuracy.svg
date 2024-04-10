@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="65px" viewBox="0 0 65 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Accuracy</title>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-March-2024" transform="translate(-208, -1532)" stroke="#000000" stroke-width="2">
+            <g id="HERO" transform="translate(-4, -6)">
+                <g id="Product-Spotlight" transform="translate(0, 628)">
+                    <g id="Accuracy" transform="translate(212, 911.5049)">
+                        <circle id="Oval" cx="29" cy="34.4951172" r="28"></circle>
+                        <circle id="Oval" cx="29" cy="34.4951172" r="18"></circle>
+                        <circle id="Oval" cx="29" cy="34.4951172" r="10"></circle>
+                        <line x1="29" y1="34.4951172" x2="53.7539063" y2="11.3066406" id="Path-46" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <polygon id="Path-47" stroke-linecap="round" stroke-linejoin="round" points="53.7539062 5.49511719 53.7539062 10.9982998 58 10.9982998 63.7988281 5.49511719 58.7763672 5.49511719 58.7763672 -2.1803303e-16"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

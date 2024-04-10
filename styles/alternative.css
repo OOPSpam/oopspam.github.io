@@ -21,7 +21,7 @@ section.section, #quick-comparison {
     background-color: #fff;
 }
 
-.alternative .navigation {
+.alternative .navigation, .tools .navigation {
     padding-bottom: 0 !important;
 }
 
@@ -33,7 +33,7 @@ section.section, #quick-comparison {
     line-height: 33px;
 }
 
-.alternative .button {
+.alternative .button, .tools .button {
     border-style: solid !important;
     border-width: 1px;
     box-shadow: 2px 5px black;
@@ -41,7 +41,7 @@ section.section, #quick-comparison {
 }
 
 h1,h2 {
-    font-family: 'Playfair Display', serif !important;
+    font-family: 'Bricolage Grotesque', serif !important;
 }
 th,td {
     white-space: nowrap;

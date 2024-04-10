@@ -126,7 +126,7 @@ gulp.task('integrationMulti', function (callback) {
                     <!DOCTYPE html>
                     <html lang="en">
                     <head>
-                      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+                      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
                       <link rel="stylesheet" href="/styles/main.min.css" />
                       <link rel="stylesheet" href="/styles/contact.css">
                     
@@ -293,7 +293,7 @@ gulp.task('integrationMulti', function (callback) {
                       <div class="level is-mobile" style="padding-top: 2.5em;">
                         <div class="level-item has-text-left ">
                           <div>
-                            <p class="title has-text-white">1.5M+</p>
+                            <p class="title has-text-white">3.5M+</p>
                             <p class="heading has-text-white">protected websites</p>
                           </div>
                         </div>
@@ -305,7 +305,7 @@ gulp.task('integrationMulti', function (callback) {
                         </div>
                         <div class="level-item has-text-left">
                           <div>
-                            <p class="title has-text-white">500M+</p>
+                            <p class="title has-text-white">1B+</p>
                             <p class="heading has-text-white">caught spam</p>
                           </div>
                         </div>
