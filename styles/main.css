@@ -404,12 +404,16 @@ iframe {
 #support .carousel-slide {
   aspect-ratio: unset;
 }
+.navbar a:hover {
+background-color: #fbf6ed;
+}
 .review {
   padding: 1em;
   border-style: solid;
   border-radius: 1em;
   background-color: #fbf6ed;
   margin: 0.5em;
+  color:#000;
 }
 .has-text-warning {
   color: #FCDD56 !important;
