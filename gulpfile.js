@@ -124,7 +124,7 @@ gulp.task('integrationMulti', function (callback) {
                             // Write HTML content to the new file
                             fs.writeFileSync(filePath, `
                     <!DOCTYPE html>
-                    <html lang="en">
+                    <html lang="en" data-theme="light">
                     <head>
                       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
                       <link rel="stylesheet" href="/styles/main.min.css" />
