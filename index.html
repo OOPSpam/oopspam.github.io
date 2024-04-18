@@ -1487,32 +1487,6 @@ background-image: linear-gradient(180deg, #D8D8D8 0%, #FFCB1D 100%);  -webkit-ba
   <script async defer src="https://scripts.withcabin.com/hello.js"></script>
 <script async src="/scripts/app.min.js"></script>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js" defer></script>
-<script>
-document.addEventListener("DOMContentLoaded", (event) => {
-  var rect = SVG.find('.animate').animate(2000,1000).move(0, 5).loop(true, true);
- 
-
-  const svgContainer = document.getElementById('integrationSvg');
-const draw = SVG.adopt(svgContainer);
-const oval = draw.find('#Oval');
-oval.animate(800).scale(1.5).scale(1.0).loop(true, true);
-
-
-
-
-
-
-  
-});
-const carousel = document.querySelector(".carousel-container");
-const slide = document.querySelector(".carousel-slide");
-
-function handleCarouselMove(positive = true) {
-  const slideWidth = slide.clientWidth;
-  carousel.scrollLeft = positive ? carousel.scrollLeft + slideWidth : carousel.scrollLeft - slideWidth;
-}
-</script>
 </body>
 
 
