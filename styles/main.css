@@ -1,26 +1,32 @@
 @font-face {
   font-family: Playfair Display;
   src: url(./fonts/PlayfairDisplay-Medium.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: Bricolage Grotesque;
   src: url(./fonts/BricolageGrotesque-Bold.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: 'Open Sans Bold';
   src: url(./fonts/OpenSans-Bold.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: 'Open Sans Regular';
   src: url(./fonts/OpenSans-Regular.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: 'Open Sans SemiBold';
   src: url(./fonts/OpenSans-SemiBold.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: 'Open Sans Italic';
   src: url(./fonts/OpenSans-Italic.ttf);
+  font-display: swap;
 }
 
 h1, h2, h3 {
