@@ -963,6 +963,15 @@ background-image: linear-gradient(180deg, #D8D8D8 0%, #FFCB1D 100%);  -webkit-ba
   {% include "partials/footer.njk" %}
   {% include "partials/footerScript.njk" %}
 </div>
+<script>
+  const carousel = document.querySelector(".carousel-container");
+  const slide = document.querySelector(".carousel-slide");
+  
+  function handleCarouselMove(positive = true) {
+    const slideWidth = slide.clientWidth;
+    carousel.scrollLeft = positive ? carousel.scrollLeft + slideWidth : carousel.scrollLeft - slideWidth;
+  }
+  </script>
 </body>
 
 
