@@ -29,6 +29,11 @@
   font-display: swap;
 }
 
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: black;
+}
+
 h1, h2, h3 {
   font-family: 'Bricolage Grotesque', serif !important;
 }
