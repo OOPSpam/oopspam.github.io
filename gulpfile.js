@@ -47,90 +47,136 @@ gulp.task('sitemap', function () {
 });
 
 
-// gulp.task('integrationMulti', function (callback) {
+
+// gulp.task('integrationMulti', async function () {
+
 //     try {
 //         const clientId = process.env.CLIENT_ID;
-        
-//         var integrations = [];
+//         console.log('Starting integrationMulti task');
 
-//         function generatePagesFor(category, page) {
-//             return new Promise((resolve, reject) => {
-//                 const body3 = request('https://api.zapier.com/v1/apps?client_id=' + clientId + '&category=' + category + '&page=' + page, function (error, response, body) {
-//                     if (!error && response.statusCode == 200) {
-//                         let responseFromZapier = JSON.parse(body);
-//                         integrations.push(...responseFromZapier.objects);
+//         let integrations = [];
 
-//                         // Process each integration app
-//                         responseFromZapier.objects.forEach((app) => {
-//                             sleep.sleep(2);
-//                             const fileName = `spam-protection-for-${app.slug}.html`;
-//                             const filePath = path.join('./integrations', fileName);
+//         async function generatePagesFor(category, page) {
+//             console.log(`Generating pages for category: ${category}, page: ${page}`);
+//             const url = `https://api.zapier.com/v1/apps?client_id=${clientId}&category=${category}&page=${page}`;
+            
+//             const response = await requestPromise(url);
+//             if (response.statusCode !== 200) {
+//                 throw new Error(`Failed to fetch data from Zapier API: ${response.statusCode}`);
+//             }
 
-//                             let templates = app.links['mutual:zap_templates'];
+//             const responseFromZapier = JSON.parse(response.body);
+//             integrations.push(...responseFromZapier.objects);
 
-//                             templates = templates.replace("referer=None", "client_id=" + clientId);
+//             console.log(`Processing ${responseFromZapier.objects.length} apps for ${category}`);
 
-//                             const getTemplate = syncRequest('GET', templates);
+//             for (const app of responseFromZapier.objects) {
+//                 await processApp(app);
+//             }
+//         }
 
-//                             if (getTemplate.statusCode === 200) {
-//                                 const responseBody = getTemplate.getBody('utf8');
-//                                 var templateData = [];
+//         async function processApp(app) {
+//             console.log(`Processing app: ${app.title}`);
+//             const fileName = `spam-protection-for-${app.slug}.html`;
+//             const filePath = path.join('./integrations', fileName);
 
-//                                 if (responseBody && responseBody.trim() !== '') {
-//                                     const template = JSON.parse(responseBody);
-//                                     templateData.htmlContent = "";
-//                                     templateData.url = "";
-//                                     templateData.title = "";
+//             let templates = app.links['mutual:zap_templates'].replace("referer=None", `client_id=${clientId}`);
 
+//             let retries = 3;
+//             while (retries > 0) {
+//                 try {
+//                     const getTemplate = syncRequest('GET', templates);
+//                     if (getTemplate.statusCode === 429) {
+//                         console.log(`Rate limited when processing ${app.title}. Retrying in 6 seconds...`);
+//                         await delay(6000);
+//                         retries--;
+//                         continue;
+//                     }
+//                     if (getTemplate.statusCode !== 200) {
+//                         throw new Error(`Failed to fetch template: ${getTemplate.statusCode}`);
+//                     }
 
-//                                     if (template != undefined && template && Array.isArray(template) && template.length > 0 && template[0].steps)
-//                                         try {
-//                                             templateData.url = template[0].url;
-//                                             templateData.title = template[0].title;
-//                                             // Loop through each mutual template
-//                                             template[0].steps.forEach((step, index) => {
+//                     const responseBody = getTemplate.getBody('utf8');
+//                     let templateData = { htmlContent: "", url: "", title: "" };
 
-//                                                 templateData.htmlContent += `
-//                                             <div class="column is-one-third">
-//                                                 <div class="box">
-//                                                     <article class="media">
-//                                                         <div class="media-left">
-//                                                             <figure class="image is-64x64">
-//                                                                 <img src="${step.image}" alt="${step.title} icon">
-//                                                             </figure>
-//                                                         </div>
-//                                                         <div class="media-content">
-//                                                             <div class="content">
-//                                                                     <p>${step.title}</p>
-//                                                                     <strong>${step.label}</strong>
-//                                                             </div>
-//                                                         </div>
-//                                                     </article>
-//                                                 </div>
-//                                             </div>
-//                                 `;
-//                                                 // Add arrow between steps
-//                                                 if (index < template[0].steps.length - 1) {
-//                                                     templateData.htmlContent += `<div class=" has-text-centered"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-step-into" width="64" height="64" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-//                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-//                                 <path d="M12 3l0 12" />
-//                                 <path d="M16 11l-4 4" />
-//                                 <path d="M8 11l4 4" />
-//                                 <path d="M12 20m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-//                               </svg></div>`;
-//                                                 }
-//                                             });
-//                                         } catch (err) {
-//                                             console.log("error while generating zap template", template[0])
-//                                         }
+//                     if (responseBody && responseBody.trim() !== '') {
+//                         const template = JSON.parse(responseBody);
+//                         if (template && Array.isArray(template) && template.length > 0 && template[0].steps) {
+//                             templateData = processTemplate(template[0]);
+//                         }
+//                     }
 
-//                                 }
-//                             } else {
-//                                 console.error('Error:', getTemplate.statusCode);
-//                             }
+//                     const htmlContent = generateHtmlContent(app, templateData);
+//                     fs.writeFileSync(filePath, htmlContent);
+//                     console.log(`Generated file: ${fileName}`);
+//                     break;  // Success, exit the retry loop
+//                 } catch (err) {
+//                     console.error(`Error processing app ${app.title}:`, err);
+//                     if (retries === 1) {
+//                         console.error(`Failed to process ${app.title} after 3 retries`);
+//                     }
+//                     retries--;
+//                     await delay(6000);  // Wait for 6 seconds before retrying
+//                 }
+//             }
 
-//                             // Write HTML content to the new file
-//                             fs.writeFileSync(filePath, `
+//             // Add a delay between processing each app
+//             await delay(2000);
+//         }
+
+//         function processTemplate(template) {
+//             let templateData = {
+//                 url: template.url,
+//                 title: template.title,
+//                 htmlContent: ""
+//             };
+
+//             template.steps.forEach((step, index) => {
+//                 templateData.htmlContent += generateStepHtml(step);
+//                 if (index < template.steps.length - 1) {
+//                     templateData.htmlContent += generateArrowHtml();
+//                 }
+//             });
+
+//             return templateData;
+//         }
+
+//         function generateStepHtml(step) {
+//             return `
+//                 <div class="column is-one-third">
+//                     <div class="box">
+//                         <article class="media">
+//                             <div class="media-left">
+//                                 <figure class="image is-64x64">
+//                                     <img src="${step.image}" alt="${step.title} icon">
+//                                 </figure>
+//                             </div>
+//                             <div class="media-content">
+//                                 <div class="content">
+//                                     <p>${step.title}</p>
+//                                     <strong>${step.label}</strong>
+//                                 </div>
+//                             </div>
+//                         </article>
+//                     </div>
+//                 </div>
+//             `;
+//         }
+
+//         function generateArrowHtml() {
+//             return `<div class="has-text-centered"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-step-into" width="64" height="64" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+//                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+//                 <path d="M12 3l0 12" />
+//                 <path d="M16 11l-4 4" />
+//                 <path d="M8 11l4 4" />
+//                 <path d="M12 20m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+//             </svg></div>`;
+//         }
+
+//         function generateHtmlContent(app, templateData) {
+//             // ... (rest of the HTML generation code remains the same)
+//             // For brevity, I'm not including the entire HTML generation here
+//             return `
 //                     <!DOCTYPE html>
 //                     <html lang="en" data-theme="light">
 //                     <head>
@@ -402,21 +448,15 @@ gulp.task('sitemap', function () {
                     
 //                     </html>
                     
-//                     `);
-//                         });
-//                             resolve();
-
-//                     }
-//                 });
-//             });
+//                     `; // Return the full HTML content
 //         }
 
-//         // Generate customer-support pages
-//         Promise.all([
+//         console.log('Starting to generate pages for all categories');
+//         await Promise.all([
 //             generatePagesFor("customer-support", 1),
 //             generatePagesFor("customer-support", 2),
-//             generatePagesFor("reviews", 1)
-//             ,generatePagesFor("forms", 1),
+//             generatePagesFor("reviews", 1),
+//             generatePagesFor("forms", 1),
 //             generatePagesFor("forms", 2),
 //             generatePagesFor("forms", 3),
 //             generatePagesFor("cms", 1),
@@ -430,35 +470,38 @@ gulp.task('sitemap', function () {
 //             generatePagesFor("crm", 7),
 //             generatePagesFor("crm", 8),
 //             generatePagesFor("crm", 9),
-            
-//         ])
-//         .then(() => {
-//             gulp.src('pages/integrations/index.html')
-//                         .pipe(data(function () {
-//                             return {
-//                                 appsData1: integrations
-//                             };
-//                         }))
-//                         .pipe(nunjucksRender({
-//                             path: ['templates']
-//                         }))
-//                         .pipe(gulp.dest('./integrations'));
-    
-//                         return gulp.src('./integrations/*.+(html|nunjucks)')
-//                         // Renders template with nunjucks
-//                         .pipe(nunjucksRender({
-//                             path: ['templates']
-//                         }))
-//                         // output files in app folder
-//                         .pipe(gulp.dest('./integrations'))
-//                         .on('end', callback);  // Signal async completion
-//         });
-        
+//         ]);
 
+//         console.log('Finished generating all pages');
+
+//         console.log('Starting to render index page');
+//         await new Promise((resolve, reject) => {
+//             gulp.src('pages/integrations/index.html')
+//                 .pipe(data(function () {
+//                     return { appsData1: integrations };
+//                 }))
+//                 .pipe(nunjucksRender({ path: ['templates'] }))
+//                 .pipe(gulp.dest('./integrations'))
+//                 .on('end', resolve)
+//                 .on('error', reject);
+//         });
+
+//         console.log('Starting to render all pages');
+//         await new Promise((resolve, reject) => {
+//             gulp.src('./integrations/*.+(html|nunjucks)')
+//                 .pipe(nunjucksRender({ path: ['templates'] }))
+//                 .pipe(gulp.dest('./integrations'))
+//                 .on('end', resolve)
+//                 .on('error', reject);
+//         });
+
+//         console.log('Task completed successfully');
 //     } catch (error) {
-//         console.error('Error making API request:', error);
+//         console.error('Error in integrationMulti task:', error);
 //     }
 // });
+
+
 
 
 
@@ -492,6 +535,12 @@ gulp.task('integrationMulti', async function () {
             console.log(`Processing app: ${app.title}`);
             const fileName = `spam-protection-for-${app.slug}.html`;
             const filePath = path.join('./integrations', fileName);
+
+            // Check if the file already exists
+            if (fs.existsSync(filePath)) {
+                console.log(`File already exists for ${app.title}. Skipping.`);
+                return;
+            }
 
             let templates = app.links['mutual:zap_templates'].replace("referer=None", `client_id=${clientId}`);
 
@@ -537,7 +586,8 @@ gulp.task('integrationMulti', async function () {
             await delay(2000);
         }
 
-        function processTemplate(template) {
+        
+                function processTemplate(template) {
             let templateData = {
                 url: template.url,
                 title: template.title,
