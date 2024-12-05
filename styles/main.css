@@ -325,6 +325,9 @@ details p {
     font-size: 2rem !important;
 }
 
+.is-opensans-italic {
+    font-family: 'Open Sans Italic';
+}
 .is-opensans-bold {
   font-family: 'Open Sans Bold', serif !important;
 }
