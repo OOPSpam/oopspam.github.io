@@ -51,9 +51,17 @@
   li, strong {
     color: black !important;
   }
+  .progress-bar {
+  background-color: #000;
+  height: 5px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
 </style>
 </head>
 <body class="home">
+  <div class="progress-bar"></div>
 <div class="app-container">
 {% include "partials/navigation.njk" %}
 
@@ -74,7 +82,7 @@
   
 
    <!-- Measurements -->
-   <section id="report" class="section my-6">
+   <section id="report" class="section">
     <div class="container">
       <div class="columns is-vcentered is-centered">
         <div class="column">
@@ -125,30 +133,42 @@
             <p>This year, political spam surged alongside health-related scams exploiting public concerns. By understanding these trends, you can stay ahead of the evolving threats.</p>
             <p>Here are examples of the 3 most common types of spam in 2024:</p>
 
-            <h3>1. SEO Spam</h3>
-            <p>SEO spammers exploit website owners' anxieties by sending unsolicited messages that highlight purported search ranking deficiencies. These fraudulent communications strategically generate concern about online visibility, then offer questionable optimization services designed to manipulate businesses into revealing sensitive information or purchasing ineffective solutions.</p>
-            <!-- <div class="columns is-flex is-centered">
-              <figure class="image" style="width: 60%;">
-                <img  style="padding: 40px; border-radius: 4em;" src="/assets/annual-reports/2024/SEOSpamExample_new.png" alt="SEO Spam Example by OOPSpam">
+            
+            <section class="section"><div class="columns">
+              <div class="column"><h3>1. SEO Spam</h3>
+              <div class="content">            <p>SEO spammers exploit website owners' anxieties by sending unsolicited messages that highlight purported search ranking deficiencies. These fraudulent communications strategically generate concern about online visibility, then offer questionable optimization services designed to manipulate businesses into revealing sensitive information or purchasing ineffective solutions.</p>
+              </div>
+              </div>
+              <div class="column">  <figure class="image">
+                <img   src="/assets/annual-reports/2024/seo-spam.png" alt="SEO Spam Example by OOPSpam">
 
-              </figure>
-              </div> -->
-            <h3>2. Political Spam</h3>
-            <p>Political spam proliferates during election seasons, strategically designed to disseminate misinformation and propaganda. US election-related spam significantly intensifies, leveraging digital platforms to manipulate public discourse and spread divisive, often fabricated narratives targeting vulnerable populations.</p>
-           
-            <!-- <div class="columns is-flex is-centered">
-              <figure class="image" style="width: 60%;">
-                <img style="padding: 40px; border-radius: 4em;" src="/assets/annual-reports/2024/PoliticalSpamExample_new.png" alt="Political Spam Example by OOPSpam">
+              </figure></div>
+            </div></section>
 
-              </figure>
-              </div> -->
-            <h3>3. Financial Spam</h3>
-            <p>Financial spam has proliferated around cryptocurrency and investment scams, strategically exploiting victims' financial desperation and hope of recovering lost funds. These deceptive tactics represent an evolving landscape of digital fraud targeting vulnerable individuals through sophisticated psychological manipulation.</p>
-            <!-- <div class="columns is-flex is-centered">
-              <figure class="image" style="width: 60%;">
-                <img style="padding: 40px; border-radius: 4em;" src="/assets/annual-reports/2024/FinanicalSpamExample_new.png" alt="Financial Spam Example by OOPSpam">             
-              </figure>
-              </div> -->
+            <section class="section"><div class="columns pt-6">
+              <div class="column"> <h3>2. Political Spam</h3>
+              <div class="content"> 
+                <p>Political spam proliferates during election seasons, strategically designed to disseminate misinformation and propaganda. US election-related spam significantly intensifies, leveraging digital platforms to manipulate public discourse and spread divisive, often fabricated narratives targeting vulnerable populations.</p>
+
+              </div>
+              </div>
+              <div class="column">  <figure class="image">
+                <img  src="/assets/annual-reports/2024/political-spam.png" alt="SEO Spam Example by OOPSpam">
+
+              </figure></div>
+            </div></section>
+
+            <section class="section"><div class="columns pt-6">
+              <div class="column"> <h3>3. Financial Spam</h3>
+              <div class="content"> 
+                <p>Financial spam has proliferated around cryptocurrency and investment scams, strategically exploiting victims' financial desperation and hope of recovering lost funds. These deceptive tactics represent an evolving landscape of digital fraud targeting vulnerable individuals through sophisticated psychological manipulation.</p>
+              </div>
+              </div>
+              <div class="column">  <figure class="image">
+                <img   src="/assets/annual-reports/2024/finanical-spam.png" alt="SEO Spam Example by OOPSpam">
+
+              </figure></div>
+            </div></section>
           <h2>The 2024 Spam Report</h2>
           <p class="is-opensans-bold">How We Collected and Analyzed the Data<p>
           <p class="is-italic">This 2024 Annual Spam Report is based on a representative sample of malicious IPs detected by OOPSpam in 2024. These IPs were flagged for engaging in online spam activities targeting forms such as sign-ups, review forms, contact forms, and e-commerce forms. The data specifically focuses on online spam, excluding email spam unrelated to forms.</p>
@@ -443,6 +463,7 @@
   {% include "partials/footer.njk" %}
   {% include "partials/footerScript.njk" %}
 </div>
+<script src="/scripts/scrollProgress.js"></script>
 <script>
   const carousel = document.querySelector(".carousel-container");
   const slide = document.querySelector(".carousel-slide");
@@ -451,6 +472,12 @@
     const slideWidth = slide.clientWidth;
     carousel.scrollLeft = positive ? carousel.scrollLeft + slideWidth : carousel.scrollLeft - slideWidth;
   }
+
+  const progressElement = document.querySelector('.progress-bar');
+
+const progressObserver = new ScrollProgress((x, y) => {
+  progressElement.style.width = y * 100 + '%';
+});
   </script>
 </body>
 
