@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible, privacy-friendly, lightweight and accurate spam protection for WordPress">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@oopspamapi" />
+  <meta property="og:url" content="https://www.oopspam.com/" />
+  <meta property="og:title" content="OOPSpam for WordPress: Privacy & accessible spam protection plugin" />
+  <meta property="og:description" content="Accessible, privacy-friendly, lightweight and accurate spam protection for WordPress" />
+  <meta property="og:image" content="https://www.oopspam.com/assets/meta_oopspam.png" />
+  <meta name="twitter:image" content="https://www.oopspam.com/assets/meta_oopspam_tw.png" />
+
+  <title>OOPSpam for WordPress: Privacy & accessible spam protection plugin</title>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
   <link rel="stylesheet" href="/styles/bulma-pricingtable.min.css" />
   <link rel="stylesheet" href="/styles/main.min.css" />
   <link rel="stylesheet" href="/styles/contact.css">
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Accessible, privacy-friendly, lightweight and accurate spam protection for WordPress">
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@oopspamapi" />
-  <meta property="og:url" content="https://www.oopspam.com/" />
-  <meta name="og:title" content="OOPSpam for WordPress: Privacy & accessible spam protection plugin" />
-  <meta name="og:description" content="Accessible, privacy-friendly, lightweight and accurate spam protection for WordPress" />
-  <meta name="og:image" content="https://www.oopspam.com/assets/meta_oopspam.png" />
-  <meta name="twitter:image" content="https://www.oopspam.com/assets/meta_oopspam_tw.png" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <title>OOPSpam for WordPress: Privacy & accessible spam protection plugin</title>
+
+  <!-- Placeholder for head scripts (assuming Nunjucks include) -->
   <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
 </head>
 
 <body>
 <div class="app-container">
- <header >
+  <!-- Navigation (Nunjucks include) -->
+   <header >
     <div class="navbar has-background-white	">
       <div class="container">
         <div class="navbar-brand">
@@ -70,44 +74,39 @@
     </div>
   </header>
 
-<main class="app-content">
-  <!-- is-hidden -->
-<section id="notify" class="is-hidden">
-<div class="notification has-text-black" style="padding-bottom:0.8rem; text-align: center; background-color: #fcdc56;">
-  </div>
-</section>
+  <main class="app-content">
+    <!-- Notification Section -->
+    <section id="notify" class="is-hidden">
+      <div class="notification has-text-black" style="padding-bottom:0.8rem; text-align: center; background-color: #fcdc56;">
+        <!-- Notification content can be dynamically added -->
+      </div>
+    </section>
 
-  <!-- The Main Section -->
-  <section id="main" class=" section" style="background-color: #fbf6ed;">
-    <!-- <div class="hero-body"> -->
+    <!-- Main Hero Section -->
+    <section id="main" class="section" style="background-color: #fbf6ed;">
       <div class="container has-text-centered is-fluid px-0">
         <div class="columns is-vcentered">
-          <!-- Left-side column -->
-          <div class="column is-5 has-text-left is-5-fullhd is-offset-1-fullhd ">
-            <!-- <div class="content"> -->
-              <div class="content is-flex is-flex-direction-column mb-0">
-                <h2 class="has-text-black is-flex is-flex-direction-row  is-flex-wrap-nowrap is-size-4  has-text-weight-bold mb-0" 
-                >
-                   
- <span class=" is-size-4">                    
- Privacy-friendly, accessible and lightweight
-                  </span>
-                </h2>
-                <h1 class="has-text-black has-text-weight-bold mt-0" >
-                  Anti-Spam Solution for WordPress
-                </h1>
-              </div>
+          <!-- Left Column -->
+          <div class="column is-5 has-text-left is-5-fullhd is-offset-1-fullhd">
+            <div class="content is-flex is-flex-direction-column mb-0">
+              <h2 class="has-text-black is-flex is-flex-direction-row is-flex-wrap-nowrap is-size-4 has-text-weight-bold mb-0">
+                <span class="is-size-4">Privacy-friendly, accessible and lightweight</span>
+              </h2>
+              <h1 class="has-text-black has-text-weight-bold mt-0">
+                Anti-Spam Solution for WordPress
+              </h1>
+            </div>
             <p class="copy has-text-black pb-5">
               Cutting edge spam protection utilizing machine learning and a cocktail of unique measurements to safeguard your WordPress websites.
             </p>
-            <div class="is-flex is-flex-direction-column  is-flex-wrap-wrap">
+            <div class="is-flex is-flex-direction-column is-flex-wrap-wrap">
               <div class="control mb-5">
-                <a class="button-has-shadow button has-text-black  is-warning is-rounded is-bg-orange" style="border:solid; border-width: 1px;"
+                <a class="button-has-shadow button has-text-black is-warning is-rounded is-bg-orange" style="border:solid; border-width: 1px;"
                   href="https://app.oopspam.com/Identity/Account/Register">
                   Get started with free spam checks →
                 </a>
               </div>
-              <div class="control ">
+              <div class="control">
                 <a class="button-has-shadow has-text-black button is-rounded has-background-white" style="border:solid; border-width: 1px; background-image: unset;"
                   href="https://wordpress.org/plugins/oopspam-anti-spam/">
                   Install the WordPress plugin →
@@ -115,23 +114,21 @@
               </div>
             </div>
             <div class="columns is-centered is-vcentered mt-3">
-              <div class="column has-text-grey has-text-left  is-flex flex-direction-row is-flex-wrap-wrap ">
-                 <span class="has-text-black mr-2"><img alt="" src="/assets/checkbox.svg" width="12px"/> No credit card required</span>   
-                 <span class="has-text-black"><img alt="" src="/assets/checkbox.svg" width="12px"/>  Cancel anytime</span>
+              <div class="column has-text-grey has-text-left is-flex flex-direction-row is-flex-wrap-wrap">
+                <span class="has-text-black mr-2"><img alt="" src="/assets/checkbox.svg" width="12px"/> No credit card required</span>   
+                <span class="has-text-black"><img alt="" src="/assets/checkbox.svg" width="12px"/>  Cancel anytime</span>
               </div>
-              
             </div>
-            <img  loading="lazy" class="pt-5" src="/assets/home/Used-By-Logos.webp" style="opacity: 75%; background-color: #FBF6ED;" alt=""/>
+            <img loading="lazy" class="pt-6" width="90%" src="/assets/home/Used-By-Logos.webp" style="opacity: 75%; background-color: #FBF6ED;" alt="Companies using OOPSpam"/>
           </div>
-          <!-- Right-side Illustration -->
+          
+          <!-- Right Column Illustration -->
           <div class="column is-flex is-justify-content-center">
-               <img width="70%" class="" loading="lazy" src="/assets/IntegrationsHeader.svg" alt="OOPSpam illustration">
-            
+            <img width="70%" class="" loading="lazy" src="/assets/IntegrationsHeader.svg" alt="OOPSpam illustration">
           </div>
         </div>
       </div>
-    <!-- </div> -->
-  </section>
+    </section>
   
   <section id="stats" class="section  mb-6">
     <div class="container">
@@ -155,6 +152,7 @@
               <p class="heading has-text-white">caught spam</p>
             </div>
           </div>
+      </div>
       </div>
   </section>
 
@@ -488,7 +486,7 @@
         <p class="p-3 copy" style="text-align: center;"><small >Just need less than 25K API calls? <a href="https://www.oopspam.com/#contact">Contact us</a> for our Starter plan.</small></p>
 
       </div>
-    </div>
+   
   </section>
   <!-- FAQ -->
   <section id="faq" class="section">
@@ -508,7 +506,7 @@
               <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
                 class="has-text-weight-bold not-selectable">How do I configure the OOPSpam WordPress plugin?</summary>
               <p>
-               Check out the <a href="https://help.oopspam.com/wordpress/configuration/">Configuration</a> page on <a href="https://help.oopspam.com/"> the knowledge base<a>.
+               Check out the <a href="https://help.oopspam.com/wordpress/configuration/">Configuration</a> page on <a href="https://help.oopspam.com/"> the knowledge base</a>.
               </p>
             </details>
           
@@ -523,21 +521,27 @@
     <div class="container">
       <div class="columns is-vcentered is-centered">
         <div class="column"></div>
-        <div class="column is-10 p-6 " style="background-color: rgb(255, 221, 87); border-radius: 2em;">
-          
-          <div class=" is-flex is-flex-direction-column is-justify-content-left is-align-content-left is-flex-wrap-wrap">
-            <p class="has-text-black is-brico has-text-weight-bold " style="font-size: 60px; line-height: 1.2em" >Automate your spam and abuse detection with OOPSpam.</p>
-            <div class=" mt-4"><a style="border-style: solid; border-color: black;" class=" button has-text-black is-medium is-default is-rounded button-has-shadow is-size-6-mobile "
-              href="https://app.oopspam.com/Identity/Account/Register">
-              Start testing for free →
-            </a></div>
+        <div class="column is-10 p-6" style="background-color: rgb(255, 221, 87); border-radius: 2em;">
+          <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center is-flex-wrap-wrap">
+            <p class="has-text-black is-brico has-text-weight-bold" style="font-size: 60px; line-height: 1.2em; text-align: center;">
+              Automate your spam and abuse detection with OOPSpam.
+            </p>
+            <div class="mt-4">
+              <a style="border-style: solid; border-color: black;" 
+                 class="button has-text-black is-medium is-default is-rounded button-has-shadow is-size-6-mobile"
+                 href="https://app.oopspam.com/Identity/Account/Register">
+                Start testing for free →
+              </a>
             </div>
+          </div>
         </div>
         <div class="column"></div>
-
       </div>
     </div>
   </section>
+  
+
+  <!-- Contact Section (Nunjucks include) -->
     <!-- Contact form -->
   <section id="contact" class="section" style="padding-top:6em; padding-bottom:5em;">
     <div class="container">
@@ -579,8 +583,11 @@
         </div>
       </div>
     </div>
-  </section></main >
-  <footer class="footer has-background-black" >
+  </section>
+</main>
+
+<!-- Footer Sections (Nunjucks includes) -->
+<footer class="footer has-background-black" >
       <div class="content has-text-centered has-text-white">
         <div class="columns">
           
@@ -665,10 +672,8 @@
         </div>
       </div>
     </div>
-  <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+<script async defer src="https://scripts.withcabin.com/hello.js"></script>
 <script async src="/scripts/app.min.js"></script>
 </div>
 </body>
-
-
 </html>
