@@ -680,7 +680,7 @@ background-image: linear-gradient(180deg, #D8D8D8 0%, #FFCB1D 100%);  -webkit-ba
 
    <!-- Pricing -->
    <section id="pricing" class="section " style="background-color: #FCDD56;">
-    <div class="container" style=" border-radius: 3em;">
+    <div class="container" style="border-radius: 3em;">
       <div class="columns p-5">
         <div class="column is-full">
           <h3 class="title has-text-centered has-text-black">Simple, transparent pricing.</h3>
@@ -689,138 +689,119 @@ background-image: linear-gradient(180deg, #D8D8D8 0%, #FFCB1D 100%);  -webkit-ba
             <span class="button monthly">Monthly</span>
             <span class="button is-warning is-selected yearly is-bg-orange">Annually - 2 months FREE</span>
           </div>
-          <div class="pricing-table" style="flex-flow: nowrap;">
-            <div class="pricing-plan" style="border-style: none;">
-              <div style="height: 290px;">
-                <div class="plan-header has-text-black is-brico" style="font-size: 36px;"></div>
-                <div class="is-flex is-flex-direction-row">
-                  <div class="plan-price monthly-price">
-                    <span class="plan-price-amount has-text-grey has-text-strike"><span class="plan-price-currency"></span></span>
-                  </div>
-                  <div class="plan-price yearly-price">
-                    <span class="plan-price-amount"><span class="plan-price-currency"></span></span>
-                  </div>
-                </div>
+
+          <!-- Common Features Box -->
+          <div class="box has-text-centered mb-5" style="background-color: #FBF6ED;">
+            <h4 class="title is-5 has-text-black mb-4">All Plans Include</h4>
+            <div class="columns is-multiline">
+              <div class="column is-4">
+                <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">Advanced Spam Protection API</p>
               </div>
-              <div class="plan-items is-flex is-flex-direction-column is-align-items-baseline" style="width: max-content;">
-                <div class="plan-item" style="background: unset;">API calls</div>
-                <div class="plan-item" style="background: unset;">Domain Reputation Watch</div>
-                <div class="plan-item" style="background: unset;">Advanced Spam Protection API</div>
-                <div class="plan-item" style="background: unset;">Domain Reputation API</div>
-                <div class="plan-item" style="background: unset;">Unlimited websites</div>
-                <div class="plan-item" style="background: unset;">No logs policy</div>
-                <div class="plan-item" style="background: unset;">Log Retention (optional)</div>
-                <div class="plan-item" style="background: unset;">Misdetection Reporting API</div>
-                <div class="plan-item" style="background: unset;">Support</div>
+              <div class="column is-4">
+                <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">Domain Reputation API</p>
+              </div>
+              <div class="column is-4">
+                <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">Unlimited websites</p>
+              </div>
+              <div class="column is-4">
+                <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">No logs policy</p>
+              </div>
+              <div class="column is-4">
+                <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">Context-Aware Spam Detection</p>
+              </div>
+              <div class="column is-4">
+                <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">Misdetection Reporting API</p>
               </div>
             </div>
-            <div class="pricing-plan" style="background-color: #FBF6ED;">
+          </div>
+
+          <div class="pricing-table">
+            <!-- Freelance Plan -->
+            <div class="pricing-plan" style="background-color: #FBF6ED; position: relative;">
+              <div style="position: absolute; top: 0; right: 1rem; background-color: #000; color: #fcdd56; padding: 0.5rem 1rem; border-radius: 0 0 0.5rem 0.5rem; font-size: 0.9rem;" class="is-opensans-bold">
+                Most Popular
+              </div>
               <div class="columns is-flex is-centered mb-0">
-                <figure class="image is-96x96 is-inline-block ">
-                  <img loading="lazy" class="is-rounded" src="/assets/ONE.png" alt="Image">
+                <figure class="image is-96x96 is-inline-block">
+                  <img loading="lazy" class="is-rounded" src="/assets/ONE.png" alt="Freelance plan">
                 </figure>
               </div>
-              <div class="is-flex is-flex-direction-column is-align-items-center">
-                <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Freelance</div>
-                <div class="is-flex is-flex-direction-row is-justify-content-center">
-                  <div class="plan-price monthly-price">
-                    <span class="plan-price-amount has-text-grey has-text-strike is-brico has-text-weight-normal"><span class="plan-price-currency">$</span>49</span><br> /mo
-                  </div>
-                  <div class="plan-price yearly-price is-brico">
-                    <span class="plan-price-amount has-text-weight-normal"><span class="plan-price-currency">$</span>40.83</span><br> /mo, billed yearly
-                  </div>
-                </div>
-                <hr style="border: 0; width: 60px; border-top: 1.5px solid black;" />
+              <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Freelance</div>
+              <div class="plan-price monthly-price">
+                <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>49</span>/mo
+              </div>
+              <div class="plan-price yearly-price is-brico">
+                <span class="plan-price-amount"><span class="plan-price-currency">$</span>40.83</span>/mo, billed yearly
               </div>
               <div class="plan-items">
-                <div class="plan-item">100,000</div>
-                <div class="plan-item">15</div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item">2 months</div>
-                <div class="plan-item">Processed within 1 week</div>
+                <div class="plan-item">100,000 API calls/month</div>
+                <div class="plan-item">15 Domain Reputation Watch</div>
+                <div class="plan-item">2 months log retention</div>
                 <div class="plan-item">Email Support</div>
               </div>
-              <div class="plan-footer mt-auto">
-                <a class="copy button has-text-white is-medium has-background-black border-0 is-opensans-semibold" style="border-radius: 3em; border-style: none;" href="https://app.oopspam.com/Identity/Account/Register">
-                  Start + test for free
-                </a>
+              <div class="plan-footer">
+                <a class="button is-fullwidth is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start for free</a>
               </div>
             </div>
-            <div class="pricing-plan">
+
+            <!-- Agency Plan -->
+            <div class="pricing-plan " style="background-color: #FBF6ED;">
               <div class="columns is-flex is-centered mb-0">
-                <figure class="image is-96x96 is-inline-block ">
-                  <img loading="lazy" class="is-rounded" src="/assets/TWO.png" alt="Image">
+                <figure class="image is-96x96 is-inline-block">
+                  <img loading="lazy" class="is-rounded" src="/assets/TWO.png" alt="Agency plan">
                 </figure>
               </div>
-              <div class="is-flex is-flex-direction-column is-align-items-center">
-                <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Agency</div>
-                <div class="is-flex is-flex-direction-row is-justify-content-center">
-                  <div class="plan-price monthly-price">
-                    <span class="plan-price-amount has-text-grey has-text-strike is-brico has-text-weight-normal"><span class="plan-price-currency">$</span>69</span><br> /mo
-                  </div>
-                  <div class="plan-price yearly-price is-brico">
-                    <span class="plan-price-amount has-text-weight-normal"><span class="plan-price-currency">$</span>57.5</span><br> /mo, billed yearly
-                  </div>
-                </div>
-                <hr style="border: 0; width: 60px; border-top: 1.5px solid black;" />
+              <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Agency</div>
+              <div class="plan-price monthly-price">
+                <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>69</span>/mo
+              </div>
+              <div class="plan-price yearly-price is-brico">
+                <span class="plan-price-amount"><span class="plan-price-currency">$</span>57.5</span>/mo, billed yearly
               </div>
               <div class="plan-items">
-                <div class="plan-item">300,000</div>
-                <div class="plan-item">50</div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item">4 months</div>
-                <div class="plan-item">Processed within 72 hours</div>
+                <div class="plan-item">300,000 API calls/month</div>
+                <div class="plan-item">50 Domain Reputation Watch</div>
+                <div class="plan-item">4 months log retention</div>
+                <div class="plan-item">IP-based API key restrictions</div>
                 <div class="plan-item">Priority Email Support</div>
               </div>
-              <div class="plan-footer mt-auto">
-                <a class="copy button has-text-white is-medium has-background-black border-0 is-opensans-semibold" style="border-radius: 3em; border-style: none;" href="https://app.oopspam.com/Identity/Account/Register">
-                  Start + test for free
-                </a>
+              <div class="plan-footer">
+                <a class="button is-fullwidth is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start for free</a>
               </div>
             </div>
-            <div class="pricing-plan">
+
+            <!-- Business Plan -->
+            <div class="pricing-plan" style="background-color: #FBF6ED;">
               <div class="columns is-flex is-centered mb-0">
-                <figure class="image is-96x96 is-inline-block ">
-                  <img loading="lazy" class="is-rounded" src="/assets/THREE.png" alt="Image">
+                <figure class="image is-96x96 is-inline-block">
+                  <img loading="lazy" class="is-rounded" src="/assets/THREE.png" alt="Business plan">
                 </figure>
               </div>
-              <div class="is-flex is-flex-direction-column is-align-items-center">
-                <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Business</div>
-                <div class="is-flex is-flex-direction-row is-justify-content-center">
-                  <div class="plan-price monthly-price">
-                    <span class="plan-price-amount has-text-grey has-text-strike is-brico has-text-weight-normal"><span class="plan-price-currency">$</span>259</span><br> /mo
-                  </div>
-                  <div class="plan-price yearly-price is-brico">
-                    <span class="plan-price-amount has-text-weight-normal"><span class="plan-price-currency">$</span>215.8</span><br> /mo, billed yearly
-                  </div>
-                </div>
-                <hr style="border: 0; width: 60px; border-top: 1.5px solid black;" />
+              <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Business</div>
+              <div class="plan-price monthly-price">
+                <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>259</span>/mo
+              </div>
+              <div class="plan-price yearly-price is-brico">
+                <span class="plan-price-amount"><span class="plan-price-currency">$</span>215.8</span>/mo, billed yearly
               </div>
               <div class="plan-items">
-                <div class="plan-item">1,000,000</div>
-                <div class="plan-item">300</div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item"><img loading="lazy" src="/assets/home/check.webp" alt="green check mark"></div>
-                <div class="plan-item">6 months</div>
-                <div class="plan-item">Processed within 48 hours</div>
+                <div class="plan-item">1,000,000 API calls/month</div>
+                <div class="plan-item">300 Domain Reputation Watch</div>
+                <div class="plan-item">6 months log retention</div>
+                <div class="plan-item">IP-based API key restrictions</div>
                 <div class="plan-item">Phone and Email Support</div>
               </div>
-              <div class="plan-footer mt-auto">
-                <a class="copy button has-text-white is-medium has-background-black border-0 is-opensans-semibold" style="border-radius: 3em; border-style: none;" href="https://app.oopspam.com/Identity/Account/Register">
-                  Start + test for free
-                </a>
+              <div class="plan-footer">
+                <a class="button is-fullwidth is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start for free</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="has-text-centered my-4">
+        <p class="is-size-6">Need a lighter plan? Get started with 25K API/m calls 
+          <a href="#contact" class="has-text-black" style="text-decoration: underline;">Contact us for Starter plan details →</a>
+        </p>
       </div>
     </div>
   </section>
@@ -886,6 +867,18 @@ background-image: linear-gradient(180deg, #D8D8D8 0%, #FFCB1D 100%);  -webkit-ba
         <div class="column is-10 is-offset-2">
           <div class="content has-text-left subtitle">
             <h3 class="has-text-black">Frequently Asked Questions</h3>
+            <details>
+              <summary unselectable="on" onselectstart="return false;" onmousedown="return false;" class="has-text-weight-bold not-selectable">
+                How many API calls do I need? 🤔
+              </summary>
+              <p>1 API call = 1 spam check</p>
+              <p>When someone submits a form on your website, that counts as one API call. For example:</p>
+                <ul>
+                  <li>The Freelance plan (100,000 API calls) typically covers ~100 websites</li>
+                  <li>Average website gets 20-50 form submissions daily</li>
+                  <li>WordPress users: count your monthly form submissions across all sites  </li>
+                </ul> 
+            </details>
             <details>
               <summary unselectable="on" onselectstart="return false;" onmousedown="return false;" class="has-text-weight-bold not-selectable">
                 Are the API calls per month or per year?
