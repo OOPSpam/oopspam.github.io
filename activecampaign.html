@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Clean your ActiveCampaign email lists by detecting spammy, risky and suspicious contacts with OOPSpam. Review flagged emails and unsubscribe or delete them from ActiveCampaign.">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@oopspamapi" />
+  <meta property="og:url" content="https://www.oopspam.com/activecampaign" />
+  <meta property="og:title" content="OOPSpam for ActiveCampaign: Clean spammy and risky email lists" />
+  <meta property="og:description" content="Clean your ActiveCampaign email lists by detecting spammy, risky and suspicious contacts with OOPSpam. Review flagged emails and unsubscribe or delete them from ActiveCampaign." />
+  <meta property="og:image" content="https://www.oopspam.com/assets/meta_oopspam.png" />
+  <meta name="twitter:image" content="https://www.oopspam.com/assets/meta_oopspam_tw.png" />
+
+  <title>OOPSpam for ActiveCampaign: Clean spammy and risky email lists</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <link rel="stylesheet" href="/styles/bulma-pricingtable.min.css" />
+  <link rel="stylesheet" href="/styles/main.min.css" />
+  <link rel="stylesheet" href="/styles/contact.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
+</head>
+
+<body>
+<div class="app-container">
+   <header >
+    <div class="navbar has-background-white	">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="/assets/oopspamLogo.svg" alt="OOPSpam logo" width="112" height="28">
+          </a>
+          <a id="navbarBurger" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navigation-bar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navigation-bar" class="navbar-menu">
+          <div class="navbar-start">
+          </div>
+          <div class="navbar-end">
+            <a href="https://www.oopspam.com/help" class="navbar-item  has-text-black">
+              Documentation
+           </a>
+            <a href="https://www.oopspam.com/integrations" class="navbar-item  has-text-black">
+              Integrations
+           </a>
+            <a href="https://www.oopspam.com/#pricing" class="navbar-item  has-text-black">
+              Pricing
+            </a>
+            <a href="https://www.oopspam.com/#contact" class="navbar-item has-text-black">
+              Contact
+            </a>
+            <div class="navbar-item">
+                 <a href="https://app.oopspam.com/Identity/Account/Login" class="has-text-black button  is-light">
+              Log in
+            </a>
+            </div>
+            <div class="navbar-item">
+             <a href="https://app.oopspam.com/Identity/Account/Register" class="has-text-black button is-warning is-bg-orange">
+              Get started
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-content">
+    <section id="notify" class="is-hidden">
+      <div class="notification has-text-black" style="padding-bottom:0.8rem; text-align: center; background-color: #fcdc56;">
+      </div>
+    </section>
+
+    <section id="main" class="section" style="background-color: #fbf6ed;">
+      <div class="container has-text-centered is-fluid px-0">
+        <div class="columns is-vcentered">
+          <div class="column is-5 has-text-left is-5-fullhd is-offset-1-fullhd">
+            <div class="content is-flex is-flex-direction-column mb-0">
+              <h2 class="has-text-black is-flex is-flex-direction-row is-flex-wrap-nowrap is-size-4 has-text-weight-bold mb-0">
+                <span class="is-size-4">Privacy-friendly, direct and accurate</span>
+              </h2>
+              <h1 class="has-text-black has-text-weight-bold mt-0">
+                Clean Spammy and Risky Contacts in ActiveCampaign
+              </h1>
+            </div>
+            <p class="copy has-text-black pb-5">
+              Connect ActiveCampaign to OOPSpam, remove risky contacts. No exports, no CSVs, no manual uploads. Just a direct connection to your ActiveCampaign lists, real-time scanning, and results you can review before taking action.
+            </p>
+            <div class="is-flex is-flex-direction-column is-flex-wrap-wrap">
+              <div class="control mb-5">
+                <a class="button-has-shadow button has-text-black is-warning is-rounded is-bg-orange" style="border:solid; border-width: 1px;"
+                   href="https://app.oopspam.com/Identity/Account/Register">
+                   Start cleaning your list for free →
+                </a>
+              </div>
+              <div class="control">
+                <a class="button-has-shadow has-text-black button is-rounded has-background-white" style="border:solid; border-width: 1px; background-image: unset;"
+                   href="#contact">
+                   Talk to us about your workflow →
+                </a>
+              </div>
+            </div>
+            <div class="columns is-centered is-vcentered mt-3">
+              <div class="column has-text-grey has-text-left is-flex flex-direction-row is-flex-wrap-wrap">
+                <span class="has-text-black mr-2"><img alt="" src="/assets/checkbox.svg" width="12px"/> No CSV exports required</span>
+                <span class="has-text-black"><img alt="" src="/assets/checkbox.svg" width="12px"/> No credit card required. Cancel anytime</span>
+              </div>
+            </div>
+            <img loading="lazy" class="pt-6" width="90%" src="/assets/home/Used-By-Logos.webp" style="opacity: 75%; background-color: #FBF6ED;" alt="Companies using OOPSpam"/>
+          </div>
+
+          <div class="column is-flex is-justify-content-center">
+            <img width="70%" class="" loading="lazy" src="/assets/IntegrationsHeader.svg" alt="OOPSpam ActiveCampaign integration illustration placeholder">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="section mb-6">
+      <div class="container">
+        <h2 class="title is-size-3 has-text-centered has-text-white ">OOPSpam helps keep millions of businesses free of spam every day</h2>
+        <div class="level is-mobile" style="padding-top: 2.5em;">
+          <div class="level-item has-text-left ">
+            <div>
+              <p class="title has-text-white is-size-1-desktop" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">3.5M+</p>
+              <p class="heading has-text-white">protected websites</p>
+            </div>
+          </div>
+          <div class="level-item has-text-left">
+            <div>
+              <p class="title has-text-white is-size-1-desktop" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">12+</p>
+              <p class="heading has-text-white">industries</p>
+            </div>
+          </div>
+          <div class="level-item has-text-left">
+            <div>
+              <p class="title has-text-white is-size-1-desktop" style="font-family: 'Lucida Sans Unicode','Lucida Grande',sans-serif;">1B+</p>
+              <p class="heading has-text-white">caught spam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="direct-integration" class="section is-mobile my-6">
+      <div class="container">
+        <div class="columns is-vcentered is-centered is-8 is-variable">
+          <div class="column is-5 has-text-centered">
+            <img loading="lazy" src="/assets/integration/wp/Opportunities.svg" alt="Illustration placeholder for ActiveCampaign list review" width="500">
+          </div>
+          <div class="column is-1"></div>
+          <div class="column is-5">
+            <h2 class="title content has-text-black">Clean ActiveCampaign lists without exports</h2>
+            <div class="columns is-multiline is-1 is-variable is-mobile" style="text-align: left;">
+              <div class="column is-full is-inline-flex flex-alignitems-center my-3">
+                <div>
+                  <div style="line-height: 33px;" class="content subtitle">
+                    The ActiveCampaign integration lives inside your OOPSpam dashboard. Connect once, pull your contacts through the API, and review the list inside OOPSpam instead of working through manual exports and imports.
+                  </div>
+                  <div class="box has-text-black" style="background-color: #FBFBED; border-left: 4px solid #fcdc56;">
+                    <p class="has-text-weight-semibold mb-3">Typical workflow</p>
+                    <p class="mb-2">1. Connect your ActiveCampaign account.</p>
+                    <p class="mb-2">2. Pull one or more email lists into OOPSpam.</p>
+                    <p class="mb-2">3. Review spammy, risky and suspicious contacts.</p>
+                    <p class="mb-0">4. Unsubscribe flagged emails or delete the contact completely.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="deliverability" class="section my-6">
+      <div class="container">
+        <div class="columns is-vcentered is-centered">
+          <div class="column">
+            <h2 class="content title has-text-black">
+              Review suspicious contacts before they affect your next send
+            </h2>
+            <div class="columns is-multiline is-1 is-variable is-mobile" style="text-align: left;">
+              <div class="column is-full is-inline-flex flex-alignitems-center my-3">
+                <div>
+                  <div style="line-height: 33px;" class="content subtitle">
+                    Low quality email campaigns result in high bounce rates, create noise in automations, and make your outreach harder to trust. <br><br>
+                    <p>OOPSpam helps your team surface suspicious contacts earlier so you can clean the list before your next broadcast or workflow runs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <img loading="lazy" src="/assets/home/PrivacyGraphic.webp" alt="Illustration placeholder for email list quality" width="500">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section is-mobile my-6">
+      <div class="container">
+        <div class="columns is-vcentered is-centered is-8 is-variable">
+          <div class="column has-text-centered">
+            <img loading="lazy" src="/assets/integration/wp/Lightweight.svg" alt="Illustration placeholder for direct ActiveCampaign integration" width="500">
+          </div>
+          <div class="column">
+            <h2 class="title content has-text-black">Direct dashboard workflow, privacy-friendly by design</h2>
+
+            <div class="columns is-multiline is-1 is-variable is-mobile" style="text-align: left;">
+              <div class="column is-full is-inline-flex flex-alignitems-center my-3">
+                <div>
+                  <div style="line-height: 33px;" class="content subtitle">
+                    No contact information is saved on our servers. OOPSpam processes the data in real-time, surfaces the results for your review, and then discards it. We never store or log any contact information.
+                  </div>
+                  <div class="box has-text-black" style="background-color: #FBFBED; border-left: 4px solid #fcdc56;">
+                    You stay in control of every cleanup action. Review the results first, then decide whether a contact should be unsubscribed or deleted.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="features" class="section is-mobile my-6">
+      <div class="container">
+        <div class="columns is-vcentered is-centered is-8 is-variable">
+
+         
+          <div class="column">
+            <h2 class="title content has-text-black">Do more with OOPSpam</h2>
+
+            <div class="columns is-multiline is-1 is-variable is-mobile" style="text-align: left;">
+              <div class="column is-full is-inline-flex flex-alignitems-center my-3">
+                <div>
+                  <div style="line-height: 33px;" class="content subtitle">
+                    Do you have websites outside of ActiveCampaign that could use better spam protection? OOPSpam can be used to protect any website, form, or contact collection point with advanced spam detection and domain reputation checks.
+                  </div>
+                  <div class="box has-text-black" style="background-color: #FBFBED; border-left: 4px solid #fcdc56;">
+                    Check out our <a href="/integration">Integration page</a> to see all the ways you can use OOPSpam to protect your business beyond just email list cleanup.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+ <div class="column has-text-centered">
+            <img loading="lazy" src="/assets/integration/wp/Features.svg" alt="Illustration placeholder for ActiveCampaign integration features" width="450">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="support" class="section py-6" style="background-color: #FBFBED;">
+      <div class="container">
+        <div class="columns is-vcentered is-centered">
+          <div class="column is-flex is-flex-direction-column is-align-items-center">
+            <h2 class="content title has-text-black">
+              ...and if you need help rolling it out, we are here for you
+            </h2>
+
+            <div class="has-text-centered">
+              <div style="line-height: 33px;" class="content subtitle">
+                Need help deciding how to scan, review results, or fit ActiveCampaign cleanup into your team workflow? Reach out and we can help you get set up.
+              </div>
+              <div class="mt-4">
+                <a style="border-style: solid; border-color: black;"
+                   class="button has-text-black is-medium is-default is-rounded button-has-shadow is-size-6-mobile"
+                   href="#contact">
+                  Contact us →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section" style="background-color: #FCDD56;">
+      <div class="container" style="border-radius: 3em;">
+        <div class="columns p-5">
+          <div class="column is-full">
+            <h3 class="title has-text-centered has-text-black">Pricing for email list scanning starts at just $23/month.</h3>
+            <p class="copy has-text-centered" style="padding:0.7em;">Start with 40 free contact scans — no credit card required</p>
+            <div class="buttons is-centered plan-interval">
+              <span class="button monthly">Monthly</span>
+              <span class="button is-warning is-selected yearly is-bg-orange">Annually - 2 months FREE</span>
+            </div>
+
+            <div class="box has-text-centered mb-5" style="background-color: #FBF6ED;">
+              <h4 class="title is-5 has-text-black mb-4">All Plans Include</h4>
+              <div class="columns is-multiline">
+                <div class="column is-4">
+                  <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">ActiveCampaign contact scanning</p>
+                </div>
+                <div class="column is-4">
+                  <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">Spammy, risky and suspicious email detection</p>
+                </div>
+                <div class="column is-4">
+                  <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">Domain reputation signals</p>
+                </div>
+                <div class="column is-4">
+                  <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">Review before unsubscribe or delete</p>
+                </div>
+                <div class="column is-4">
+                  <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">No logs policy</p>
+                </div>
+                <div class="column is-4">
+                  <p><img loading="lazy" src="/assets/home/check.webp" alt="check" class="mr-2">Misdetection reporting</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pricing-table">
+              <div class="pricing-plan" style="background-color: #FBF6ED; position: relative;">
+                <div style="position: absolute; top: 0; right: 1rem; background-color: #000; color: #fcdd56; padding: 0.5rem 1rem; border-radius: 0 0 0.5rem 0.5rem; font-size: 0.9rem;" class="is-opensans-bold">
+                  Most Popular
+                </div>
+                <div class="columns is-flex is-centered mb-0">
+                  <figure class="image is-96x96 is-inline-block ">
+                    <img loading="lazy" class="is-rounded" src="/assets/ONE.png" alt="Image">
+                  </figure>
+                </div>
+                <div class="is-flex is-flex-direction-column is-align-items-center">
+                  <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Freelance</div>
+                  <div class="is-flex is-flex-direction-row is-justify-content-center">
+                    <div class="plan-price monthly-price">
+                      <span class="plan-price-amount has-text-grey has-text-strike is-brico has-text-weight-normal"><span class="plan-price-currency">$</span>49</span><br> /mo
+                    </div>
+                    <div class="plan-price yearly-price is-brico">
+                      <span class="plan-price-amount has-text-weight-normal"><span class="plan-price-currency">$</span>40.83</span><br> /mo, billed yearly
+                    </div>
+                  </div>
+                  <hr style="border: 0; width: 60px; border-top: 1.5px solid black;"/>
+                </div>
+                <div class="plan-items">
+                  <div class="plan-item">100,000 contact scans/month</div>
+                  <div class="plan-item">15 domain reputation watch slots</div>
+                  <div class="plan-item">2 months scan history</div>
+                  <div class="plan-item">Email Support</div>
+                </div>
+                <div class="plan-footer mt-auto">
+                  <a class="copy button has-text-white is-medium has-background-black border-0 is-opensans-semibold" style="border-radius: 3em; border-style: none;"
+                     href="https://app.oopspam.com/Identity/Account/Register">
+                    Start for free
+                  </a>
+                </div>
+              </div>
+
+              <div class="pricing-plan">
+                <div class="columns is-flex is-centered mb-0">
+                  <figure class="image is-96x96 is-inline-block ">
+                    <img loading="lazy" class="is-rounded" src="/assets/TWO.png" alt="Image">
+                  </figure>
+                </div>
+                <div class="is-flex is-flex-direction-column is-align-items-center">
+                  <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Agency</div>
+                  <div class="is-flex is-flex-direction-row is-justify-content-center">
+                    <div class="plan-price monthly-price">
+                      <span class="plan-price-amount has-text-grey has-text-strike is-brico has-text-weight-normal"><span class="plan-price-currency">$</span>69</span><br> /mo
+                    </div>
+                    <div class="plan-price yearly-price is-brico">
+                      <span class="plan-price-amount has-text-weight-normal"><span class="plan-price-currency">$</span>57.5</span><br> /mo, billed yearly
+                    </div>
+                  </div>
+                  <hr style="border: 0; width: 60px; border-top: 1.5px solid black;"/>
+                </div>
+                <div class="plan-items">
+                  <div class="plan-item">300,000 contact scans/month</div>
+                  <div class="plan-item">50 domain reputation watch slots</div>
+                  <div class="plan-item">4 months scan history</div>
+                  <div class="plan-item">IP-based API key restrictions</div>
+                  <div class="plan-item">Team access</div>
+                  <div class="plan-item">Priority Email Support</div>
+                </div>
+                <div class="plan-footer mt-auto">
+                  <a class="copy button has-text-white is-medium has-background-black border-0 is-opensans-semibold" style="border-radius: 3em; border-style: none;"
+                     href="https://app.oopspam.com/Identity/Account/Register">
+                    Start for free
+                  </a>
+                </div>
+              </div>
+
+              <div class="pricing-plan">
+                <div class="columns is-flex is-centered mb-0">
+                  <figure class="image is-96x96 is-inline-block ">
+                    <img loading="lazy" class="is-rounded" src="/assets/THREE.png" alt="Image">
+                  </figure>
+                </div>
+                <div class="is-flex is-flex-direction-column is-align-items-center">
+                  <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Business</div>
+                  <div class="is-flex is-flex-direction-row is-justify-content-center">
+                    <div class="plan-price monthly-price">
+                      <span class="plan-price-amount has-text-grey has-text-strike is-brico has-text-weight-normal"><span class="plan-price-currency">$</span>259</span><br> /mo
+                    </div>
+                    <div class="plan-price yearly-price is-brico">
+                      <span class="plan-price-amount has-text-weight-normal"><span class="plan-price-currency">$</span>215.8</span><br> /mo, billed yearly
+                    </div>
+                  </div>
+                  <hr style="border: 0; width: 60px; border-top: 1.5px solid black;"/>
+                </div>
+                <div class="plan-items">
+                  <div class="plan-item">1,000,000 contact scans/month</div>
+                  <div class="plan-item">300 domain reputation watch slots</div>
+                  <div class="plan-item">6 months scan history</div>
+                  <div class="plan-item">IP-based API key restrictions</div>
+                  <div class="plan-item">Team access</div>
+                  <div class="plan-item">Priority Email + Call Support</div>
+                </div>
+                <div class="plan-footer mt-auto">
+                  <a class="copy button has-text-white is-medium has-background-black border-0 is-opensans-semibold" style="border-radius: 3em; border-style: none;"
+                     href="https://app.oopspam.com/Identity/Account/Register">
+                    Start for free
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="has-text-centered mt-6">
+              <p class="is-size-6">Need a lighter plan? <a class="has-text-black is-underlined" href="https://app.oopspam.com/Identity/Account/Register">Get 25K contact scans/month for $23/month with our Starter plan.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-10 is-offset-2">
+            <div class="content has-text-left subtitle">
+              <h2 class="title has-text-black">Frequently Asked <span class="shadow is-success">Questions</span> (FAQ)</h2>
+              <details>
+                <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
+                  class="has-text-weight-bold not-selectable">How does the ActiveCampaign integration work?</summary>
+                <p>
+                  Connect your ActiveCampaign account to OOPSpam, pull your lists into the dashboard, scan contacts for spammy, risky and suspicious signals, then review the flagged results.
+                </p>
+              </details>
+              <details>
+                <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
+                  class="has-text-weight-bold not-selectable">Do I need to export contacts from ActiveCampaign?</summary>
+                <p>
+                  No. The workflow is designed around a direct API connection, so you can review contacts inside OOPSpam without managing CSV exports.
+                </p>
+              </details>
+              <details>
+                <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
+                  class="has-text-weight-bold not-selectable">What can I do with flagged contacts?</summary>
+                <p>
+                  After a scan, you can review flagged contacts and choose whether to unsubscribe them from the list or delete the contact completely.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-started" class="section">
+      <div class="container">
+        <div class="columns is-vcentered is-centered">
+          <div class="column"></div>
+          <div class="column is-10 p-6" style="background-color: rgb(255, 221, 87); border-radius: 2em;">
+            <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center is-flex-wrap-wrap">
+              <p class="has-text-black is-brico has-text-weight-bold" style="font-size: 60px; line-height: 1.2em; text-align: center;">
+                Keep your ActiveCampaign lists cleaner with OOPSpam.
+              </p>
+              <div class="mt-4">
+                <a style="border-style: solid; border-color: black;"
+                   class="button has-text-black is-medium is-default is-rounded button-has-shadow is-size-6-mobile"
+                   href="https://app.oopspam.com/Identity/Account/Register">
+                  Start testing for free →
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Contact form -->
+  <section id="contact" class="section" style="padding-top:6em; padding-bottom:5em;">
+    <div class="container">
+      <div class="columns is-vcentered is-centered">
+        <div class="column is-half ">
+          <h3 class=" has-text-centered has-text-black">Contact us</h3>
+          <p class="copy has-text-centered" style="padding-top:10px;">Need to know more? Don't hesitate to contact us.</p>
+       <div id="contact-container">
+        <form id="contact_form" action="https://auto.oopspam.com/webhook/cedfc4c4-e0fd-4d97-b133-56ea844627b5"
+            class="pageclip-form" method="post">
+            <div class="columns">
+                <div class="column">
+                    <div class="name">
+                        <label for="name_input">Full Name</label>
+                        <input type="text" placeholder="Fred Armisen" name="name" id="name_input" required>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="email">
+                        <label for="email_input">Email Address</label>
+                        <input type="email" placeholder="fred@mail.com" name="email" id="email_input" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <textarea name="message" placeholder="Your Message" id="message_input" cols="30" rows="5"
+                    required></textarea>
+            </div>
+
+            <div class="submit">
+                <button id="form_button" class="is-bg-orange pageclip-form__submit button is-warning is-rounded button-has-shadow" type="submit">
+                    <span>Submit</span>
+                </button>
+            </div>
+
+        </form>
+    </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer has-background-black" >
+      <div class="content has-text-centered has-text-white">
+        <div class="columns">
+          
+          <div class="column">
+            <h6 class=" has-text-weight-bold has-text-left" style="color: #ffdd57;">Resources</h6>
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-white" href="https://www.oopspam.com/affiliate">Affiliate Program</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/blog">Blog</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/docs">Documentation</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/#faq">FAQ</a></li>
+              <li><a class="has-text-white" href="https://status.oopspam.com/">Status</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/#contact">Contact us</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/2025-spam-report">✨ 2025 Annual Spam Report</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/about">👋 About</a></li>
+            </ul>
+          </div>
+           <div class="column">
+            <a  href="/tools/"><h6 class=" has-text-weight-bold has-text-left" style="color: #ffdd57;">Free Tools</h6></a>
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-white" href="https://www.oopspam.com/tools/spam-words-checker">Spam Words Checker</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/tools/domain-reputation-checker">Domain Reputation Checker</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/tools/disposable-email-checker">Disposable Email and Domain Checker</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/tools/report-ip">Find out where to report an IP?</a></li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <a  href="/compare/"><h6 class=" has-text-weight-bold has-text-left" style="color: #ffdd57;">How We Compare</h6></a>
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-white" href="https://www.oopspam.com/akismet-alternative">Alternative to Akismet</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/recaptcha-alternative">Alternative to reCAPTCHA</a></li>
+             <li><a class="has-text-white" href="https://www.oopspam.com/hcaptcha-alternative">Alternative to hCAPTCHA</a></li>
+             <li><a class="has-text-white" href="https://www.oopspam.com/turnstile-alternative">Alternative to Turnstile</a></li>
+               <li><a class="has-text-white" href="https://www.oopspam.com/cleantalk-alternative">Alternative to CleanTalk</a></li>
+               
+            </ul>
+          </div>
+
+          <div class="column">
+                  <h6 class="has-text-weight-bold has-text-left" style="color: #ffdd57;">Integrations</h6>    
+                  <ul class="has-text-left" style="list-style-type:none; margin:0;">
+                    <li><a class="has-text-white"  href="https://www.oopspam.com/wordpress">WordPress</a></li>
+                    <li><a class="has-text-white"  href="https://www.oopspam.com/woocommerce">WooCommerce</a></li>
+                    <li><a class="has-text-white" href="https://www.oopspam.com/anti-spam-filter-for-gravity-forms">Gravity Forms</a></li>
+                  <li><a class="has-text-white" href="https://www.oopspam.com/anti-spam-filter-for-ninja-forms">Ninja Forms</a></li>
+                  <li><a class="has-text-white" href="https://www.oopspam.com/spam-filter-for-contactform7">Contact Form 7</a></li>
+                  <li><a class="has-text-white" href="https://www.oopspam.com/blog/spam-protection-for-elementor-forms">Elementor Forms</a></li>
+                  <li><a class="has-text-white" href="https://www.oopspam.com/integrations/">View all integrations</a></li>
+                  </ul>
+          </div>
+
+          <div class="column">
+            <h6 class="has-text-weight-bold has-text-left" style="color: #ffdd57;">Legal</h6>    
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-white" href="https://www.oopspam.com/terms">Terms of use</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/privacypolicy">Privacy Policy</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/gdpr">GDPR Compliance</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/dpa">Data Processing Agreement</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+   
+    </footer>
+    <div class="has-background-black has-text-white bottom">
+      <div class="container is-fluid">
+        <div class="columns">
+          <div class="column">
+            <p class="has-text-white">© 2017 - 2026 OOPSpam LLC</p>
+          </div>
+          <div class="column has-text-right" style="display: flex;
+  align-items: center; justify-content: end;">
+             <a class="p-1" href="https://twitter.com/oopspamapi">
+                            <img  src="/assets/x-logo.svg" alt="x logo">
+                            </a>
+                            <a class="p-1"  href="https://github.com/OOPSpam">
+                            <img src="/assets/github-circle.svg" alt="github logo">
+                            </a>
+                            <a class="p-1"  href="https://wordpress.org/plugins/oopspam-anti-spam/">
+                            <img src="/assets/wordpress.svg" alt="wordpress logo">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+<script async src="/scripts/app.min.js"></script>
+</div>
+</body>
+</html>
