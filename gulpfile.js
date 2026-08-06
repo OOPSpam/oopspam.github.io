@@ -6,7 +6,6 @@ const data = require('gulp-data');
 const fs = require('fs');
 const path = require('path');
 const syncRequest = require('sync-request');
-const sleep = require('sleep');
 const replace = require('gulp-replace');
 
 
