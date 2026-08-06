@@ -104,9 +104,20 @@
                                 comply with Data Protection Laws. The Data Controller is solely responsibility for the
                                 accuracy, quality, and legality of Personal Data and the means by which it acquires
                                 personal data.</li>
-                            <li>The inputs to the OOPSpam Service provided by the Data Controller are URLs and optional
-                                parameters. No other data should be sent to OOPSpam. The Data Controller bears sole
-                                responsibility for transmission of URls that can include personal data.</li>
+                            <li>In connection with the provision of the OOPSpam Service, the Data Controller transmits,
+                                and OOPSpam processes on the Data Controller&rsquo;s behalf, IP addresses, email
+                                addresses, and the content of form submissions, messages or comments (free text), for
+                                the purpose of spam and fraud detection. The Data Controller may optionally pass
+                                additional parameters via the API (for example, a name or phone number), but these are
+                                not required and are not transferred by default. Request bodies are not stored by
+                                default; they are processed in memory only. The Data Controller bears sole
+                                responsibility for the lawfulness of the personal data it transmits.</li>
+                            <li>Where personal data is transferred outside the European Economic Area, the United
+                                Kingdom or Switzerland, the transfer is subject to the European Commission&rsquo;s
+                                Standard Contractual Clauses (Module Two &ndash; Controller to Processor) and, where
+                                applicable, the UK International Data Transfer Addendum, as completed and executed
+                                between OOPSpam and the Data Controller. A copy of the completed clauses is available
+                                on request from <a href="mailto:contact@oopspam.com">contact@oopspam.com</a>.</li>
                             <li>OOPSpam lays out a full and accurate description of its data protection practices on its
                                 website at <a href="https://www.oopspam.com/gdpr">https://www.oopspam.com/gdpr</a>. This
                                 description is updated from time to time as and when practices change.</li>
@@ -137,10 +148,21 @@
                         </ul>
                         <h2 id="sub-processors" tabindex="-1">5. Sub-Processors</h2>
                         <ul>
-                            <li>The Data Controller agrees OOPSpam may engage third-party Sub-processors to provide the
-                                Services and such Sub-processors may access personal data, and appoint additional levels
-                                of Sub-processors, only for purposes of providing the services OOPSpam retained them to
+                            <li>The Data Controller grants OOPSpam general written authorisation to engage the
+                                Sub-processors listed in the Annex to this DPA for the purposes of providing the
+                                Services. A Sub-processor may access personal data, and may appoint further
+                                sub-processors, only for the purposes of providing the services OOPSpam retained it to
                                 provide and not for any other purpose.</li>
+                            <li>OOPSpam will notify the Data Controller in writing of any intended addition or
+                                replacement of Sub-processors at least 30 days in advance, and will provide the Data
+                                Controller with sufficient information to enable it to exercise its right to object. If
+                                the Data Controller objects to a proposed Sub-processor on reasonable data protection
+                                grounds, OOPSpam will either not engage the Sub-processor or, where OOPSpam is unable to
+                                do so, the Data Controller may terminate the affected processing without penalty.</li>
+                            <li>OOPSpam will enter into a written contract with each Sub-processor that imposes data
+                                protection obligations at least as protective as those set out in this DPA, and will
+                                remain fully responsible to the Data Controller for the performance of each
+                                Sub-processor&rsquo;s obligations.</li>
                         </ul>
                         <h2 id="security">6. Security</h2>
                         <ul>
@@ -175,12 +197,23 @@
                                 not be construed as an admission by OOPSpam to fault or liability with respect to the
                                 Security Breach.</li>
                         </ul>
-                        <h2 id="deletion-of-customer-data">8. Deletion of Customer Data</h2>
+                        <h2 id="deletion-of-customer-data">8. Deletion and Return of Customer Data; Audit</h2>
                         <ul>
-                            <li>OOPSpam agrees to delete Customer personal data in accordance with OOPSpam&rsquo;s
-                                procedures and Data Protection Laws.</li>
-                            <li>At a Customer's request, OOPSpam will provide the Customer with a certification of
-                                deletion of personal data.</li>
+                            <li>Upon termination or expiry of the Services, OOPSpam will, at the Data Controller&rsquo;s
+                                choice, either delete all personal data processed on behalf of the Data Controller or
+                                return it to the Data Controller, and will delete existing copies unless retention is
+                                required by Data Protection Laws or applicable tax or accounting obligations. At the
+                                Data Controller&rsquo;s request, OOPSpam will certify that such deletion or return has
+                                been completed.</li>
+                            <li>OOPSpam will make available to the Data Controller all information necessary to
+                                demonstrate compliance with its obligations under this DPA, and, at the Data
+                                Controller&rsquo;s request and with reasonable notice, will allow for and contribute to
+                                audits, including inspections, of its processing activities conducted by the Data
+                                Controller or by an independent auditor mandated by it. Audits will be carried out
+                                during normal business hours, at the Data Controller&rsquo;s expense, and in a manner
+                                that does not disrupt OOPSpam&rsquo;s operations. Where OOPSpam holds a recognised
+                                certification or independent audit report covering the processing, OOPSpam may make such
+                                report available to the Data Controller in lieu of a direct audit.</li>
                         </ul>
                         <h2 id="governing-laws">9. Governing Laws</h2>
                         <ul>
@@ -191,6 +224,28 @@
                             <li>This agreement comes into effect from the time of purchase of an OOPSpam subscription.
                                 It expires with cessation of the Customer's OOPSpam subscription.</li>
                         </ul>
+                        <h2 id="annex-sub-processors">Annex - List of Sub-Processors</h2>
+                        <p>Sub-processors that may process personal data transferred by the Data Controller in
+                            connection with the OOPSpam Service:</p>
+                        <div class="table-container">
+                            <table class="table is-striped is-hoverable">
+                                <thead>
+                                    <tr><th>Sub-processor</th><th>Location</th><th>Processing</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Fly.io</td><td>United States</td><td>Cloud hosting of the API servers; processes IP addresses, email addresses and message content for spam and fraud detection.</td></tr>
+                                    <tr><td>DigitalOcean</td><td>United States</td><td>API gateway and rate limiting; stores request-count metadata (retained 30 days). Does not store request bodies.</td></tr>
+                                    <tr><td>Supabase</td><td>European Union (eu-central-1)</td><td>Stores request/response logs only where the Data Controller has opted in to logging.</td></tr>
+                                    <tr><td>Hetzner</td><td>Germany and United States</td><td>Hosting of microservices for user statistics and automation; may process IP addresses and customer account metadata.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Note: OOPSpam also uses service providers (including Paddle for payments, Crisp for support,
+                            Postmark and EmailOctopus for email, ProfitWell for subscription analytics, GitHub for
+                            website hosting, and Cabin for privacy-friendly website analytics) in its own capacity as a
+                            data controller for the operation of its business. These providers do not process personal
+                            data transferred through the OOPSpam API on the Data Controller&rsquo;s behalf and are
+                            therefore not Sub-processors under this DPA.</p>
                     </div>
 
                 </div>
