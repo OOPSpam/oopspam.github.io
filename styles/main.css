@@ -96,7 +96,7 @@ padding-right: calc(0.5em + .25em);
 }
 
 #stats, #enterprise {
-  background-image: url(/assets/home/ProductBackground.webp);
+  background-image: url(/assets/home/ProductBackground_Green.webp);
 background-position: 50% 0;
 background-repeat: no-repeat;
 background-attachment: scroll;
