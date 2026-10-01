@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="101px" height="84px" viewBox="0 0 101 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon_SignUps</title>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sep-2026" transform="translate(-283, -2477)" stroke="#000000">
+            <g id="Group" transform="translate(283, 2477.5509)">
+                <g transform="translate(0, 5.4667)">
+                    <ellipse id="Oval" stroke-width="2" fill="#FFFFFF" cx="38.9139559" cy="38.2666667" rx="37.9139559" ry="37.2666667"></ellipse>
+                    <ellipse id="Oval" stroke-width="1.37307092" fill="#000000" cx="38.2962741" cy="35.2296296" rx="14.1378287" ry="13.8912423"></ellipse>
+                    <path d="M12.3435708,64.3851852 C17.0343687,54.6666667 25.8911638,49.8074074 38.9139559,49.8074074 C51.936748,49.8074074 60.1398825,54.6666667 63.5233595,64.3851852 C55.7646362,72.4839506 47.7673956,76.5333333 39.5316377,76.5333333 C31.2958799,76.5333333 22.2331909,72.4839506 12.3435708,64.3851852 Z" id="Path-44" stroke-width="1.37307092" fill="#000000"></path>
+                </g>
+                <g id="Group-9" transform="translate(61.1505, 0)">
+                    <ellipse id="Oval" stroke-width="2" fill="#FCDD56" cx="19.4569779" cy="19.1333333" rx="18.4569779" ry="18.1333333"></ellipse>
+                    <line x1="19.4569779" y1="12.4950862" x2="19.4569779" y2="27.3981883" id="Path-45" stroke-width="2.74614183"></line>
+                    <line x1="11.5097172" y1="19.9466372" x2="28.5774364" y2="19.73125" id="Path-46" stroke-width="2.74614183"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

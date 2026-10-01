@@ -534,3 +534,98 @@ background-color: #fbf6ed;
   .has-warning-boxshadow {
     box-shadow: 0px 0px 3px 3px #dbb41a;
   }
+
+/* Shared marketing sections (homepage hero trust row, "Join the millions" stats) */
+.millions-stat-value {
+  font-size: 60px;
+  line-height: 65px;
+}
+
+.millions-stat-label {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.hero-bullets {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  margin-left: 0;
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+
+.hero-bullets li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+}
+
+.hero-logos {
+  max-width: 520px;
+  aspect-ratio: 934 / 85;
+  overflow: hidden;
+}
+
+.hero-logos img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .millions-stat-value {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .millions-stat-label {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .hero-logos {
+    max-width: 100%;
+  }
+}
+
+.lead-copy {
+  font-size: 21px;
+  line-height: 29px;
+}
+
+/* Keeps hero content off the very edge of wide screens and centres it, so the gap left of
+   the copy matches the gap right of the illustration. */
+.container.hero-container {
+  max-width: 1440px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Product-page hero headlines: the global h1 is a fixed 70px, which is too large for the
+   narrow hero columns on small and medium screens where long headlines wrap heavily. */
+@media screen and (max-width: 1407px) {
+  .page-hero-title {
+    font-size: 48px !important;
+    line-height: 1.15 !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .page-hero-title {
+    font-size: 40px !important;
+  }
+
+  .lead-copy {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lead-copy {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

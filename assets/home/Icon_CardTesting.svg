@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="126px" height="102px" viewBox="0 0 126 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon_CardTesting</title>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sep-2026" transform="translate(-970, -2462)" stroke="#000000">
+            <g id="Icon_CardTesting" transform="translate(1032.7791, 2512.9194) rotate(10) translate(-1032.7791, -2512.9194)translate(977.7791, 2472.5592)">
+                <g id="Group-12" transform="translate(55, 40.3602) rotate(-10) translate(-55, -40.3602)translate(4.8177, 8.2259)" stroke-width="1.61440678">
+                    <rect id="Rectangle" fill="#FCDD56" stroke-linejoin="round" x="3.52156637" y="3.52156637" width="96.8430752" height="60.7470199" rx="6.45762713"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" stroke-linejoin="round" x="3.95273772e-12" y="1.48205358e-12" width="96.8430752" height="60.7470199" rx="6.45762713"></rect>
+                    <g id="Group-11" transform="translate(7.7573, 20.3885)">
+                        <rect id="Rectangle" fill="#FCDD56" x="0.807203391" y="0.807203391" width="15.1130335" height="15.1130335"></rect>
+                        <line x1="8.36372013" y1="-2.33492623e-15" x2="8.36372013" y2="16.7274403" id="Path-26"></line>
+                        <line x1="8.42906708e-11" y1="8.80391592" x2="16.7274403" y2="8.80391592" id="Path-27"></line>
+                        <polyline id="Path-28" points="-9.22518218e-13 4.49242056 3.95364821 4.49242056 12.8500955 13.4056869 16.7274403 13.4056869"></polyline>
+                        <polyline id="Path-28" transform="translate(8.3637, 8.9491) scale(1, -1) translate(-8.3637, -8.9491)" points="-9.22518218e-13 4.49242056 3.95364821 4.49242056 12.8500955 13.4056869 16.7274403 13.4056869"></polyline>
+                        <rect id="Rectangle" fill="#FCDD56" x="5.64935715" y="6.08955295" width="5.42872596" height="5.42872596"></rect>
+                    </g>
+                    <rect id="Rectangle" fill="#FCDD56" x="76.5208803" y="48.3483494" width="14.2326419" height="7.18950914" rx="3.59475457"></rect>
+                    <line x1="9.18281994" y1="12.303819" x2="71.9351841" y2="12.2553738" id="Path-31"></line>
+                    <line x1="7.94741306" y1="42.7567296" x2="20.4553116" y2="42.7472875" id="Path-44"></line>
+                    <line x1="24.1249403" y1="43.1674702" x2="36.6328389" y2="43.1580281" id="Path-44"></line>
+                    <line x1="40.5844211" y1="42.7910975" x2="53.0923196" y2="42.7816554" id="Path-44"></line>
+                    <line x1="58.6337821" y1="42.6950636" x2="71.1416807" y2="42.6856215" id="Path-44"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
