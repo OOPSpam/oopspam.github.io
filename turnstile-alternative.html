@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
   <link rel="stylesheet" href="/styles/main.min.css" />
   <link rel="stylesheet" href="/styles/alternative.min.css" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-    content="Switching from Cloudflare's Turnstile to oopspam - stop bots and manual spam from reaching you or your customer. All with high accuracy, privacy, and accessibility.">
+    content="Tired of Turnstile errors like 110200 and 106010? oopspam blocks spam server-side with no widget, no JavaScript and no Cloudflare lock-in.">
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@oopspamapi" />
   <meta property="og:url" content="https://www.oopspam.com/turnstile-alternative"/>
-  <meta name="og:title" content="Turnstile alternative - oopspam" />
-  <meta name="og:description" content="Switching from Cloudflare's Turnstile to oopspam - stop bots and manual spam from reaching you or your customer. All with high accuracy, privacy, and accessibility." />
+  <meta name="og:title" content="Cloudflare Turnstile Alternative for WordPress | oopspam" />
+  <meta name="og:description" content="Tired of Turnstile errors like 110200 and 106010? oopspam blocks spam server-side with no widget, no JavaScript and no Cloudflare lock-in." />
   <meta name="og:image" content="https://www.oopspam.com/assets/alternative/turnstile-alternative.png" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
-  <title>A Better Turnstile Alternative</title>
+  <title>Cloudflare Turnstile Alternative for WordPress | oopspam</title>
   <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
 </head>
 
@@ -76,8 +77,8 @@
           <!-- full column -->
           <div class="column is-full has-text-centered">
             <div class="content" style="color:black; font-size:16px;">
-                <h1 class="">Looking for a Turnstile alternative?</h1>
-                <h3 class=" pt-5 has-text-black">Upgrade to <span class="shadow is-success">oopspam</span>  for top-notch support, seamless accessibility, and optimal website performance - because your online presence deserves the best.</h3>
+                <h1 class="">Looking for a Cloudflare Turnstile alternative?</h1>
+                <h3 class=" pt-5 has-text-black">oopspam is a Cloudflare Turnstile alternative that blocks spam server-side: no widget, no JavaScript, and no Cloudflare dependency.</h3>
                 <p class="has-text-weight-light is-size-5 content"> <span style="margin-right: 0.5em; border: solid 1px;
                   border-radius: 6px;
                   padding: 0 8px;
@@ -130,6 +131,44 @@
       </div>
     </div>
   </section>
+
+  <!-- turnstile errors box -->
+  <section id="turnstile-errors" class="section pt-0">
+    <div class="container">
+      <div class="box" style="background-color:#FBFBED; border:2px solid black; box-shadow:4px 4px 0 0 #ffdd57;">
+        <h2 class="title is-4 has-text-black has-text-centered">Tired of Turnstile errors? See the alternative</h2>
+        <p class="has-text-centered">Errors like <code>110200</code>, <code>106010</code> and "token missing" come from the widget, not from your forms. oopspam has no widget to fail: it filters on the server, so there's nothing to break.</p>
+        <p class="has-text-centered mt-4">
+          <a class="button has-text-black is-warning is-rounded" href="#get-started">Get started free →</a>
+          <a class="ml-3" href="https://www.oopspam.com/blog/common-cloudflare-turnstile-errors-in-wordpress-forms-and-how-to-fix-them">Read the Turnstile errors guide →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+     <!-- error list -->
+     <section id="turnstile-error-list" class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-half">
+            <h2 class="title is-spaced">The Turnstile errors you're seeing</h2>
+            <div class="content subtitle">
+              <p>Most WordPress Turnstile problems trace back to the same handful of errors:</p>
+              <ul>
+                <li><strong>110200 (invalid domain / sitekey mismatch):</strong> the widget is loaded for a domain or key Cloudflare doesn't recognise.</li>
+                <li><strong>106010 (invalid or expired token):</strong> the challenge token didn't arrive in time or was used twice, often because of caching or a slow theme.</li>
+                <li><strong>Missing token:</strong> a form submits without a Turnstile response, so server-side validation fails.</li>
+              </ul>
+              <p>They're all symptoms of the same thing: a widget that has to load, run and hand a token back before a form can be sent. Cache plugins, JavaScript optimisers, cookie banners and slow connections all get in the way.</p>
+              <p>oopspam removes the widget entirely. Submissions are scored on your server <em>after</em> they arrive, so there's no token, no challenge and no front-end script to fail. We explain the fixes in our <a href="https://www.oopspam.com/blog/common-cloudflare-turnstile-errors-in-wordpress-forms-and-how-to-fix-them">guide to common Turnstile errors</a>.</p>
+            </div>
+          </div>
+          <div class="column is-half has-text-centered">
+            <img loading="lazy" src="assets/alternative/WhyItsSpam.svg" alt="oopspam spam report">
+          </div>
+        </div>
+      </div>
+    </section>
 
   <section class="hero my-6">
     <div class=" hero-body">
@@ -215,9 +254,9 @@
     <div class="container">
       <div class="columns is-vcentered">
         <div class="column is-half">
-            <h2 class="title is-spaced">Privacy-friendly anti-spam <abbr title="Application programming interface">API</abbr></h2>
+            <h2 class="title is-spaced">No Cloudflare account, no lock-in</h2>
             <div class="content subtitle">
-              We are GDPR-compliant. That means you are too. We respect your and your website visitors' privacy. We don't keep logs by default. oopspam Anti-Spam asks only for minimal data while providing high accuracy.
+              <p>Turnstile ties your form protection to Cloudflare's network and dashboard. oopspam is independent: one API key, no CDN, no DNS changes. We are GDPR-friendly, keep <strong>no logs by default</strong>, and ask only for the minimum data needed to score a submission.</p>
             </div>
         </div>
         <div class="column is-half has-text-centered">
@@ -324,6 +363,20 @@
         </div>
       </div>
     </section>
+    <!-- related reading -->
+  <section id="related" class="section">
+    <div class="container has-text-centered">
+      <div class="content">
+        <p class="is-size-5">Related reading:</p>
+        <p>
+          <a href="https://www.oopspam.com/blog/common-cloudflare-turnstile-errors-in-wordpress-forms-and-how-to-fix-them">Fix common Turnstile errors</a> ·
+          <a href="https://www.oopspam.com/blog/best-turnstile-alternatives">Best Turnstile alternatives</a> ·
+          <a href="/compare/hcaptcha-vs-turnstile">Turnstile vs hCaptcha</a> ·
+          <a href="/compare/recaptcha-vs-turnstile">Turnstile vs reCAPTCHA</a>
+        </p>
+      </div>
+    </div>
+  </section>
   <section id="other-comparison" class="hero">
     <div class="hero-body">
       <div class="container">

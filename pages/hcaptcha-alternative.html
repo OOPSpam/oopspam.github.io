@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
   <link rel="stylesheet" href="/styles/main.min.css" />
   <link rel="stylesheet" href="/styles/alternative.min.css" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Switching from hCAPTCHA to oopspam - stop bots and manual spam from reaching you or your customer. All with high accuracy, privacy, and accessibility.">
+  <meta name="description" content="Drop hCaptcha challenges without letting spam through. oopspam filters server-side, keeps forms accessible, and explains every block.">
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@oopspamapi" />
   <meta property="og:url" content="https://www.oopspam.com/hcaptcha-alternative/" />
-  <meta property="og:title" content="hCAPTCHA alternative - oopspam" />
-  <meta property="og:description" content="Switching from hCAPTCHA to oopspam - stop bots and manual spam from reaching you or your customer. All with high accuracy, privacy, and accessibility." />
+  <meta property="og:title" content="hCaptcha Alternative: Accessible, Puzzle-Free | oopspam" />
+  <meta property="og:description" content="Drop hCaptcha challenges without letting spam through. oopspam filters server-side, keeps forms accessible, and explains every block." />
   <meta property="og:image" content="https://www.oopspam.com/assets/oopspam-vs-hcaptcha.png" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
-  <title>A Better hCAPTCHA Alternative</title>
+  <title>hCaptcha Alternative: Accessible, Puzzle-Free | oopspam</title>
   {% include "partials/headScript.njk" %}
 </head>
 
@@ -31,8 +32,8 @@
           <!-- full column -->
           <div class="column is-full has-text-centered">
             <div class="content" style="color:black; font-size:16px;">
-                <h1 class="">Looking for a hCAPTCHA alternative?</h1>
-                <h3 class=" pt-5 has-text-black">Upgrade to <span class="shadow is-success">oopspam</span>  for better privacy, accessibility, and website performance.</h3>
+                <h1 class="">Looking for a hCaptcha alternative?</h1>
+                <h3 class=" pt-5 has-text-black">Stop solving challenges and start filtering: oopspam keeps forms accessible, converts better, and never shows your visitors a puzzle.</h3>
                 <p class="has-text-weight-light is-size-5 content"> <span style="margin-right: 0.5em; border: solid 1px;
                   border-radius: 6px;
                   padding: 0 8px;
@@ -158,9 +159,11 @@
             <img loading="lazy" src="assets/alternative/Accessability.svg"  alt="accessibility icon">
           </div>
           <div class="column is-half">
-              <h2 class="title is-spaced">No more accessibility issues. <br/> Higher conversion rate.</h2>
+              <h2 class="title is-spaced">Accessibility shouldn't need a workaround</h2>
               <div class="content subtitle">
-                Make your website accessible for everyone. oopspam works in your backend and never interacts with your visitors. Increase conversion rate and keep your visitors happy.</div>
+                <p>hCaptcha challenges are hard for everyone, and hardest for people using screen readers, keyboard navigation or switch devices. hCaptcha's answer is an <em>accessibility cookie</em> you have to request and users have to opt into: a workaround layered on top of a wall.</p>
+                <p>oopspam never shows a challenge, so there's nothing to work around. Forms stay usable for everyone and you stop losing visitors at the last step. We wrote about this in <a href="https://www.oopspam.com/blog/captcha-and-accessibility-why-your-forms-might-be-breaking-the-law-in-2026">CAPTCHA and accessibility</a>.</p>
+              </div>
           </div>
         </div>
         </div>
@@ -171,9 +174,10 @@
     <div class="container">
       <div class="columns is-vcentered">
         <div class="column is-half">
-            <h2 class="title is-spaced">Privacy-friendly anti-spam <abbr title="Application programming interface">API</abbr></h2>
+            <h2 class="title is-spaced">No widget, no script, no visitor cookies</h2>
             <div class="content subtitle">
-              We are GDPR-compliant. That means you are too. We respect your and your website visitors' privacy. We don't keep logs by default. oopspam Anti-Spam asks only for minimal data while providing high accuracy.
+              <p>hCaptcha is more privacy-conscious than reCAPTCHA, but it's still a widget: a third-party script loads on every form, sets its own cookies, and sees every visitor. oopspam runs entirely server-side: no widget, no front-end script, and no visitor cookies to disclose.</p>
+              <p>We keep <strong>no logs by default</strong> and ask for the minimum data needed to score a submission.</p>
             </div>
         </div>
         <div class="column is-half has-text-centered">
@@ -183,22 +187,36 @@
       </div>
   </section>
 
+    <!-- performance section -->
+    <section id="performance" class="section my-6">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-half is-flex is-justify-content-center">
+            <img loading="lazy" src="assets/alternative/Fast.svg" alt="page speed illustration">
+          </div>
+          <div class="column is-half">
+            <h2 class="title is-spaced">Faster forms, no widget</h2>
+            <div class="content subtitle">
+              <p>Every hCaptcha challenge means loading hCaptcha's script and doing extra work in the browser before a form can be submitted. Our tests show it adds real time to form pages. See the <a href="https://www.oopspam.com/blog/hcaptcha-performance-analyses">hCaptcha performance analysis</a>.</p>
+              <p>oopspam adds nothing to the page: the check happens on your server after submission, so your forms stay as fast as your theme.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- spam-score section -->
     <section id="spam-score" class="section">
       <div class="container">
         <div class="columns is-vcentered">
+          <div class="column is-half">
+              <h2 class="title is-spaced">Zero challenges for your visitors</h2>
+              <div class="content subtitle">
+                oopspam returns a spam score for every submission and lets you tune the sensitivity to avoid false positives. You can block by country or language when an attack hits. The difference is that your visitors never see any of it.
+                 </div>
+          </div>
           <div class="column is-half has-text-centered">
             <img src="assets/alternative/SpamScore.svg" loading="lazy" alt="Spam Score response of oopspam Anti-Spam">
-        </div>
-
-          <div class="column is-half">
-              <h2 class="title is-spaced">The same feature you like and more
-              </h2>
-              <div class="content subtitle">
-                Just like hCAPTCHA, oopspam returns a spam score, giving you more control over your spam protection. Set the spam sensitivity level to avoid missed opportunities. You can also block messages by country and language. All this and more without your visitors having to solve a puzzle.
-                 </div>
-        
-        </div>
+          </div>
         
         </div>
     </section>
@@ -207,15 +225,15 @@
       <section id="detailed-spamscore" class="section my-6" >
         <div class="container">
           <div class="columns is-vcentered">
-            <div class="column is-half">
-              <h2 class="title is-spaced">Detailed spam report</h2>
-              <div class="content subtitle">
-                Unlike hCAPTCHA where the only response you get is Score, oopspam Anti-Spam sends you a detailed report so that you know why you got that Spam Score.
-              </div>
-          </div>
             <div class="column is-half has-text-centered">
               <img src="assets/alternative/WhyItsSpam.svg" loading="lazy"  alt="oopspam Score and Details example response">
             </div>
+            <div class="column is-half">
+              <h2 class="title is-spaced">A report for every block</h2>
+              <div class="content subtitle">
+                hCaptcha gives you a pass/fail and little explanation. oopspam sends a detailed report for every blocked submission so you can see which signals fired and rescue any legitimate message that tripped the filter.
+              </div>
+          </div>
            
           </div>
           </div>
@@ -226,19 +244,19 @@
       <section id="wordpress" class="section my-6">
         <div class="container">
           <div class="columns is-vcentered">
-            <div class="column is-half has-text-centered">
-              <img src="assets/alternative/WordpressOOPSpamplugin.svg" loading="lazy"  alt="oopspam WordPress Plugin screenshot">
-          </div>
             <div class="column is-half">
-                <h2 class="title is-spaced">Spam Protection for your WordPress websites</h2>
+                <h2 class="title is-spaced">Drop hCaptcha without touching your forms</h2>
                 <div class="content subtitle">
-                   <p class="is-size-5">Looking for WordPress integration?</p> 
+                   <p class="is-size-5">Works with Elementor Forms, WPForms, Gravity Forms and more.</p> 
                   <p>
-                    We have your back. Check out <a href="https://wordpress.org/plugins/oopspam-anti-spam/">our WordPress plugin</a>. Increase the performance of your website by not having to load any script or display any badge on your website.
+                    Install the <a href="https://wordpress.org/plugins/oopspam-anti-spam/">oopspam WordPress plugin</a>, paste your API key, and remove the hCaptcha widget. There are no form fields to add and no badge to display.
                   </p>
                    </div>
           
           </div>
+            <div class="column is-half has-text-centered">
+              <img src="assets/alternative/WordpressOOPSpamplugin.svg" loading="lazy"  alt="oopspam WordPress Plugin screenshot">
+            </div>
          
           </div>
       </section>
@@ -249,6 +267,9 @@
    <section id="support" class="section my-6" >
       <div class="container">
         <div class="columns is-vcentered">
+          <div class="column is-half has-text-centered">
+            <img src="assets/alternative/CustomerService.svg" loading="lazy" alt="headphone">
+          </div>
           <div class="column is-half">
             <h2 class="title is-spaced">24/7 customer support</h2>
             <div class="content subtitle">
@@ -257,9 +278,6 @@
               </p>
                </div>
         </div>
-          <div class="column is-half has-text-centered">
-            <img src="assets/alternative/CustomerService.svg" loading="lazy" alt="headphone">
-          </div>
           
         </div>
         </div>
@@ -269,17 +287,32 @@
       <div class="container">
         <div class="columns is-vcentered is-centered">
           <div class="column is-half has-text-centered">
-            <p class="title">Your search for a hCAPTCHA alternative is over</p>
+            <p class="title">Your search for a hCaptcha alternative is over</p>
             <div class="content">
                 <a class="button has-text-black is-medium is-warning is-rounded is-size-7-mobile"
                   href="https://app.oopspam.com/Identity/Account/Register">
-                  Get started for free. No CC required.
+                  Try 40 checks free →
                 </a>
+                <p class="pt-3">✓ No credit card required ✓ Cancel anytime</p>
               </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- related reading -->
+  <section id="related" class="section">
+    <div class="container has-text-centered">
+      <div class="content">
+        <p class="is-size-5">Related reading:</p>
+        <p>
+          <a href="https://www.oopspam.com/blog/hcaptcha-performance-analyses">hCaptcha performance analysis</a> ·
+          <a href="/compare/hcaptcha-vs-turnstile">hCaptcha vs Turnstile</a> ·
+          <a href="/compare/recaptcha-vs-hcaptcha">hCaptcha vs reCAPTCHA</a> ·
+          <a href="https://www.oopspam.com/blog/captcha-and-accessibility-why-your-forms-might-be-breaking-the-law-in-2026">CAPTCHA and accessibility</a>
+        </p>
+      </div>
+    </div>
+  </section>
   <section id="other-comparison" class="hero my-6">
     <div class="hero-body">
       <div class="container">

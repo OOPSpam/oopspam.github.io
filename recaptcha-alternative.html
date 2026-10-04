@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
   <link rel="stylesheet" href="/styles/main.min.css" />
   <link rel="stylesheet" href="/styles/alternative.min.css" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Switching from reCAPTCHA to oopspam - stop bots and manual spam from reaching you or your customer. All with high accuracy, privacy, and accessibility.">
+  <meta name="description" content="Replace reCAPTCHA with invisible, server-side spam filtering. No puzzles, no Google tracking, WCAG-friendly forms. Try 40 checks free.">
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@oopspamapi" />
   <meta property="og:url" content="https://www.oopspam.com/recaptcha-alternative" />
-  <meta property="og:title" content="reCAPTCHA alternative - oopspam"/>
-  <meta property="og:description" content="Switching from reCAPTCHA to oopspam - stop bots and manual spam from reaching you or your customer. All with high accuracy, privacy, and accessibility." />
+  <meta property="og:title" content="reCAPTCHA Alternative: No Puzzles, No Google | oopspam"/>
+  <meta property="og:description" content="Replace reCAPTCHA with invisible, server-side spam filtering. No puzzles, no Google tracking, WCAG-friendly forms. Try 40 checks free." />
   <meta property="og:image" content="https://www.oopspam.com/assets/oopspam-vs-recaptcha.png"/>
   
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
-  <title>A Better reCAPTCHA Alternative</title>
+  <title>reCAPTCHA Alternative: No Puzzles, No Google | oopspam</title>
   <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
 </head>
 
@@ -77,7 +78,7 @@
           <div class="column is-full has-text-centered">
             <div class="content" style="color:black; font-size:16px;">
                 <h1 class="">Looking for a reCAPTCHA alternative?</h1>
-                <h3 class=" pt-5 has-text-black">Upgrade to <span class="shadow is-success">oopspam</span>  for uncompromised privacy, seamless accessibility, and optimal website performance - because your online presence deserves the best.</h3>
+                <h3 class=" pt-5 has-text-black">Filter spam server-side: no puzzles, no Google tracking, no badge, and nothing extra loaded on your forms.</h3>
                 <p class="has-text-weight-light is-size-5 content"> <span style="margin-right: 0.5em; border: solid 1px;
                   border-radius: 6px;
                   padding: 0 8px;
@@ -203,9 +204,11 @@ Works perfectly with different forms like Elementor, Formidable etc.
             <img loading="lazy" src="assets/alternative/Accessability.svg"  alt="accessibility icon">
           </div>
           <div class="column is-half">
-              <h2 class="title is-spaced">No more accessibility issues. <br/> Higher conversion rate.</h2>
+              <h2 class="title is-spaced">Puzzles that block real users (and customers)</h2>
               <div class="content subtitle">
-                Make your website accessible for everyone. oopspam works in your backend and never interacts with your visitors. Increase conversion rate and keep your visitors happy.</div>
+                <p>Every image grid, "select all traffic lights" or audio fallback is a place where a real person can give up. Visitors who can't solve the challenge don't complain: they leave, and you never see the lost signup.</p>
+                <p>oopspam filters on the server, so there is no puzzle between a visitor and the submit button. Fewer abandoned forms, more conversions.</p>
+              </div>
           </div>
         </div>
         </div>
@@ -216,9 +219,10 @@ Works perfectly with different forms like Elementor, Formidable etc.
     <div class="container">
       <div class="columns is-vcentered">
         <div class="column is-half">
-            <h2 class="title is-spaced">Privacy-friendly anti-spam <abbr title="Application programming interface">API</abbr></h2>
+            <h2 class="title is-spaced">Keep your visitors' data out of Google</h2>
             <div class="content subtitle">
-              We are GDPR-compliant. That means you are too. We respect your and your website visitors' privacy. We don't keep logs by default. oopspam Anti-Spam asks only for minimal data while providing high accuracy.
+              <p>reCAPTCHA is a Google service. To score a visitor it sends their behaviour, device and network signals to Google, which is why it keeps coming up in GDPR and data-transfer reviews, and why the reCAPTCHA badge has to be declared in your cookie notice.</p>
+              <p>oopspam scores submissions on the server with the minimum data needed, keeps <strong>no logs by default</strong>, and shows no badge. That makes the compliance conversation much shorter. See <a href="https://www.oopspam.com/blog/recaptcha-badge">why the reCAPTCHA badge is a problem</a>.</p>
             </div>
         </div>
         <div class="column is-half has-text-centered">
@@ -228,21 +232,35 @@ Works perfectly with different forms like Elementor, Formidable etc.
       </div>
   </section>
 
+    <!-- performance section -->
+    <section id="performance" class="section">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-half is-flex is-justify-content-center">
+            <img loading="lazy" src="assets/alternative/Fast.svg" alt="page speed illustration">
+          </div>
+          <div class="column is-half">
+            <h2 class="title is-spaced">Slower pages, heavier forms</h2>
+            <div class="content subtitle">
+              <p>reCAPTCHA loads Google's script on every page that uses it. On slower connections that's extra work before a visitor can even fill in the form, and it's a script you don't control. Our tests show it costs real loading time. See <a href="https://www.oopspam.com/blog/recaptcha-performance-analyses">how reCAPTCHA affects page performance</a>.</p>
+              <p>Not sure whether v2 or v3 is your problem? Our guide to <a href="https://www.oopspam.com/blog/recaptcha-v2-vs-v3-which-is-right-for-your-website">reCAPTCHA v2 vs v3</a> breaks down what each version loads. oopspam loads nothing on the front end.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- spam-score section -->
     <section id="spam-score" class="section">
       <div class="container">
         <div class="columns is-vcentered">
+          <div class="column is-half">
+              <h2 class="title is-spaced">A spam score, without the puzzle</h2>
+              <div class="content subtitle">
+                Like reCAPTCHA, oopspam returns a spam score you can tune. Unlike reCAPTCHA, no visitor ever has to prove they're human: set the sensitivity level to control false positives, and block by country or language when an attack hits. All of it happens server-side.
+                 </div>
+        </div>
           <div class="column is-half has-text-centered">
             <img src="assets/alternative/SpamScore.svg" loading="lazy" alt="Spam Score response of oopspam Anti-Spam">
-        </div>
-
-          <div class="column is-half">
-              <h2 class="title is-spaced">The same feature you like and more
-              </h2>
-              <div class="content subtitle">
-                Just like reCAPTCHA, oopspam returns a spam score, giving you more control over your spam protection. Set the spam sensitivity level to avoid missed opportunities. You can also block messages by country and language. All this and more without your visitors having to solve a puzzle.
-                 </div>
-        
         </div>
         
         </div>
@@ -252,38 +270,53 @@ Works perfectly with different forms like Elementor, Formidable etc.
       <section id="detailed-spamscore" class="section" >
         <div class="container">
           <div class="columns is-vcentered">
-            <div class="column is-half">
-              <h2 class="title is-spaced">Detailed spam report</h2>
-              <div class="content subtitle">
-                Unlike reCAPTCHA where the only response you get is Score, oopspam Anti-Spam sends you a detailed report so that you know why you got that Spam Score.
-              </div>
-          </div>
             <div class="column is-half has-text-centered">
               <img src="assets/alternative/WhyItsSpam.svg" loading="lazy"  alt="oopspam Score and Details example response">
             </div>
+            <div class="column is-half">
+              <h2 class="title is-spaced">Know why a message was blocked</h2>
+              <div class="content subtitle">
+                reCAPTCHA hands you a score and little else. oopspam sends a detailed report for every blocked submission, so you can see which signals fired and fix false positives instead of guessing.
+              </div>
+          </div>
            
           </div>
           </div>
       </section>
      
    
+      <!-- captcha alternatives -->
+      <section id="captcha-alternatives" class="section">
+        <div class="container">
+          <h2 class="title is-spaced has-text-centered">CAPTCHA alternatives, explained</h2>
+          <div class="content subtitle">
+            <p>"CAPTCHA alternative" can mean a few different things. Here's the landscape so you can pick the right approach:</p>
+            <ul>
+              <li><strong>Challenge-based (reCAPTCHA, hCaptcha, Turnstile):</strong> the visitor (or their browser) has to prove they're human. At best it's mildly accessible, and it still loads a third-party script.</li>
+              <li><strong>Honeypots:</strong> a hidden field bots fill in. Free and invisible, but it only catches naive bots.</li>
+              <li><strong>Server-side filtering (oopspam):</strong> the submission is scored after it arrives, using spam signals and machine learning. Nothing loads for the visitor, and real people are never stopped by a puzzle.</li>
+            </ul>
+            <p>Most sites get the best balance with server-side filtering, optionally alongside a honeypot. See our full roundup of the <a href="https://www.oopspam.com/blog/best-captcha-alternatives">best CAPTCHA alternatives</a>.</p>
+          </div>
+        </div>
+      </section>
       <!-- wordpress section -->
       <section id="wordpress" class="section">
         <div class="container">
           <div class="columns is-vcentered">
-            <div class="column is-half has-text-centered">
-              <img src="assets/alternative/WordpressOOPSpamplugin.svg" loading="lazy"  alt="oopspam WordPress Plugin screenshot">
-          </div>
             <div class="column is-half">
-                <h2 class="title is-spaced">Spam Protection for your WordPress websites</h2>
+                <h2 class="title is-spaced">Works with your forms, not against them</h2>
                 <div class="content subtitle">
-                   <p class="is-size-5">Looking for WordPress integration?</p> 
+                   <p class="is-size-5">Replace reCAPTCHA without touching your forms.</p> 
                   <p>
-                    We have your back. Check out <a href="https://wordpress.org/plugins/oopspam-anti-spam/">our WordPress plugin</a>. Increase the performance of your website by not having to load any script or display any badge on your website.
+                    The <a href="https://wordpress.org/plugins/oopspam-anti-spam/">oopspam WordPress plugin</a> works with Elementor Forms, WPForms, Gravity Forms, Ninja Forms, Contact Form 7 and WooCommerce. Disable reCAPTCHA, paste your API key, and you're done: no script, no badge, no puzzle.
                   </p>
                    </div>
           
           </div>
+            <div class="column is-half has-text-centered">
+              <img src="assets/alternative/WordpressOOPSpamplugin.svg" loading="lazy"  alt="oopspam WordPress Plugin screenshot">
+            </div>
          
           </div>
       </section>
@@ -294,6 +327,9 @@ Works perfectly with different forms like Elementor, Formidable etc.
    <section id="support" class="section" >
       <div class="container">
         <div class="columns is-vcentered">
+          <div class="column is-half has-text-centered">
+            <img src="assets/alternative/CustomerService.svg" loading="lazy" alt="headphone">
+          </div>
           <div class="column is-half">
             <h2 class="title is-spaced">24/7 customer support</h2>
             <div class="content subtitle">
@@ -302,9 +338,6 @@ Works perfectly with different forms like Elementor, Formidable etc.
               </p>
                </div>
         </div>
-          <div class="column is-half has-text-centered">
-            <img src="assets/alternative/CustomerService.svg" loading="lazy" alt="headphone">
-          </div>
           
         </div>
         </div>
@@ -318,13 +351,27 @@ Works perfectly with different forms like Elementor, Formidable etc.
             <div class="content">
                 <a class="button has-text-black is-medium is-warning is-rounded is-size-7-mobile"
                   href="https://app.oopspam.com/Identity/Account/Register">
-                  Get started for free. No CC required.
+                  Try 40 checks free →
                 </a>
+                <p class="pt-3">✓ No credit card required ✓ Cancel anytime</p>
               </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- related reading -->
+  <section id="related" class="section">
+    <div class="container has-text-centered">
+      <div class="content">
+        <p class="is-size-5">Related reading:</p>
+        <p>
+          <a href="https://www.oopspam.com/blog/best-captcha-alternatives">Best CAPTCHA alternatives</a> ·
+          <a href="https://www.oopspam.com/blog/recaptcha-performance-analyses">reCAPTCHA performance analysis</a> ·
+          <a href="https://www.oopspam.com/blog/recaptcha-v2-vs-v3-which-is-right-for-your-website">reCAPTCHA v2 vs v3</a>
+        </p>
+      </div>
+    </div>
+  </section>
     <section id="other-comparison" class="hero">
       <div class="hero-body">
         <div class="container">

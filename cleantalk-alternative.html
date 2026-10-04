@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
   <link rel="stylesheet" href="/styles/main.min.css" />
   <link rel="stylesheet" href="/styles/alternative.min.css" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Switching from CleanTalk to oopspam - makes your website faster, gives you high accuracy, and a privacy-friendly spam filter.">
+  <meta name="description" content="Looking for a CleanTalk alternative? oopspam runs server-side with no logs, scores every submission, and covers unlimited sites from $23/mo.">
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@oopspamapi" />
   <meta property="og:url" content="https://www.oopspam.com/cleantalk-alternative/" />
-  <meta property="og:title" content="A Better CleanTalk Alternative - oopspam" />
-  <meta property="og:description" content="Switching from CleanTalk to oopspam - makes your website faster, gives you high accuracy, and a privacy-friendly spam filter." />
+  <meta property="og:title" content="CleanTalk Alternative: Lighter Plugin, No Logs | oopspam" />
+  <meta property="og:description" content="Looking for a CleanTalk alternative? oopspam runs server-side with no logs, scores every submission, and covers unlimited sites from $23/mo." />
   <meta property="og:image" content="https://www.oopspam.com/assets/oopspamVScleantalk.png" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="any">
-  <title>A Better CleanTalk Alternative</title>
+  <title>CleanTalk Alternative: Lighter Plugin, No Logs | oopspam</title>
   <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
 </head>
 <style>
   .table td,
   .table th {
     padding: 1em 0.75em !important;
+}
+  #pricing table th,
+  #pricing table td {
+    white-space: normal !important;
 }
 </style>
 <body class="alternative">
@@ -82,7 +87,7 @@
           <div class="column is-full has-text-centered">
             <div class="content" style="color:black; font-size:16px;">
                 <h1 class="">Looking for a CleanTalk alternative?</h1>
-                <h3 class=" pt-5 has-text-black">Upgrade to <span class="shadow is-success">oopspam</span> for better privacy, faster website, and accuracy.</h3>
+                <h3 class=" pt-5 has-text-black">Upgrade to <span class="shadow is-success">oopspam</span> for a lighter, server-side plugin: no logs, no per-site fees, and nothing slowing your site down.</h3>
                 <p class="has-text-weight-light is-size-5 content"> <span style="margin-right: 0.5em; border: solid 1px;
                   border-radius: 6px;
                   padding: 0 8px;
@@ -194,10 +199,17 @@
                 </td>
               </tr>
               <tr>
+                  <th>Keeps spam logs</th>
+                  <td>✗ No logs kept</td>
+                  <td>✓ Logs stored in CleanTalk's cloud</td>
+              </tr>
+              <tr>
                   <th>Unlimited websites
                   </th>
-                  <td>$49/mo</td>
-                  <td>$25/mo</td>
+                  <td>$23/mo</td>
+                  <td>$27/mo
+                    <p><small>Per-site plans start at $12/yr</small></p>
+                  </td>
               </tr>
             <tr>
                 <th>Spam Score</th>
@@ -352,10 +364,59 @@
                 <p>
                  oopspam doesn't inject any JavaScript files or use any cookies on your website. It works on your server, away from the users. You get all the benefits with 0% impact on your website performance.
                 </p>
+                <table class="table is-bordered is-striped">
+                  <thead>
+                    <tr>
+                      <th>What loads on every page</th>
+                      <th class="has-text-centered">oopspam</th>
+                      <th class="has-text-centered">CleanTalk</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><th>Front-end anti-spam JavaScript</th><td class="has-text-centered">None</td><td class="has-text-centered">Loads for visitors</td></tr>
+                    <tr><th>Cookies set on visitors</th><td class="has-text-centered">None</td><td class="has-text-centered">Yes (e.g. ct_checkjs)</td></tr>
+                    <tr><th>Extra requests per page load</th><td class="has-text-centered">0</td><td class="has-text-centered">Added to every page</td></tr>
+                    <tr><th>Where filtering happens</th><td class="has-text-centered">Server-side</td><td class="has-text-centered">Visitor-facing check</td></tr>
+                  </tbody>
+                </table>
+                <p><small>Based on our <a href="https://www.oopspam.com/blog/cleantalk-vs-cloudflare-and-why-oopspam-is-the-best-alternative">CleanTalk vs Cloudflare notes</a>. Test your own site before and after to confirm the difference.</small></p>
                  </div>
         </div>
          
         </div>
+    </section>
+     <!-- pricing -->
+    <section id="pricing" class="section mgb-large">
+      <div class="container" style="padding: 2.5rem;">
+        <div class="columns">
+          <div class="column">
+            <h2 class="title is-spaced">CleanTalk pricing explained</h2>
+            <div class="content subtitle">
+              <p>CleanTalk prices two ways: per-site licenses that start at <strong>$12/year for a single website</strong>, and an unlimited-sites plan at <strong>$27/mo</strong>. oopspam's Starter plan is <strong>$23/mo and already includes unlimited websites</strong> and 25,000 checks, so you're not counting sites or renewing licenses one by one.</p>
+              <div class="table-container" style="overflow-x: auto;">
+                <table class="table is-bordered is-striped">
+                  <thead>
+                    <tr>
+                      <th>Plan</th>
+                      <th>CleanTalk</th>
+                      <th>oopspam</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><th>Single website</th><td>$12/year (1 site)</td><td>$23/mo, unlimited sites</td></tr>
+                    <tr><th>Unlimited websites</th><td>$27/mo</td><td>$23/mo</td></tr>
+                    <tr><th>Volume included</th><td>Depends on plan</td><td>25,000 checks; $49/100K, $69/300K, $259/1M</td></tr>
+                    <tr><th>Spam logs retained</th><td>Yes, in CleanTalk's dashboard</td><td>None by default</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3>CleanTalk vs Akismet</h3>
+              <p>Weighing CleanTalk against Akismet instead of against us? The short version: Akismet is free only for personal sites and its paid plans cover just 500–5,000 checks, while CleanTalk sells cheap per-site licenses. Neither keeps filtering inside your WordPress dashboard the way oopspam does. Read the full <a href="https://www.oopspam.com/blog/akismet-vs-cleantalk-and-why-oopspam-is-the-best-alternative">CleanTalk vs Akismet comparison</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
      <!-- spam-score section -->
      <section id="spam-score" class="section mgb-large">
@@ -470,6 +531,19 @@
         </div>
       </div>
     </section>
+    <!-- related reading -->
+  <section id="related" class="section">
+    <div class="container has-text-centered">
+      <div class="content">
+        <p class="is-size-5">Related reading:</p>
+        <p>
+          <a href="https://www.oopspam.com/blog/best-cleantalk-alternatives">Best CleanTalk alternatives</a> ·
+          <a href="https://www.oopspam.com/blog/cleantalk-vs-cloudflare-and-why-oopspam-is-the-best-alternative">CleanTalk vs Cloudflare</a> ·
+          <a href="/compare/akismet-vs-cleantalk">Akismet vs CleanTalk</a>
+        </p>
+      </div>
+    </div>
+  </section>
     <section id="other-comparison" class="hero">
       <div class="hero-body">
         <div class="container">
