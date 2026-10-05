@@ -218,7 +218,7 @@ Works perfectly with different forms like Elementor, Formidable etc.
           <div class="column is-half">
             <h2 class="title is-spaced">Slower pages, heavier forms</h2>
             <div class="content subtitle">
-              <p>reCAPTCHA loads Google's script on every page that uses it. On slower connections that's extra work before a visitor can even fill in the form, and it's a script you don't control. Our tests show it costs real loading time. See <a href="https://www.oopspam.com/blog/recaptcha-performance-analyses">how reCAPTCHA affects page performance</a>.</p>
+              <p>reCAPTCHA loads Google's script on every page that uses it. On slower connections that's extra work before a visitor can even fill in the form, and it's a script you don't control. In our test on a simple contact-form page, adding reCAPTCHA took the page from 5 to 13 network requests and from 35.6 kB to 565 kB transferred, and load time went from 285 ms to 1.56 seconds. Your numbers will vary with hosting, but the extra weight lands on every page that loads the script. See <a href="https://www.oopspam.com/blog/recaptcha-performance-analyses">how reCAPTCHA affects page performance</a>.</p>
               <p>Not sure whether v2 or v3 is your problem? Our guide to <a href="https://www.oopspam.com/blog/recaptcha-v2-vs-v3-which-is-right-for-your-website">reCAPTCHA v2 vs v3</a> breaks down what each version loads. oopspam loads nothing on the front end.</p>
             </div>
           </div>
