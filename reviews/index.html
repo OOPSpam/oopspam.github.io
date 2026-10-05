@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/styles/main.min.css" />
+  <link rel="stylesheet" href="/styles/alternative.min.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read real oopspam reviews from WordPress, WooCommerce, and other website owners. See what customers say about spam protection, fake orders, support, and more.">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@oopspamapi" />
+  <meta property="og:url" content="https://www.oopspam.com/reviews/" />
+  <meta property="og:title" content="oopspam Reviews: Customer Reviews &amp; Experiences" />
+  <meta property="og:description" content="Read real oopspam reviews from WordPress, WooCommerce, and other website owners. See what customers say about spam protection, fake orders, support, and more." />
+  <meta property="og:image" content="https://www.oopspam.com/assets/meta_oopspam.png" />
+  <link rel="canonical" href="https://www.oopspam.com/reviews/" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <title>oopspam Reviews: Customer Reviews &amp; Experiences</title>
+  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
+  <style>
+    :root {
+      --rv-green: #166239;
+      --rv-cream: #FBF6ED;
+      --rv-gold: #f5a800;
+      --rv-ink: #1f1f1f;
+      --rv-muted: #5c5c5c;
+      --rv-line: #e6e1d6;
+      --rv-wp: #3858e9;
+      --rv-tp: #00b67a;
+    }
+
+    /* Hero */
+    .rv-hero .hero-body { padding-bottom: 1.5rem; }
+    .rv-hero h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; margin-bottom: 1rem !important; }
+    .rv-hero .rv-lede { max-width: 40rem; margin: 0 auto; color: var(--rv-muted); }
+
+    /* Star ratings: a grey row of 5 stars with a gold row clipped to the exact score */
+    .rv-stars { position: relative; display: inline-block; font-size: 1.1rem; line-height: 1; letter-spacing: 3px; color: #d9d3c4 !important; }
+    .rv-stars::before { content: "★★★★★"; }
+    .rv-stars > span { position: absolute; inset: 0 auto 0 0; overflow: hidden; white-space: nowrap; color: var(--rv-gold) !important; }
+    .rv-stars > span::before { content: "★★★★★"; }
+    .rv-stars.is-large { font-size: 1.5rem; }
+
+    /* Rating summary cards */
+    .rv-source { height: 100%; display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid var(--rv-line); box-shadow: none; border-radius: 1.25rem; padding: 2rem 1.5rem; }
+    .rv-source-mark { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; margin-bottom: .75rem; }
+    .rv-source-mark img { width: 40px; height: 40px; object-fit: contain; }
+    .rv-source-mark.is-tp { color: var(--rv-tp); }
+    .rv-source-mark svg { width: 34px; height: 34px; }
+    .rv-score { font-size: 3.25rem; font-weight: 700; line-height: 1; color: var(--rv-green); margin: .5rem 0 .35rem; }
+    .rv-count { font-size: .85rem; color: var(--rv-muted); margin-bottom: 1.25rem; }
+    .rv-source .button { margin-top: auto; }
+    .rv-checked { font-size: .8rem; color: var(--rv-muted); max-width: 36rem; margin: 1rem auto 0; }
+
+    /* Logo strip */
+    .rv-marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+    .rv-track { display: flex; width: max-content; animation: rv-marquee 70s linear infinite; }
+    .rv-group { display: flex; align-items: center; gap: 3rem; padding-right: 3rem; }
+    .rv-logo { display: flex; flex: 0 0 auto; align-items: center; gap: .6rem; color: #363636; }
+    .rv-logo img { width: 36px; height: 36px; object-fit: contain; filter: grayscale(100%); opacity: .6; transition: filter .2s ease, opacity .2s ease; }
+    .rv-logo:hover img { filter: none; opacity: 1; }
+    .rv-logo span { font-size: .9rem; font-weight: 600; white-space: nowrap; }
+    @keyframes rv-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .rv-marquee:hover .rv-track, .rv-marquee:focus-within .rv-track { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) {
+      .rv-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; }
+      .rv-group[aria-hidden="true"] { display: none; }
+      .rv-group { flex-wrap: wrap; justify-content: center; row-gap: 1.25rem; padding-right: 0; }
+      .rv-marquee { mask-image: none; -webkit-mask-image: none; }
+    }
+
+    /* Theme cards */
+    .rv-theme { height: 100%; border-radius: 1rem; border: 1px solid var(--rv-line); box-shadow: none; display: flex; flex-direction: column; }
+    .rv-theme .rv-theme-text { flex-grow: 1; }
+    .rv-theme a { font-weight: 600; font-size: .9rem; }
+    .rv-tag { display: inline-block; align-self: flex-start; font-size: .72rem; font-weight: 700; letter-spacing: .02em; color: #6b4e00; background: var(--rv-cream); border: 1px solid #f2d98a; border-radius: 999px; padding: .15rem .6rem; margin-bottom: .75rem; }
+
+    /* Filter chips */
+    .rv-filters { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-bottom: 2rem; }
+    .rv-chip { font: inherit; font-size: .85rem; font-weight: 600; padding: .4rem .95rem; border-radius: 999px; border: 1px solid var(--rv-line); background: #fff; color: var(--rv-ink); cursor: pointer; transition: background .15s ease, border-color .15s ease; }
+    .rv-chip:hover { border-color: #bfb59f; }
+    .rv-chip[aria-pressed="true"] { background: var(--rv-green); border-color: var(--rv-green); color: #fff; }
+    .rv-chip:focus-visible { outline: 3px solid #f2d98a; outline-offset: 2px; }
+
+    /* Review cards */
+    .rv-review { position: relative; height: 100%; display: flex; flex-direction: column; border-radius: 1rem; border: 1px solid var(--rv-line); box-shadow: none; padding: 1.5rem; scroll-margin-top: 6rem; }
+    .rv-review:target { border-color: var(--rv-green); box-shadow: 0 0 0 3px rgba(22, 98, 57, .15); }
+    .rv-review blockquote { position: relative; flex-grow: 1; margin: .9rem 0 1.25rem; padding-left: 1.6rem; font-size: 1rem; line-height: 1.55; color: var(--rv-ink); }
+    .rv-review blockquote::before { content: "\201C"; position: absolute; left: -.1rem; top: -.55rem; font-size: 2.6rem; line-height: 1; color: var(--rv-green); font-family: Georgia, serif; }
+    .rv-review-head { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+    .rv-review-head .rv-tag { margin-bottom: 0; }
+    .rv-who { display: flex; align-items: center; gap: .75rem; padding-top: 1rem; border-top: 1px solid var(--rv-line); }
+    .rv-avatar { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: .95rem; color: var(--rv-green); background: var(--rv-cream); border: 1px solid #efe4cb; text-transform: uppercase; }
+    .rv-who-text { font-size: .82rem; line-height: 1.35; min-width: 0; }
+    .rv-who-text strong { display: block; color: var(--rv-ink); overflow-wrap: anywhere; }
+    .rv-who-text > span { color: var(--rv-muted); }
+    .rv-badge { font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: .12rem .5rem; border-radius: 999px; border: 1px solid transparent; }
+    .rv-badge.is-wp { background: #e9edfd; border-color: #c7d2fb; color: #1c37c0 !important; }
+    .rv-badge.is-tp { background: #e2f7ee; border-color: #b6e6d2; color: #006a4a !important; }
+    .rv-original { margin-left: auto; font-size: .8rem; font-weight: 600; white-space: nowrap; }
+    .rv-review[hidden] { display: none; }
+    .rv-col[hidden] { display: none; }
+
+    /* Critical review */
+    .rv-critical { border-radius: 1.25rem; border: 1px solid var(--rv-line); box-shadow: none; padding: 2rem; background: #fff; }
+    .rv-reply { margin-top: 1.25rem; padding: 1rem 1.25rem; border-left: 4px solid var(--rv-green); background: var(--rv-cream); border-radius: 0 .75rem .75rem 0; font-size: .95rem; }
+    .rv-reply p { margin-bottom: .5rem; }
+    .rv-update { margin-top: 1rem; font-size: .9rem; color: var(--rv-muted); }
+
+    /* Platforms */
+    .rv-platform h3 { font-size: 1.15rem; margin-bottom: .5rem !important; }
+
+    /* FAQ */
+    .rv-faq { max-width: 46rem; margin: 0 auto; }
+    .rv-faq details { border-bottom: 1px solid var(--rv-line); padding: 1.1rem 0; }
+    .rv-faq summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; color: var(--rv-ink); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+    .rv-faq summary::-webkit-details-marker { display: none; }
+    .rv-faq summary::after { content: "+"; font-weight: 400; font-size: 1.4rem; line-height: 1; color: var(--rv-green); }
+    .rv-faq details[open] summary::after { content: "\2212"; }
+    .rv-faq summary:focus-visible { outline: 3px solid #f2d98a; outline-offset: 4px; }
+    .rv-faq .content { margin-top: .75rem; color: #333; }
+
+    /* Sources */
+    .rv-method { border-radius: 1.25rem; background: var(--rv-cream); padding: 2rem; }
+    .rv-method li { margin-bottom: .5rem; }
+  </style>
+</head>
+
+<body class="alternative">
+  <header >
+    <div class="navbar has-background-white	">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="/assets/oopspamLogo.svg" alt="OOPSpam logo" width="120" height="30">
+          </a>
+          <a id="navbarBurger" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navigation-bar">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navigation-bar" class="navbar-menu">
+          <div class="navbar-start">
+          </div>
+          <div class="navbar-end">
+            <a href="https://www.oopspam.com/help" class="navbar-item  has-text-black">
+              Documentation
+           </a>
+            <a href="https://www.oopspam.com/integrations" class="navbar-item  has-text-black">
+              Integrations
+           </a>
+            <a href="https://www.oopspam.com/#pricing" class="navbar-item  has-text-black">
+              Pricing
+            </a>
+            <a href="https://www.oopspam.com/#contact" class="navbar-item has-text-black">
+              Contact
+            </a>
+            <div class="navbar-item">
+                 <a href="https://app.oopspam.com/Identity/Account/Login" class="has-text-black button  is-light">
+              Log in
+            </a>
+            </div>
+            <div class="navbar-item">
+             <a href="https://app.oopspam.com/Identity/Account/Register" class="has-text-black button is-warning is-bg-orange">
+              Get started
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+ <img alt="" width="100%" src="/assets/alternative/lp-top.svg"/>
+
+ <main>
+
+  <!-- 1. Hero -->
+  <section class="hero rv-hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="content has-text-centered" style="color:black;">
+          <h1 class="has-text-black">oopspam Reviews &amp; Customer Experiences</h1>
+          <p class="is-size-5 rv-lede">What customers say about oopspam, in their own words, and how they use it to stop spam, fake orders, card testing and other unwanted activity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Rating summary -->
+  <section class="section pt-0">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="columns">
+            <div class="column">
+              <div class="box rv-source">
+                <div class="rv-source-mark is-wp"><img width="40" height="40" src="/assets/reviews/wordpress.svg" alt=""></div>
+                <p class="has-text-weight-bold">WordPress.org</p>
+                <!-- Keep score, count, star width (score / 5 * 100) and the "checked" date in sync with https://wordpress.org/support/plugin/oopspam-anti-spam/reviews/ -->
+                <p class="rv-score">4.9</p>
+                <span class="rv-stars is-large" role="img" aria-label="Rated 4.9 out of 5"><span style="width:98%"></span></span>
+                <p class="rv-count mt-2">out of 5, from 49 reviews</p>
+                <a class="button is-small is-warning is-rounded" href="https://wordpress.org/support/plugin/oopspam-anti-spam/reviews/" target="_blank" rel="nofollow noopener">Read reviews on WordPress.org</a>
+              </div>
+            </div>
+            <div class="column">
+              <div class="box rv-source">
+                <div class="rv-source-mark is-tp" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="#00b67a" focusable="false"><path d="M12 1.6l3.09 6.26 6.91.6-5.23 4.57 1.55 6.77L12 16.9l-6.32 3.9 1.55-6.77L2 8.46l6.91-.6z"/></svg></div>
+                <p class="has-text-weight-bold">Trustpilot</p>
+                <!-- Keep score, count, star width (score / 5 * 100) and the "checked" date in sync with https://www.trustpilot.com/review/oopspam.com -->
+                <p class="rv-score">4.7</p>
+                <span class="rv-stars is-large" role="img" aria-label="Rated 4.7 out of 5"><span style="width:94%"></span></span>
+                <p class="rv-count mt-2">out of 5, from 23 reviews</p>
+                <a class="button is-small is-warning is-rounded" href="https://www.trustpilot.com/review/oopspam.com" target="_blank" rel="nofollow noopener">Read reviews on Trustpilot</a>
+              </div>
+            </div>
+          </div>
+          <p class="has-text-centered rv-checked">Ratings checked on 5 October 2026. Each platform shows its own rating and count. oopspam does not publish a combined score, because the two platforms measure different customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Trusted by -->
+  <section id="trusted-by" class="section has-background-white pt-4">
+    <div class="container">
+      <h2 class="title is-4 has-text-centered is-spaced">Used by businesses worldwide</h2>
+      <p class="has-text-centered mb-6">A selection of organizations that use oopspam to keep their forms and stores free of spam and abuse.</p>
+    </div>
+    <div class="rv-marquee">
+      <div class="rv-track">
+        <div class="rv-group">
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/webflow.png" alt=""><span>Webflow</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/harvard.png" alt=""><span>Harvard Medical School</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/bbb.png" alt=""><span>Better Business Bureau</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/honeywell.png" alt=""><span>Honeywell</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/quilium.png" alt=""><span>Quilium</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/cos.png" alt=""><span>Center for Open Science</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/vexxhost.png" alt=""><span>VEXXHOST</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/yab.png" alt=""><span>Yab</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/tmdb.png" alt=""><span>The Movie Database</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/strasberg.png" alt=""><span>The Lee Strasberg Theatre &amp; Film Institute</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/plumguide.png" alt=""><span>Plum Guide</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/invisioncommunity.svg" alt=""><span>Invision Community</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/keboola.png" alt=""><span>Keboola</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/webfx.png" alt=""><span>WebFX</span></span>
+        </div>
+        <div class="rv-group" aria-hidden="true">
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/webflow.png" alt=""><span>Webflow</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/harvard.png" alt=""><span>Harvard Medical School</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/bbb.png" alt=""><span>Better Business Bureau</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/honeywell.png" alt=""><span>Honeywell</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/quilium.png" alt=""><span>Quilium</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/cos.png" alt=""><span>Center for Open Science</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/vexxhost.png" alt=""><span>VEXXHOST</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/yab.png" alt=""><span>Yab</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/tmdb.png" alt=""><span>The Movie Database</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/strasberg.png" alt=""><span>The Lee Strasberg Theatre &amp; Film Institute</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/plumguide.png" alt=""><span>Plum Guide</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/invisioncommunity.svg" alt=""><span>Invision Community</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/keboola.png" alt=""><span>Keboola</span></span>
+          <span class="rv-logo"><img width="36" height="36" src="/assets/reviews/webfx.png" alt=""><span>WebFX</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. What customers use oopspam for -->
+  <section id="use-cases" class="section">
+    <div class="container">
+      <h2 class="title has-text-centered is-spaced">What are customers using oopspam for?</h2>
+      <p class="has-text-centered mb-6">These themes come up again and again in independent reviews. Each one links to a real review below.</p>
+      <div class="columns is-multiline">
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <div class="box rv-theme">
+            <p class="rv-tag">Persistent spam</p>
+            <p class="rv-theme-text">Customers often describe trying several tools before oopspam, then finally stopping an attack that kept getting through. One reviewer said OOPSpam "was the one that finally did the trick."</p>
+            <a href="#r-debbietomkies">Read this review &rarr;</a>
+          </div>
+        </div>
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <div class="box rv-theme">
+            <p class="rv-tag">WooCommerce</p>
+            <p class="rv-theme-text">Store owners use oopspam to cut down spam orders and abusive checkout activity in WooCommerce, often after a spike in suspicious orders.</p>
+            <a href="#r-rainingbrains">Read a WooCommerce review &rarr;</a>
+          </div>
+        </div>
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <div class="box rv-theme">
+            <p class="rv-tag">Card testing</p>
+            <p class="rv-theme-text">Two of the reviews below describe card testing attacks and floods of fake orders, one of them around 800 a day. Both report the attacks stopping after installing oopspam.</p>
+            <a href="#r-customfit">Read this review &rarr;</a>
+          </div>
+        </div>
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <div class="box rv-theme">
+            <p class="rv-tag">Form spam</p>
+            <p class="rv-theme-text">Contact and quote form spam is one of the most common reasons people install oopspam. One reviewer runs it with Contact Form 7 across several sites.</p>
+            <a href="#r-osaegrov">Read this review &rarr;</a>
+          </div>
+        </div>
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <div class="box rv-theme">
+            <p class="rv-tag">Registration spam</p>
+            <p class="rv-theme-text">Reviewers mention fake signups and registration spam, and note that oopspam stopped the junk submissions while letting real users through.</p>
+            <a href="#r-simplywebservices">Read this review &rarr;</a>
+          </div>
+        </div>
+        <div class="column is-12-mobile is-6-tablet is-4-desktop">
+          <div class="box rv-theme">
+            <p class="rv-tag">Support</p>
+            <p class="rv-theme-text">A recurring theme is fast, personal support. Reviewers mention quick replies, a fix shipped the next day, and help with integration issues.</p>
+            <a href="#r-woodcock02">Read this review &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Featured reviews -->
+  <section id="featured-reviews" class="section has-background-white-ter">
+    <div class="container">
+      <h2 class="title has-text-centered is-spaced">What customers are saying</h2>
+      <p class="has-text-centered mb-5">A selection of reviews that show different problems and setups. Names and dates are as published on the source platform; &hellip; marks words left out for length.</p>
+
+      <div class="rv-filters" role="group" aria-label="Filter reviews by topic" hidden>
+        <button type="button" class="rv-chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="rv-chip" data-filter="spam" aria-pressed="false">Spam attacks</button>
+        <button type="button" class="rv-chip" data-filter="orders" aria-pressed="false">Fake orders &amp; card testing</button>
+        <button type="button" class="rv-chip" data-filter="forms" aria-pressed="false">Forms &amp; registrations</button>
+        <button type="button" class="rv-chip" data-filter="switch" aria-pressed="false">Switched from another tool</button>
+        <button type="button" class="rv-chip" data-filter="support" aria-pressed="false">Support &amp; setup</button>
+      </div>
+      <p class="is-sr-only" aria-live="polite" id="rv-filter-status"></p>
+
+      <div class="columns is-multiline" id="rv-grid">
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="spam">
+          <article id="r-debbietomkies" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Persistent spam</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>Following a major spamming attack on our site we tried all manner of ways/plugins etc. to stop it. OOPSpam was the one that finally did the trick&hellip;</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">D</span>
+              <p class="rv-who-text"><strong>debbietomkies</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; Aug 2026</span></p>
+              <a class="rv-original" href="https://wordpress.org/support/topic/fixed-a-persistent-spam-issue-would-recommend/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="spam">
+          <article id="r-debbie-tp" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Persistent spam</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>Oopspam fixed an issue with relentless spammers that we had tried a whole different number of ways to resolve. Happy to renew :)</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">D</span>
+              <p class="rv-who-text"><strong>Debbie</strong><span><span class="rv-badge is-tp">Trustpilot</span> &middot; Aug 2026</span></p>
+              <a class="rv-original" href="https://www.trustpilot.com/reviews/6a7c52f47bdc8b5c3bb0b6fd" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on Trustpilot (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="orders">
+          <article id="r-ladreamer" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Card testing</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>The plugin did exactly what it said it would, stopped the carding attack I was receiving on the site.</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">L</span>
+              <p class="rv-who-text"><strong>LAdreamer</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; May 2026</span></p>
+              <a class="rv-original" href="https://wordpress.org/support/topic/does-what-it-promised-it-would-do/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="orders">
+          <article id="r-customfit" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Fake orders</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>They've received around 800 fake orders daily and total of 60,000 in 1 week. All of them had the origin "Unknown"&hellip; after installing it with a valid API key I was able to disable WooCommerce orders coming from an Unknown origin.</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">C</span>
+              <p class="rv-who-text"><strong>customfit</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; Mar 2025</span></p>
+              <a class="rv-original" href="https://wordpress.org/support/topic/one-of-the-best-plugins-to-stop-spam/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="forms">
+          <article id="r-simplywebservices" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Registration spam</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>We were getting a ton of registration and contact form spam. CAPTCHA wasn't doing much to slow it down. Installed OOPSpam and it instantly stopped the spam but allowed valid registrations and contact messages to come through.</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">S</span>
+              <p class="rv-who-text"><strong>simplywebservices</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; Mar 2025</span></p>
+              <a class="rv-original" href="https://wordpress.org/support/topic/stopped-all-the-form-and-registration-spam/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="support">
+          <article id="r-woodcock02" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Support</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>I noticed a missing country in this amazing indispensable plugin, but wasn't expecting an almost instant reply &ndash; and a fix !! The next day an update was issued and the problem sorted. Incredible support.</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">W</span>
+              <p class="rv-who-text"><strong>Woodcock02</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; Nov 2025</span></p>
+              <a class="rv-original" href="https://wordpress.org/support/topic/amazing-service-support-2/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="switch forms">
+          <article id="r-allynagle9" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Switched tools</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>I implemented this for my client when other spam filters weren't working so great (Akismet and CleanTalk). After installing this, spam entries were cut down considerably &ndash; and the client was happy.</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">A</span>
+              <p class="rv-who-text"><strong>allynagle9</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; Jul 2025</span></p>
+              <a class="rv-original" href="https://wordpress.org/support/topic/definitely-works-6/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="forms">
+          <article id="r-osaegrov" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Contact Form 7</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>I use this together with Contact Form 7 on several sites, and prefer the results from Oopspam to other paid services.</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">O</span>
+              <p class="rv-who-text"><strong>osaegrov</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; Jul 2025</span></p>
+              <a class="rv-original" href="https://wordpress.org/support/topic/works-very-well-748/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="switch">
+          <article id="r-webmazing" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Switched from Akismet</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>Very good, effective and good spam plugin that does what it says&hellip; I like the fact that you have control over the Sensitivity level. Also nice pricing and therefore we transferred from Akismet.</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">W</span>
+              <p class="rv-who-text"><strong>Webmazing</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; Oct 2024</span></p>
+              <a class="rv-original" href="https://wordpress.org/support/topic/good-effective-and-simple/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="switch support">
+          <article id="r-scialabbas" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Switched from CleanTalk</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>I'm coming from CleanTalk, who just had a major outage&hellip; I was desperate&hellip; I found OOPSpam and got this set up in 15mins, cannot be happier!</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">S</span>
+              <p class="rv-who-text"><strong>scialabbas</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; Sep 2024</span></p>
+              <a class="rv-original" href="https://wordpress.org/support/topic/set-this-up-in-my-app-in-15mins/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="spam support">
+          <article id="r-jade-tp" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">Filtering &amp; support</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>The platform does a great job of filtering out spam in a multitude of ways from location, language, email, and more! They also have a top notch client success team to help troubleshoot any integration issues that may arise.</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">J</span>
+              <p class="rv-who-text"><strong>Jade Earnhardt</strong><span><span class="rv-badge is-tp">Trustpilot</span> &middot; Oct 2024</span></p>
+              <a class="rv-original" href="https://www.trustpilot.com/reviews/670d672c69f9b809f7ccbfa0" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on Trustpilot (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="column is-12-mobile is-6-tablet is-4-desktop rv-col" data-topics="orders">
+          <article id="r-rainingbrains" class="box rv-review">
+            <div class="rv-review-head">
+              <p class="rv-tag">WooCommerce</p>
+              <span class="rv-stars" role="img" aria-label="5 out of 5 stars"><span style="width:100%"></span></span>
+            </div>
+            <blockquote>Very clean and functional plugin. Easy to setup, quick API calls, and runs very smooth. It has caught a number of spam orders and has helped our shop tremendously.</blockquote>
+            <div class="rv-who">
+              <span class="rv-avatar" aria-hidden="true">R</span>
+              <p class="rv-who-text"><strong>rainingbrains</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; Jan 2025</span></p>
+              <a class="rv-original" href="https://wordpress.org/support/topic/great-plugin-40019/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. A critical review, with our reply -->
+  <section id="critical-review" class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <h2 class="title has-text-centered is-spaced">Not every review is five stars</h2>
+          <p class="has-text-centered mb-5">Here is the most critical point raised in a recent review, and our reply. It was about price.</p>
+          <article id="r-alissaesafetyinc" class="box rv-critical">
+            <div class="rv-review-head">
+              <p class="rv-tag">Pricing</p>
+              <span class="rv-stars" role="img" aria-label="4 out of 5 stars"><span style="width:80%"></span></span>
+            </div>
+            <div class="rv-review" style="border:0;padding:0;">
+              <blockquote>I've had it set up for a few weeks and it worked really well! The spam form fills I was getting was extremely aggravating&hellip; The monthly prices STARTING at $49 shocked and disappointed me.</blockquote>
+              <div class="rv-who">
+                <span class="rv-avatar" aria-hidden="true">A</span>
+                <p class="rv-who-text"><strong>alissaesafetyinc</strong><span><span class="rv-badge is-wp">WordPress.org</span> &middot; Mar 2025</span></p>
+                <a class="rv-original" href="https://wordpress.org/support/topic/it-works-well-but-is-not-practical-cost-wise/" target="_blank" rel="nofollow noopener">Original <span aria-hidden="true">&#8599;</span><span class="is-sr-only"> review on WordPress.org (opens in a new tab)</span></a>
+              </div>
+            </div>
+            <div class="rv-reply">
+              <p><strong>Our reply, Mar 2025</strong></p>
+              <p>&ldquo;All our plans come with unlimited websites. So if you run multiple websites, this is cheaper than alternatives that charge per site. That said, I agree, for a single site $49/m is a lot. We do have a starter plan that may be better suited for your use case.&rdquo;</p>
+            </div>
+            <p class="rv-update">Since then, the Starter plan is listed on our <a href="https://www.oopspam.com/#pricing">pricing page</a>: $23/month for 25,000 spam checks, on unlimited websites.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Where oopspam runs -->
+  <section id="platforms" class="section has-background-white-ter">
+    <div class="container">
+      <h2 class="title has-text-centered is-spaced">Where customers use oopspam</h2>
+      <p class="has-text-centered mb-6">What oopspam supports, and what customers mention in the reviews above.</p>
+      <div class="columns is-multiline">
+        <div class="column is-12-mobile is-4-desktop">
+          <div class="content rv-platform">
+            <h3>WordPress and WooCommerce</h3>
+            <p>The official WordPress plugin filters form submissions, comments and WooCommerce orders on your server, with no CAPTCHA for visitors. See <a href="https://www.oopspam.com/wordpress">spam protection for WordPress</a> and <a href="https://www.oopspam.com/woocommerce">for WooCommerce</a>.</p>
+            <p class="is-size-7 has-text-grey">Reviews above mention Contact Form 7 and WooCommerce.</p>
+          </div>
+        </div>
+        <div class="column is-12-mobile is-4-desktop">
+          <div class="content rv-platform">
+            <h3>API and custom applications</h3>
+            <p>Developers add spam and abuse detection to their own apps and workflows with the oopspam API. Start with the <a href="https://www.oopspam.com/docs/">API documentation</a>.</p>
+          </div>
+        </div>
+        <div class="column is-12-mobile is-4-desktop">
+          <div class="content rv-platform">
+            <h3>Automation platforms</h3>
+            <p>Screen submissions before they reach your tools with the official <a href="https://zapier.com/apps/oopspam/integrations" target="_blank" rel="noopener">Zapier app</a>, the official <a href="https://bubble.io/plugin/oopspam-spam-detection-1582908608700x936823858020745200" target="_blank" rel="noopener">Bubble.io plugin</a>, or <a href="https://www.make.com/en/integrations/oopspam-anti-spam" target="_blank" rel="noopener">Make</a>. See all <a href="https://www.oopspam.com/integrations/">integrations</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ (mirrored in the FAQPage structured data at the bottom of the page; keep both in sync) -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="title has-text-centered is-spaced">Questions people ask before choosing oopspam</h2>
+      <div class="rv-faq">
+        <details open>
+          <summary>Are these reviews real?</summary>
+          <div class="content"><p>Yes. Every review on this page was published by a customer on WordPress.org or Trustpilot, and each one links to the original so you can check it. We show a selection, including a critical one, and mark any words left out with an ellipsis (&hellip;).</p></div>
+        </details>
+        <details>
+          <summary>Does oopspam work with WooCommerce?</summary>
+          <div class="content"><p>Yes. The WordPress plugin protects WooCommerce orders and checkout on your server. Store owners use it against spam orders and card testing, for example <a href="#r-customfit">this review about 800 fake orders a day</a>. More on the <a href="https://www.oopspam.com/woocommerce">WooCommerce page</a>.</p></div>
+        </details>
+        <details>
+          <summary>Do I still need a CAPTCHA?</summary>
+          <div class="content"><p>No. oopspam checks submissions on your server, so visitors never see a puzzle. One reviewer found that &ldquo;CAPTCHA wasn't doing much to slow it down&rdquo; before switching (<a href="#r-simplywebservices">read the review</a>).</p></div>
+        </details>
+        <details>
+          <summary>What happens if a real message is marked as spam?</summary>
+          <div class="content"><p>Every submission gets a spam score, and you choose how strict the filter is with the sensitivity setting. In WordPress, blocked entries are kept in the plugin's <a href="https://help.oopspam.com/wordpress/form-entries">logs</a>, where you can review them and report a misdetection so the filter learns from it.</p></div>
+        </details>
+        <details>
+          <summary>Is oopspam GDPR compliant?</summary>
+          <div class="content"><p>Yes. The oopspam API doesn't store submission data by default, so there is no data to identify or track your visitors. See the <a href="https://www.oopspam.com/gdpr">GDPR notice</a> and the <a href="https://www.oopspam.com/dpa">Data Processing Agreement</a>.</p></div>
+        </details>
+        <details>
+          <summary>How much does oopspam cost?</summary>
+          <div class="content"><p>You can start with 40 free spam checks a month, no credit card required. Paid plans start at $23/month for 25,000 checks, and every plan covers unlimited websites. See <a href="https://www.oopspam.com/#pricing">pricing</a>.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Where these reviews come from -->
+  <section id="sources" class="section pt-0">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="rv-method">
+            <h2 class="title is-4 is-spaced">Where these reviews come from</h2>
+            <div class="content">
+            <ul>
+              <li>All reviews come from independent platforms where customers post publicly: <a href="https://wordpress.org/support/plugin/oopspam-anti-spam/reviews/" target="_blank" rel="nofollow noopener">WordPress.org</a> and <a href="https://www.trustpilot.com/review/oopspam.com" target="_blank" rel="nofollow noopener">Trustpilot</a>.</li>
+              <li>This page shows a selection, not every review. We picked reviews that describe different problems and setups, and included a critical one.</li>
+              <li>Quotes are the reviewers' own words. Where a quote is shortened, &hellip; marks the words left out.</li>
+              <li>Every review links to its original, so you can read it in full with its date and rating.</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CTA -->
+  <section id="reviews-cta" class="section has-background-white-ter">
+    <div class="container">
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-8 has-text-centered">
+          <h2 class="title">See what oopspam can do for your site</h2>
+          <div class="content">
+            <p>Try oopspam and see how it handles spam, abusive submissions, and other unwanted activity on your site.</p>
+            <p class="mt-4">
+              <a class="button has-text-black is-medium is-warning is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Try oopspam free</a>
+              <a class="button is-medium is-light is-rounded ml-2" href="https://www.oopspam.com/#pricing">View pricing</a>
+            </p>
+            <p class="pt-3 is-size-7">40 spam checks free every month. No credit card required.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ </main>
+
+ <footer class="footer has-background-black" >
+      <div class="content has-text-centered has-text-white">
+        <div class="columns">
+          
+          <div class="column">
+            <h6 class=" has-text-weight-bold has-text-left" style="color: #ffdd57;">Resources</h6>
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-white" href="https://www.oopspam.com/affiliate">Affiliate Program</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/blog">Blog</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/docs">Documentation</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/#faq">FAQ</a></li>
+              <li><a class="has-text-white" href="https://status.oopspam.com/">Status</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/#contact">Contact us</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/2025-spam-report">✨ 2025 Annual Spam Report</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/reviews/">Customer Reviews</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/about">👋 About</a></li>
+            </ul>
+          </div>
+           <div class="column">
+            <a  href="/tools/"><h6 class=" has-text-weight-bold has-text-left" style="color: #ffdd57;">Free Tools</h6></a>
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-white" href="https://www.oopspam.com/tools/spam-words-checker">Spam Words Checker</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/tools/domain-reputation-checker">Domain Reputation Checker</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/tools/disposable-email-checker">Disposable Email and Domain Checker</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/tools/report-ip">Find out where to report an IP?</a></li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <a  href="/compare/"><h6 class=" has-text-weight-bold has-text-left" style="color: #ffdd57;">How We Compare</h6></a>
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-white" href="https://www.oopspam.com/akismet-alternative">Alternative to Akismet</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/recaptcha-alternative">Alternative to reCAPTCHA</a></li>
+             <li><a class="has-text-white" href="https://www.oopspam.com/hcaptcha-alternative">Alternative to hCAPTCHA</a></li>
+             <li><a class="has-text-white" href="https://www.oopspam.com/turnstile-alternative">Alternative to Turnstile</a></li>
+               <li><a class="has-text-white" href="https://www.oopspam.com/cleantalk-alternative">Alternative to CleanTalk</a></li>
+               
+            </ul>
+          </div>
+
+          <div class="column">
+                  <h6 class="has-text-weight-bold has-text-left" style="color: #ffdd57;">Integrations</h6>    
+                  <ul class="has-text-left" style="list-style-type:none; margin:0;">
+                    <li><a class="has-text-white"  href="https://www.oopspam.com/wordpress">WordPress</a></li>
+                    <li><a class="has-text-white"  href="https://www.oopspam.com/woocommerce">WooCommerce</a></li>
+                    <li><a class="has-text-white" href="https://www.oopspam.com/anti-spam-filter-for-gravity-forms">Gravity Forms</a></li>
+                  <li><a class="has-text-white" href="https://www.oopspam.com/anti-spam-filter-for-ninja-forms">Ninja Forms</a></li>
+                  <li><a class="has-text-white" href="https://www.oopspam.com/spam-filter-for-contactform7">Contact Form 7</a></li>
+                  <li><a class="has-text-white" href="https://www.oopspam.com/blog/spam-protection-for-elementor-forms">Elementor Forms</a></li>
+                  <li><a class="has-text-white" href="https://www.oopspam.com/integrations/">View all integrations</a></li>
+                  </ul>
+          </div>
+
+          <div class="column">
+            <h6 class="has-text-weight-bold has-text-left" style="color: #ffdd57;">Legal</h6>    
+            <ul class="has-text-left" style="list-style-type:none; margin:0;">
+              <li><a class="has-text-white" href="https://www.oopspam.com/terms">Terms of use</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/privacypolicy">Privacy Policy</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/gdpr">GDPR Compliance</a></li>
+              <li><a class="has-text-white" href="https://www.oopspam.com/dpa">Data Processing Agreement</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+   
+    </footer>
+    <div class="has-background-black has-text-white bottom">
+      <div class="container is-fluid">
+        <div class="columns">
+          <div class="column">
+            <p class="has-text-white">© 2017 - 2026 OOPSpam LLC</p>
+          </div>
+          <div class="column has-text-right" style="display: flex;
+  align-items: center; justify-content: end;">
+             <a class="p-1" href="https://twitter.com/oopspamapi">
+                            <img  src="/assets/x-logo.svg" alt="x logo">
+                            </a>
+                            <a class="p-1"  href="https://github.com/OOPSpam">
+                            <img src="/assets/github-circle.svg" alt="github logo">
+                            </a>
+                            <a class="p-1"  href="https://wordpress.org/plugins/oopspam-anti-spam/">
+                            <img src="/assets/wordpress.svg" alt="wordpress logo">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+ <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+<script async src="/scripts/app.min.js"></script>
+
+ <script>
+  (function () {
+    var bar = document.querySelector('.rv-filters');
+    var cols = document.querySelectorAll('#rv-grid .rv-col');
+    var status = document.getElementById('rv-filter-status');
+    if (!bar || !cols.length) return;
+    bar.hidden = false; // filters only appear when JavaScript is running; without it every review shows
+    var chips = bar.querySelectorAll('.rv-chip');
+
+    function apply(topic) {
+      var shown = 0;
+      cols.forEach(function (col) {
+        var match = topic === 'all' || (' ' + col.dataset.topics + ' ').indexOf(' ' + topic + ' ') !== -1;
+        col.hidden = !match;
+        if (match) shown++;
+      });
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.filter === topic ? 'true' : 'false'); });
+      if (status) status.textContent = 'Showing ' + shown + ' review' + (shown === 1 ? '' : 's');
+    }
+
+    bar.addEventListener('click', function (e) {
+      var chip = e.target.closest('.rv-chip');
+      if (chip) apply(chip.dataset.filter);
+    });
+
+    // A link to a specific review (e.g. #r-customfit) always shows it, even if a filter hid it
+    function reveal() {
+      var target = location.hash && document.getElementById(location.hash.slice(1));
+      if (target && target.closest('.rv-col') && target.closest('.rv-col').hidden) {
+        apply('all');
+        target.scrollIntoView();
+      }
+    }
+    window.addEventListener('hashchange', reveal);
+  })();
+ </script>
+
+ <script type="application/ld+json">
+ {
+   "@context": "https://schema.org",
+   "@graph": [
+     {
+       "@type": "Organization",
+       "@id": "https://www.oopspam.com/#organization",
+       "name": "oopspam",
+       "url": "https://www.oopspam.com/",
+       "logo": "https://www.oopspam.com/assets/oopspamLogo.svg",
+       "sameAs": [
+         "https://www.trustpilot.com/review/oopspam.com",
+         "https://wordpress.org/plugins/oopspam-anti-spam/",
+         "https://twitter.com/oopspamapi",
+         "https://github.com/OOPSpam"
+       ]
+     },
+     {
+       "@type": "WebSite",
+       "@id": "https://www.oopspam.com/#website",
+       "url": "https://www.oopspam.com/",
+       "name": "oopspam",
+       "publisher": { "@id": "https://www.oopspam.com/#organization" }
+     },
+     {
+       "@type": "WebPage",
+       "@id": "https://www.oopspam.com/reviews/#webpage",
+       "url": "https://www.oopspam.com/reviews/",
+       "name": "oopspam Reviews: Customer Reviews & Experiences",
+       "description": "Read real oopspam reviews from WordPress, WooCommerce, and other website owners.",
+       "dateModified": "2026-10-05",
+       "isPartOf": { "@id": "https://www.oopspam.com/#website" },
+       "about": { "@id": "https://www.oopspam.com/#organization" },
+       "breadcrumb": { "@id": "https://www.oopspam.com/reviews/#breadcrumb" }
+     },
+     {
+       "@type": "BreadcrumbList",
+       "@id": "https://www.oopspam.com/reviews/#breadcrumb",
+       "itemListElement": [
+         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.oopspam.com/" },
+         { "@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://www.oopspam.com/reviews/" }
+       ]
+     },
+     {
+       "@type": "FAQPage",
+       "@id": "https://www.oopspam.com/reviews/#faq",
+       "mainEntity": [
+         { "@type": "Question", "name": "Are these reviews real?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every review on this page was published by a customer on WordPress.org or Trustpilot, and each one links to the original so you can check it. We show a selection, including a critical one, and mark any words left out with an ellipsis." } },
+         { "@type": "Question", "name": "Does oopspam work with WooCommerce?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The WordPress plugin protects WooCommerce orders and checkout on your server. Store owners use it against spam orders and card testing." } },
+         { "@type": "Question", "name": "Do I still need a CAPTCHA?", "acceptedAnswer": { "@type": "Answer", "text": "No. oopspam checks submissions on your server, so visitors never see a puzzle." } },
+         { "@type": "Question", "name": "What happens if a real message is marked as spam?", "acceptedAnswer": { "@type": "Answer", "text": "Every submission gets a spam score, and you choose how strict the filter is with the sensitivity setting. In WordPress, blocked entries are kept in the plugin's logs, where you can review them and report a misdetection so the filter learns from it." } },
+         { "@type": "Question", "name": "Is oopspam GDPR compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The oopspam API doesn't store submission data by default, so there is no data to identify or track your visitors. A GDPR notice and Data Processing Agreement are available." } },
+         { "@type": "Question", "name": "How much does oopspam cost?", "acceptedAnswer": { "@type": "Answer", "text": "You can start with 40 free spam checks a month, no credit card required. Paid plans start at $23/month for 25,000 checks, and every plan covers unlimited websites." } }
+       ]
+     }
+   ]
+ }
+ </script>
+</body>
+</html>

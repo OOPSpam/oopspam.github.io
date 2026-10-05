@@ -35,7 +35,8 @@ gulp.task('sitemap', function () {
         '*.html',
         './tools/*.html',
         './compare/*.html',
-        './integrations/*.html'
+        './integrations/*.html',
+        './reviews/*.html'
     ];
     return gulp.src(sources, { base: './' })
         .pipe(sitemap({
