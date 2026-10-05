@@ -24,7 +24,54 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 
   <!-- Placeholder for head scripts (assuming Nunjucks include) -->
-  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
+  
+  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.oopspam.com/#organization",
+      "name": "oopspam",
+      "url": "https://www.oopspam.com/",
+      "logo": "https://www.oopspam.com/assets/oopspamLogo.svg",
+      "sameAs": [
+        "https://wordpress.org/plugins/oopspam-anti-spam/",
+        "https://www.trustpilot.com/review/oopspam.com",
+        "https://twitter.com/oopspamapi",
+        "https://github.com/OOPSpam",
+        "https://www.linkedin.com/company/oopspam/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.oopspam.com/#website",
+      "url": "https://www.oopspam.com/",
+      "name": "oopspam",
+      "publisher": { "@id": "https://www.oopspam.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.oopspam.com/#software",
+      "name": "oopspam Anti-Spam",
+      "description": "Server-side spam and fraud detection for forms, comments, sign-ups and WooCommerce orders. No CAPTCHA, no logs by default.",
+      "url": "https://www.oopspam.com/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web, WordPress",
+      "publisher": { "@id": "https://www.oopspam.com/#organization" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "0",
+        "highPrice": "259",
+        "offerCount": "5",
+        "url": "https://www.oopspam.com/#pricing"
+      }
+    }
+  ]
+}
+</script>
+
   <style>
     .pricing-includes {
       background-color: #FBF6ED;
@@ -741,5 +788,29 @@
 <script async defer src="https://scripts.withcabin.com/hello.js"></script>
 <script async src="/scripts/app.min.js"></script>
 </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to block orders from Unknown origin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the plugin settings, enable \"Block orders from Unknown origin\"."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I configure the oopspam WordPress plugin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check out the Configuration page on the knowledge base ."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

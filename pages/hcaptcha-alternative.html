@@ -19,7 +19,10 @@
 <link rel="icon" href="favicon.ico" sizes="any">
   <title>hCaptcha Alternative: Accessible, Puzzle-Free | oopspam</title>
   <link rel="canonical" href="https://www.oopspam.com/hcaptcha-alternative" />
+  {% set softwareApp = true %}
   {% include "partials/headScript.njk" %}
+  {% import "partials/alternative.njk" as alt %}
+  {{ alt.styles() }}
 </head>
 
 <body class="alternative">
@@ -87,6 +90,22 @@
       </div>
     </div>
   </section>
+
+  {{ alt.lastUpdated("2026-10-05", "5 October 2026") }}
+
+  {% set compareRows = [
+    ["What visitors see", "Nothing. Checks run on your server", "A checkbox and, when unsure, a challenge. Passive mode on Pro; fully passive (no-CAPTCHA) mode on Enterprise only"],
+    ["Free tier", "40 checks/month", "Basic plan is free"],
+    ["Paid", "From <strong>$23/month for 25,000 checks</strong>, unlimited websites", "Pro: $99/month billed yearly ($139 monthly), 100,000 evaluations, then $0.99 per 1,000"],
+    ["Reads the message content", "<span class='alt-yes'>&#10003;</span> Spam words, links, language", "<span class='alt-no'>&#10007;</span> Checks the visitor, not the message"],
+    ["Block by country or language", "<span class='alt-yes'>&#10003;</span> ", "<span class='alt-no'>&#10007;</span> "],
+    ["Explains each block", "<span class='alt-yes'>&#10003;</span> Spam score and reasons", "Risk scores on Enterprise only"],
+    ["Script added to your pages", "None", "hCaptcha's widget script"]
+  ] %}
+  {{ alt.comparison("hCaptcha", compareRows, "5 October 2026", [
+    ["oopspam pricing", "https://www.oopspam.com/#pricing"],
+    ["hCaptcha pricing", "https://www.hcaptcha.com/pricing"]
+  ]) }}
 
   <section class="hero my-6">
     <div class=" hero-body">
@@ -284,6 +303,8 @@
         </div>
     </section>
      <!-- get started -->
+  {{ alt.howToSwitch("hCaptcha", "<strong>Remove the hCaptcha widget</strong> from your forms (or its plugin) once you're happy with the results. You can run both while you test.") }}
+
   <section id="get-started" class="section has-background-white-ter my-6">
       <div class="container">
         <div class="columns is-vcentered is-centered">
@@ -300,6 +321,16 @@
         </div>
       </div>
     </section>
+
+  {% set faqItems = [
+    ["Is hCaptcha free?", "<p>hCaptcha's Basic plan is free. Pro costs $99/month billed yearly ($139 month to month) and includes 100,000 evaluations, then $0.99 per 1,000. Its fully passive &ldquo;no-CAPTCHA&rdquo; mode is only on Enterprise (hCaptcha pricing, checked 5 October 2026).</p>"],
+    ["Will my visitors ever see a challenge with oopspam?", "<p>No. oopspam scores submissions on your server, so there is nothing to solve, click or wait for.</p>"],
+    ["Is oopspam accessible?", "<p>Yes. There is no visible check, so there is nothing a screen reader or keyboard user has to get past. Your forms stay exactly as they are.</p>"],
+    ["Can I keep hCaptcha while I test oopspam?", "<p>Yes. oopspam works on the server, separately from the hCaptcha widget, so you can run both and remove hCaptcha once you've seen the results.</p>"],
+    ["Does oopspam store my visitors' data?", "<p>Not by default. The oopspam API scores each submission without storing it, so there is no data to identify or track your visitors. See our <a href='https://www.oopspam.com/gdpr'>GDPR notice</a> and <a href='https://www.oopspam.com/dpa'>Data Processing Agreement</a>.</p>"],
+    ["How much does oopspam cost?", "<p>You can start with 40 free spam checks a month, no credit card required. Paid plans start at <strong>$23/month for 25,000 checks</strong>, and every plan covers unlimited websites. See <a href='https://www.oopspam.com/#pricing'>pricing</a>.</p>"]
+  ] %}
+  {{ alt.faq("hCaptcha", faqItems) }}
     <!-- related reading -->
   <section id="related" class="section">
     <div class="container has-text-centered">
@@ -308,7 +339,7 @@
         <p>
           <a href="https://www.oopspam.com/blog/hcaptcha-performance-analyses">hCaptcha performance analysis</a> ·
           <a href="/compare/hcaptcha-vs-turnstile">hCaptcha vs Turnstile</a> ·
-          <a href="/compare/recaptcha-vs-hcaptcha">hCaptcha vs reCAPTCHA</a> ·
+          <a href="/compare/reCaptcha-vs-hCaptcha">hCaptcha vs reCAPTCHA</a> ·
           <a href="https://www.oopspam.com/blog/captcha-and-accessibility-why-your-forms-might-be-breaking-the-law-in-2026">CAPTCHA and accessibility</a>
         </p>
       </div>

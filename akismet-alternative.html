@@ -20,7 +20,85 @@
 <link rel="icon" href="favicon.ico" sizes="any">
   <title>Akismet Alternative: 20× the Checks, No Logs | oopspam</title>
   <link rel="canonical" href="https://www.oopspam.com/akismet-alternative" />
-  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
+  
+  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.oopspam.com/#organization",
+      "name": "oopspam",
+      "url": "https://www.oopspam.com/",
+      "logo": "https://www.oopspam.com/assets/oopspamLogo.svg",
+      "sameAs": [
+        "https://wordpress.org/plugins/oopspam-anti-spam/",
+        "https://www.trustpilot.com/review/oopspam.com",
+        "https://twitter.com/oopspamapi",
+        "https://github.com/OOPSpam",
+        "https://www.linkedin.com/company/oopspam/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.oopspam.com/#website",
+      "url": "https://www.oopspam.com/",
+      "name": "oopspam",
+      "publisher": { "@id": "https://www.oopspam.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.oopspam.com/#software",
+      "name": "oopspam Anti-Spam",
+      "description": "Server-side spam and fraud detection for forms, comments, sign-ups and WooCommerce orders. No CAPTCHA, no logs by default.",
+      "url": "https://www.oopspam.com/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web, WordPress",
+      "publisher": { "@id": "https://www.oopspam.com/#organization" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "0",
+        "highPrice": "259",
+        "offerCount": "5",
+        "url": "https://www.oopspam.com/#pricing"
+      }
+    }
+  ]
+}
+</script>
+
+  
+  
+<style>
+  .alt-updated { font-size: .85rem; color: #5c5c5c; margin-top: -.5rem; margin-bottom: 1rem; }
+  .alt-note { font-size: .85rem; color: #5c5c5c; margin-top: 1rem; }
+  .alt-table-wrap { max-width: 56rem; margin: 0 auto; border: 1px solid #e6e1d6; border-radius: 1rem; }
+  .alt-table { margin-bottom: 0 !important; }
+  .alt-table thead th { background: #FBF6ED; font-size: .95rem; }
+  .alt-table thead th:nth-child(2) { background: #ffdd57; }
+  .alt-table th[scope="row"] { font-weight: 600; }
+  .alt-table { table-layout: fixed; width: 100%; min-width: 34rem; }
+  .alt-table td, .alt-table th { padding: .85rem 1rem; vertical-align: top; white-space: normal; overflow-wrap: anywhere; }
+  .alt-table th[scope="row"], .alt-table thead th:first-child { width: 26%; }
+  @media (max-width: 600px) {
+    .alt-table { min-width: 0; font-size: .85rem; }
+    .alt-table td, .alt-table th { padding: .6rem .5rem; }
+  }
+  .alt-yes { color: #166239; font-weight: 700; }
+  .alt-no { color: #a33a2b; font-weight: 700; }
+  .alt-steps { counter-reset: step; list-style: none; margin: 0; padding: 0; }
+  .alt-steps li { counter-increment: step; position: relative; padding: 0 0 1.25rem 3.25rem; min-height: 2.5rem; }
+  .alt-steps li::before { content: counter(step); position: absolute; left: 0; top: -.15rem; width: 2.25rem; height: 2.25rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #166239; background: #FBF6ED; border: 1px solid #efe4cb; }
+  .alt-faq details { border-bottom: 1px solid #e6e1d6; padding: 1.1rem 0; }
+  .alt-faq summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; color: #1f1f1f; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  .alt-faq summary::-webkit-details-marker { display: none; }
+  .alt-faq summary::after { content: "+"; font-weight: 400; font-size: 1.4rem; line-height: 1; color: #166239; }
+  .alt-faq details[open] summary::after { content: "\2212"; }
+  .alt-faq summary:focus-visible { outline: 3px solid #f2d98a; outline-offset: 4px; }
+  .alt-faq .content { margin-top: .75rem; }
+</style>
+
 </head>
 <style>
   .table td,
@@ -143,6 +221,10 @@
       </div>
     </div>
   </section>
+
+  
+<p class="alt-updated has-text-centered">Last updated <time datetime="2026-10-05">5 October 2026</time></p>
+
 
   <section id="quick-comparison" class="hero">
     <div class="hero-body">
@@ -457,6 +539,27 @@
         </div>
     </section>
      <!-- get started -->
+  
+<section id="how-to-switch" class="section">
+  <div class="container">
+    <h2 class="title has-text-centered is-spaced">How to switch from Akismet</h2>
+    <p class="has-text-centered mb-5">On WordPress it takes a few minutes, and you don't need to edit your forms.</p>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <ol class="alt-steps">
+          <li><strong>Create a free oopspam account</strong> and copy your API key from the <a href="https://app.oopspam.com/Identity/Account/Register">dashboard</a>. The free plan includes 40 checks a month, with no credit card.</li>
+          <li><strong>Install the <a href="https://wordpress.org/plugins/oopspam-anti-spam/">oopspam Anti-Spam plugin</a></strong> from WordPress.org and activate it.</li>
+          <li><strong>Paste your key</strong> into the <em>My API Key</em> field, or follow the <a href="https://help.oopspam.com/wordpress/setup-wizard">Setup Wizard</a>.</li>
+          <li><strong>Turn on <em>Activate Spam Protection</em></strong> for each form plugin you use. Comments are protected automatically.</li>
+          <li><strong>Deactivate Akismet</strong> once you're happy with the results. You can keep it running for a few days to compare.</li>
+        </ol>
+        <p class="alt-note">Not on WordPress? Send each submission to the <a href="https://www.oopspam.com/docs/">oopspam API</a> (one call per check), or connect your forms through <a href="https://help.oopspam.com/other-integrations/zapier">Zapier</a> or <a href="https://help.oopspam.com/other-integrations/make">Make</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <section id="get-started" class="section has-background-white-ter">
       <div class="container">
         <div class="columns is-centered is-vcentered">
@@ -486,23 +589,44 @@
         </div>
       </div>
     </section>
-     <!-- faq -->
-  <section id="faq" class="section">
-    <div class="container">
-      <h2 class="title has-text-centered">Frequently asked questions</h2>
-      <div class="content">
-        <h3>Is Akismet free for business sites?</h3>
-        <p>No. Akismet is free only for personal, non-commercial sites. If your site runs ads, uses affiliate links, or sells products or services, you need a paid plan. Akismet's published plans are Pro at $9.95/mo for 500 checks and Business at $49.95/mo for 5,000 checks per site; anything above that is Enterprise pricing you have to ask for. oopspam starts at <strong>$23/mo for 25,000 checks</strong> with unlimited websites, roughly 20× the checks for less than half the price.</p>
-
-        <h3>Does Akismet work with Elementor and WPForms forms?</h3>
-        <p>Akismet is built for WordPress comments and a small set of integrations. Elementor Forms and WPForms often need extra hooks or don't get full coverage, which is why spam still slips through. oopspam supports Elementor Forms, WPForms, Gravity Forms, Ninja Forms, Contact Form 7 and WooCommerce out of the box: server-side, with no extra field for your visitors to complete.</p>
-
-        <h3>Is Akismet GDPR compliant?</h3>
-        <p>Akismet sends submissions to Automattic's servers and stores them so the service can learn from them, which makes compliance harder to justify. oopspam keeps <strong>no logs by default</strong>, asks for the minimum data needed to score a submission, and is built to be GDPR-friendly.</p>
-
-        <h3>How do I migrate from Akismet?</h3>
-        <p>It takes about a minute: create a free oopspam API key, install the <a href="https://wordpress.org/plugins/oopspam-anti-spam/">oopspam WordPress plugin</a>, paste your key, then disable the Akismet plugin. There are no forms to edit and no fields to add. See our <a href="https://www.oopspam.com/blog/best-akismet-alternatives">Akismet alternatives guide</a> for a step-by-step walkthrough.</p>
+     <!-- faq -->  
+  
+<section id="faq" class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h2 class="title has-text-centered is-spaced">Akismet alternative: common questions</h2>
+        <div class="alt-faq">
+          
+          <details open>
+            <summary>Is Akismet free for business sites?</summary>
+            <div class="content"><p>No. Akismet is free only for personal, non-commercial sites. If your site runs ads, uses affiliate links, or sells products or services, you need a paid plan: Pro at $9.95/month for 500 checks on one site, or Business at $49.95/month for 5,000 checks across unlimited sites (both billed yearly). Anything above that is Enterprise pricing (<a href='https://akismet.com/pricing/' rel='nofollow noopener' target='_blank'>Akismet pricing</a>, checked 5 October 2026). oopspam starts at <strong>$23/month for 25,000 checks</strong> on unlimited websites: 5&times; the checks of Akismet Business for less than half the price.</p></div>
+          </details>
+          
+          <details>
+            <summary>Does Akismet work with Elementor and WPForms forms?</summary>
+            <div class="content"><p>Akismet's own documentation lists Jetpack forms, Contact Form 7 and Gravity Forms. Other form plugins only get Akismet protection if they build in support themselves. oopspam supports Elementor Forms, WPForms, Gravity Forms, Ninja Forms, Contact Form 7, WooCommerce and more out of the box, checking each submission on your server with no extra field for visitors.</p></div>
+          </details>
+          
+          <details>
+            <summary>Is Akismet GDPR compliant?</summary>
+            <div class="content"><p>Akismet sends each comment or submission, including the IP address and email, to Automattic's servers, keeps most spam data for two weeks to 90 days, and asks site owners to show visitors a privacy notice. oopspam keeps <strong>no logs by default</strong> and asks for the minimum data needed to score a submission. See our <a href='https://www.oopspam.com/gdpr'>GDPR notice</a>.</p></div>
+          </details>
+          
+          <details>
+            <summary>How do I migrate from Akismet?</summary>
+            <div class="content"><p>Follow the <a href='#how-to-switch'>steps above</a>: create a free API key, install the plugin, paste the key and turn on protection for your forms. Keep Akismet running for a few days if you want to compare, then deactivate it. Our <a href='https://www.oopspam.com/blog/best-akismet-alternatives'>Akismet alternatives guide</a> has more detail.</p></div>
+          </details>
+          
+        </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="related" class="section pt-0">
+    <div class="container">
       <div class="content has-text-centered mt-5">
         <p class="is-size-5">Related reading:</p>
         <p>
@@ -648,6 +772,46 @@
     </div>
   <script async defer src="https://scripts.withcabin.com/hello.js"></script>
 <script async src="/scripts/app.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Akismet free for business sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Akismet is free only for personal, non-commercial sites. If your site runs ads, uses affiliate links, or sells products or services, you need a paid plan: Pro at $9.95/month for 500 checks on one site, or Business at $49.95/month for 5,000 checks across unlimited sites (both billed yearly). Anything above that is Enterprise pricing ( Akismet pricing , checked 5 October 2026). oopspam starts at $23/month for 25,000 checks on unlimited websites: 5× the checks of Akismet Business for less than half the price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Akismet work with Elementor and WPForms forms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Akismet's own documentation lists Jetpack forms, Contact Form 7 and Gravity Forms. Other form plugins only get Akismet protection if they build in support themselves. oopspam supports Elementor Forms, WPForms, Gravity Forms, Ninja Forms, Contact Form 7, WooCommerce and more out of the box, checking each submission on your server with no extra field for visitors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Akismet GDPR compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Akismet sends each comment or submission, including the IP address and email, to Automattic's servers, keeps most spam data for two weeks to 90 days, and asks site owners to show visitors a privacy notice. oopspam keeps no logs by default and asks for the minimum data needed to score a submission. See our GDPR notice ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I migrate from Akismet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Follow the steps above : create a free API key, install the plugin, paste the key and turn on protection for your forms. Keep Akismet running for a few days if you want to compare, then deactivate it. Our Akismet alternatives guide has more detail."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>
 

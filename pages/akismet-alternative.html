@@ -20,7 +20,10 @@
 <link rel="icon" href="favicon.ico" sizes="any">
   <title>Akismet Alternative: 20× the Checks, No Logs | oopspam</title>
   <link rel="canonical" href="https://www.oopspam.com/akismet-alternative" />
+  {% set softwareApp = true %}
   {% include "partials/headScript.njk" %}
+  {% import "partials/alternative.njk" as alt %}
+  {{ alt.styles() }}
 </head>
 <style>
   .table td,
@@ -99,6 +102,8 @@
       </div>
     </div>
   </section>
+
+  {{ alt.lastUpdated("2026-10-05", "5 October 2026") }}
 
   <section id="quick-comparison" class="hero">
     <div class="hero-body">
@@ -413,6 +418,8 @@
         </div>
     </section>
      <!-- get started -->
+  {{ alt.howToSwitch("Akismet", "<strong>Deactivate Akismet</strong> once you're happy with the results. You can keep it running for a few days to compare.") }}
+
   <section id="get-started" class="section has-background-white-ter">
       <div class="container">
         <div class="columns is-centered is-vcentered">
@@ -442,23 +449,16 @@
         </div>
       </div>
     </section>
-     <!-- faq -->
-  <section id="faq" class="section">
+     <!-- faq -->  {% set faqItems = [
+    ["Is Akismet free for business sites?", "<p>No. Akismet is free only for personal, non-commercial sites. If your site runs ads, uses affiliate links, or sells products or services, you need a paid plan: Pro at $9.95/month for 500 checks on one site, or Business at $49.95/month for 5,000 checks across unlimited sites (both billed yearly). Anything above that is Enterprise pricing (<a href='https://akismet.com/pricing/' rel='nofollow noopener' target='_blank'>Akismet pricing</a>, checked 5 October 2026). oopspam starts at <strong>$23/month for 25,000 checks</strong> on unlimited websites: 5&times; the checks of Akismet Business for less than half the price.</p>"],
+    ["Does Akismet work with Elementor and WPForms forms?", "<p>Akismet's own documentation lists Jetpack forms, Contact Form 7 and Gravity Forms. Other form plugins only get Akismet protection if they build in support themselves. oopspam supports Elementor Forms, WPForms, Gravity Forms, Ninja Forms, Contact Form 7, WooCommerce and more out of the box, checking each submission on your server with no extra field for visitors.</p>"],
+    ["Is Akismet GDPR compliant?", "<p>Akismet sends each comment or submission, including the IP address and email, to Automattic's servers, keeps most spam data for two weeks to 90 days, and asks site owners to show visitors a privacy notice. oopspam keeps <strong>no logs by default</strong> and asks for the minimum data needed to score a submission. See our <a href='https://www.oopspam.com/gdpr'>GDPR notice</a>.</p>"],
+    ["How do I migrate from Akismet?", "<p>Follow the <a href='#how-to-switch'>steps above</a>: create a free API key, install the plugin, paste the key and turn on protection for your forms. Keep Akismet running for a few days if you want to compare, then deactivate it. Our <a href='https://www.oopspam.com/blog/best-akismet-alternatives'>Akismet alternatives guide</a> has more detail.</p>"]
+  ] %}
+  {{ alt.faq("Akismet", faqItems) }}
+
+  <section id="related" class="section pt-0">
     <div class="container">
-      <h2 class="title has-text-centered">Frequently asked questions</h2>
-      <div class="content">
-        <h3>Is Akismet free for business sites?</h3>
-        <p>No. Akismet is free only for personal, non-commercial sites. If your site runs ads, uses affiliate links, or sells products or services, you need a paid plan. Akismet's published plans are Pro at $9.95/mo for 500 checks and Business at $49.95/mo for 5,000 checks per site; anything above that is Enterprise pricing you have to ask for. oopspam starts at <strong>$23/mo for 25,000 checks</strong> with unlimited websites, roughly 20× the checks for less than half the price.</p>
-
-        <h3>Does Akismet work with Elementor and WPForms forms?</h3>
-        <p>Akismet is built for WordPress comments and a small set of integrations. Elementor Forms and WPForms often need extra hooks or don't get full coverage, which is why spam still slips through. oopspam supports Elementor Forms, WPForms, Gravity Forms, Ninja Forms, Contact Form 7 and WooCommerce out of the box: server-side, with no extra field for your visitors to complete.</p>
-
-        <h3>Is Akismet GDPR compliant?</h3>
-        <p>Akismet sends submissions to Automattic's servers and stores them so the service can learn from them, which makes compliance harder to justify. oopspam keeps <strong>no logs by default</strong>, asks for the minimum data needed to score a submission, and is built to be GDPR-friendly.</p>
-
-        <h3>How do I migrate from Akismet?</h3>
-        <p>It takes about a minute: create a free oopspam API key, install the <a href="https://wordpress.org/plugins/oopspam-anti-spam/">oopspam WordPress plugin</a>, paste your key, then disable the Akismet plugin. There are no forms to edit and no fields to add. See our <a href="https://www.oopspam.com/blog/best-akismet-alternatives">Akismet alternatives guide</a> for a step-by-step walkthrough.</p>
-      </div>
       <div class="content has-text-centered mt-5">
         <p class="is-size-5">Related reading:</p>
         <p>

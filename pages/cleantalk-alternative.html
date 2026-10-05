@@ -19,7 +19,10 @@
 <link rel="icon" href="favicon.ico" sizes="any">
   <title>CleanTalk Alternative: Lighter Plugin, No Logs | oopspam</title>
   <link rel="canonical" href="https://www.oopspam.com/cleantalk-alternative" />
+  {% set softwareApp = true %}
   {% include "partials/headScript.njk" %}
+  {% import "partials/alternative.njk" as alt %}
+  {{ alt.styles() }}
 </head>
 <style>
   .table td,
@@ -103,6 +106,8 @@
       </div>
     </div>
   </section>
+
+  {{ alt.lastUpdated("2026-10-05", "5 October 2026") }}
 
   <section id="quick-comparison" class="hero">
     <div class="hero-body">
@@ -459,6 +464,8 @@
         </div>
     </section>
      <!-- get started -->
+  {{ alt.howToSwitch("CleanTalk", "<strong>Deactivate the CleanTalk plugin</strong> once you're happy with the results.") }}
+
   <section id="get-started" class="section has-background-white-ter">
       <div class="container">
         <div class="columns is-centered is-vcentered">
@@ -488,6 +495,15 @@
         </div>
       </div>
     </section>
+
+  {% set faqItems = [
+    ["How much does CleanTalk cost?", "<p>CleanTalk sells yearly licenses by number of websites: $12/year for one site, up to $200/year for 40 sites, plus an unlimited-sites plan at $27/month (<a href='https://cleantalk.org/price-anti-spam' rel='nofollow noopener' target='_blank'>CleanTalk pricing</a>, checked 5 October 2026). oopspam has a free plan with 40 checks a month, and paid plans start at <strong>$23/month for 25,000 checks on unlimited websites</strong>.</p>"],
+    ["Will oopspam slow down my site?", "<p>No. oopspam checks submissions on your server through its API, so it adds no JavaScript, fonts or CSS to your pages.</p>"],
+    ["Where do I review blocked messages?", "<p>In your WordPress dashboard. The oopspam plugin keeps a log of blocked entries where you can review them and report a misdetection, without signing in to a separate dashboard.</p>"],
+    ["Can oopspam block countries and languages?", "<p>Yes. You can allow or block submissions by country and by language, alongside the spam score.</p>"],
+    ["Does oopspam store my visitors' data?", "<p>Not by default. The oopspam API scores each submission without storing it, so there is no data to identify or track your visitors. See our <a href='https://www.oopspam.com/gdpr'>GDPR notice</a> and <a href='https://www.oopspam.com/dpa'>Data Processing Agreement</a>.</p>"]
+  ] %}
+  {{ alt.faq("CleanTalk", faqItems) }}
     <!-- related reading -->
   <section id="related" class="section">
     <div class="container has-text-centered">

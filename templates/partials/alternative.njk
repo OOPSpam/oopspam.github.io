@@ -1,0 +1,111 @@
+{#-
+  Shared blocks for the alternative pages (akismet-, cleantalk-, recaptcha-, hcaptcha-, turnstile-alternative).
+
+  Use in a page:
+    {% import "partials/alternative.njk" as alt %}
+    {{ alt.styles() }}                                        inside <head>, once
+    {{ alt.lastUpdated("2026-10-05", "5 October 2026") }}     under the hero
+    {{ alt.comparison("reCAPTCHA", rows, "5 October 2026", sources) }}
+    {{ alt.howToSwitch("reCAPTCHA", "Final step text, HTML allowed") }}
+    {{ alt.faq("reCAPTCHA", [["Question?", "<p>Answer, HTML allowed</p>"], ...]) }}
+
+  The gulp build turns the FAQ into FAQPage structured data automatically, so only edit the questions here.
+  When you change prices in a table or FAQ, update the "checked" and "last updated" dates too.
+-#}
+
+{% macro styles() %}
+<style>
+  .alt-updated { font-size: .85rem; color: #5c5c5c; margin-top: -.5rem; margin-bottom: 1rem; }
+  .alt-note { font-size: .85rem; color: #5c5c5c; margin-top: 1rem; }
+  .alt-table-wrap { max-width: 56rem; margin: 0 auto; border: 1px solid #e6e1d6; border-radius: 1rem; }
+  .alt-table { margin-bottom: 0 !important; }
+  .alt-table thead th { background: #FBF6ED; font-size: .95rem; }
+  .alt-table thead th:nth-child(2) { background: #ffdd57; }
+  .alt-table th[scope="row"] { font-weight: 600; }
+  .alt-table { table-layout: fixed; width: 100%; min-width: 34rem; }
+  .alt-table td, .alt-table th { padding: .85rem 1rem; vertical-align: top; white-space: normal; overflow-wrap: anywhere; }
+  .alt-table th[scope="row"], .alt-table thead th:first-child { width: 26%; }
+  @media (max-width: 600px) {
+    .alt-table { min-width: 0; font-size: .85rem; }
+    .alt-table td, .alt-table th { padding: .6rem .5rem; }
+  }
+  .alt-yes { color: #166239; font-weight: 700; }
+  .alt-no { color: #a33a2b; font-weight: 700; }
+  .alt-steps { counter-reset: step; list-style: none; margin: 0; padding: 0; }
+  .alt-steps li { counter-increment: step; position: relative; padding: 0 0 1.25rem 3.25rem; min-height: 2.5rem; }
+  .alt-steps li::before { content: counter(step); position: absolute; left: 0; top: -.15rem; width: 2.25rem; height: 2.25rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #166239; background: #FBF6ED; border: 1px solid #efe4cb; }
+  .alt-faq details { border-bottom: 1px solid #e6e1d6; padding: 1.1rem 0; }
+  .alt-faq summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; color: #1f1f1f; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  .alt-faq summary::-webkit-details-marker { display: none; }
+  .alt-faq summary::after { content: "+"; font-weight: 400; font-size: 1.4rem; line-height: 1; color: #166239; }
+  .alt-faq details[open] summary::after { content: "\2212"; }
+  .alt-faq summary:focus-visible { outline: 3px solid #f2d98a; outline-offset: 4px; }
+  .alt-faq .content { margin-top: .75rem; }
+</style>
+{% endmacro %}
+
+{% macro lastUpdated(isoDate, label) %}
+<p class="alt-updated has-text-centered">Last updated <time datetime="{{ isoDate }}">{{ label }}</time></p>
+{% endmacro %}
+
+{% macro comparison(competitor, rows, checkedLabel, sources) %}
+<section id="comparison" class="section">
+  <div class="container">
+    <h2 class="title has-text-centered is-spaced">oopspam vs {{ competitor }} at a glance</h2>
+    <div class="table-container alt-table-wrap">
+      <table class="table is-fullwidth is-striped alt-table">
+        <thead>
+          <tr><th scope="col"><span class="is-sr-only">Feature</span></th><th scope="col">oopspam</th><th scope="col">{{ competitor }}</th></tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+          <tr><th scope="row">{{ row[0] }}</th><td>{{ row[1] | safe }}</td><td>{{ row[2] | safe }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="alt-note has-text-centered">Prices checked on {{ checkedLabel }}. Sources: {% for s in sources %}<a href="{{ s[1] }}" target="_blank" rel="nofollow noopener">{{ s[0] }}</a>{% if not loop.last %}, {% endif %}{% endfor %}.</p>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro howToSwitch(competitor, lastStep) %}
+<section id="how-to-switch" class="section">
+  <div class="container">
+    <h2 class="title has-text-centered is-spaced">How to switch from {{ competitor }}</h2>
+    <p class="has-text-centered mb-5">On WordPress it takes a few minutes, and you don't need to edit your forms.</p>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <ol class="alt-steps">
+          <li><strong>Create a free oopspam account</strong> and copy your API key from the <a href="https://app.oopspam.com/Identity/Account/Register">dashboard</a>. The free plan includes 40 checks a month, with no credit card.</li>
+          <li><strong>Install the <a href="https://wordpress.org/plugins/oopspam-anti-spam/">oopspam Anti-Spam plugin</a></strong> from WordPress.org and activate it.</li>
+          <li><strong>Paste your key</strong> into the <em>My API Key</em> field, or follow the <a href="https://help.oopspam.com/wordpress/setup-wizard">Setup Wizard</a>.</li>
+          <li><strong>Turn on <em>Activate Spam Protection</em></strong> for each form plugin you use. Comments are protected automatically.</li>
+          <li>{{ lastStep | safe }}</li>
+        </ol>
+        <p class="alt-note">Not on WordPress? Send each submission to the <a href="https://www.oopspam.com/docs/">oopspam API</a> (one call per check), or connect your forms through <a href="https://help.oopspam.com/other-integrations/zapier">Zapier</a> or <a href="https://help.oopspam.com/other-integrations/make">Make</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro faq(competitor, items) %}
+<section id="faq" class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h2 class="title has-text-centered is-spaced">{{ competitor }} alternative: common questions</h2>
+        <div class="alt-faq">
+          {% for item in items %}
+          <details{% if loop.first %} open{% endif %}>
+            <summary>{{ item[0] }}</summary>
+            <div class="content">{{ item[1] | safe }}</div>
+          </details>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}

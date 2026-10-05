@@ -18,12 +18,81 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 require('dotenv').config();
 
+// ---- SEO helpers used by the build task ----
+const SITE_URL = 'https://www.oopspam.com';
+
+// Canonical URL for a page in /pages. Keeps the casing of a file that is already published
+// (e.g. compare/reCaptcha-vs-hCaptcha.html), because live URLs are case-sensitive.
+function canonicalUrlFor(relPath) {
+    const rel = relPath.split(path.sep).join('/');
+    if (rel === 'index.html') return SITE_URL + '/';
+    if (rel.endsWith('/index.html')) return SITE_URL + '/' + rel.slice(0, -'index.html'.length);
+    const dir = path.posix.dirname(rel);
+    let base = path.posix.basename(rel);
+    const outDir = path.join(__dirname, dir);
+    if (fs.existsSync(outDir)) {
+        const live = fs.readdirSync(outDir).find(f => f.toLowerCase() === base.toLowerCase());
+        if (live) base = live;
+    }
+    return SITE_URL + '/' + (dir === '.' ? '' : dir + '/') + base.replace(/\.html$/, '');
+}
+
+const HTML_ENTITIES = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', hellip: '…', ndash: '–', mdash: '—', rarr: '→', larr: '←', ldquo: '“', rdquo: '”', lsquo: '‘', rsquo: '’', times: '×', middot: '·', minus: '−' };
+function htmlToText(html) {
+    return html
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&(#x[0-9a-f]+|#\d+|\w+);/gi, (m, e) => {
+            if (e[0] === '#') return String.fromCodePoint(e[1].toLowerCase() === 'x' ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10));
+            return HTML_ENTITIES[e] !== undefined ? HTML_ENTITIES[e] : m;
+        })
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+// FAQPage structured data built from the <details><summary> questions inside <section id="faq">.
+// Skipped when the page already has FAQPage markup.
+function faqSchemaFor(html) {
+    if (html.includes('"FAQPage"')) return '';
+    const section = html.match(/<section[^>]*id=["']faq["'][\s\S]*?<\/section>/i);
+    if (!section) return '';
+    const items = [];
+    const re = /<details[^>]*>\s*<summary[^>]*>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/gi;
+    let m;
+    while ((m = re.exec(section[0]))) {
+        const question = htmlToText(m[1]);
+        const answer = htmlToText(m[2]);
+        if (question && answer) items.push({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } });
+    }
+    if (!items.length) return '';
+    const json = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items }, null, 2).replace(/</g, '\\u003c');
+    return '<script type="application/ld+json">\n' + json + '\n</script>\n';
+}
+
+// Adds a canonical tag when a page doesn't set one, warns when a hand-written one doesn't match
+// the published URL, and appends FAQPage data.
+function addSeoTags(html, relPath) {
+    const url = canonicalUrlFor(relPath);
+    const existing = html.match(/<link[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i);
+    if (!existing) {
+        html = html.replace(/<\/head>/i, '  <link rel="canonical" href="' + url + '" />\n</head>');
+    } else if (existing[1] !== url) {
+        console.warn('[seo] ' + relPath + ': canonical is ' + existing[1] + ' but the page is published at ' + url);
+    }
+    const faq = faqSchemaFor(html);
+    if (faq) html = html.replace(/<\/body>/i, faq + '</body>');
+    return html;
+}
+
 gulp.task('build', function () {
     // Gets .html and .nunjucks files in pages
     return gulp.src('pages/**/*.+(html|nunjucks)')
         // Renders template with nunjucks
         .pipe(nunjucksRender({
             path: ['templates']
+        }))
+        // Adds missing canonical tags and FAQPage structured data (see addSeoTags above)
+        .pipe(replace(/^[\s\S]+$/, function (html) {
+            return addSeoTags(html, this.file.relative);
         }))
         // output files in app folder
         .pipe(gulp.dest('./'))

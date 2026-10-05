@@ -19,7 +19,85 @@
 <link rel="icon" href="favicon.ico" sizes="any">
   <title>hCaptcha Alternative: Accessible, Puzzle-Free | oopspam</title>
   <link rel="canonical" href="https://www.oopspam.com/hcaptcha-alternative" />
-  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
+  
+  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.oopspam.com/#organization",
+      "name": "oopspam",
+      "url": "https://www.oopspam.com/",
+      "logo": "https://www.oopspam.com/assets/oopspamLogo.svg",
+      "sameAs": [
+        "https://wordpress.org/plugins/oopspam-anti-spam/",
+        "https://www.trustpilot.com/review/oopspam.com",
+        "https://twitter.com/oopspamapi",
+        "https://github.com/OOPSpam",
+        "https://www.linkedin.com/company/oopspam/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.oopspam.com/#website",
+      "url": "https://www.oopspam.com/",
+      "name": "oopspam",
+      "publisher": { "@id": "https://www.oopspam.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.oopspam.com/#software",
+      "name": "oopspam Anti-Spam",
+      "description": "Server-side spam and fraud detection for forms, comments, sign-ups and WooCommerce orders. No CAPTCHA, no logs by default.",
+      "url": "https://www.oopspam.com/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web, WordPress",
+      "publisher": { "@id": "https://www.oopspam.com/#organization" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "0",
+        "highPrice": "259",
+        "offerCount": "5",
+        "url": "https://www.oopspam.com/#pricing"
+      }
+    }
+  ]
+}
+</script>
+
+  
+  
+<style>
+  .alt-updated { font-size: .85rem; color: #5c5c5c; margin-top: -.5rem; margin-bottom: 1rem; }
+  .alt-note { font-size: .85rem; color: #5c5c5c; margin-top: 1rem; }
+  .alt-table-wrap { max-width: 56rem; margin: 0 auto; border: 1px solid #e6e1d6; border-radius: 1rem; }
+  .alt-table { margin-bottom: 0 !important; }
+  .alt-table thead th { background: #FBF6ED; font-size: .95rem; }
+  .alt-table thead th:nth-child(2) { background: #ffdd57; }
+  .alt-table th[scope="row"] { font-weight: 600; }
+  .alt-table { table-layout: fixed; width: 100%; min-width: 34rem; }
+  .alt-table td, .alt-table th { padding: .85rem 1rem; vertical-align: top; white-space: normal; overflow-wrap: anywhere; }
+  .alt-table th[scope="row"], .alt-table thead th:first-child { width: 26%; }
+  @media (max-width: 600px) {
+    .alt-table { min-width: 0; font-size: .85rem; }
+    .alt-table td, .alt-table th { padding: .6rem .5rem; }
+  }
+  .alt-yes { color: #166239; font-weight: 700; }
+  .alt-no { color: #a33a2b; font-weight: 700; }
+  .alt-steps { counter-reset: step; list-style: none; margin: 0; padding: 0; }
+  .alt-steps li { counter-increment: step; position: relative; padding: 0 0 1.25rem 3.25rem; min-height: 2.5rem; }
+  .alt-steps li::before { content: counter(step); position: absolute; left: 0; top: -.15rem; width: 2.25rem; height: 2.25rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #166239; background: #FBF6ED; border: 1px solid #efe4cb; }
+  .alt-faq details { border-bottom: 1px solid #e6e1d6; padding: 1.1rem 0; }
+  .alt-faq summary { cursor: pointer; font-weight: 700; font-size: 1.05rem; color: #1f1f1f; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+  .alt-faq summary::-webkit-details-marker { display: none; }
+  .alt-faq summary::after { content: "+"; font-weight: 400; font-size: 1.4rem; line-height: 1; color: #166239; }
+  .alt-faq details[open] summary::after { content: "\2212"; }
+  .alt-faq summary:focus-visible { outline: 3px solid #f2d98a; outline-offset: 4px; }
+  .alt-faq .content { margin-top: .75rem; }
+</style>
+
 </head>
 
 <body class="alternative">
@@ -131,6 +209,44 @@
       </div>
     </div>
   </section>
+
+  
+<p class="alt-updated has-text-centered">Last updated <time datetime="2026-10-05">5 October 2026</time></p>
+
+
+  
+  
+<section id="comparison" class="section">
+  <div class="container">
+    <h2 class="title has-text-centered is-spaced">oopspam vs hCaptcha at a glance</h2>
+    <div class="table-container alt-table-wrap">
+      <table class="table is-fullwidth is-striped alt-table">
+        <thead>
+          <tr><th scope="col"><span class="is-sr-only">Feature</span></th><th scope="col">oopspam</th><th scope="col">hCaptcha</th></tr>
+        </thead>
+        <tbody>
+          
+          <tr><th scope="row">What visitors see</th><td>Nothing. Checks run on your server</td><td>A checkbox and, when unsure, a challenge. Passive mode on Pro; fully passive (no-CAPTCHA) mode on Enterprise only</td></tr>
+          
+          <tr><th scope="row">Free tier</th><td>40 checks/month</td><td>Basic plan is free</td></tr>
+          
+          <tr><th scope="row">Paid</th><td>From <strong>$23/month for 25,000 checks</strong>, unlimited websites</td><td>Pro: $99/month billed yearly ($139 monthly), 100,000 evaluations, then $0.99 per 1,000</td></tr>
+          
+          <tr><th scope="row">Reads the message content</th><td><span class='alt-yes'>&#10003;</span> Spam words, links, language</td><td><span class='alt-no'>&#10007;</span> Checks the visitor, not the message</td></tr>
+          
+          <tr><th scope="row">Block by country or language</th><td><span class='alt-yes'>&#10003;</span> </td><td><span class='alt-no'>&#10007;</span> </td></tr>
+          
+          <tr><th scope="row">Explains each block</th><td><span class='alt-yes'>&#10003;</span> Spam score and reasons</td><td>Risk scores on Enterprise only</td></tr>
+          
+          <tr><th scope="row">Script added to your pages</th><td>None</td><td>hCaptcha's widget script</td></tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <p class="alt-note has-text-centered">Prices checked on 5 October 2026. Sources: <a href="https://www.oopspam.com/#pricing" target="_blank" rel="nofollow noopener">oopspam pricing</a>, <a href="https://www.hcaptcha.com/pricing" target="_blank" rel="nofollow noopener">hCaptcha pricing</a>.</p>
+  </div>
+</section>
+
 
   <section class="hero my-6">
     <div class=" hero-body">
@@ -328,6 +444,27 @@
         </div>
     </section>
      <!-- get started -->
+  
+<section id="how-to-switch" class="section">
+  <div class="container">
+    <h2 class="title has-text-centered is-spaced">How to switch from hCaptcha</h2>
+    <p class="has-text-centered mb-5">On WordPress it takes a few minutes, and you don't need to edit your forms.</p>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <ol class="alt-steps">
+          <li><strong>Create a free oopspam account</strong> and copy your API key from the <a href="https://app.oopspam.com/Identity/Account/Register">dashboard</a>. The free plan includes 40 checks a month, with no credit card.</li>
+          <li><strong>Install the <a href="https://wordpress.org/plugins/oopspam-anti-spam/">oopspam Anti-Spam plugin</a></strong> from WordPress.org and activate it.</li>
+          <li><strong>Paste your key</strong> into the <em>My API Key</em> field, or follow the <a href="https://help.oopspam.com/wordpress/setup-wizard">Setup Wizard</a>.</li>
+          <li><strong>Turn on <em>Activate Spam Protection</em></strong> for each form plugin you use. Comments are protected automatically.</li>
+          <li><strong>Remove the hCaptcha widget</strong> from your forms (or its plugin) once you're happy with the results. You can run both while you test.</li>
+        </ol>
+        <p class="alt-note">Not on WordPress? Send each submission to the <a href="https://www.oopspam.com/docs/">oopspam API</a> (one call per check), or connect your forms through <a href="https://help.oopspam.com/other-integrations/zapier">Zapier</a> or <a href="https://help.oopspam.com/other-integrations/make">Make</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <section id="get-started" class="section has-background-white-ter my-6">
       <div class="container">
         <div class="columns is-vcentered is-centered">
@@ -344,6 +481,52 @@
         </div>
       </div>
     </section>
+
+  
+  
+<section id="faq" class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h2 class="title has-text-centered is-spaced">hCaptcha alternative: common questions</h2>
+        <div class="alt-faq">
+          
+          <details open>
+            <summary>Is hCaptcha free?</summary>
+            <div class="content"><p>hCaptcha's Basic plan is free. Pro costs $99/month billed yearly ($139 month to month) and includes 100,000 evaluations, then $0.99 per 1,000. Its fully passive &ldquo;no-CAPTCHA&rdquo; mode is only on Enterprise (hCaptcha pricing, checked 5 October 2026).</p></div>
+          </details>
+          
+          <details>
+            <summary>Will my visitors ever see a challenge with oopspam?</summary>
+            <div class="content"><p>No. oopspam scores submissions on your server, so there is nothing to solve, click or wait for.</p></div>
+          </details>
+          
+          <details>
+            <summary>Is oopspam accessible?</summary>
+            <div class="content"><p>Yes. There is no visible check, so there is nothing a screen reader or keyboard user has to get past. Your forms stay exactly as they are.</p></div>
+          </details>
+          
+          <details>
+            <summary>Can I keep hCaptcha while I test oopspam?</summary>
+            <div class="content"><p>Yes. oopspam works on the server, separately from the hCaptcha widget, so you can run both and remove hCaptcha once you've seen the results.</p></div>
+          </details>
+          
+          <details>
+            <summary>Does oopspam store my visitors&#39; data?</summary>
+            <div class="content"><p>Not by default. The oopspam API scores each submission without storing it, so there is no data to identify or track your visitors. See our <a href='https://www.oopspam.com/gdpr'>GDPR notice</a> and <a href='https://www.oopspam.com/dpa'>Data Processing Agreement</a>.</p></div>
+          </details>
+          
+          <details>
+            <summary>How much does oopspam cost?</summary>
+            <div class="content"><p>You can start with 40 free spam checks a month, no credit card required. Paid plans start at <strong>$23/month for 25,000 checks</strong>, and every plan covers unlimited websites. See <a href='https://www.oopspam.com/#pricing'>pricing</a>.</p></div>
+          </details>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- related reading -->
   <section id="related" class="section">
     <div class="container has-text-centered">
@@ -352,7 +535,7 @@
         <p>
           <a href="https://www.oopspam.com/blog/hcaptcha-performance-analyses">hCaptcha performance analysis</a> ·
           <a href="/compare/hcaptcha-vs-turnstile">hCaptcha vs Turnstile</a> ·
-          <a href="/compare/recaptcha-vs-hcaptcha">hCaptcha vs reCAPTCHA</a> ·
+          <a href="/compare/reCaptcha-vs-hCaptcha">hCaptcha vs reCAPTCHA</a> ·
           <a href="https://www.oopspam.com/blog/captcha-and-accessibility-why-your-forms-might-be-breaking-the-law-in-2026">CAPTCHA and accessibility</a>
         </p>
       </div>
@@ -492,5 +675,61 @@
     </div>
   <script async defer src="https://scripts.withcabin.com/hello.js"></script>
 <script async src="/scripts/app.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is hCaptcha free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "hCaptcha's Basic plan is free. Pro costs $99/month billed yearly ($139 month to month) and includes 100,000 evaluations, then $0.99 per 1,000. Its fully passive “no-CAPTCHA” mode is only on Enterprise (hCaptcha pricing, checked 5 October 2026)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my visitors ever see a challenge with oopspam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. oopspam scores submissions on your server, so there is nothing to solve, click or wait for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is oopspam accessible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. There is no visible check, so there is nothing a screen reader or keyboard user has to get past. Your forms stay exactly as they are."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I keep hCaptcha while I test oopspam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. oopspam works on the server, separately from the hCaptcha widget, so you can run both and remove hCaptcha once you've seen the results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does oopspam store my visitors' data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not by default. The oopspam API scores each submission without storing it, so there is no data to identify or track your visitors. See our GDPR notice and Data Processing Agreement ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does oopspam cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can start with 40 free spam checks a month, no credit card required. Paid plans start at $23/month for 25,000 checks , and every plan covers unlimited websites. See pricing ."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

@@ -24,7 +24,54 @@
 
   <title>oopspam: Automate your Spam and Fraud Detection</title>
   <link rel="canonical" href="https://www.oopspam.com/" />
-  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script>
+  
+  <script async src="https://cdn.tolt.io/tolt.js" data-tolt="eb76ab36-57d2-4c20-ba2f-92eec10234a9"></script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.oopspam.com/#organization",
+      "name": "oopspam",
+      "url": "https://www.oopspam.com/",
+      "logo": "https://www.oopspam.com/assets/oopspamLogo.svg",
+      "sameAs": [
+        "https://wordpress.org/plugins/oopspam-anti-spam/",
+        "https://www.trustpilot.com/review/oopspam.com",
+        "https://twitter.com/oopspamapi",
+        "https://github.com/OOPSpam",
+        "https://www.linkedin.com/company/oopspam/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.oopspam.com/#website",
+      "url": "https://www.oopspam.com/",
+      "name": "oopspam",
+      "publisher": { "@id": "https://www.oopspam.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.oopspam.com/#software",
+      "name": "oopspam Anti-Spam",
+      "description": "Server-side spam and fraud detection for forms, comments, sign-ups and WooCommerce orders. No CAPTCHA, no logs by default.",
+      "url": "https://www.oopspam.com/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web, WordPress",
+      "publisher": { "@id": "https://www.oopspam.com/#organization" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "0",
+        "highPrice": "259",
+        "offerCount": "5",
+        "url": "https://www.oopspam.com/#pricing"
+      }
+    }
+  ]
+}
+</script>
+
   <style>
     .pricing-includes {
       background-color: #FBF6ED;
@@ -1087,6 +1134,62 @@
   <script async defer src="https://scripts.withcabin.com/hello.js"></script>
 <script async src="/scripts/app.min.js"></script>
 </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many API calls do I need? 🤔",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 API call = 1 spam check When someone submits a form on your website, that counts as one API call. For example: The Freelance plan (100,000 API calls) typically covers ~100 websites Average website gets 20-50 form submissions daily WordPress users: count your monthly form submissions across all sites"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the API calls per month or per year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The API call limit in each plan is monthly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a request to the oopspam API logged?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not by default, but you can enable it. For API users, add the \"logIt\" parameter to a request body. Learn more about this here ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is oopspam GDPR compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "oopspam itself as an API is GDPR compliant. It does not store any data, so there is no data to identify or track a user. Read more in the GDPR Notice and Data Processing Agreement ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you have a WordPress plugin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Here you go: oopspam WordPress plugin ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use one key for multiple websites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Once you have a key, you can use it in our WordPress plugin as well as on any other platforms."
+      }
+    }
+  ]
+}
+</script>
 </body>
 
 
