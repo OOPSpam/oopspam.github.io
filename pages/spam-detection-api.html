@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spam Detection API for Forms, Sign-ups & Comments | oopspam</title>
+  <meta name="description" content="One REST call checks a submission's message, IP and email and returns a 0–6 spam score. No CAPTCHA, no logs by default. 40 free checks a month.">
+  <link rel="canonical" href="https://www.oopspam.com/spam-detection-api" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@oopspamapi" />
+  <meta property="og:url" content="https://www.oopspam.com/spam-detection-api" />
+  <meta property="og:title" content="Spam Detection API for Forms, Sign-ups & Comments | oopspam" />
+  <meta property="og:description" content="One REST call checks a submission's message, IP and email and returns a 0–6 spam score. No CAPTCHA, no logs by default." />
+  <meta property="og:image" content="https://www.oopspam.com/assets/meta_oopspam.png" />
+  <meta name="twitter:image" content="https://www.oopspam.com/assets/meta_oopspam_tw.png" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/styles/main.min.css" />
+  <link rel="stylesheet" href="/styles/contact.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+
+  {% set softwareApp = true %}
+  {% include "partials/headScript.njk" %}
+  <style>
+    .api { --cream: #FBF6ED; --yellow: #fcdd56; --green: #166239; --red: #a33a2b; --ink: #111; --line: rgba(0,0,0,.1); --code: #1c1b19; }
+    .api h1.api-title { font-size: 64px !important; line-height: 1.05 !important; margin: 1rem 0 1.25rem; }
+    .api .lead { font-size: 1.2rem; line-height: 1.6; max-width: 34rem; color: #222; }
+    .api .section-title { font-size: 2.4rem; line-height: 1.15; margin-bottom: .5rem; color: var(--ink); }
+    .api .section-sub { color: #4a4a4a; margin-bottom: 2.5rem; max-width: 36rem; }
+    .api .center { margin-left: auto; margin-right: auto; text-align: center; }
+
+    /* Code cards */
+    .api .code-card { background: var(--code); color: #eae6dc; border-radius: 1.1rem; border: 1px solid #000; box-shadow: 3px 6px 0 #000; overflow: hidden; text-align: left; }
+    .api .code-bar { display: flex; align-items: center; gap: .4rem; padding: .7rem 1rem; border-bottom: 1px solid rgba(255,255,255,.08); font-size: .8rem; color: #a7a397; }
+    .api .code-bar i { width: .65rem; height: .65rem; border-radius: 50%; background: #3b3934; display: inline-block; }
+    .api .code-bar span { color: #a7a397 !important; margin-left: .5rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .api pre.code { background: transparent; color: inherit; margin: 0; padding: 1.1rem 1.2rem; font-size: .86rem; line-height: 1.6; white-space: pre; overflow-x: auto; }
+    /* main.css forces span { color: #000 !important }, so code colours need !important too */
+    .api pre.code span { color: inherit !important; }
+    .api pre.code .k { color: #f5d76e !important; } .api pre.code .s { color: #a8d38c !important; } .api pre.code .n { color: #f0a36b !important; } .api pre.code .c { color: #8a867b !important; }
+
+    /* Hero: messages pass into the filter and come out sorted */
+    .api .flow { position: relative; width: 100%; max-width: 560px; height: 480px; margin-left: auto; }
+    .api .filter-art { position: absolute; left: 14%; top: 40px; width: 86%; height: auto; z-index: 1; display: block; }
+    .api .filter-art.mesh { z-index: 5; pointer-events: none; } /* mesh lines drawn over the cards, so they pass behind a see-through filter */
+    .api .in-layer { position: absolute; inset: 0; z-index: 6; pointer-events: none; overflow: hidden; } /* in front of the mesh; clipped at the mesh by JS */ 
+    .api .out-layer { position: absolute; left: 0; right: 0; bottom: 0; z-index: 4; pointer-events: none; }
+    .api .msg { position: absolute; left: 0; top: 0; display: flex; align-items: center; width: 250px; height: 62px; padding: 0 1rem 0 3.6rem; background: #fff; border: 2.5px solid #000; border-radius: 12px; box-shadow: 5px 6px 0 #000; font-size: .9rem; color: #111; will-change: transform, opacity; }
+    .api .msg .ico { position: absolute; left: -22px; top: 50%; width: 66px; height: 66px; transform: translateY(-50%); object-fit: contain; }
+    .api .msg .t { color: #111 !important; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .api .msg.out { width: 230px; padding-left: 2.6rem; }
+    .api .msg.is-spam { background: #111; }
+    .api .msg.is-spam .t { color: #fff !important; font-family: 'Open Sans SemiBold'; letter-spacing: .14em; font-size: 1rem; }
+    .api .msg.is-ok .t { font-family: 'Open Sans SemiBold'; }
+    .api .msg .skull { position: absolute; left: -22px; bottom: -22px; width: 54px; height: 54px; border-radius: 50%; background: #fff; border: 3px solid #111; display: grid; place-items: center; }
+    .api .msg .skull img { width: 34px; height: auto; }
+    .api .msg .gem { position: absolute; left: -16px; bottom: -24px; width: 34px; height: auto; }
+    .api .msg .badge { position: absolute; right: -16px; top: -18px; width: 40px; height: 40px; }
+    .api .tray { position: absolute; bottom: 0; z-index: 1; width: 200px; padding: .6rem .8rem; border-radius: .9rem; border: 1.5px dashed rgba(0,0,0,.35); text-align: center; font-family: 'Open Sans SemiBold'; font-size: .85rem; color: #111; }
+    .api .tray b { display: block; font-family: 'Bricolage Grotesque'; font-size: 1.6rem; line-height: 1.1; }
+    .api .tray.blocked { left: calc(57% - 208px); } .api .tray.blocked b { color: var(--red); }
+    .api .tray.delivered { left: calc(57% + 8px); } .api .tray.delivered b { color: #111; }
+    .api .tray.bump { animation: api-bump .5s ease; }
+
+    /* Globe */
+    .api .globe-wrap { position: relative; max-width: 420px; margin: 0 auto; }
+    .api .globe { width: 100%; height: auto; display: block; overflow: visible; }
+    .api .globe .meridian { transform-box: fill-box; transform-origin: center; animation: api-spin 14s linear infinite; }
+    .api .globe .meridian:nth-of-type(2) { animation-delay: -3.5s; } .api .globe .meridian:nth-of-type(3) { animation-delay: -7s; } .api .globe .meridian:nth-of-type(4) { animation-delay: -10.5s; }
+    .api .ping { transform-box: fill-box; transform-origin: center; }
+    .api .ping .ring { transform-box: fill-box; transform-origin: center; animation: api-ring 2.4s ease-out forwards; }
+    .api .ping .core { animation: api-core 2.4s ease forwards; }
+    .api .bubble { width: 9.5rem; height: 9.5rem; border-radius: 50%; border: 1.5px solid #000; background: #fff; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; position: relative; margin: .5rem; box-shadow: 2px 4px 0 #000; }
+    .api .bubble::after { content: ''; position: absolute; top: .9rem; right: .6rem; width: .8rem; height: .8rem; border-radius: 50%; background: var(--yellow); }
+    .api .bubble b { font-family: 'Bricolage Grotesque'; font-size: 2rem; line-height: 1; color: #111; }
+    .api .bubble > span { font-size: .85rem; color: #333 !important; }
+    .api .bubble b span { font-size: inherit; color: #111 !important; }
+
+    /* Stats */
+    .api .stat-value { font-family: 'Bricolage Grotesque'; font-size: 2.6rem; color: var(--green); line-height: 1.1; }
+    .api .stat-label { font-family: 'Open Sans Bold'; color: var(--ink); }
+
+    /* Signal cards */
+    .api .signals { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
+    .api .signal { background: #fff; border: 1px solid var(--line); border-radius: 1rem; padding: 1.2rem 1.25rem; transition: transform .25s ease, box-shadow .25s ease, border-color .25s; }
+    .api .signal:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.07); border-color: rgba(0,0,0,.25); }
+    .api .signal h3 { font-size: 1.15rem !important; margin: 0 0 .3rem; color: var(--ink); }
+    .api .signal p { color: #4a4a4a; font-size: .95rem; margin: 0 0 .7rem; }
+    .api .param { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .78rem; background: var(--cream); border: 1px solid #efe4cb; border-radius: .4rem; padding: .1rem .45rem; color: #5a4a1c; }
+
+    /* Steps */
+    .api .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; counter-reset: step; }
+    .api .step { background: var(--cream); border-radius: 1.2rem; padding: 1.5rem; position: relative; }
+    .api .step::before { counter-increment: step; content: counter(step); font-family: 'Bricolage Grotesque'; font-size: 1.1rem; width: 2.2rem; height: 2.2rem; border-radius: 50%; display: grid; place-items: center; background: var(--yellow); border: 1px solid var(--ink); margin-bottom: .9rem; }
+    .api .step h3 { font-size: 1.2rem !important; margin: 0 0 .35rem; color: var(--ink); }
+    .api .step p { margin: 0; color: #4a4a4a; }
+
+    /* Tabs */
+    .api .tabs-row { display: flex; flex-wrap: wrap; gap: .4rem; padding: .6rem .8rem 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .api .tab-btn { background: transparent; border: 0; color: #a7a397; font: inherit; font-size: .85rem; padding: .45rem .8rem .55rem; cursor: pointer; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+    .api .tab-btn[aria-selected="true"] { color: #fff; border-color: var(--yellow); }
+    .api .tab-btn:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; border-radius: .3rem; }
+    .api .tab-panel { animation: api-fade .3s ease; }
+    .api .tab-panel[hidden] { display: none; }
+    .api .copy-btn { margin-left: auto; background: rgba(255,255,255,.08); color: #eae6dc; border: 1px solid rgba(255,255,255,.15); border-radius: .4rem; font-size: .75rem; padding: .25rem .6rem; cursor: pointer; transition: background .2s; }
+    .api .copy-btn:hover { background: rgba(255,255,255,.16); }
+
+    /* Endpoints & extras */
+    .api .endpoint { display: flex; flex-direction: column; gap: .5rem; height: 100%; background: #fff; border: 1px solid var(--line); border-radius: 1rem; padding: 1.3rem; transition: transform .25s ease, box-shadow .25s ease; }
+    .api .endpoint:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.07); }
+    .api .method { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .85rem; color: var(--ink); }
+    .api .method b { background: var(--green); color: #fff; border-radius: .35rem; padding: .1rem .4rem; margin-right: .4rem; font-weight: 700; }
+    .api .endpoint h3 { font-size: 1.15rem !important; margin: 0; color: var(--ink); }
+    .api .endpoint p { color: #4a4a4a; margin: 0; }
+    .api .pills { display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; }
+    .api .pill { display: inline-flex; align-items: center; gap: .55rem; padding: .7rem 1.1rem; border-radius: 999px; background: #fffdf7; border: 1px solid var(--line); font-family: 'Open Sans SemiBold'; color: var(--ink); }
+    .api .pill img { width: 16px; height: 16px; }
+
+    /* Pricing: pick a volume */
+    .api .price-card { max-width: 38rem; margin: 0 auto; text-align: center; }
+    .api .billing { display: inline-flex; padding: .25rem; border: 1px solid #000; border-radius: 999px; background: var(--cream); margin-bottom: 1.5rem; }
+    .api .billing button { border: 0; background: transparent; font: inherit; font-size: .9rem; padding: .4rem 1rem; border-radius: 999px; cursor: pointer; color: #111; transition: background .2s; }
+    .api .billing button[aria-pressed="true"] { background: var(--yellow); font-family: 'Open Sans SemiBold'; }
+    .api .billing button:focus-visible, .api .vol:focus-visible { outline: 3px solid #f2d98a; outline-offset: 3px; }
+    .api .vol-label { display: block; font-family: 'Open Sans SemiBold'; color: #111; margin-bottom: .4rem; }
+    .api .vol-value { font-family: 'Bricolage Grotesque'; font-size: 2.2rem; line-height: 1.1; color: #111; }
+    .api .vol { -webkit-appearance: none; appearance: none; width: 100%; height: .5rem; border-radius: 999px; margin: 1.2rem 0 .4rem; cursor: pointer; background: linear-gradient(to right, var(--green) 0 var(--fill, 0%), #eee6d6 var(--fill, 0%) 100%); }
+    .api .vol::-webkit-slider-thumb { -webkit-appearance: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--yellow); border: 2px solid #000; box-shadow: 1px 2px 0 #000; transition: transform .2s; }
+    .api .vol::-moz-range-thumb { width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--yellow); border: 2px solid #000; box-shadow: 1px 2px 0 #000; }
+    .api .vol:active::-webkit-slider-thumb { transform: scale(1.1); }
+    .api .vol-ticks { display: flex; justify-content: space-between; font-size: .78rem; color: #555; }
+    .api .vol-ticks span { color: #555 !important; }
+    .api .result { display: flex; align-items: flex-end; justify-content: center; gap: .6rem; margin: 1.6rem 0 .3rem; }
+    .api .result .plan-name { font-family: 'Open Sans SemiBold'; color: #111; padding-bottom: .5rem; }
+    .api .result .amount { font-family: 'Bricolage Grotesque'; font-size: 3.2rem; line-height: 1; color: #111; transition: opacity .2s; }
+    .api .result .per { color: #444; padding-bottom: .45rem; }
+    .api .billing-note { font-size: .88rem; color: #555; min-height: 1.3em; }
+    .api .price-includes { margin: 1.2rem 0 1.4rem; color: #333; font-size: .92rem; }
+
+    /* Social proof */
+    .api .ratings { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
+    .api .rating { display: inline-flex; align-items: center; gap: .7rem; padding: .7rem 1.1rem; background: #fff; border: 1px solid var(--line); border-radius: 999px; color: #111; }
+    .api .rating b { font-family: 'Bricolage Grotesque'; font-size: 1.4rem; }
+    .api .rating .stars { color: #e3a008 !important; letter-spacing: 2px; }
+    .api .rating small { color: #555; }
+    .api .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; text-align: left; }
+    .api .quote-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 1.1rem; padding: 1.4rem; transition: transform .25s ease, box-shadow .25s ease; }
+    .api .quote-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.07); }
+    .api .quote-card blockquote { flex-grow: 1; margin: 0 0 1rem; font-size: 1rem; line-height: 1.55; color: #111; }
+    .api .quote-card blockquote::before { content: "\201C"; display: block; font-family: Georgia, serif; font-size: 2.4rem; line-height: .8; color: var(--green); }
+    .api .quote-card .who { font-size: .88rem; color: #555; }
+    .api .quote-card .who strong { color: #111; }
+    .api .logos { max-width: 34rem; margin: 2.2rem auto 0; display: block; }
+
+    /* Human support */
+    .api .support { background: var(--cream); border-radius: 2rem; padding: 2.5rem; }
+    .api .chat { max-width: 24rem; margin: 0 auto; display: flex; flex-direction: column; gap: .7rem; }
+    .api .bubble-msg { max-width: 85%; padding: .75rem 1rem; border: 1.5px solid #000; border-radius: 1.1rem; background: #fff; color: #111; font-size: .95rem; line-height: 1.45; box-shadow: 2px 3px 0 #000; }
+    .api .bubble-msg.them { align-self: flex-start; border-bottom-left-radius: .3rem; }
+    .api .bubble-msg.you { align-self: flex-end; background: var(--yellow); border-bottom-right-radius: .3rem; }
+    .api .bubble-msg small { display: block; font-size: .75rem; color: #555 !important; margin-bottom: .2rem; }
+    .api .typing { align-self: flex-start; display: inline-flex; gap: .3rem; padding: .7rem .9rem; border: 1.5px solid #000; border-radius: 1.1rem; border-bottom-left-radius: .3rem; background: #fff; }
+    .api .typing i { width: .45rem; height: .45rem; border-radius: 50%; background: #111; opacity: .3; animation: api-dot 1.4s ease-in-out infinite; }
+    .api .typing i:nth-child(2) { animation-delay: .2s; } .api .typing i:nth-child(3) { animation-delay: .4s; }
+    .api .support-points { list-style: none; margin: 1.2rem 0 1.5rem; padding: 0; }
+    .api .support-points li { display: flex; gap: .6rem; align-items: flex-start; margin-bottom: .6rem; color: #222; }
+    .api .support-points span { color: #222 !important; min-width: 0; overflow-wrap: anywhere; }
+    .api .support-points img { width: 18px; height: 18px; margin-top: .2rem; }
+    .api .support-quote { border-left: 3px solid var(--green); padding-left: 1rem; margin: 0 0 .8rem; color: #111; font-size: .98rem; }
+    .api .support-quote cite { display: block; font-style: normal; font-size: .85rem; color: #555; margin-top: .3rem; }
+
+    /* FAQ */
+    .api #faq details { border-bottom: 1px solid #e6e1d6; padding: 1.1rem 0; }
+    .api #faq summary { cursor: pointer; font-weight: 700; font-size: 1.1rem; color: var(--ink); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+    .api #faq summary::-webkit-details-marker { display: none; }
+    .api #faq summary::after { content: "+"; font-weight: 400; font-size: 1.4rem; line-height: 1; color: var(--green); transition: transform .25s ease; }
+    .api #faq details[open] summary::after { transform: rotate(45deg); }
+    .api #faq summary:focus-visible { outline: 3px solid #f2d98a; outline-offset: 4px; }
+    .api #faq details p { margin: .7rem 0 0; color: #333; }
+
+    /* Scroll reveal */
+    .api .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; transition-delay: calc(var(--i, 0) * 70ms); }
+    .api .reveal.is-visible { opacity: 1; transform: none; }
+
+    @keyframes api-in { to { opacity: 1; transform: none; } }
+    @keyframes api-fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+    @keyframes api-dot { 0%, 100% { opacity: .25; transform: translateY(0); } 50% { opacity: .9; transform: translateY(-2px); } }
+    @keyframes api-twinkle { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(.82); opacity: .75; } }
+    @keyframes api-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+    @keyframes api-bump { 0% { transform: scale(1); } 40% { transform: scale(1.06); } 100% { transform: scale(1); } }
+    @keyframes api-spin { 0% { transform: scaleX(1); } 50% { transform: scaleX(-1); } 100% { transform: scaleX(1); } }
+    @keyframes api-ring { from { transform: scale(.4); opacity: .7; } to { transform: scale(3.2); opacity: 0; } }
+    @keyframes api-core { 0% { opacity: 0; } 15% { opacity: 1; } 75% { opacity: 1; } 100% { opacity: 0; } }
+    #pricing .container { padding: 2.5rem 2rem !important; border-radius: 2rem; }
+
+    @media screen and (max-width: 1023px) {
+      .api h1.api-title { font-size: 46px !important; }
+      .api .flow { margin: 2.5rem auto 0; }
+      .api .quotes { grid-template-columns: 1fr; }
+      .api .support { padding: 1.5rem; }
+      .api .steps { grid-template-columns: 1fr; }
+    }
+    @media screen and (max-width: 600px) {
+      .api .tray { width: calc(50% - 10px); }
+      .api h1.api-title { font-size: 38px !important; }
+      .api .section-title { font-size: 1.9rem; }
+      .api .flow { height: 430px; }
+      .api .msg { width: 200px; height: 54px; font-size: .8rem; padding-left: 3.1rem; }
+      .api .msg.out { width: 180px; }
+      .api .msg .ico { width: 56px; height: 56px; left: -16px; }
+      .api .filter-art, .api .filter-art.mesh { left: 6%; width: 94%; }
+      #pricing .container { padding: 1.5rem 1rem !important; }
+      .api .result .amount { font-size: 2.6rem; }
+      .api pre.code { font-size: .78rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .api *, .api *::before, .api *::after { animation: none !important; transition: none !important; }
+      .api .reveal { opacity: 1 !important; transform: none !important; }
+    }
+  </style>
+  <noscript><style>.api .reveal { opacity: 1; transform: none; }</style></noscript>
+</head>
+<body>
+<div class="app-container api">
+  {% include "partials/navigation.njk" %}
+  <main class="app-content">
+
+    <!-- Hero -->
+    <section id="main" class="section" style="background-color: #fbf6ed;">
+      <div class="container is-fluid px-0 hero-container">
+        <div class="columns is-vcentered">
+          <div class="column is-6">
+            <h1 class="api-title has-text-black">Spam detection API</h1>
+            <p class="lead">Privacy-first spam detection. One call checks the message, IP and email behind every form submission, sign-up, review or comment, and returns a spam score. No CAPTCHA. No logs by default.</p>
+            <div class="buttons mt-5">
+              <a class="button-has-shadow button has-text-black is-rounded is-bg-orange is-medium" style="border: solid 1px;" href="https://app.oopspam.com/Identity/Account/Register">Get a free API key →</a>
+              <a class="button-has-shadow button has-text-black is-rounded has-background-white is-medium" style="border: solid 1px; background-image: unset;" href="/docs/">Read the docs</a>
+            </div>
+            <p class="mt-3 has-text-grey-dark">40 free checks a month. No credit card.</p>
+          </div>
+          <div class="column is-6">
+            <div class="flow" id="flow" role="img" aria-label="Comments, reviews, sign-ups and form messages pass into the oopspam filter. Spam is blocked and genuine messages are delivered.">
+              <div class="in-layer" id="in-layer" aria-hidden="true"></div>
+              <img class="filter-art" id="filter-art" src="/assets/api/filter-scene.webp" width="862" height="398" alt="">
+              <img class="filter-art mesh" src="/assets/api/mesh-lines.webp" width="862" height="398" alt="" aria-hidden="true">
+              <div class="out-layer" id="out-layer" aria-hidden="true"></div>
+              <div class="tray blocked" aria-hidden="true"><b id="n-blocked">0</b>Blocked</div>
+              <div class="tray delivered" aria-hidden="true"><b id="n-delivered">0</b>Delivered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section has-background-white">
+      <div class="container">
+        <div class="columns is-mobile is-multiline is-centered has-text-centered">
+          <div class="column is-4-tablet reveal" style="--i:0"><p class="stat-value"><span data-count="1">0</span>B+</p><p class="stat-label">Spam caught</p></div>
+          <div class="column is-4-tablet reveal" style="--i:1"><p class="stat-value"><span data-count="3.5" data-decimals="1">0</span>M+</p><p class="stat-label">Protected websites</p></div>
+          <div class="column is-4-tablet reveal" style="--i:2"><p class="stat-value">24/7</p><p class="stat-label">Human support</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global blocklist -->
+    <section id="blocklist" class="section" style="background-color: #fbf6ed;">
+      <div class="container">
+        <div class="columns is-vcentered is-variable is-8-desktop">
+          <div class="column is-6">
+            <div class="globe-wrap reveal">
+              <svg class="globe" id="globe" viewBox="0 0 400 400" role="img" aria-label="Globe with spam sources being flagged around the world">
+                <defs><clipPath id="globe-clip"><circle cx="200" cy="200" r="160"/></clipPath></defs>
+                <circle cx="200" cy="200" r="160" fill="#fff" stroke="#000" stroke-width="3"/>
+                <g clip-path="url(#globe-clip)" fill="none" stroke="#000" stroke-width="1.2" opacity=".28">
+                  <ellipse cx="200" cy="200" rx="160" ry="48"/><ellipse cx="200" cy="200" rx="160" ry="104"/>
+                  <line x1="40" y1="200" x2="360" y2="200"/>
+                  <ellipse class="meridian" cx="200" cy="200" rx="40" ry="160"/><ellipse class="meridian" cx="200" cy="200" rx="90" ry="160"/><ellipse class="meridian" cx="200" cy="200" rx="130" ry="160"/><ellipse class="meridian" cx="200" cy="200" rx="155" ry="160"/>
+                  <line x1="200" y1="40" x2="200" y2="360"/>
+                </g>
+                <g id="pings" clip-path="url(#globe-clip)"></g>
+                <ellipse cx="200" cy="378" rx="120" ry="10" fill="#000" opacity=".08"/>
+              </svg>
+            </div>
+          </div>
+          <div class="column is-6">
+            <h2 class="section-title reveal">A global blocklist behind every check</h2>
+            <p class="section-sub reveal">An up-to-date database of malicious emails and IPs from around the world, looked up on every request.</p>
+            <div class="reveal">
+              <div class="bubble"><b><span data-count="200">0</span>M+</b><span>blocked emails</span></div>
+              <div class="bubble"><b><span data-count="150">0</span>M+</b><span>blocked IPs</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What it checks -->
+    <section id="checks" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Every signal in one request</h2>
+        <p class="section-sub reveal">Send what you have. Turn on the filters you need.</p>
+        <div class="signals">
+          <div class="signal reveal" style="--i:0"><h3>Message content</h3><p>Machine learning trained on real spam.</p><span class="param">content</span></div>
+          <div class="signal reveal" style="--i:1"><h3>IP reputation</h3><p>Checked against multiple IP denylists.</p><span class="param">senderIP</span></div>
+          <div class="signal reveal" style="--i:2"><h3>Email reputation</h3><p>Checked against multiple email denylists.</p><span class="param">email</span></div>
+          <div class="signal reveal" style="--i:3"><h3>Disposable emails</h3><p>Block temporary inboxes.</p><span class="param">blockTempEmail</span></div>
+          <div class="signal reveal" style="--i:4"><h3>VPN, proxy &amp; Tor</h3><p>Stop senders hiding their location.</p><span class="param">blockVPN</span></div>
+          <div class="signal reveal" style="--i:5"><h3>Data center IPs</h3><p>Filter bots running on cloud servers.</p><span class="param">blockDC</span></div>
+          <div class="signal reveal" style="--i:6"><h3>Countries</h3><p>Allow or block by country.</p><span class="param">allowedCountries</span> <span class="param">blockedCountries</span></div>
+          <div class="signal reveal" style="--i:7"><h3>Languages</h3><p>Accept only the languages you support.</p><span class="param">allowedLanguages</span></div>
+          <div class="signal reveal" style="--i:8"><h3>Context-aware detection</h3><p>Judge each message against what your business expects.</p><span class="param">context</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="section has-background-white">
+      <div class="container">
+        <h2 class="section-title reveal">How it works</h2>
+        <p class="section-sub reveal">Three steps, server-side, invisible to your visitors.</p>
+        <div class="steps">
+          <div class="step reveal" style="--i:0"><h3>Send the submission</h3><p>POST the message, IP and email from your backend.</p></div>
+          <div class="step reveal" style="--i:1"><h3>Get a score</h3><p>A 0–6 <code>Score</code> plus the reason for each check.</p></div>
+          <div class="step reveal" style="--i:2"><h3>Decide</h3><p>Treat 3 and above as spam, or set your own threshold.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code -->
+    <section id="code" class="section">
+      <div class="container">
+        <div class="columns is-variable is-6-desktop">
+          <div class="column is-4">
+            <h2 class="section-title reveal">Ship it in minutes</h2>
+            <p class="section-sub reveal">One endpoint, one header. Examples in shell, Ruby, Python, PHP, JavaScript, Java, C# and Go are in the <a href="/docs/#spam-detection">docs</a>.</p>
+            <ul class="reveal" style="list-style: none; margin: 0; padding: 0; line-height: 2.1;">
+              <li><span class="param">https://api.oopspam.com/v1</span></li>
+              <li><span class="param">X-Api-Key: YOUR_API_KEY</span></li>
+            </ul>
+          </div>
+          <div class="column is-8">
+            <div class="code-card reveal">
+              <div class="tabs-row" role="tablist" aria-label="Code examples">
+                <button class="tab-btn" role="tab" aria-selected="true" aria-controls="tab-curl" id="t-curl">cURL</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-php" id="t-php" tabindex="-1">PHP</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-python" id="t-python" tabindex="-1">Python</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-js" id="t-js" tabindex="-1">JavaScript</button>
+                <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-response" id="t-response" tabindex="-1">Response</button>
+                <button class="copy-btn" type="button" id="copy-code">Copy</button>
+              </div>
+<div class="tab-panel" role="tabpanel" id="tab-curl" aria-labelledby="t-curl"><pre class="code">curl --request POST \
+  --url https://api.oopspam.com/v1/spamdetection \
+  --header <span class="s">'Content-Type: application/json'</span> \
+  --header <span class="s">'X-Api-Key: YOUR_API_KEY'</span> \
+  --data <span class="s">'{
+    "content": "Dear Agent, we are unable to follow up payments...",
+    "senderIP": "185.234.219.246",
+    "email": "testing@example.com",
+    "blockTempEmail": true,
+    "allowedLanguages": ["en"]
+  }'</span></pre></div>
+<div class="tab-panel" role="tabpanel" id="tab-php" aria-labelledby="t-php" hidden><pre class="code"><span class="k">$ch</span> = curl_init(<span class="s">'https://api.oopspam.com/v1/spamdetection'</span>);
+curl_setopt_array(<span class="k">$ch</span>, [
+    CURLOPT_POST           => <span class="n">true</span>,
+    CURLOPT_RETURNTRANSFER => <span class="n">true</span>,
+    CURLOPT_HTTPHEADER     => [<span class="s">'Content-Type: application/json'</span>, <span class="s">'X-Api-Key: YOUR_API_KEY'</span>],
+    CURLOPT_POSTFIELDS     => json_encode([
+        <span class="s">'content'</span>  => <span class="k">$_POST</span>[<span class="s">'message'</span>],
+        <span class="s">'senderIP'</span> => <span class="k">$_SERVER</span>[<span class="s">'REMOTE_ADDR'</span>],
+        <span class="s">'email'</span>    => <span class="k">$_POST</span>[<span class="s">'email'</span>],
+    ]),
+]);
+<span class="k">$result</span> = json_decode(curl_exec(<span class="k">$ch</span>), <span class="n">true</span>);
+
+<span class="k">if</span> (<span class="k">$result</span>[<span class="s">'Score'</span>] >= <span class="n">3</span>) { <span class="c">/* treat as spam */</span> }</pre></div>
+<div class="tab-panel" role="tabpanel" id="tab-python" aria-labelledby="t-python" hidden><pre class="code"><span class="k">import</span> requests
+
+result = requests.post(
+    <span class="s">"https://api.oopspam.com/v1/spamdetection"</span>,
+    headers={<span class="s">"X-Api-Key"</span>: <span class="s">"YOUR_API_KEY"</span>},
+    json={
+        <span class="s">"content"</span>: message,
+        <span class="s">"senderIP"</span>: ip,
+        <span class="s">"email"</span>: email,
+    },
+).json()
+
+is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pre></div>
+<div class="tab-panel" role="tabpanel" id="tab-js" aria-labelledby="t-js" hidden><pre class="code"><span class="k">const</span> res = <span class="k">await</span> fetch(<span class="s">"https://api.oopspam.com/v1/spamdetection"</span>, {
+  method: <span class="s">"POST"</span>,
+  headers: { <span class="s">"Content-Type"</span>: <span class="s">"application/json"</span>, <span class="s">"X-Api-Key"</span>: process.env.OOPSPAM_KEY },
+  body: JSON.stringify({ content: message, senderIP: ip, email }),
+});
+<span class="k">const</span> { Score } = <span class="k">await</span> res.json();
+
+<span class="k">const</span> isSpam = Score >= <span class="n">3</span>; <span class="c">// run on your server, never in the browser</span></pre></div>
+<div class="tab-panel" role="tabpanel" id="tab-response" aria-labelledby="t-response" hidden><pre class="code">{
+  <span class="k">"Score"</span>: <span class="n">6</span>,
+  <span class="k">"Details"</span>: {
+    <span class="k">"isIPBlocked"</span>: <span class="n">false</span>,
+    <span class="k">"isEmailBlocked"</span>: <span class="n">true</span>,
+    <span class="k">"isContentSpam"</span>: <span class="s">"spam"</span>,
+    <span class="k">"langMatch"</span>: <span class="n">true</span>,
+    <span class="k">"countryMatch"</span>: <span class="n">false</span>,
+    <span class="k">"numberOfSpamWords"</span>: <span class="n">1</span>,
+    <span class="k">"spamWords"</span>: [<span class="s">"dear"</span>],
+    <span class="k">"isContentTooShort"</span>: <span class="n">false</span>
+  }
+}</pre></div>
+            </div>
+            <p class="mt-3 is-size-7 has-text-grey-dark reveal">Prefer clicking to coding? Try requests in the <a href="https://app.oopspam.com/#test-with-your-data">dashboard</a>, or import the <a href="https://god.gw.postman.com/run-collection/14518409-422afe44-9793-4a24-aaee-e0d47e083234?action=collection%2Ffork&amp;source=rip_markdown&amp;collection-url=entityId%3D14518409-422afe44-9793-4a24-aaee-e0d47e083234%26entityType%3Dcollection%26workspaceId%3D73b5fac9-5b29-4680-9bb8-47a1a4768457">Postman collection</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- More endpoints -->
+    <section id="endpoints" class="section has-background-white">
+      <div class="container">
+        <h2 class="section-title reveal">More than a spam check</h2>
+        <p class="section-sub reveal">Same key, same plan.</p>
+        <div class="columns is-multiline">
+          <div class="column is-4 reveal" style="--i:0"><a class="endpoint" href="/docs/#spam-detection"><span class="method"><b>POST</b>/spamdetection</span><h3>Spam detection</h3><p>Score a message, IP and email.</p></a></div>
+          <div class="column is-4 reveal" style="--i:1"><a class="endpoint" href="/docs/#report"><span class="method"><b>POST</b>/spamdetection/report</span><h3>Report mistakes</h3><p>Send false positives and missed spam; detection adapts to your site.</p></a></div>
+          <div class="column is-4 reveal" style="--i:2"><a class="endpoint" href="/docs/#domain-reputation"><span class="method"><b>POST</b>/reputation/domain</span><h3>Domain reputation</h3><p>Check a domain against Google, Microsoft, Mozilla and other security lists.</p></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof -->
+    <section id="reviews" class="section">
+      <div class="container has-text-centered">
+        <h2 class="section-title reveal">Trusted by developers and site owners</h2>
+        <p class="section-sub center reveal">Real reviews, linked to the originals.</p>
+        <div class="ratings reveal">
+          <a class="rating" href="https://wordpress.org/support/plugin/oopspam-anti-spam/reviews/" target="_blank" rel="nofollow noopener"><b>4.9</b><span class="stars" aria-hidden="true">★★★★★</span><small>49 reviews on WordPress.org</small></a>
+          <a class="rating" href="https://www.trustpilot.com/review/oopspam.com" target="_blank" rel="nofollow noopener"><b>4.7</b><span class="stars" aria-hidden="true">★★★★★</span><small>23 reviews on Trustpilot</small></a>
+        </div>
+        <div class="quotes">
+          <figure class="quote-card reveal" style="--i:0">
+            <blockquote>I'm coming from CleanTalk, who just had a major outage&hellip; I was desperate&hellip; I found OOPSpam and got this set up in 15mins, cannot be happier!</blockquote>
+            <figcaption class="who"><strong>scialabbas</strong> &middot; <a href="https://wordpress.org/support/topic/set-this-up-in-my-app-in-15mins/" target="_blank" rel="nofollow noopener">WordPress.org</a></figcaption>
+          </figure>
+          <figure class="quote-card reveal" style="--i:1">
+            <blockquote>The platform does a great job of filtering out spam in a multitude of ways from location, language, email, and more! They also have a top notch client success team to help troubleshoot any integration issues that may arise.</blockquote>
+            <figcaption class="who"><strong>Jade Earnhardt</strong> &middot; <a href="https://www.trustpilot.com/reviews/670d672c69f9b809f7ccbfa0" target="_blank" rel="nofollow noopener">Trustpilot</a></figcaption>
+          </figure>
+          <figure class="quote-card reveal" style="--i:2">
+            <blockquote>Very clean and functional plugin. Easy to setup, quick API calls, and runs very smooth. It has caught a number of spam orders and has helped our shop tremendously.</blockquote>
+            <figcaption class="who"><strong>rainingbrains</strong> &middot; <a href="https://wordpress.org/support/topic/great-plugin-40019/" target="_blank" rel="nofollow noopener">WordPress.org</a></figcaption>
+          </figure>
+        </div>
+        <img class="logos reveal" loading="lazy" src="/assets/home/UsedByLogos2026-white.webp" alt="Used by Webflow, Harvard Medical School and Better Business Bureau">
+        <p class="mt-4 reveal"><a href="/reviews/">Read more reviews</a></p>
+      </div>
+    </section>
+
+    <!-- Human support -->
+    <section id="support" class="section">
+      <div class="container">
+        <div class="support columns is-vcentered is-variable is-8-desktop mx-0">
+          <div class="column is-6">
+            <h2 class="section-title reveal">Real humans, 24/7</h2>
+            <p class="reveal">Stuck on an integration? Talk directly to the developers who build the API.</p>
+            <ul class="support-points reveal">
+              <li><img src="/assets/home/check.webp" alt=""><span>Developer-to-developer support, not a ticket queue</span></li>
+              <li><img src="/assets/home/check.webp" alt=""><span>Chat with us from the <a href="/docs/">docs</a>, or email <a href="mailto:contact@oopspam.com">contact@oopspam.com</a></span></li>
+              <li><img src="/assets/home/check.webp" alt=""><span>Email support on every plan; priority support and live chat on higher plans</span></li>
+            </ul>
+            <blockquote class="support-quote reveal">I noticed a missing country in this amazing indispensable plugin, but wasn't expecting an almost instant reply &ndash; and a fix !! The next day an update was issued and the problem sorted. Incredible support.<cite>Woodcock02 &middot; <a href="https://wordpress.org/support/topic/amazing-service-support-2/" target="_blank" rel="nofollow noopener">WordPress.org</a></cite></blockquote>
+          </div>
+          <div class="column is-6">
+            <div class="chat reveal" aria-hidden="true">
+              <div class="bubble-msg you"><small>You</small>Getting a 429 on staging. Is that my key?</div>
+              <div class="bubble-msg them"><small>oopspam developer</small>That's the rate limit. Staging and production use the same key, so they share one limit. The X-RateLimit-Remaining header shows what's left.</div>
+              <div class="typing"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section" style="background-color: #FCDD56;">
+      <div class="container">
+        <h2 class="section-title has-text-centered reveal">Pay per check</h2>
+        <p class="section-sub center has-text-centered reveal" style="color:#222;">1 API call = 1 spam check. Pick your volume.</p>
+        <div class="price-card reveal">
+          <div class="billing" role="group" aria-label="Billing period">
+            <button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
+            <button type="button" data-billing="yearly" aria-pressed="true">Yearly: 2 months free</button>
+          </div>
+          <label class="vol-label" for="vol">How many spam checks a month?</label>
+          <div class="vol-value" id="vol-value" aria-hidden="true">100,000</div>
+          <input class="vol" id="vol" type="range" min="0" max="4" step="1" value="2" aria-valuetext="100,000 checks a month">
+          <div class="vol-ticks" aria-hidden="true"><span>40</span><span>25K</span><span>100K</span><span>300K</span><span>1M+</span></div>
+          <div class="result" aria-live="polite">
+            <span class="plan-name" id="plan-name">Freelance</span>
+            <span class="amount" id="plan-price">$40.83</span>
+            <span class="per">/mo</span>
+          </div>
+          <div class="billing-note" id="billing-note">$490 billed once a year · you save $98</div>
+          <p class="price-includes">Every plan: unlimited websites · no logs by default · all filters · domain reputation checks</p>
+          <a class="button has-text-black is-medium is-rounded button-has-shadow is-bg-orange" style="border: solid 1px #000;" id="plan-cta" href="https://app.oopspam.com/Identity/Account/Register">Start free →</a>
+          <p class="mt-3 is-size-7"><a class="has-text-black" style="text-decoration: underline;" href="/#pricing">See full plan details</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (the build turns this into FAQPage structured data) -->
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <h2 class="section-title reveal">Spam detection API: common questions</h2>
+            <details open>
+              <summary>What does the spam detection API check?</summary>
+              <p>The message content with machine learning, plus the sender's IP and email against denylists. Optional filters block disposable emails, VPNs, data center IPs, countries and languages.</p>
+            </details>
+            <details>
+              <summary>What score counts as spam?</summary>
+              <p>The <code>Score</code> runs from 0 to 6. We recommend treating 3 and above as spam, then adjusting to your use case.</p>
+            </details>
+            <details>
+              <summary>What happens when I hit my rate limit?</summary>
+              <p>Once you've used all the checks in your plan, new requests are blocked: the API returns a <code>429 Too Many Requests</code> error instead of a score. We notify you when this happens, so you can upgrade or wait for checks to free up. Every response also includes rate-limit headers showing how many checks you have left.</p>
+            </details>
+            <details>
+              <summary>When does my rate limit reset?</summary>
+              <p>There's no single reset date. We use a sliding 30-day window: your limit counts the checks you made in the last 30 days. Each check stops counting 30 days after you made it, so capacity comes back gradually, day by day, instead of all at once.</p>
+              <p>For example, if you used 5,000 checks on 1 March, those 5,000 become available again on 31 March.</p>
+            </details>
+            <details>
+              <summary>Do you store the submissions I send?</summary>
+              <p>No, not by default. Logging is off unless you set <code>logIt</code> to true.</p>
+            </details>
+            <details>
+              <summary>Is there a free plan?</summary>
+              <p>Yes: 40 spam checks a month, no credit card. Paid plans start at $23 a month for 25,000 checks.</p>
+            </details>
+            <details>
+              <summary>Can I use it without writing code?</summary>
+              <p>Yes. Use the <a href="/wordpress">WordPress plugin</a>, or add oopspam to <a href="https://help.oopspam.com/other-integrations/zapier/">Zapier</a>, <a href="https://help.oopspam.com/other-integrations/make/">Make</a> or <a href="https://help.oopspam.com/other-integrations/bubble-io/">Bubble.io</a> workflows.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="get-started" class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-10 p-6 has-text-centered reveal" style="background-color: rgb(255, 221, 87); border-radius: 2em;">
+            <p class="has-text-black is-brico has-text-weight-bold" style="font-size: 48px; line-height: 1.15em;">Stop spam with one API call.</p>
+            <div class="buttons is-centered mt-4">
+              <a style="border-style: solid; border-color: black;" class="button has-text-black is-medium is-rounded button-has-shadow" href="https://app.oopspam.com/Identity/Account/Register">Get a free API key →</a>
+              <a style="border-style: solid; border-color: black; background-image: unset;" class="button has-text-black is-medium is-rounded has-background-white" href="/docs/">Read the docs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include "partials/contact.njk" %}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/footerScript.njk" %}
+</div>
+
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Scroll reveal + number count-up
+  var countUp = function (el) {
+    var target = parseFloat(el.dataset.count), dec = parseInt(el.dataset.decimals || '0', 10);
+    if (reduce) { el.textContent = target.toFixed(dec); return; }
+    var start = null, dur = 1200;
+    var step = function (t) {
+      if (!start) start = t;
+      var p = Math.min((t - start) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = (target * eased).toFixed(dec);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  var items = document.querySelectorAll('.api .reveal');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('is-visible');
+        e.target.querySelectorAll('[data-count]').forEach(countUp);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.15 });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('is-visible'); el.querySelectorAll('[data-count]').forEach(countUp); });
+  }
+
+  // Hero: messages slide into the filter (hidden behind it) and come out sorted below the grid
+  var flow = document.getElementById('flow');
+  var inLayer = document.getElementById('in-layer'), outLayer = document.getElementById('out-layer'), art = document.getElementById('filter-art');
+  var feed = [
+    { icon: '/assets/home/Icon_SignUps.svg', text: 'x8f2@tempmail.dev', spam: true },
+    { icon: '/assets/home/Icon_Reviews.svg', text: 'Great service, fast delivery', spam: false },
+    { icon: '/assets/home/Icon_LiveChat.svg', text: 'Cheap followers, click here', spam: true },
+    { icon: '/assets/home/Icon_ContactForm.svg', text: 'Quote request for 40 units', spam: false },
+    { icon: '/assets/home/Icon_email.svg', text: 'maria@acme-supplies.com', spam: false },
+    { icon: '/assets/home/Icon_Reviews.svg', text: 'Dear Agent, we are unable to…', spam: true }
+  ];
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  var skull = '<span class="skull"><img src="/assets/api/skull.webp" alt=""></span>';
+  var gem = '<img class="gem" src="/assets/api/gem.webp" alt="">';
+  var badX = '<img class="badge" src="/assets/api/badge-x.webp" alt="">';
+  var badOk = '<img class="badge" src="/assets/api/badge-check.webp" alt="">';
+  var counts = { blocked: 0, delivered: 0 };
+  var geo = {};
+  var measure = function () {
+    var f = flow.getBoundingClientRect(), a = art.getBoundingClientRect();
+    geo.w = f.width;
+    geo.cloudX = a.left - f.left + a.width * 0.5;        // middle of the filter
+    geo.gridTop = a.top - f.top + a.height * (297 / 398);    // back edge of the mesh
+    geo.gridBottom = a.top - f.top + a.height * (393 / 398); // front edge of the mesh
+    // Cards move over the cloud and are cut off where they reach the mesh
+    geo.gridMid = geo.gridTop + (geo.gridBottom - geo.gridTop) * 0.45;
+    inLayer.style.clipPath = 'inset(0 0 ' + Math.round(f.height - geo.gridTop - 3) + 'px 0)';
+    outLayer.style.top = Math.round(geo.gridTop) + 'px';
+    // Centre the two trays under the graphic, 16px apart
+    var tw = flow.querySelector('.tray.blocked').offsetWidth;
+    var mid = Math.min(Math.max(geo.cloudX, tw + 8), f.width - tw - 8); // keep both trays on screen
+    flow.querySelector('.tray.blocked').style.left = Math.round(mid - tw - 8) + 'px';
+    flow.querySelector('.tray.delivered').style.left = Math.round(mid + 8) + 'px';
+    geo.trayMid = mid;
+    geo.trayOffset = tw / 2 + 8;
+  };
+  var make = function (html, cls, layer) {
+    var el = document.createElement('div'); el.className = 'msg ' + cls; el.innerHTML = html; layer.appendChild(el); return el;
+  };
+  var bump = function (kind) {
+    counts[kind] += 1;
+    document.getElementById('n-' + kind).textContent = counts[kind];
+    var tray = flow.querySelector('.tray.' + kind);
+    tray.classList.remove('bump'); void tray.offsetWidth; tray.classList.add('bump');
+  };
+  var ease = 'cubic-bezier(.45,.05,.3,1)';
+  var lane = 0;
+  var run = function (item, done) {
+    // In: glide from the left into the cloud; the cloud covers it, so it is cut off as it enters
+    var inEl = make('<img class="ico" src="' + item.icon + '" alt=""><span class="t"></span>', '', inLayer);
+    inEl.querySelector('.t').textContent = item.text;
+    var w = inEl.offsetWidth, h = inEl.offsetHeight;
+    var startX = [0.08, 0.30, 0.18][lane++ % 3] * geo.w;
+    var endX = geo.cloudX - w / 2, endY = geo.gridTop + 8;
+    var a = inEl.animate([
+      { transform: 'translate(' + startX + 'px, -10px)', opacity: 0 },
+      { transform: 'translate(' + startX + 'px, 10px)', opacity: 1, offset: .2 },
+      { transform: 'translate(' + endX + 'px,' + endY + 'px)', opacity: 1 }
+    ], { duration: 3000, easing: ease, fill: 'forwards' });
+    a.onfinish = function () {
+      inEl.remove();
+      // Out: rises out from under the grid edge, then settles towards its tray
+      var outEl = item.spam ? make(skull + '<span class="t">SPAM</span>' + badX, 'out is-spam', outLayer)
+                            : make(gem + '<span class="t">Delivered</span>' + badOk, 'out is-ok', outLayer);
+      var ow = outEl.offsetWidth, oh = outEl.offsetHeight;
+      var cx = geo.trayMid - ow / 2, layerH = outLayer.offsetHeight;
+      var side = item.spam ? -1 : 1, dx = side * geo.trayOffset;
+      var b = outEl.animate([
+        { transform: 'translate(' + cx + 'px,' + (geo.gridMid - geo.gridTop - oh / 2 - 6) + 'px) scale(.9)', opacity: 0 },
+        { transform: 'translate(' + cx + 'px,' + (geo.gridMid - geo.gridTop - oh / 2 + 4) + 'px) scale(.94)', opacity: 1, offset: .1 },
+        { transform: 'translate(' + cx + 'px,' + (geo.gridBottom - geo.gridTop + 10) + 'px) scale(1)', opacity: 1, offset: .38 },
+        { transform: 'translate(' + (cx + dx) + 'px,' + (layerH - oh - 70) + 'px)', opacity: 1, offset: .82 },
+        { transform: 'translate(' + (cx + dx) + 'px,' + (layerH - oh - 50) + 'px)', opacity: 0 }
+      ], { duration: 2600, easing: ease, fill: 'forwards' });
+      setTimeout(function () { bump(item.spam ? 'blocked' : 'delivered'); }, 2150);
+      b.onfinish = function () { outEl.remove(); if (done) done(); };
+    };
+  };
+  if (flow) {
+    measure();
+    window.addEventListener('resize', measure);
+    if (!art.complete) art.addEventListener('load', measure);
+    if (reduce || !flow.animate) {
+      counts = { blocked: 2, delivered: 3 };
+      document.getElementById('n-blocked').textContent = 2;
+      document.getElementById('n-delivered').textContent = 3;
+    } else {
+      // One item at a time: the next starts only after the previous one reaches its tray
+      var k = 0, next = function () {
+        if (document.hidden) { setTimeout(next, 1000); return; }
+        run(feed[k++ % feed.length], function () { setTimeout(next, 400); });
+      };
+      setTimeout(next, 400);
+    }
+  }
+
+  // Globe: spam sources light up around the world
+  var pings = document.getElementById('pings');
+  if (pings && !reduce) {
+    var NS = 'http://www.w3.org/2000/svg';
+    var ping = function () {
+      if (document.hidden) return;
+      var ang = Math.random() * Math.PI * 2, r = Math.sqrt(Math.random()) * 140;
+      var x = 200 + Math.cos(ang) * r, y = 200 + Math.sin(ang) * r * .9;
+      var color = Math.random() < .5 ? '#a33a2b' : '#111';
+      var g = document.createElementNS(NS, 'g'); g.setAttribute('class', 'ping');
+      var ring = document.createElementNS(NS, 'circle');
+      ring.setAttribute('class', 'ring'); ring.setAttribute('cx', x); ring.setAttribute('cy', y); ring.setAttribute('r', 6);
+      ring.setAttribute('fill', 'none'); ring.setAttribute('stroke', color); ring.setAttribute('stroke-width', 1.5);
+      var core = document.createElementNS(NS, 'circle');
+      core.setAttribute('class', 'core'); core.setAttribute('cx', x); core.setAttribute('cy', y); core.setAttribute('r', 4); core.setAttribute('fill', color);
+      g.appendChild(ring); g.appendChild(core); pings.appendChild(g);
+      setTimeout(function () { g.remove(); }, 2500);
+    };
+    setInterval(ping, 650);
+  }
+
+  // Pricing: volume slider + billing toggle
+  var tiers = [
+    { checks: '40', name: 'Free', monthly: 0, yearly: 0 },
+    { checks: '25,000', name: 'Starter', monthly: 23, yearly: 19.17 },
+    { checks: '100,000', name: 'Freelance', monthly: 49, yearly: 40.83 },
+    { checks: '300,000', name: 'Agency', monthly: 69, yearly: 57.5 },
+    { checks: '1,000,000+', name: 'Scale', monthly: 259, yearly: 215.8 }
+  ];
+  var vol = document.getElementById('vol'), billing = 'yearly';
+  var fmt = function (n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
+  var renderPrice = function () {
+    var t = tiers[+vol.value];
+    vol.style.setProperty('--fill', (vol.value / 4 * 100) + '%');
+    vol.setAttribute('aria-valuetext', t.checks + ' checks a month, ' + t.name + ' plan');
+    document.getElementById('vol-value').textContent = t.checks;
+    document.getElementById('plan-name').textContent = t.name;
+    document.getElementById('plan-price').textContent = fmt(t[billing]);
+    // Yearly = 10 months' price (2 months free)
+    var note = t.monthly === 0 ? 'Free forever, no credit card'
+      : billing === 'yearly' ? fmt(t.monthly * 10) + ' billed once a year · you save ' + fmt(t.monthly * 2)
+      : 'Billed monthly · pay yearly to get 2 months free';
+    document.getElementById('billing-note').textContent = note;
+    document.getElementById('plan-cta').textContent = t.monthly === 0 ? 'Start free →' : 'Start with ' + t.name + ' →';
+  };
+  if (vol) {
+    vol.addEventListener('input', renderPrice);
+    document.querySelectorAll('.api .billing button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        billing = b.dataset.billing;
+        document.querySelectorAll('.api .billing button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+        renderPrice();
+      });
+    });
+    renderPrice();
+  }
+
+  // Code tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.api .tab-btn'));
+  var select = function (tab) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  };
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      select(next); next.focus();
+    });
+  });
+  var copy = document.getElementById('copy-code');
+  copy.addEventListener('click', function () {
+    var panel = document.querySelector('.api .tab-panel:not([hidden]) pre');
+    if (!panel || !navigator.clipboard) return;
+    navigator.clipboard.writeText(panel.innerText).then(function () {
+      copy.textContent = 'Copied'; setTimeout(function () { copy.textContent = 'Copy'; }, 1500);
+    });
+  });
+})();
+</script>
+</body>
+</html>
