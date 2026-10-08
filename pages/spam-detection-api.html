@@ -46,7 +46,7 @@
     .api .filter-art { position: absolute; left: 14%; top: 40px; width: 86%; height: auto; z-index: 1; display: block; }
     .api .filter-art.mesh { z-index: 5; pointer-events: none; } /* mesh lines drawn over the cards, so they pass behind a see-through filter */
     .api .in-layer { position: absolute; inset: 0; z-index: 6; pointer-events: none; overflow: hidden; } /* in front of the mesh; clipped at the mesh by JS */ 
-    .api .out-layer { position: absolute; left: 0; right: 0; bottom: 0; z-index: 4; pointer-events: none; }
+    .api .out-layer { position: absolute; left: 0; right: 0; bottom: 0; z-index: 4; pointer-events: none; overflow: hidden; }
     .api .msg { position: absolute; left: 0; top: 0; display: flex; align-items: center; width: 250px; height: 62px; padding: 0 1rem 0 3.6rem; background: #fff; border: 2.5px solid #000; border-radius: 12px; box-shadow: 5px 6px 0 #000; font-size: .9rem; color: #111; will-change: transform, opacity; }
     .api .msg .ico { position: absolute; left: -22px; top: 50%; width: 66px; height: 66px; transform: translateY(-50%); object-fit: contain; }
     .api .msg .t { color: #111 !important; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -86,7 +86,7 @@
     .api .signals { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
     .api .signal { background: #fff; border: 1px solid var(--line); border-radius: 1rem; padding: 1.2rem 1.25rem; transition: transform .25s ease, box-shadow .25s ease, border-color .25s; }
     .api .signal:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.07); border-color: rgba(0,0,0,.25); }
-    .api .signal h3 { font-size: 1.15rem !important; margin: 0 0 .3rem; color: var(--ink); }
+    .api .signal h3 { font-size: 1.15rem !important; line-height: 1.25 !important; margin: 0 0 .5rem; color: var(--ink); }
     .api .signal p { color: #4a4a4a; font-size: .95rem; margin: 0 0 .7rem; }
     .api .param { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .78rem; background: var(--cream); border: 1px solid #efe4cb; border-radius: .4rem; padding: .1rem .45rem; color: #5a4a1c; }
 
@@ -173,7 +173,7 @@
 
     /* FAQ */
     .api #faq details { border-bottom: 1px solid #e6e1d6; padding: 1.1rem 0; }
-    .api #faq summary { cursor: pointer; font-weight: 700; font-size: 1.1rem; color: var(--ink); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+    .api #faq summary { cursor: pointer; font-weight: 700; font-size: 1.1rem; color: var(--ink); list-style: none; display: flex; justify-content: space-between; gap: 1rem; padding-right: 4px; }
     .api #faq summary::-webkit-details-marker { display: none; }
     .api #faq summary::after { content: "+"; font-weight: 400; font-size: 1.4rem; line-height: 1; color: var(--green); transition: transform .25s ease; }
     .api #faq details[open] summary::after { transform: rotate(45deg); }
@@ -671,9 +671,8 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
       var cx = geo.trayMid - ow / 2, layerH = outLayer.offsetHeight;
       var side = item.spam ? -1 : 1, dx = side * geo.trayOffset;
       var b = outEl.animate([
-        { transform: 'translate(' + cx + 'px,' + (geo.gridMid - geo.gridTop - oh / 2 - 6) + 'px) scale(.9)', opacity: 0 },
-        { transform: 'translate(' + cx + 'px,' + (geo.gridMid - geo.gridTop - oh / 2 + 4) + 'px) scale(.94)', opacity: 1, offset: .1 },
-        { transform: 'translate(' + cx + 'px,' + (geo.gridBottom - geo.gridTop + 10) + 'px) scale(1)', opacity: 1, offset: .38 },
+        { transform: 'translate(' + cx + 'px,' + (-oh - 4) + 'px)', opacity: 1 },
+        { transform: 'translate(' + cx + 'px,' + (geo.gridBottom - geo.gridTop + 24) + 'px)', opacity: 1, offset: .42 },
         { transform: 'translate(' + (cx + dx) + 'px,' + (layerH - oh - 70) + 'px)', opacity: 1, offset: .82 },
         { transform: 'translate(' + (cx + dx) + 'px,' + (layerH - oh - 50) + 'px)', opacity: 0 }
       ], { duration: 2600, easing: ease, fill: 'forwards' });
