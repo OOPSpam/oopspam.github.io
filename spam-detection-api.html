@@ -100,11 +100,11 @@
     .api .msg.is-spam { background: #111; }
     .api .msg.is-spam .t { color: #fff !important; font-family: 'Open Sans SemiBold'; letter-spacing: .14em; font-size: 1rem; }
     .api .msg.is-ok .t { font-family: 'Open Sans SemiBold'; }
-    .api .msg .skull { position: absolute; left: -22px; bottom: -22px; width: 54px; height: 54px; border-radius: 50%; background: #fff; border: 3px solid #111; display: grid; place-items: center; }
-    .api .msg .skull img { width: 34px; height: auto; }
-    .api .msg .gem { position: absolute; left: -16px; bottom: -24px; width: 34px; height: auto; }
+    .api .msg .skull { position: absolute; left: -10px; bottom: -4px; height: 50px; width: auto; display: block; }
+    .api .msg .skull img { height: 50px; width: auto; display: block; }
+    .api .msg .gem { position: absolute; left: -11px; bottom: -20px; height: 50px; width: auto; }
     .api .msg .badge { position: absolute; right: -16px; top: -18px; width: 40px; height: 40px; }
-    .api .tray { position: absolute; bottom: 0; z-index: 1; width: 200px; padding: .6rem .8rem; border-radius: .9rem; border: 1.5px dashed rgba(0,0,0,.35); text-align: center; font-family: 'Open Sans SemiBold'; font-size: .85rem; color: #111; }
+    .api .tray { position: absolute; bottom: 50px; z-index: 1; width: 200px; padding: .6rem .8rem; border-radius: .9rem; border: 1.5px dashed rgba(0,0,0,.35); text-align: center; font-family: 'Open Sans SemiBold'; font-size: .85rem; color: #111; }
     .api .tray b { display: block; font-family: 'Bricolage Grotesque'; font-size: 1.6rem; line-height: 1.1; }
     .api .tray.blocked { left: calc(57% - 208px); } .api .tray.blocked b { color: var(--red); }
     .api .tray.delivered { left: calc(57% + 8px); } .api .tray.delivered b { color: #111; }
@@ -826,14 +826,31 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
   // Hero: messages slide into the filter (hidden behind it) and come out sorted below the grid
   var flow = document.getElementById('flow');
   var inLayer = document.getElementById('in-layer'), outLayer = document.getElementById('out-layer'), art = document.getElementById('filter-art');
-  var feed = [
-    { icon: '/assets/home/Icon_SignUps.svg', text: 'x8f2@tempmail.dev', spam: true },
-    { icon: '/assets/home/Icon_Reviews.svg', text: 'Great service, fast delivery', spam: false },
-    { icon: '/assets/home/Icon_LiveChat.svg', text: 'Cheap followers, click here', spam: true },
-    { icon: '/assets/home/Icon_ContactForm.svg', text: 'Quote request for 40 units', spam: false },
-    { icon: '/assets/home/Icon_email.svg', text: 'maria@acme-supplies.com', spam: false },
-    { icon: '/assets/home/Icon_Reviews.svg', text: 'Dear Agent, we are unable to…', spam: true }
+  var spamPool = [
+    { icon: '/assets/home/Icon_SignUps.svg', text: 'x8f2@tempmail.dev' },
+    { icon: '/assets/home/Icon_LiveChat.svg', text: 'Cheap followers, click here' },
+    { icon: '/assets/home/Icon_Reviews.svg', text: 'Dear Agent, we are unable to…' },
+    { icon: '/assets/home/Icon_ContactForm.svg', text: 'SEO services, page 1 guaranteed' },
+    { icon: '/assets/home/Icon_email.svg', text: 'win-prize@claim-now.biz' },
+    { icon: '/assets/home/Icon_CardTesting.svg', text: 'Order #4471 · card declined ×9' },
+    { icon: '/assets/home/Icon_Other.svg', text: 'Crypto profits 300% weekly' }
   ];
+  var hamPool = [
+    { icon: '/assets/home/Icon_Reviews.svg', text: 'Great service, fast delivery' },
+    { icon: '/assets/home/Icon_ContactForm.svg', text: 'Quote request for 40 units' },
+    { icon: '/assets/home/Icon_email.svg', text: 'maria@acme-supplies.com' },
+    { icon: '/assets/home/Icon_LiveChat.svg', text: 'Is the blue one in stock?' },
+    { icon: '/assets/home/Icon_SignUps.svg', text: 'j.okafor@northwind.io' },
+    { icon: '/assets/home/Icon_Other.svg', text: 'Booking for Saturday, 4 people' }
+  ];
+  // Random outcome and message each time, never the same message twice in a row
+  var last = null;
+  var pick = function () {
+    var spam = Math.random() < .5, pool = spam ? spamPool : hamPool, it;
+    do { it = pool[Math.floor(Math.random() * pool.length)]; } while (it === last);
+    last = it;
+    return { icon: it.icon, text: it.text, spam: spam };
+  };
   var SVGNS = 'http://www.w3.org/2000/svg';
   var skull = '<span class="skull"><img src="/assets/api/skull.webp" alt=""></span>';
   var gem = '<img class="gem" src="/assets/api/gem.webp" alt="">';
@@ -850,7 +867,8 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
     // Cards move over the cloud and are cut off where they reach the mesh
     geo.gridMid = geo.gridTop + (geo.gridBottom - geo.gridTop) * 0.45;
     inLayer.style.clipPath = 'inset(0 0 ' + Math.round(f.height - geo.gridTop - 3) + 'px 0)';
-    outLayer.style.top = Math.round(geo.gridTop) + 'px';
+    geo.outTop = geo.gridTop + 25; // sorted cards start showing 25px below the mesh back edge
+    outLayer.style.top = Math.round(geo.outTop) + 'px';
     // Centre the two trays under the graphic, 16px apart
     var tw = flow.querySelector('.tray.blocked').offsetWidth;
     var mid = Math.min(Math.max(geo.cloudX, tw + 8), f.width - tw - 8); // keep both trays on screen
@@ -869,13 +887,14 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
     tray.classList.remove('bump'); void tray.offsetWidth; tray.classList.add('bump');
   };
   var ease = 'cubic-bezier(.45,.05,.3,1)';
-  var lane = 0;
   var run = function (item, done) {
     // In: glide from the left into the cloud; the cloud covers it, so it is cut off as it enters
     var inEl = make('<img class="ico" src="' + item.icon + '" alt=""><span class="t"></span>', '', inLayer);
     inEl.querySelector('.t').textContent = item.text;
     var w = inEl.offsetWidth, h = inEl.offsetHeight;
-    var startX = [0.08, 0.30, 0.18][lane++ % 3] * geo.w;
+    var fromRight = Math.random() < .45;
+    var startX = fromRight ? geo.w - w - (0.02 + Math.random() * 0.16) * geo.w // right side of the hero
+                           : (0.02 + Math.random() * 0.24) * geo.w;          // left side
     var endX = geo.cloudX - w / 2, endY = geo.gridTop + 8;
     var a = inEl.animate([
       { transform: 'translate(' + startX + 'px, -10px)', opacity: 0 },
@@ -890,11 +909,12 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
       var ow = outEl.offsetWidth, oh = outEl.offsetHeight;
       var cx = geo.trayMid - ow / 2, layerH = outLayer.offsetHeight;
       var side = item.spam ? -1 : 1, dx = side * geo.trayOffset;
+      dx = Math.min(Math.max(cx + dx, 14), geo.w - ow - 8) - cx; // keep the card (and its icon/shadow) inside the hero
       var b = outEl.animate([
         { transform: 'translate(' + cx + 'px,' + (-oh - 4) + 'px)', opacity: 1 },
-        { transform: 'translate(' + cx + 'px,' + (geo.gridBottom - geo.gridTop + 24) + 'px)', opacity: 1, offset: .42 },
-        { transform: 'translate(' + (cx + dx) + 'px,' + (layerH - oh - 70) + 'px)', opacity: 1, offset: .82 },
-        { transform: 'translate(' + (cx + dx) + 'px,' + (layerH - oh - 50) + 'px)', opacity: 0 }
+        { transform: 'translate(' + cx + 'px,' + (geo.gridBottom - geo.outTop + 24) + 'px)', opacity: 1, offset: .42 },
+        { transform: 'translate(' + (cx + dx) + 'px,' + (layerH - oh - 120) + 'px)', opacity: 1, offset: .82 },
+        { transform: 'translate(' + (cx + dx) + 'px,' + (layerH - oh - 100) + 'px)', opacity: 0 }
       ], { duration: 2600, easing: ease, fill: 'forwards' });
       setTimeout(function () { bump(item.spam ? 'blocked' : 'delivered'); }, 2150);
       b.onfinish = function () { outEl.remove(); if (done) done(); };
@@ -910,9 +930,9 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
       document.getElementById('n-delivered').textContent = 3;
     } else {
       // One item at a time: the next starts only after the previous one reaches its tray
-      var k = 0, next = function () {
+      var next = function () {
         if (document.hidden) { setTimeout(next, 1000); return; }
-        run(feed[k++ % feed.length], function () { setTimeout(next, 400); });
+        run(pick(), function () { setTimeout(next, 400); });
       };
       setTimeout(next, 400);
     }
