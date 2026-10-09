@@ -111,6 +111,11 @@
     .api .tray.bump { animation: api-bump .5s ease; }
 
     /* Globe */
+    /* Blocklist band: same green/black backdrop as the home page "AI is creating more fraud" section */
+    .api #blocklist { background: #fff url(/assets/home/ProductBackground_Green.webp) 50% 0 no-repeat; padding-top: 8rem; padding-bottom: 6rem; }
+    .api #blocklist .section-title { color: #fff; }
+    .api #blocklist .section-sub { color: rgba(255,255,255,.8) !important; }
+    .api #blocklist .bubble { box-shadow: 3px 5px 0 var(--yellow); }
     .api .globe-wrap { position: relative; max-width: 420px; margin: 0 auto; }
     .api .globe { width: 100%; height: auto; display: block; overflow: visible; }
     .api .globe .meridian { transform-box: fill-box; transform-origin: center; animation: api-spin 14s linear infinite; }
@@ -356,7 +361,7 @@
     </section>
 
     <!-- Global blocklist -->
-    <section id="blocklist" class="section" style="background-color: #fbf6ed;">
+    <section id="blocklist" class="section">
       <div class="container">
         <div class="columns is-vcentered is-variable is-8-desktop">
           <div class="column is-6">
