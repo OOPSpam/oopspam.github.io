@@ -646,7 +646,8 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
     geo.gridBottom = a.top - f.top + a.height * (393 / 398); // front edge of the mesh
     // Cards move over the cloud and are cut off where they reach the mesh
     geo.gridMid = geo.gridTop + (geo.gridBottom - geo.gridTop) * 0.45;
-    inLayer.style.clipPath = 'inset(0 0 ' + Math.round(f.height - geo.gridTop - 3) + 'px 0)';
+    geo.inCut = geo.gridTop + 12; // incoming cards disappear 15px below the mesh back edge
+    inLayer.style.clipPath = 'inset(0 0 ' + Math.round(f.height - geo.inCut) + 'px 0)';
     geo.outTop = geo.gridTop + 25; // sorted cards start showing 25px below the mesh back edge
     outLayer.style.top = Math.round(geo.outTop) + 'px';
     // Centre the two trays under the graphic, 16px apart
@@ -675,7 +676,7 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
     var fromRight = Math.random() < .45;
     var startX = fromRight ? geo.w - w - (0.02 + Math.random() * 0.16) * geo.w // right side of the hero
                            : (0.02 + Math.random() * 0.24) * geo.w;          // left side
-    var endX = geo.cloudX - w / 2, endY = geo.gridTop + 8;
+    var endX = geo.cloudX - w / 2, endY = geo.inCut + 11;
     var a = inEl.animate([
       { transform: 'translate(' + startX + 'px, -10px)', opacity: 0 },
       { transform: 'translate(' + startX + 'px, 10px)', opacity: 1, offset: .2 },
