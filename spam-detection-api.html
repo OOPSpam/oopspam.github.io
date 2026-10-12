@@ -62,7 +62,7 @@
         "lowPrice": "0",
         "highPrice": "259",
         "offerCount": "5",
-        "url": "https://www.oopspam.com/#pricing"
+        "url": "https://www.oopspam.com/pricing"
       }
     }
   ]
@@ -172,8 +172,8 @@
     /* Pricing: pick a volume */
     .api .price-card { max-width: 38rem; margin: 0 auto; text-align: center; }
     .api .billing { display: inline-flex; padding: .25rem; border: 1px solid #000; border-radius: 999px; background: var(--cream); margin-bottom: 1.5rem; }
-    .api .billing button { border: 0; background: transparent; font: inherit; font-size: .9rem; padding: .4rem 1rem; border-radius: 999px; cursor: pointer; color: #111; transition: background .2s; }
-    .api .billing button[aria-pressed="true"] { background: var(--yellow); font-family: 'Open Sans SemiBold'; }
+    .api .billing button { border: 1px solid transparent; background: transparent; font: inherit; font-size: .9rem; padding: .4rem 1rem; border-radius: 999px; cursor: pointer; color: #111; transition: background .2s; }
+    .api .billing button[aria-pressed="true"] { background: var(--yellow); border-color: #000; font-family: 'Open Sans SemiBold'; }
     .api .billing button:focus-visible, .api .vol:focus-visible { outline: 3px solid #f2d98a; outline-offset: 3px; }
     .api .vol-label { display: block; font-family: 'Open Sans SemiBold'; color: #111; margin-bottom: .4rem; }
     .api .vol-value { font-family: 'Bricolage Grotesque'; font-size: 2.2rem; line-height: 1.1; color: #111; }
@@ -187,6 +187,7 @@
     .api .result .plan-name { font-family: 'Open Sans SemiBold'; color: #111; padding-bottom: .5rem; }
     .api .result .amount { font-family: 'Bricolage Grotesque'; font-size: 3.2rem; line-height: 1; color: #111; transition: opacity .2s; }
     .api .result .per { color: #444; padding-bottom: .45rem; }
+    .api .billing-note b { color: #111; }
     .api .billing-note { font-size: .88rem; color: #555; min-height: 1.3em; }
     .api .price-includes { margin: 1.2rem 0 1.4rem; color: #333; font-size: .92rem; }
 
@@ -293,15 +294,15 @@
           <div class="navbar-start">
           </div>
           <div class="navbar-end">
+            <a href="https://www.oopspam.com/pricing" class="navbar-item  has-text-black">
+              Pricing
+            </a>
             <a href="https://www.oopspam.com/help" class="navbar-item  has-text-black">
               Documentation
            </a>
             <a href="https://www.oopspam.com/integrations" class="navbar-item  has-text-black">
               Integrations
            </a>
-            <a href="https://www.oopspam.com/#pricing" class="navbar-item  has-text-black">
-              Pricing
-            </a>
             <a href="https://www.oopspam.com/#contact" class="navbar-item has-text-black">
               Contact
             </a>
@@ -589,18 +590,18 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
             <button type="button" data-billing="yearly" aria-pressed="true">Yearly: 2 months free</button>
           </div>
           <label class="vol-label" for="vol">How many spam checks a month?</label>
-          <div class="vol-value" id="vol-value" aria-hidden="true">100,000</div>
-          <input class="vol" id="vol" type="range" min="0" max="5" step="1" value="2" aria-valuetext="100,000 checks a month">
+          <div class="vol-value" id="vol-value" aria-hidden="true">25,000</div>
+          <input class="vol" id="vol" type="range" min="0" max="5" step="1" value="1" aria-valuetext="25,000 checks a month">
           <div class="vol-ticks" aria-hidden="true"><span>40</span><span>25K</span><span>100K</span><span>300K</span><span>1M</span><span>1M+</span></div>
           <div class="result" aria-live="polite">
-            <span class="plan-name" id="plan-name">Freelance</span>
-            <span class="amount" id="plan-price">$40.83</span>
+            <span class="plan-name" id="plan-name">Starter</span>
+            <span class="amount" id="plan-price">$19.17</span>
             <span class="per" id="plan-per">/mo</span>
           </div>
-          <div class="billing-note" id="billing-note">$490 billed once a year · you save $98</div>
+          <div class="billing-note" id="billing-note">$230 billed once a year. <b>You save $46.</b></div>
           <p class="price-includes">Every plan: unlimited websites · no logs by default · all filters · domain reputation checks</p>
           <a class="button has-text-black is-medium is-rounded button-has-shadow is-bg-orange" style="border: solid 1px #000;" id="plan-cta" href="https://app.oopspam.com/Identity/Account/Register">Start free →</a>
-          <p class="mt-3 is-size-7"><a class="has-text-black" style="text-decoration: underline;" href="/#pricing">See full plan details</a></p>
+          <p class="mt-3 is-size-7"><a class="has-text-black" style="text-decoration: underline;" href="/pricing">See full plan details</a></p>
         </div>
       </div>
     </section>
@@ -987,7 +988,7 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
     if (t.enterprise) {
       // Above the Scale plan: custom pricing, talk to us
       document.getElementById('plan-price').textContent = 'Custom';
-      document.getElementById('billing-note').textContent = 'Volume pricing, custom limits and dedicated support';
+      document.getElementById('billing-note').textContent = 'Volume pricing, custom limits and dedicated support.';
       cta.textContent = 'Reach out →';
       cta.href = 'mailto:contact@oopspam.com?subject=Enterprise%20plan';
       return;
@@ -995,10 +996,10 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
     cta.href = 'https://app.oopspam.com/Identity/Account/Register';
     document.getElementById('plan-price').textContent = fmt(t[billing]);
     // Yearly = 10 months' price (2 months free)
-    var note = t.monthly === 0 ? 'Free forever, no credit card'
-      : billing === 'yearly' ? fmt(t.monthly * 10) + ' billed once a year · you save ' + fmt(t.monthly * 2)
-      : 'Billed monthly · pay yearly to get 2 months free';
-    document.getElementById('billing-note').textContent = note;
+    var note = t.monthly === 0 ? 'Free forever. No credit card needed.'
+      : billing === 'yearly' ? fmt(t.monthly * 10) + ' billed once a year. <b>You save ' + fmt(t.monthly * 2) + '.</b>'
+      : 'Billed monthly. Pay yearly to get 2 months free.';
+    document.getElementById('billing-note').innerHTML = note;
     cta.textContent = t.monthly === 0 ? 'Start free →' : 'Start with ' + t.name + ' →';
   };
   if (vol) {
