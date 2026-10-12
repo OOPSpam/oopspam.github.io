@@ -492,7 +492,7 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
     <section id="pricing" class="section" style="background-color: #FCDD56;">
       <div class="container">
         <h2 class="section-title has-text-centered reveal">Pay per check</h2>
-        <p class="section-sub center has-text-centered reveal" style="color:#222;">1 API call = 1 spam check. Pick your volume.</p>
+        <p class="section-sub center has-text-centered reveal" style="color:#222;">1 API call = 1 spam check.<br>Pick your volume.</p>
         <div class="price-card reveal">
           <div class="billing" role="group" aria-label="Billing period">
             <button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
@@ -500,12 +500,12 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
           </div>
           <label class="vol-label" for="vol">How many spam checks a month?</label>
           <div class="vol-value" id="vol-value" aria-hidden="true">100,000</div>
-          <input class="vol" id="vol" type="range" min="0" max="4" step="1" value="2" aria-valuetext="100,000 checks a month">
-          <div class="vol-ticks" aria-hidden="true"><span>40</span><span>25K</span><span>100K</span><span>300K</span><span>1M+</span></div>
+          <input class="vol" id="vol" type="range" min="0" max="5" step="1" value="2" aria-valuetext="100,000 checks a month">
+          <div class="vol-ticks" aria-hidden="true"><span>40</span><span>25K</span><span>100K</span><span>300K</span><span>1M</span><span>1M+</span></div>
           <div class="result" aria-live="polite">
             <span class="plan-name" id="plan-name">Freelance</span>
             <span class="amount" id="plan-price">$40.83</span>
-            <span class="per">/mo</span>
+            <span class="per" id="plan-per">/mo</span>
           </div>
           <div class="billing-note" id="billing-note">$490 billed once a year · you save $98</div>
           <p class="price-includes">Every plan: unlimited websites · no logs by default · all filters · domain reputation checks</p>
@@ -751,23 +751,35 @@ is_spam = result[<span class="s">"Score"</span>] >= <span class="n">3</span></pr
     { checks: '25,000', name: 'Starter', monthly: 23, yearly: 19.17 },
     { checks: '100,000', name: 'Freelance', monthly: 49, yearly: 40.83 },
     { checks: '300,000', name: 'Agency', monthly: 69, yearly: 57.5 },
-    { checks: '1,000,000+', name: 'Scale', monthly: 259, yearly: 215.8 }
+    { checks: '1,000,000', name: 'Scale', monthly: 259, yearly: 215.8 },
+    { checks: '1,000,000+', name: 'Enterprise', enterprise: true }
   ];
   var vol = document.getElementById('vol'), billing = 'yearly';
   var fmt = function (n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
   var renderPrice = function () {
     var t = tiers[+vol.value];
-    vol.style.setProperty('--fill', (vol.value / 4 * 100) + '%');
+    vol.style.setProperty('--fill', (vol.value / vol.max * 100) + '%');
     vol.setAttribute('aria-valuetext', t.checks + ' checks a month, ' + t.name + ' plan');
     document.getElementById('vol-value').textContent = t.checks;
     document.getElementById('plan-name').textContent = t.name;
+    var cta = document.getElementById('plan-cta');
+    document.getElementById('plan-per').style.display = t.enterprise ? 'none' : '';
+    if (t.enterprise) {
+      // Above the Scale plan: custom pricing, talk to us
+      document.getElementById('plan-price').textContent = 'Custom';
+      document.getElementById('billing-note').textContent = 'Volume pricing, custom limits and dedicated support';
+      cta.textContent = 'Reach out →';
+      cta.href = 'mailto:contact@oopspam.com?subject=Enterprise%20plan';
+      return;
+    }
+    cta.href = 'https://app.oopspam.com/Identity/Account/Register';
     document.getElementById('plan-price').textContent = fmt(t[billing]);
     // Yearly = 10 months' price (2 months free)
     var note = t.monthly === 0 ? 'Free forever, no credit card'
       : billing === 'yearly' ? fmt(t.monthly * 10) + ' billed once a year · you save ' + fmt(t.monthly * 2)
       : 'Billed monthly · pay yearly to get 2 months free';
     document.getElementById('billing-note').textContent = note;
-    document.getElementById('plan-cta').textContent = t.monthly === 0 ? 'Start free →' : 'Start with ' + t.name + ' →';
+    cta.textContent = t.monthly === 0 ? 'Start free →' : 'Start with ' + t.name + ' →';
   };
   if (vol) {
     vol.addEventListener('input', renderPrice);

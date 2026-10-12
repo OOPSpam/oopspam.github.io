@@ -448,7 +448,7 @@
   <section id="pricing" class="section" style="background-color: #FCDD56;">
     <div class="container price-box">
       <h3 class="title has-text-centered has-text-black">Simple, transparent pricing.</h3>
-      <p class="copy has-text-centered price-sub">1 API call = 1 spam check. Start with 40 free checks a month, no credit card required.</p>
+      <p class="copy has-text-centered price-sub">1 API call = 1 spam check.<br>Start with 40 free checks a month, no credit card required.</p>
       <div class="price-card">
         <div class="billing" role="group" aria-label="Billing period">
           <button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
@@ -456,16 +456,16 @@
         </div>
         <label class="vol-label" for="vol">How many spam checks a month?</label>
         <div class="vol-value" id="vol-value" aria-hidden="true">100,000</div>
-        <input class="vol" id="vol" data-unit="spam checks" type="range" min="0" max="4" step="1" value="2" aria-valuetext="100,000 spam checks a month">
-        <div class="vol-ticks" aria-hidden="true"><span>40</span><span>25K</span><span>100K</span><span>300K</span><span>1M+</span></div>
+        <input class="vol" id="vol" data-unit="spam checks" type="range" min="0" max="5" step="1" value="2" aria-valuetext="100,000 spam checks a month">
+        <div class="vol-ticks" aria-hidden="true"><span>40</span><span>25K</span><span>100K</span><span>300K</span><span>1M</span><span>1M+</span></div>
         <div class="result" aria-live="polite">
           <span class="plan-name" id="plan-name">Freelance</span>
           <span class="amount" id="plan-price">$40.83</span>
-          <span class="per">/mo</span>
+          <span class="per" id="plan-per">/mo</span>
         </div>
         <div class="billing-note" id="billing-note">$490 billed once a year · you save $98</div>
         <a class="button has-text-black is-medium is-rounded button-has-shadow is-bg-orange" style="border: solid 1px #000;" id="plan-cta" href="https://app.oopspam.com/Identity/Account/Register">Start with Freelance →</a>
-        <p class="mt-3 is-size-7"><a class="has-text-black" style="text-decoration: underline;" href="#compare-plans">Compare all plans</a></p>
+        <p class="mt-3 is-size-normal"><a class="has-text-black" style="text-decoration: underline;" href="#compare-plans">Compare all plans</a></p>
       </div>
     </div>
 
@@ -491,7 +491,7 @@
               <td data-m="69" data-y="57.5"></td>
               <td data-m="259" data-y="215.8"></td>
             </tr>
-            <tr><th scope="row">Spam checks / API calls a month</th><td>25,000</td><td class="is-popular">100,000</td><td>300,000</td><td>1,000,000+</td></tr>
+            <tr><th scope="row">Spam checks / API calls a month</th><td>25,000</td><td class="is-popular">100,000</td><td>300,000</td><td>1,000,000</td></tr>
             <tr><th scope="row">Domain Reputation Watch</th><td>5 domains</td><td class="is-popular">15 domains</td><td>50 domains</td><td>300 domains</td></tr>
             <tr><th scope="row">Log retention (when you turn logging on)</th><td class="no">–</td><td class="is-popular">2 months</td><td>4 months</td><td>6 months</td></tr>
             <tr><th scope="row">IP-based API key restrictions</th><td class="no">–</td><td class="no is-popular">–</td><td class="yes">✓</td><td class="yes">✓</td></tr>
@@ -538,7 +538,8 @@
       { checks: '25,000', name: 'Starter', monthly: 23, yearly: 19.17 },
       { checks: '100,000', name: 'Freelance', monthly: 49, yearly: 40.83 },
       { checks: '300,000', name: 'Agency', monthly: 69, yearly: 57.5 },
-      { checks: '1,000,000+', name: 'Scale', monthly: 259, yearly: 215.8 }
+      { checks: '1,000,000', name: 'Scale', monthly: 259, yearly: 215.8 },
+      { checks: '1,000,000+', name: 'Enterprise', enterprise: true }
     ];
     var vol = document.getElementById('vol');
     if (!vol) return;
@@ -546,20 +547,31 @@
     var fmt = function (n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
     var render = function () {
       var t = tiers[+vol.value];
-      vol.style.setProperty('--fill', (vol.value / 4 * 100) + '%');
+      vol.style.setProperty('--fill', (vol.value / vol.max * 100) + '%');
       vol.setAttribute('aria-valuetext', t.checks + ' ' + vol.dataset.unit + ' a month, ' + t.name + ' plan');
       document.getElementById('vol-value').textContent = t.checks;
       document.getElementById('plan-name').textContent = t.name;
+      document.querySelectorAll('#compare-plans .price-row td').forEach(function (td) {
+        var m = +td.dataset.m, y = +td.dataset.y;
+        td.innerHTML = '<b>' + fmt(billing === 'yearly' ? y : m) + '</b>/mo<small>' + (billing === 'yearly' ? fmt(m * 10) + ' billed yearly' : 'billed monthly') + '</small>';
+      });
+      var cta = document.getElementById('plan-cta');
+      document.getElementById('plan-per').style.display = t.enterprise ? 'none' : '';
+      if (t.enterprise) {
+        // Above the Scale plan: custom pricing, talk to us
+        document.getElementById('plan-price').textContent = 'Custom';
+        document.getElementById('billing-note').textContent = 'Volume pricing, custom limits and dedicated support';
+        cta.textContent = 'Reach out →';
+        cta.href = 'mailto:contact@oopspam.com?subject=Enterprise%20plan';
+        return;
+      }
+      cta.href = 'https://app.oopspam.com/Identity/Account/Register';
       document.getElementById('plan-price').textContent = fmt(t[billing]);
       // Yearly = 10 months' price (2 months free)
       document.getElementById('billing-note').textContent = t.monthly === 0 ? 'Free forever, no credit card'
         : billing === 'yearly' ? fmt(t.monthly * 10) + ' billed once a year · you save ' + fmt(t.monthly * 2)
         : 'Billed monthly · pay yearly to get 2 months free';
-      document.getElementById('plan-cta').textContent = t.monthly === 0 ? 'Start free →' : 'Start with ' + t.name + ' →';
-      document.querySelectorAll('#compare-plans .price-row td').forEach(function (td) {
-        var m = +td.dataset.m, y = +td.dataset.y;
-        td.innerHTML = '<b>' + fmt(billing === 'yearly' ? y : m) + '</b>/mo<small>' + (billing === 'yearly' ? fmt(m * 10) + ' billed yearly' : 'billed monthly') + '</small>';
-      });
+      cta.textContent = t.monthly === 0 ? 'Start free →' : 'Start with ' + t.name + ' →';
     };
     vol.addEventListener('input', render);
     document.querySelectorAll('#pricing .billing button').forEach(function (b) {
