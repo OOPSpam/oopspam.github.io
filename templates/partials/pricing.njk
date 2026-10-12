@@ -1,0 +1,171 @@
+{#
+  Shared pricing block: volume slider + "Compare plans" table.
+  Optional variables (set before including):
+    pricingUnit        e.g. "contact scans" (default "spam checks")
+    pricingUnitShort   e.g. "scans" (default "checks")
+    pricingSub         subtitle under the heading
+    pricingVolumeLabel table row label for monthly volume
+    pricingLogLabel    table row label for log retention
+    pricingIncludes    list of "Included in every plan" rows (HTML allowed)
+  Prices and plan limits live here only, so update them in one place.
+#}
+{% set defaultPricingIncludes = ["Unlimited websites", "Spam Protection API", "Domain Reputation API", "Context-aware spam detection", "API key rotation", "Misdetection Reporting API", "No logs by default", "WordPress, WooCommerce, Zapier and Make integrations"] %}
+  <style>
+    /* Pricing: slider card + compare table (matches /spam-detection-api) */
+    #pricing { --cream: #FBF6ED; --yellow: #fcdd56; --green: #166239; }
+    #pricing .container { padding: 2.5rem 2rem !important; border-radius: 2rem; }
+    #pricing .compare-box { margin-top: 3rem; }
+    #pricing .price-sub { max-width: 34rem; margin: 0 auto 1.5rem; }
+    #pricing .price-card { max-width: 38rem; margin: 0 auto; text-align: center; }
+    #pricing .billing { display: inline-flex; padding: .25rem; border: 1px solid #000; border-radius: 999px; background: var(--cream); margin-bottom: 1.5rem; }
+    #pricing .billing button { border: 0; background: transparent; font: inherit; font-size: .9rem; padding: .4rem 1rem; border-radius: 999px; cursor: pointer; color: #111; transition: background .2s; }
+    #pricing .billing button[aria-pressed="true"] { background: var(--yellow); font-family: 'Open Sans SemiBold'; }
+    #pricing .billing button:focus-visible, #pricing .vol:focus-visible { outline: 3px solid #f2d98a; outline-offset: 3px; }
+    #pricing .vol-label { display: block; font-family: 'Open Sans SemiBold'; color: #111; margin-bottom: .4rem; }
+    #pricing .vol-value { font-family: 'Bricolage Grotesque'; font-size: 2.2rem; line-height: 1.1; color: #111; }
+    #pricing .vol { -webkit-appearance: none; appearance: none; width: 100%; height: .5rem; border-radius: 999px; margin: 1.2rem 0 .4rem; cursor: pointer; background: linear-gradient(to right, var(--green) 0 var(--fill, 0%), #eee6d6 var(--fill, 0%) 100%); }
+    #pricing .vol::-webkit-slider-thumb { -webkit-appearance: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--yellow); border: 2px solid #000; box-shadow: 1px 2px 0 #000; transition: transform .2s; }
+    #pricing .vol::-moz-range-thumb { width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--yellow); border: 2px solid #000; box-shadow: 1px 2px 0 #000; }
+    #pricing .vol:active::-webkit-slider-thumb { transform: scale(1.1); }
+    #pricing .vol-ticks { display: flex; justify-content: space-between; font-size: .78rem; }
+    #pricing .vol-ticks span { color: #555 !important; }
+    #pricing .result { display: flex; align-items: flex-end; justify-content: center; gap: .6rem; margin: 1.6rem 0 .3rem; }
+    #pricing .result .plan-name { font-family: 'Open Sans SemiBold'; padding-bottom: .5rem; }
+    #pricing .result .amount { font-family: 'Bricolage Grotesque'; font-size: 3.2rem; line-height: 1; }
+    #pricing .result .per { color: #444 !important; padding-bottom: .45rem; }
+    #pricing .billing-note { font-size: .88rem; color: #555; min-height: 1.3em; margin-bottom: 1.5rem; }
+    #pricing .compare-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 1.5rem; }
+    #pricing .compare-table { width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 0; font-size: .95rem; color: #111; }
+    #pricing .compare-table th, #pricing .compare-table td { padding: .8rem .75rem; border-bottom: 1px solid rgba(0,0,0,.1); text-align: center; vertical-align: middle; color: #111; }
+    #pricing .compare-table tbody th { text-align: left; font-family: 'Open Sans SemiBold'; font-weight: normal; width: 32%; position: sticky; left: 0; background: var(--cream); z-index: 1; }
+    #pricing .compare-table thead th { font-family: 'Bricolage Grotesque'; font-size: 1.25rem; border-bottom: 2px solid #000; vertical-align: bottom; }
+    #pricing .compare-table thead th small { display: block; font-family: 'Open Sans SemiBold'; font-size: .72rem; color: #000; background: var(--yellow); border: 1px solid #000; border-radius: 999px; padding: .1rem .5rem; margin: .35rem auto 0; width: max-content; }
+    #pricing .compare-table .is-popular { background: rgba(252, 221, 86, .28); }
+    #pricing .compare-table .price-row td b { font-family: 'Bricolage Grotesque'; font-size: 1.35rem; font-weight: normal; }
+    #pricing .compare-table .price-row td small { display: block; font-size: .75rem; color: #555; }
+    #pricing .compare-table .yes { color: var(--green); font-size: 1.1rem; font-weight: 700; }
+    #pricing .compare-table .no { color: #999; }
+    #pricing .compare-table .group-row th { padding-top: 1.6rem; font-family: 'Bricolage Grotesque'; font-size: 1.05rem; border-bottom: 2px solid #000; background: var(--cream); }
+    #pricing .compare-table .cta-row td, #pricing .compare-table .cta-row th { border-bottom: 0; padding-top: 1.2rem; }
+    #pricing .compare-note { margin-top: 1.2rem; text-align: center; font-size: .9rem; color: #333; }
+    #pricing .swipe-hint { display: none; text-align: center; font-size: .8rem; color: #555; margin: -.5rem 0 0; }
+    #pricing .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+    @media screen and (max-width: 768px) {
+      #pricing .container { padding: 1.5rem 1rem !important; }
+      #pricing .result .amount { font-size: 2.6rem; }
+      #pricing .compare-table tbody th { width: 40%; min-width: 9rem; }
+      #pricing .swipe-hint { display: block; }
+    }
+  </style>
+  <section id="pricing" class="section" style="background-color: #FCDD56;">
+    <div class="container price-box">
+      <h3 class="title has-text-centered has-text-black">Simple, transparent pricing.</h3>
+      <p class="copy has-text-centered price-sub">{{ pricingSub or "1 API call = 1 spam check. Start with 40 free checks a month, no credit card required." }}</p>
+      <div class="price-card">
+        <div class="billing" role="group" aria-label="Billing period">
+          <button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
+          <button type="button" data-billing="yearly" aria-pressed="true">Yearly: 2 months free</button>
+        </div>
+        <label class="vol-label" for="vol">How many {{ pricingUnit or "spam checks" }} a month?</label>
+        <div class="vol-value" id="vol-value" aria-hidden="true">100,000</div>
+        <input class="vol" id="vol" data-unit="{{ pricingUnit or 'spam checks' }}" type="range" min="0" max="4" step="1" value="2" aria-valuetext="100,000 {{ pricingUnit or 'spam checks' }} a month">
+        <div class="vol-ticks" aria-hidden="true"><span>40</span><span>25K</span><span>100K</span><span>300K</span><span>1M+</span></div>
+        <div class="result" aria-live="polite">
+          <span class="plan-name" id="plan-name">Freelance</span>
+          <span class="amount" id="plan-price">$40.83</span>
+          <span class="per">/mo</span>
+        </div>
+        <div class="billing-note" id="billing-note">$490 billed once a year · you save $98</div>
+        <a class="button has-text-black is-medium is-rounded button-has-shadow is-bg-orange" style="border: solid 1px #000;" id="plan-cta" href="https://app.oopspam.com/Identity/Account/Register">Start with Freelance →</a>
+        <p class="mt-3 is-size-7"><a class="has-text-black" style="text-decoration: underline;" href="#compare-plans">Compare all plans</a></p>
+      </div>
+    </div>
+
+    <div class="container compare-box" id="compare-plans">
+      <h3 class="title has-text-centered has-text-black">Compare plans</h3>
+      <p class="swipe-hint" aria-hidden="true">Swipe to see all plans →</p>
+      <div class="compare-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">Feature</span></th>
+              <th scope="col">Starter</th>
+              <th scope="col" class="is-popular">Freelance<small>Most popular</small></th>
+              <th scope="col">Agency</th>
+              <th scope="col">Scale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="price-row">
+              <th scope="row">Price</th>
+              <td data-m="23" data-y="19.17"></td>
+              <td data-m="49" data-y="40.83" class="is-popular"></td>
+              <td data-m="69" data-y="57.5"></td>
+              <td data-m="259" data-y="215.8"></td>
+            </tr>
+            <tr><th scope="row">{{ pricingVolumeLabel or "Spam checks / API calls a month" }}</th><td>25,000</td><td class="is-popular">100,000</td><td>300,000</td><td>1,000,000+</td></tr>
+            <tr><th scope="row">Domain Reputation Watch</th><td>5 domains</td><td class="is-popular">15 domains</td><td>50 domains</td><td>300 domains</td></tr>
+            <tr><th scope="row">{{ pricingLogLabel or "Log retention (when you turn logging on)" }}</th><td class="no">–</td><td class="is-popular">2 months</td><td>4 months</td><td>6 months</td></tr>
+            <tr><th scope="row">IP-based API key restrictions</th><td class="no">–</td><td class="no is-popular">–</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Team access</th><td class="no">–</td><td class="no is-popular">–</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Support</th><td>Email</td><td class="is-popular">Priority email</td><td>Priority email + human live chat</td><td>Dedicated support</td></tr>
+            <tr class="group-row"><th scope="rowgroup" colspan="5">Included in every plan</th></tr>
+            {% for item in (pricingIncludes or defaultPricingIncludes) %}
+            <tr><th scope="row">{{ item | safe }}</th><td class="yes">✓</td><td class="yes is-popular">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            {% endfor %}
+            <tr class="cta-row">
+              <th scope="row"></th>
+              <td><a class="button is-small is-rounded has-background-black has-text-white" href="https://app.oopspam.com/Identity/Account/Register">Start free</a></td>
+              <td class="is-popular"><a class="button is-small is-rounded is-bg-orange has-text-black" style="border: solid 1px #000;" href="https://app.oopspam.com/Identity/Account/Register">Start free</a></td>
+              <td><a class="button is-small is-rounded has-background-black has-text-white" href="https://app.oopspam.com/Identity/Account/Register">Start free</a></td>
+              <td><a class="button is-small is-rounded has-background-black has-text-white" href="https://app.oopspam.com/Identity/Account/Register">Start free</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">Free plan: 40 {{ pricingUnit or "spam checks" }} a month, no credit card required. Need more than 1,000,000 {{ pricingUnitShort or "checks" }}? <a class="has-text-black" style="text-decoration: underline;" href="mailto:contact@oopspam.com">Contact us</a>.</p>
+    </div>
+  </section>
+  <script>
+  (function () {
+    // Pricing: volume slider + billing toggle (same tiers as /spam-detection-api)
+    var tiers = [
+      { checks: '40', name: 'Free', monthly: 0, yearly: 0 },
+      { checks: '25,000', name: 'Starter', monthly: 23, yearly: 19.17 },
+      { checks: '100,000', name: 'Freelance', monthly: 49, yearly: 40.83 },
+      { checks: '300,000', name: 'Agency', monthly: 69, yearly: 57.5 },
+      { checks: '1,000,000+', name: 'Scale', monthly: 259, yearly: 215.8 }
+    ];
+    var vol = document.getElementById('vol');
+    if (!vol) return;
+    var billing = 'yearly';
+    var fmt = function (n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
+    var render = function () {
+      var t = tiers[+vol.value];
+      vol.style.setProperty('--fill', (vol.value / 4 * 100) + '%');
+      vol.setAttribute('aria-valuetext', t.checks + ' ' + vol.dataset.unit + ' a month, ' + t.name + ' plan');
+      document.getElementById('vol-value').textContent = t.checks;
+      document.getElementById('plan-name').textContent = t.name;
+      document.getElementById('plan-price').textContent = fmt(t[billing]);
+      // Yearly = 10 months' price (2 months free)
+      document.getElementById('billing-note').textContent = t.monthly === 0 ? 'Free forever, no credit card'
+        : billing === 'yearly' ? fmt(t.monthly * 10) + ' billed once a year · you save ' + fmt(t.monthly * 2)
+        : 'Billed monthly · pay yearly to get 2 months free';
+      document.getElementById('plan-cta').textContent = t.monthly === 0 ? 'Start free →' : 'Start with ' + t.name + ' →';
+      document.querySelectorAll('#compare-plans .price-row td').forEach(function (td) {
+        var m = +td.dataset.m, y = +td.dataset.y;
+        td.innerHTML = '<b>' + fmt(billing === 'yearly' ? y : m) + '</b>/mo<small>' + (billing === 'yearly' ? fmt(m * 10) + ' billed yearly' : 'billed monthly') + '</small>';
+      });
+    };
+    vol.addEventListener('input', render);
+    document.querySelectorAll('#pricing .billing button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        billing = b.dataset.billing;
+        document.querySelectorAll('#pricing .billing button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+        render();
+      });
+    });
+    render();
+  })();
+  </script>

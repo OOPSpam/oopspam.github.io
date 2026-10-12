@@ -73,55 +73,9 @@
 </script>
 
   <style>
-    .pricing-includes {
-      background-color: #FBF6ED;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      border-radius: 2rem;
-      padding: 2rem;
-    }
-
-    .pricing-includes-title {
-      margin-bottom: 0.4rem !important;
-    }
-
-    .pricing-includes-copy {
-      max-width: 38rem;
-      margin: 0 auto 1.5rem;
-      color: #4a4a4a;
-    }
-
-    .pricing-includes-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.85rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    .pricing-includes-item {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.65rem;
-      min-height: 3.25rem;
-      padding: 0.85rem 1.15rem;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      border-radius: 999px;
-      background-color: #fffdf7;
-      color: #000;
-      font-weight: 600;
-      line-height: 1.35;
-      text-align: center;
-    }
-
-    .pricing-includes-item img {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-    }
-
+    /* "Enterprise" is an H2 (one H1 per page) but keeps the H1 size */
+    #enterprise h2.enterprise-title { font-size: 70px !important; line-height: 75px !important; }
+    @media (max-width: 768px) { #enterprise h2.enterprise-title { font-size: 40px !important; line-height: 48px !important; } }
     .hero-title {
       font-size: 60px !important;
       line-height: 65px !important;
@@ -164,14 +118,6 @@
     }
 
     @media screen and (max-width: 768px) {
-      .pricing-includes {
-        padding: 1.5rem;
-        border-radius: 1.5rem;
-      }
-
-      .pricing-includes-item {
-        width: 100%;
-      }
 
       .hero-title {
         font-size: 40px !important;
@@ -296,7 +242,7 @@
         <div class="column has-text-centered">
           <img loading="lazy" src="/assets/home/api.svg" alt=""/>
           <div class=" pt-5 is-flex is-flex-direction-row  is-justify-content-center is-align-items-center">
-            <a href="https://app.oopspam.com" class="has-text-white"  style="font-size: 24px;border-bottom: solid #fcdd56;" >Start testing our <strong class="has-text-white">API</strong></a> 
+            <a href="/spam-detection-api" class="has-text-white"  style="font-size: 24px;border-bottom: solid #fcdd56;" >Explore the spam detection <strong class="has-text-white">API</strong></a> 
          <img loading="lazy" class="has-text-white pl-2" alt="" src="/assets/home/arrow.webp" />
         </div>
         </div>
@@ -445,7 +391,7 @@
           <h2 class="has-text-black">
             Fight spam the smart way
           </h2>
-          <div class="copy has-text-black pt-5">Up-to-date <span class="is-opensans-bold">Machine Learning model and a cocktail of unique measurements</span> to fight spam before it reaches you. It learns and adapts to your use case automatically with <span class="is-opensans-bold">99.99% accuracy</span>.</div>
+          <div class="copy has-text-black pt-5">Up-to-date <span class="is-opensans-bold">Machine Learning model and a cocktail of unique measurements</span> to fight spam before it reaches you. It learns and adapts to your use case automatically with <span class="is-opensans-bold">99.9% accuracy</span>.</div>
          
           <blockquote class="quote p-4 has-text-black  mt-5" style="border:solid;border-radius: 1em;border-width: 2px;">
             “We strongly recommend oopspam for anyone who values their time and resources.” <br>
@@ -728,136 +674,183 @@
   </section>
 
 
-   <!-- Pricing -->
-   <section id="pricing" class="section " style="background-color: #FCDD56;">
-    <div class="container" style="border-radius: 3em;">
-      <div class="columns p-5">
-        <div class="column is-full">
-          <h3 class="title has-text-centered has-text-black">Simple, transparent pricing.</h3>
-          <p class="copy has-text-centered" style="padding:0.7em;">Start with 40 free spam checks, no credit card required</p>
-          <div class="buttons is-centered plan-interval">
-            <span class="button monthly">Monthly</span>
-            <span class="button is-warning is-selected yearly is-bg-orange">Annually - 2 months FREE</span>
-          </div>
+   <!-- Pricing (shared: templates/partials/pricing.njk) -->
+  
 
-          <div class="pricing-includes has-text-centered mb-5">
-            <h4 class="title is-5 has-text-black pricing-includes-title">Included in every plan</h4>
-            <p class="pricing-includes-copy">Core protection, privacy-friendly defaults, and ready-to-use integrations from day one.</p>
-            <ul class="pricing-includes-list">
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">Advanced Spam Protection API</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">Domain Reputation API</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">Unlimited websites</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">No logs policy</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">Context-Aware Spam Detection</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">Misdetection Reporting API</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">WordPress, WooCommerce, Zapier, Make.com integrations</li>
-            </ul>
-          </div>
+  <style>
+    /* Pricing: slider card + compare table (matches /spam-detection-api) */
+    #pricing { --cream: #FBF6ED; --yellow: #fcdd56; --green: #166239; }
+    #pricing .container { padding: 2.5rem 2rem !important; border-radius: 2rem; }
+    #pricing .compare-box { margin-top: 3rem; }
+    #pricing .price-sub { max-width: 34rem; margin: 0 auto 1.5rem; }
+    #pricing .price-card { max-width: 38rem; margin: 0 auto; text-align: center; }
+    #pricing .billing { display: inline-flex; padding: .25rem; border: 1px solid #000; border-radius: 999px; background: var(--cream); margin-bottom: 1.5rem; }
+    #pricing .billing button { border: 0; background: transparent; font: inherit; font-size: .9rem; padding: .4rem 1rem; border-radius: 999px; cursor: pointer; color: #111; transition: background .2s; }
+    #pricing .billing button[aria-pressed="true"] { background: var(--yellow); font-family: 'Open Sans SemiBold'; }
+    #pricing .billing button:focus-visible, #pricing .vol:focus-visible { outline: 3px solid #f2d98a; outline-offset: 3px; }
+    #pricing .vol-label { display: block; font-family: 'Open Sans SemiBold'; color: #111; margin-bottom: .4rem; }
+    #pricing .vol-value { font-family: 'Bricolage Grotesque'; font-size: 2.2rem; line-height: 1.1; color: #111; }
+    #pricing .vol { -webkit-appearance: none; appearance: none; width: 100%; height: .5rem; border-radius: 999px; margin: 1.2rem 0 .4rem; cursor: pointer; background: linear-gradient(to right, var(--green) 0 var(--fill, 0%), #eee6d6 var(--fill, 0%) 100%); }
+    #pricing .vol::-webkit-slider-thumb { -webkit-appearance: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--yellow); border: 2px solid #000; box-shadow: 1px 2px 0 #000; transition: transform .2s; }
+    #pricing .vol::-moz-range-thumb { width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--yellow); border: 2px solid #000; box-shadow: 1px 2px 0 #000; }
+    #pricing .vol:active::-webkit-slider-thumb { transform: scale(1.1); }
+    #pricing .vol-ticks { display: flex; justify-content: space-between; font-size: .78rem; }
+    #pricing .vol-ticks span { color: #555 !important; }
+    #pricing .result { display: flex; align-items: flex-end; justify-content: center; gap: .6rem; margin: 1.6rem 0 .3rem; }
+    #pricing .result .plan-name { font-family: 'Open Sans SemiBold'; padding-bottom: .5rem; }
+    #pricing .result .amount { font-family: 'Bricolage Grotesque'; font-size: 3.2rem; line-height: 1; }
+    #pricing .result .per { color: #444 !important; padding-bottom: .45rem; }
+    #pricing .billing-note { font-size: .88rem; color: #555; min-height: 1.3em; margin-bottom: 1.5rem; }
+    #pricing .compare-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 1.5rem; }
+    #pricing .compare-table { width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 0; font-size: .95rem; color: #111; }
+    #pricing .compare-table th, #pricing .compare-table td { padding: .8rem .75rem; border-bottom: 1px solid rgba(0,0,0,.1); text-align: center; vertical-align: middle; color: #111; }
+    #pricing .compare-table tbody th { text-align: left; font-family: 'Open Sans SemiBold'; font-weight: normal; width: 32%; position: sticky; left: 0; background: var(--cream); z-index: 1; }
+    #pricing .compare-table thead th { font-family: 'Bricolage Grotesque'; font-size: 1.25rem; border-bottom: 2px solid #000; vertical-align: bottom; }
+    #pricing .compare-table thead th small { display: block; font-family: 'Open Sans SemiBold'; font-size: .72rem; color: #000; background: var(--yellow); border: 1px solid #000; border-radius: 999px; padding: .1rem .5rem; margin: .35rem auto 0; width: max-content; }
+    #pricing .compare-table .is-popular { background: rgba(252, 221, 86, .28); }
+    #pricing .compare-table .price-row td b { font-family: 'Bricolage Grotesque'; font-size: 1.35rem; font-weight: normal; }
+    #pricing .compare-table .price-row td small { display: block; font-size: .75rem; color: #555; }
+    #pricing .compare-table .yes { color: var(--green); font-size: 1.1rem; font-weight: 700; }
+    #pricing .compare-table .no { color: #999; }
+    #pricing .compare-table .group-row th { padding-top: 1.6rem; font-family: 'Bricolage Grotesque'; font-size: 1.05rem; border-bottom: 2px solid #000; background: var(--cream); }
+    #pricing .compare-table .cta-row td, #pricing .compare-table .cta-row th { border-bottom: 0; padding-top: 1.2rem; }
+    #pricing .compare-note { margin-top: 1.2rem; text-align: center; font-size: .9rem; color: #333; }
+    #pricing .swipe-hint { display: none; text-align: center; font-size: .8rem; color: #555; margin: -.5rem 0 0; }
+    #pricing .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-          <div class="pricing-table">
-            <!-- Starter Plan -->
-            <div class="pricing-plan" style="background-color: #FBF6ED;">
-              <div class="columns is-flex is-centered mb-0">
-                <figure class="image is-96x96 is-inline-block">
-                  <img loading="lazy" class="is-rounded" src="/assets/ONE.png" alt="Starter plan">
-                </figure>
-              </div>
-              <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Starter</div>
-              <div class="plan-price monthly-price">
-                <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>23</span>/mo
-              </div>
-              <div class="plan-price yearly-price is-brico">
-                <span class="plan-price-amount"><span class="plan-price-currency">$</span>19.17</span>/mo, billed yearly
-              </div>
-              <div class="plan-items">
-                <div class="plan-item">25,000 Spam Checks / API Calls per month</div>
-                <div class="plan-item">5 Domain Reputation Watch</div>
-                <div class="plan-item">Email Support</div>
-              </div>
-              <div class="plan-footer">
-                <a class="button is-fullwidth is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start for free</a>
-              </div>
-            </div>
-
-            <!-- Freelance Plan -->
-            <div class="pricing-plan" style="background-color: #FBF6ED; position: relative;">
-              <div style="position: absolute; top: 0; right: 1rem; background-color: #000; color: #fcdd56; padding: 0.5rem 1rem; border-radius: 0 0 0.5rem 0.5rem; font-size: 0.9rem;" class="is-opensans-bold">
-                Most Popular
-              </div>
-              <div class="columns is-flex is-centered mb-0">
-                <figure class="image is-96x96 is-inline-block">
-                  <img loading="lazy" class="is-rounded" src="/assets/TWO.png" alt="Freelance plan">
-                </figure>
-              </div>
-              <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Freelance</div>
-              <div class="plan-price monthly-price">
-                <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>49</span>/mo
-              </div>
-              <div class="plan-price yearly-price is-brico">
-                <span class="plan-price-amount"><span class="plan-price-currency">$</span>40.83</span>/mo, billed yearly
-              </div>
-              <div class="plan-items">
-                <div class="plan-item">100,000 Spam Checks / API Calls per month</div>
-                <div class="plan-item">15 Domain Reputation Watch</div>
-                <div class="plan-item">2 Months Log Retention</div>
-                <div class="plan-item">Priority Email Support</div>
-              </div>
-              <div class="plan-footer">
-                <a class="button is-fullwidth is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start for free</a>
-              </div>
-            </div>
-
-            <!-- Agency Plan -->
-            <div class="pricing-plan" style="background-color: #FBF6ED;">
-              <div class="columns is-flex is-centered mb-0">
-                <figure class="image is-96x96 is-inline-block">
-                  <img loading="lazy" class="is-rounded" src="/assets/THREE.png" alt="Agency plan">
-                </figure>
-              </div>
-              <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Agency</div>
-              <div class="plan-price monthly-price">
-                <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>69</span>/mo
-              </div>
-              <div class="plan-price yearly-price is-brico">
-                <span class="plan-price-amount"><span class="plan-price-currency">$</span>57.5</span>/mo, billed yearly
-              </div>
-              <div class="plan-items">
-                <div class="plan-item">300,000 Spam Checks / API Calls per month</div>
-                <div class="plan-item">50 Domain Reputation Watch</div>
-                <div class="plan-item">4 months log retention</div>
-                <div class="plan-item">IP-based API key restrictions</div>
-                <div class="plan-item">Team</div>
-                <div class="plan-item">Priority Email Support + Human Live Chat</div>
-              </div>
-              <div class="plan-footer">
-                <a class="button is-fullwidth is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start for free</a>
-              </div>
-            </div>
-          </div>
-          <div class="box mt-6" style="background-color: #FBF6ED;">
-            <div class="columns is-vcentered">
-              <div class="column is-8">
-                <p class="title is-5 has-text-black mb-2">Need more than 300,000 checks per month?</p>
-                <p class="has-text-grey-dark mb-0">
-                  The Scale plan starts at 1,000,000 Spam Checks / API Calls per month and includes 300 Domain Reputation Watch plus call support.
-                </p>
-              </div>
-              <div class="column is-4 has-text-centered">
-                <div class="plan-price monthly-price">
-                  <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>259</span>/mo
-                </div>
-                <div class="plan-price yearly-price is-brico">
-                  <span class="plan-price-amount"><span class="plan-price-currency">$</span>215.8</span>/mo, billed yearly
-                </div>
-                <a class="button is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start with Scale</a>
-              </div>
-            </div>
-          </div>
+    @media screen and (max-width: 768px) {
+      #pricing .container { padding: 1.5rem 1rem !important; }
+      #pricing .result .amount { font-size: 2.6rem; }
+      #pricing .compare-table tbody th { width: 40%; min-width: 9rem; }
+      #pricing .swipe-hint { display: block; }
+    }
+  </style>
+  <section id="pricing" class="section" style="background-color: #FCDD56;">
+    <div class="container price-box">
+      <h3 class="title has-text-centered has-text-black">Simple, transparent pricing.</h3>
+      <p class="copy has-text-centered price-sub">1 API call = 1 spam check. Start with 40 free checks a month, no credit card required.</p>
+      <div class="price-card">
+        <div class="billing" role="group" aria-label="Billing period">
+          <button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
+          <button type="button" data-billing="yearly" aria-pressed="true">Yearly: 2 months free</button>
         </div>
+        <label class="vol-label" for="vol">How many spam checks a month?</label>
+        <div class="vol-value" id="vol-value" aria-hidden="true">100,000</div>
+        <input class="vol" id="vol" data-unit="spam checks" type="range" min="0" max="4" step="1" value="2" aria-valuetext="100,000 spam checks a month">
+        <div class="vol-ticks" aria-hidden="true"><span>40</span><span>25K</span><span>100K</span><span>300K</span><span>1M+</span></div>
+        <div class="result" aria-live="polite">
+          <span class="plan-name" id="plan-name">Freelance</span>
+          <span class="amount" id="plan-price">$40.83</span>
+          <span class="per">/mo</span>
+        </div>
+        <div class="billing-note" id="billing-note">$490 billed once a year · you save $98</div>
+        <a class="button has-text-black is-medium is-rounded button-has-shadow is-bg-orange" style="border: solid 1px #000;" id="plan-cta" href="https://app.oopspam.com/Identity/Account/Register">Start with Freelance →</a>
+        <p class="mt-3 is-size-7"><a class="has-text-black" style="text-decoration: underline;" href="#compare-plans">Compare all plans</a></p>
       </div>
     </div>
+
+    <div class="container compare-box" id="compare-plans">
+      <h3 class="title has-text-centered has-text-black">Compare plans</h3>
+      <p class="swipe-hint" aria-hidden="true">Swipe to see all plans →</p>
+      <div class="compare-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">Feature</span></th>
+              <th scope="col">Starter</th>
+              <th scope="col" class="is-popular">Freelance<small>Most popular</small></th>
+              <th scope="col">Agency</th>
+              <th scope="col">Scale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="price-row">
+              <th scope="row">Price</th>
+              <td data-m="23" data-y="19.17"></td>
+              <td data-m="49" data-y="40.83" class="is-popular"></td>
+              <td data-m="69" data-y="57.5"></td>
+              <td data-m="259" data-y="215.8"></td>
+            </tr>
+            <tr><th scope="row">Spam checks / API calls a month</th><td>25,000</td><td class="is-popular">100,000</td><td>300,000</td><td>1,000,000+</td></tr>
+            <tr><th scope="row">Domain Reputation Watch</th><td>5 domains</td><td class="is-popular">15 domains</td><td>50 domains</td><td>300 domains</td></tr>
+            <tr><th scope="row">Log retention (when you turn logging on)</th><td class="no">–</td><td class="is-popular">2 months</td><td>4 months</td><td>6 months</td></tr>
+            <tr><th scope="row">IP-based API key restrictions</th><td class="no">–</td><td class="no is-popular">–</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Team access</th><td class="no">–</td><td class="no is-popular">–</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            <tr><th scope="row">Support</th><td>Email</td><td class="is-popular">Priority email</td><td>Priority email + human live chat</td><td>Dedicated support</td></tr>
+            <tr class="group-row"><th scope="rowgroup" colspan="5">Included in every plan</th></tr>
+            
+            <tr><th scope="row">Unlimited websites</th><td class="yes">✓</td><td class="yes is-popular">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            
+            <tr><th scope="row">Spam Protection API</th><td class="yes">✓</td><td class="yes is-popular">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            
+            <tr><th scope="row">Domain Reputation API</th><td class="yes">✓</td><td class="yes is-popular">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            
+            <tr><th scope="row">Context-aware spam detection</th><td class="yes">✓</td><td class="yes is-popular">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            
+            <tr><th scope="row">API key rotation</th><td class="yes">✓</td><td class="yes is-popular">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            
+            <tr><th scope="row">Misdetection Reporting API</th><td class="yes">✓</td><td class="yes is-popular">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            
+            <tr><th scope="row">No logs by default</th><td class="yes">✓</td><td class="yes is-popular">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            
+            <tr><th scope="row">WordPress, WooCommerce, Zapier and Make integrations</th><td class="yes">✓</td><td class="yes is-popular">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+            
+            <tr class="cta-row">
+              <th scope="row"></th>
+              <td><a class="button is-small is-rounded has-background-black has-text-white" href="https://app.oopspam.com/Identity/Account/Register">Start free</a></td>
+              <td class="is-popular"><a class="button is-small is-rounded is-bg-orange has-text-black" style="border: solid 1px #000;" href="https://app.oopspam.com/Identity/Account/Register">Start free</a></td>
+              <td><a class="button is-small is-rounded has-background-black has-text-white" href="https://app.oopspam.com/Identity/Account/Register">Start free</a></td>
+              <td><a class="button is-small is-rounded has-background-black has-text-white" href="https://app.oopspam.com/Identity/Account/Register">Start free</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-note">Free plan: 40 spam checks a month, no credit card required. Need more than 1,000,000 checks? <a class="has-text-black" style="text-decoration: underline;" href="mailto:contact@oopspam.com">Contact us</a>.</p>
+    </div>
   </section>
-  
+  <script>
+  (function () {
+    // Pricing: volume slider + billing toggle (same tiers as /spam-detection-api)
+    var tiers = [
+      { checks: '40', name: 'Free', monthly: 0, yearly: 0 },
+      { checks: '25,000', name: 'Starter', monthly: 23, yearly: 19.17 },
+      { checks: '100,000', name: 'Freelance', monthly: 49, yearly: 40.83 },
+      { checks: '300,000', name: 'Agency', monthly: 69, yearly: 57.5 },
+      { checks: '1,000,000+', name: 'Scale', monthly: 259, yearly: 215.8 }
+    ];
+    var vol = document.getElementById('vol');
+    if (!vol) return;
+    var billing = 'yearly';
+    var fmt = function (n) { return '$' + n.toLocaleString('en-US', { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
+    var render = function () {
+      var t = tiers[+vol.value];
+      vol.style.setProperty('--fill', (vol.value / 4 * 100) + '%');
+      vol.setAttribute('aria-valuetext', t.checks + ' ' + vol.dataset.unit + ' a month, ' + t.name + ' plan');
+      document.getElementById('vol-value').textContent = t.checks;
+      document.getElementById('plan-name').textContent = t.name;
+      document.getElementById('plan-price').textContent = fmt(t[billing]);
+      // Yearly = 10 months' price (2 months free)
+      document.getElementById('billing-note').textContent = t.monthly === 0 ? 'Free forever, no credit card'
+        : billing === 'yearly' ? fmt(t.monthly * 10) + ' billed once a year · you save ' + fmt(t.monthly * 2)
+        : 'Billed monthly · pay yearly to get 2 months free';
+      document.getElementById('plan-cta').textContent = t.monthly === 0 ? 'Start free →' : 'Start with ' + t.name + ' →';
+      document.querySelectorAll('#compare-plans .price-row td').forEach(function (td) {
+        var m = +td.dataset.m, y = +td.dataset.y;
+        td.innerHTML = '<b>' + fmt(billing === 'yearly' ? y : m) + '</b>/mo<small>' + (billing === 'yearly' ? fmt(m * 10) + ' billed yearly' : 'billed monthly') + '</small>';
+      });
+    };
+    vol.addEventListener('input', render);
+    document.querySelectorAll('#pricing .billing button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        billing = b.dataset.billing;
+        document.querySelectorAll('#pricing .billing button').forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+        render();
+      });
+    });
+    render();
+  })();
+  </script>
+
 
   <section id="support" class="section pb-0 has-background-white" >
     <h3 class="has-text-centered content has-text-black mb-0">We’re here for you 24/7 with world-class customer support.</h3>
@@ -898,7 +891,7 @@
         
           <div class="is-flex is-flex-direction-column has-text-left is-justify-content-center is-align-items-flex-start">
             <p class="has-text-white is-brico" style="font-size: 24px;">Cutting edge spam protection for</p>
-            <h1 class="has-text-white is-brico">Enterprise</h1>
+            <h2 class="has-text-white is-brico enterprise-title">Enterprise</h2>
             <p class="has-text-white is-opensans-regular copy pt-5" >Join industry leaders already using oopspam.</p>
             <a href="mailto:contact@oopspam.com" style="border-radius: 2em;" class="mt-5 has-text-black button copy has-text-weight-bold">Get in touch</a> 
         </div>

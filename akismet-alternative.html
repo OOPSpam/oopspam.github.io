@@ -99,6 +99,11 @@
   .alt-faq .content { margin-top: .75rem; }
 </style>
 
+  <style>
+    /* "Get more for less" is an H2 (one H1 per page) but keeps the H1 size */
+    #unlimited-websites h2.more-for-less { font-size: 70px !important; line-height: 75px !important; }
+    @media (max-width: 768px) { #unlimited-websites h2.more-for-less { font-size: 40px !important; line-height: 48px !important; } }
+  </style>
 </head>
 <style>
   .table td,
@@ -510,7 +515,7 @@
 
   <section id="unlimited-websites" class="section">
     <div class="container has-text-centered">
-      <h1 class="title has-text-centered">Get more for less</h1>
+      <h2 class="title has-text-centered more-for-less">Get more for less</h2>
       <!-- <img src="assets/THREE.png" loading="lazy" width="100" alt="three diamonds"> -->
       <span class="copy has-text-centered pb-4">Slide to compare</span>
       <div class="columns is-vcentered">

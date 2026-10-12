@@ -27,55 +27,9 @@
   {% set softwareApp = true %}
   {% include "partials/headScript.njk" %}
   <style>
-    .pricing-includes {
-      background-color: #FBF6ED;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      border-radius: 2rem;
-      padding: 2rem;
-    }
-
-    .pricing-includes-title {
-      margin-bottom: 0.4rem !important;
-    }
-
-    .pricing-includes-copy {
-      max-width: 38rem;
-      margin: 0 auto 1.5rem;
-      color: #4a4a4a;
-    }
-
-    .pricing-includes-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.85rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    .pricing-includes-item {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.65rem;
-      min-height: 3.25rem;
-      padding: 0.85rem 1.15rem;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      border-radius: 999px;
-      background-color: #fffdf7;
-      color: #000;
-      font-weight: 600;
-      line-height: 1.35;
-      text-align: center;
-    }
-
-    .pricing-includes-item img {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-    }
-
+    /* "Enterprise" is an H2 (one H1 per page) but keeps the H1 size */
+    #enterprise h2.enterprise-title { font-size: 70px !important; line-height: 75px !important; }
+    @media (max-width: 768px) { #enterprise h2.enterprise-title { font-size: 40px !important; line-height: 48px !important; } }
     .hero-title {
       font-size: 60px !important;
       line-height: 65px !important;
@@ -118,14 +72,6 @@
     }
 
     @media screen and (max-width: 768px) {
-      .pricing-includes {
-        padding: 1.5rem;
-        border-radius: 1.5rem;
-      }
-
-      .pricing-includes-item {
-        width: 100%;
-      }
 
       .hero-title {
         font-size: 40px !important;
@@ -206,7 +152,7 @@
         <div class="column has-text-centered">
           <img loading="lazy" src="/assets/home/api.svg" alt=""/>
           <div class=" pt-5 is-flex is-flex-direction-row  is-justify-content-center is-align-items-center">
-            <a href="https://app.oopspam.com" class="has-text-white"  style="font-size: 24px;border-bottom: solid #fcdd56;" >Start testing our <strong class="has-text-white">API</strong></a> 
+            <a href="/spam-detection-api" class="has-text-white"  style="font-size: 24px;border-bottom: solid #fcdd56;" >Explore the spam detection <strong class="has-text-white">API</strong></a> 
          <img loading="lazy" class="has-text-white pl-2" alt="" src="/assets/home/arrow.webp" />
         </div>
         </div>
@@ -355,7 +301,7 @@
           <h2 class="has-text-black">
             Fight spam the smart way
           </h2>
-          <div class="copy has-text-black pt-5">Up-to-date <span class="is-opensans-bold">Machine Learning model and a cocktail of unique measurements</span> to fight spam before it reaches you. It learns and adapts to your use case automatically with <span class="is-opensans-bold">99.99% accuracy</span>.</div>
+          <div class="copy has-text-black pt-5">Up-to-date <span class="is-opensans-bold">Machine Learning model and a cocktail of unique measurements</span> to fight spam before it reaches you. It learns and adapts to your use case automatically with <span class="is-opensans-bold">99.9% accuracy</span>.</div>
          
           <blockquote class="quote p-4 has-text-black  mt-5" style="border:solid;border-radius: 1em;border-width: 2px;">
             “We strongly recommend oopspam for anyone who values their time and resources.” <br>
@@ -638,136 +584,8 @@
   </section>
 
 
-   <!-- Pricing -->
-   <section id="pricing" class="section " style="background-color: #FCDD56;">
-    <div class="container" style="border-radius: 3em;">
-      <div class="columns p-5">
-        <div class="column is-full">
-          <h3 class="title has-text-centered has-text-black">Simple, transparent pricing.</h3>
-          <p class="copy has-text-centered" style="padding:0.7em;">Start with 40 free spam checks, no credit card required</p>
-          <div class="buttons is-centered plan-interval">
-            <span class="button monthly">Monthly</span>
-            <span class="button is-warning is-selected yearly is-bg-orange">Annually - 2 months FREE</span>
-          </div>
-
-          <div class="pricing-includes has-text-centered mb-5">
-            <h4 class="title is-5 has-text-black pricing-includes-title">Included in every plan</h4>
-            <p class="pricing-includes-copy">Core protection, privacy-friendly defaults, and ready-to-use integrations from day one.</p>
-            <ul class="pricing-includes-list">
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">Advanced Spam Protection API</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">Domain Reputation API</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">Unlimited websites</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">No logs policy</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">Context-Aware Spam Detection</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">Misdetection Reporting API</li>
-              <li class="pricing-includes-item"><img loading="lazy" src="/assets/home/check.webp" alt="">WordPress, WooCommerce, Zapier, Make.com integrations</li>
-            </ul>
-          </div>
-
-          <div class="pricing-table">
-            <!-- Starter Plan -->
-            <div class="pricing-plan" style="background-color: #FBF6ED;">
-              <div class="columns is-flex is-centered mb-0">
-                <figure class="image is-96x96 is-inline-block">
-                  <img loading="lazy" class="is-rounded" src="/assets/ONE.png" alt="Starter plan">
-                </figure>
-              </div>
-              <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Starter</div>
-              <div class="plan-price monthly-price">
-                <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>23</span>/mo
-              </div>
-              <div class="plan-price yearly-price is-brico">
-                <span class="plan-price-amount"><span class="plan-price-currency">$</span>19.17</span>/mo, billed yearly
-              </div>
-              <div class="plan-items">
-                <div class="plan-item">25,000 Spam Checks / API Calls per month</div>
-                <div class="plan-item">5 Domain Reputation Watch</div>
-                <div class="plan-item">Email Support</div>
-              </div>
-              <div class="plan-footer">
-                <a class="button is-fullwidth is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start for free</a>
-              </div>
-            </div>
-
-            <!-- Freelance Plan -->
-            <div class="pricing-plan" style="background-color: #FBF6ED; position: relative;">
-              <div style="position: absolute; top: 0; right: 1rem; background-color: #000; color: #fcdd56; padding: 0.5rem 1rem; border-radius: 0 0 0.5rem 0.5rem; font-size: 0.9rem;" class="is-opensans-bold">
-                Most Popular
-              </div>
-              <div class="columns is-flex is-centered mb-0">
-                <figure class="image is-96x96 is-inline-block">
-                  <img loading="lazy" class="is-rounded" src="/assets/TWO.png" alt="Freelance plan">
-                </figure>
-              </div>
-              <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Freelance</div>
-              <div class="plan-price monthly-price">
-                <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>49</span>/mo
-              </div>
-              <div class="plan-price yearly-price is-brico">
-                <span class="plan-price-amount"><span class="plan-price-currency">$</span>40.83</span>/mo, billed yearly
-              </div>
-              <div class="plan-items">
-                <div class="plan-item">100,000 Spam Checks / API Calls per month</div>
-                <div class="plan-item">15 Domain Reputation Watch</div>
-                <div class="plan-item">2 Months Log Retention</div>
-                <div class="plan-item">Priority Email Support</div>
-              </div>
-              <div class="plan-footer">
-                <a class="button is-fullwidth is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start for free</a>
-              </div>
-            </div>
-
-            <!-- Agency Plan -->
-            <div class="pricing-plan" style="background-color: #FBF6ED;">
-              <div class="columns is-flex is-centered mb-0">
-                <figure class="image is-96x96 is-inline-block">
-                  <img loading="lazy" class="is-rounded" src="/assets/THREE.png" alt="Agency plan">
-                </figure>
-              </div>
-              <div class="plan-header has-text-black is-brico pt-0" style="font-size: 36px;">Agency</div>
-              <div class="plan-price monthly-price">
-                <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>69</span>/mo
-              </div>
-              <div class="plan-price yearly-price is-brico">
-                <span class="plan-price-amount"><span class="plan-price-currency">$</span>57.5</span>/mo, billed yearly
-              </div>
-              <div class="plan-items">
-                <div class="plan-item">300,000 Spam Checks / API Calls per month</div>
-                <div class="plan-item">50 Domain Reputation Watch</div>
-                <div class="plan-item">4 months log retention</div>
-                <div class="plan-item">IP-based API key restrictions</div>
-                <div class="plan-item">Team</div>
-                <div class="plan-item">Priority Email Support + Human Live Chat</div>
-              </div>
-              <div class="plan-footer">
-                <a class="button is-fullwidth is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start for free</a>
-              </div>
-            </div>
-          </div>
-          <div class="box mt-6" style="background-color: #FBF6ED;">
-            <div class="columns is-vcentered">
-              <div class="column is-8">
-                <p class="title is-5 has-text-black mb-2">Need more than 300,000 checks per month?</p>
-                <p class="has-text-grey-dark mb-0">
-                  The Scale plan starts at 1,000,000 Spam Checks / API Calls per month and includes 300 Domain Reputation Watch plus call support.
-                </p>
-              </div>
-              <div class="column is-4 has-text-centered">
-                <div class="plan-price monthly-price">
-                  <span class="plan-price-amount has-text-grey has-text-strike is-brico"><span class="plan-price-currency">$</span>259</span>/mo
-                </div>
-                <div class="plan-price yearly-price is-brico">
-                  <span class="plan-price-amount"><span class="plan-price-currency">$</span>215.8</span>/mo, billed yearly
-                </div>
-                <a class="button is-medium has-background-black has-text-white is-rounded" href="https://app.oopspam.com/Identity/Account/Register">Start with Scale</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+   <!-- Pricing (shared: templates/partials/pricing.njk) -->
+  {% include "partials/pricing.njk" %}
 
   <section id="support" class="section pb-0 has-background-white" >
     <h3 class="has-text-centered content has-text-black mb-0">We’re here for you 24/7 with world-class customer support.</h3>
@@ -808,7 +626,7 @@
         
           <div class="is-flex is-flex-direction-column has-text-left is-justify-content-center is-align-items-flex-start">
             <p class="has-text-white is-brico" style="font-size: 24px;">Cutting edge spam protection for</p>
-            <h1 class="has-text-white is-brico">Enterprise</h1>
+            <h2 class="has-text-white is-brico enterprise-title">Enterprise</h2>
             <p class="has-text-white is-opensans-regular copy pt-5" >Join industry leaders already using oopspam.</p>
             <a href="mailto:contact@oopspam.com" style="border-radius: 2em;" class="mt-5 has-text-black button copy has-text-weight-bold">Get in touch</a> 
         </div>
