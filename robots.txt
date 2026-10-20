@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.oopspam.com/sitemap.xml
+Sitemap: https://www.oopspam.com/blog/sitemap.xml
+Sitemap: https://help.oopspam.com/sitemap.xml
