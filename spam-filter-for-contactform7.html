@@ -127,28 +127,27 @@
   .fp .trust li { font-family: 'Open Sans SemiBold', sans-serif; font-size: 15px; margin: 0; }
   .fp .trust .stars { color: #000; letter-spacing: 1px; }
 
-  /* Hero illustration: one spam blocked, one real message delivered */
-  .fp .mock-stack { display: grid; gap: 18px; }
-  .fp .mock { background: #fff; border: 1.5px solid #000; border-radius: 16px; padding: 18px 20px; }
-  .fp .mock-spam { box-shadow: 8px 9px 0 var(--yellow); }
-  .fp .mock-ok { margin-left: 40px; }
-  .fp .mock-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 10px; }
-  .fp .mock-top p { margin: 0; font-family: 'Open Sans SemiBold', sans-serif; font-size: 14px; color: #555; }
-  .fp .badge { display: inline-block; padding: 3px 12px; border-radius: 999px; font-family: 'Open Sans Bold', sans-serif; font-size: 12px; letter-spacing: .04em; border: 1px solid #000; white-space: nowrap; }
-  .fp .badge-spam { background: #FEE5E5; }
-  .fp .badge-ok { background: #DDF3EA; }
-  .fp .mock-msg { margin: 0; font-size: 16px; line-height: 1.5; }
-  .fp .mock-why { margin: 10px 0 0; font-size: 13px; color: #555; }
+  /* Hero illustration */
+  .fp .hero-art { display: block; width: 100%; max-width: 460px; height: auto; margin: 0 auto; }
 
   /* Why */
-  .fp .why-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: start; }
-  .fp .why-grid .body p:not(.eyebrow) { font-size: 18px; line-height: 1.75; margin: 0 0 16px; }
-  .fp .builtins { list-style: none; margin: 0; padding: 0; border: 1.5px solid #000; border-radius: 16px; overflow: hidden; background: #fff; }
-  .fp .builtins li { margin: 0; padding: 18px 22px; border-bottom: 1px solid var(--line); }
-  .fp .builtins li:last-child { border-bottom: 0; }
-  .fp .builtins .b-name { font-family: 'Open Sans Bold', sans-serif; font-size: 16px; margin: 0 0 4px; }
-  .fp .builtins .b-text { font-size: 15px; line-height: 1.55; margin: 0; color: #333; }
-  .fp .builtins-title { font-family: 'Open Sans Bold', sans-serif; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: #555; margin: 0; padding: 14px 22px; background: var(--cream); border-bottom: 1px solid #000; }
+  .fp .why-intro { max-width: 760px; }
+  .fp .why-intro p:not(.eyebrow) { font-size: 18px; line-height: 1.75; margin: 0 0 16px; }
+  .fp table.gaps { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 40px; }
+  .fp table.gaps thead th { text-align: left; vertical-align: bottom; padding: 0 24px 18px 0; border: 0; font-family: 'Open Sans SemiBold', sans-serif; font-size: 22px; line-height: 1.3; color: #000; }
+  .fp table.gaps tbody th { width: 30%; }
+  .fp table.gaps tbody th, .fp table.gaps tbody td { padding: 22px 26px; border-top: 1px solid #000; text-align: left; vertical-align: middle; }
+  .fp table.gaps tbody th { background: var(--cream); border-left: 1.5px solid #000; border-right: 1px solid #000; font-family: 'Open Sans Bold', sans-serif; font-size: 17px; white-space: nowrap; }
+  .fp table.gaps tbody td { background: #fff; border-right: 1.5px solid #000; font-size: 16px; line-height: 1.6; color: #222; }
+  .fp table.gaps tbody tr:first-child th, .fp table.gaps tbody tr:first-child td { border-top-width: 1.5px; }
+  .fp table.gaps tbody tr:last-child th, .fp table.gaps tbody tr:last-child td { border-bottom: 1.5px solid #000; }
+  .fp table.gaps tbody tr:first-child th { border-top-left-radius: 16px; }
+  .fp table.gaps tbody tr:first-child td { border-top-right-radius: 16px; }
+  .fp table.gaps tbody tr:last-child th { border-bottom-left-radius: 16px; }
+  .fp table.gaps tbody tr:last-child td { border-bottom-right-radius: 16px; }
+  .fp table.gaps .x { display: inline-flex; vertical-align: -5px; margin-right: 14px; }
+  .fp table.gaps .x svg { width: 20px; height: 20px; }
+  .fp table.gaps .x svg * { fill: none; stroke: #000; stroke-width: 3.2; stroke-linecap: round; }
 
   /* Steps */
   .fp .fp-steps { background: linear-gradient(180deg, #E9D9C8 0%, #FEE5E5 100%); border-top: 1px solid #000; border-bottom: 1px solid #000; }
@@ -169,6 +168,16 @@
   .fp .feature .f-icon svg .acc { fill: #FCDD56; }
   .fp .shot { margin: 48px auto 0; max-width: 900px; }
   .fp .shot img { display: block; width: 100%; height: auto; border: 1.5px solid #000; border-radius: 14px; box-shadow: 6px 7px 0 var(--yellow); }
+  .fp .shot-steps { margin: 36px auto 0; max-width: 1000px; }
+  .fp .gallery { margin: 56px auto 0; max-width: 1000px; }
+  .fp .g-title { font-family: 'Open Sans Bold', sans-serif; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: #555; text-align: center; margin: 0 0 14px; }
+  .fp .g-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 22px; }
+  .fp .g-tabs button { font-family: 'Open Sans SemiBold', sans-serif; font-size: 15px; padding: 9px 16px; border: 1.5px solid #000; border-radius: 10px; background: #fff; color: #000; cursor: pointer; }
+  .fp .g-tabs button[aria-selected="true"] { background: var(--yellow); }
+  .fp .g-tabs button:focus-visible { outline: 3px solid #000; outline-offset: 2px; }
+  .fp .gallery .shot { margin: 0; max-width: none; }
+  .fp .g-panel[hidden] { display: none !important; }
+  .fp .shot-steps img { background: #fff; padding: 10px; }
   .fp .shot figcaption { font-size: 14px; color: #555; text-align: center; margin-top: 14px; font-family: 'Open Sans Regular', sans-serif; }
 
   /* Comparison */
@@ -220,8 +229,7 @@
   .fp .fp-cta .btn-primary { background: #fff; }
 
   @media (max-width: 1023px) {
-    .fp .hero-grid, .fp .why-grid { grid-template-columns: 1fr; gap: 40px; }
-    .fp .mock-ok { margin-left: 24px; }
+    .fp .hero-grid { grid-template-columns: 1fr; gap: 40px; }
     .fp .features, .fp .reviews { grid-template-columns: 1fr 1fr; }
     .fp .guides { grid-template-columns: 1fr 1fr; }
     .fp .steps { grid-template-columns: 1fr; }
@@ -234,6 +242,13 @@
     .fp .lead { font-size: 17px; }
     .fp .features, .fp .reviews, .fp .guides { grid-template-columns: 1fr; }
     .fp .btn-row .btn { width: 100%; justify-content: center; }
+    .fp table.gaps thead th { font-size: 16px; padding-right: 12px; }
+    .fp table.gaps tbody th { width: 42%; }
+    .fp table.gaps tbody th, .fp table.gaps tbody td { padding: 16px 14px; }
+    .fp table.gaps tbody th { white-space: normal; font-size: 15px; }
+    .fp table.gaps tbody td { font-size: 14.5px; }
+    .fp table.gaps .x { margin-right: 8px; }
+    .fp table.gaps .x svg { width: 14px; height: 14px; }
   }
 </style>
 
@@ -257,41 +272,44 @@
         </ul>
       </div>
       <div>
-        <div class="mock-stack" role="img" aria-label="Illustration: oopspam blocks a spam Contact Form 7 submission and delivers a real one">
-          <div class="mock mock-spam">
-            <div class="mock-top"><p>Contact Form 7 submission</p><span class="badge badge-spam">Spam blocked</span></div>
-            <p class="mock-msg">Hi! We can get your website to the first page of Google in 30 days. Reply for a free audit…</p>
-            <p class="mock-why">The message looks like SEO spam, and the email is a disposable address.</p>
-          </div>
-          <div class="mock mock-ok">
-            <div class="mock-top"><p>Contact Form 7 submission</p><span class="badge badge-ok">Delivered</span></div>
-            <p class="mock-msg">Hi, could you send me a quote for a website redesign? We're a team of 12.</p>
-          </div>
-        </div>
+        <img class="hero-art" src="/assets/alternative/no-captcha.webp" alt="A form crossed out with a no sign, next to skull icons and a gem, showing spam blocked without a CAPTCHA" width="930" height="640">
       </div>
     </div>
   </section>
 
   <!-- Why -->
   <section class="fp-sec">
-    <div class="fp-wrap why-grid">
-      <div class="body">
+    <div class="fp-wrap">
+      <div class="why-intro">
         <p class="eyebrow">The problem</p>
         <h2 class="fp-h2">Why Contact Form 7 still gets spam</h2>
         <p>Contact Form 7 runs on millions of WordPress sites, so spam bots look for it first. Many forms are left without any protection after setup.</p><p>Its built-in tools stop simple bots, but none of them read the message itself. Spam typed by real people, and bots that behave like people, still get through.</p><p>Contact Form 7 also doesn't save submissions by default, so it's hard to see what was blocked and why.</p>
       </div>
-      <ul class="builtins" aria-label="Contact Form 7's own anti-spam options">
-        <li class="builtins-title">What Contact Form 7 offers on its own</li>
-        
-        <li><p class="b-name">reCAPTCHA v3</p><p class="b-text">Scores visitors in the background, but loads a Google script on every page and can't judge the message itself.</p></li>
-        
-        <li><p class="b-name">Cloudflare Turnstile</p><p class="b-text">Good at stopping bots without puzzles. Doesn't stop spam typed by people.</p></li>
-        
-        <li><p class="b-name">Quiz field</p><p class="b-text">Asks visitors a question. Extra friction for real people, and easy for a human spammer to answer.</p></li>
-        
-        <li><p class="b-name">Akismet</p><p class="b-text">Built for blog comments rather than forms, and needs a paid plan on commercial sites.</p></li>
-        
-      </ul>
+      <table class="gaps" aria-label="Contact Form 7's own anti-spam options and their problems">
+        <tbody>
+          
+          <tr>
+            <th scope="row"><span class="x" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></span>reCAPTCHA v3</th>
+            <td>Scores visitors in the background, but loads a Google script on every page and can't judge the message itself.</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><span class="x" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></span>Cloudflare Turnstile</th>
+            <td>Good at stopping bots without puzzles. Doesn't stop spam typed by people.</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><span class="x" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></span>Quiz field</th>
+            <td>Asks visitors a question. Extra friction for real people, and easy for a human spammer to answer.</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><span class="x" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></span>Akismet</th>
+            <td>Built for blog comments rather than forms, and needs a paid plan on commercial sites.</td>
+          </tr>
+          
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -306,6 +324,12 @@
         <li><h3 class="fp-h3">Add your API key</h3><p><a class="text-link" href="https://app.oopspam.com/Identity/Account/Register">Create a free account</a>, copy your API key and paste it under <strong>Settings → oopspam Anti-Spam</strong>.</p></li>
         <li><h3 class="fp-h3">Turn on Contact Form 7</h3><p>In the Contact Form 7 section of the settings, switch on <strong>Activate Spam Protection</strong> and write the message spammers will see. That's it.</p></li>
       </ol>
+      
+      <figure class="shot shot-steps">
+        <img loading="lazy" src="/assets/form-plugins/settings-contact-form-7.webp" alt="The Contact Form 7 section of the oopspam Anti-Spam settings: Activate Spam Protection switched on, the spam message field and content field mapping" width="1600" height="546">
+        <figcaption>The Contact Form 7 section in the oopspam Anti-Spam settings.</figcaption>
+      </figure>
+      
       <div class="blocked">
         <p><strong>What happens to a blocked submission?</strong> The visitor sees the message you wrote, and the submission is not sent to your inbox. It is saved in the plugin's Spam Entries log with its score and the reason it was blocked. If you use <a class="text-link" href="https://wordpress.org/plugins/flamingo/">Flamingo</a>, the oopspam score shows there too.</p>
       </div>
@@ -350,8 +374,8 @@
         </div>
         <div class="feature">
           <div class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h9M4 18h6"/><circle class="acc" cx="17.5" cy="16.5" r="4"/><path d="M15.5 14.5l4 4M19.5 14.5l-4 4"/></svg></div>
-          <h3 class="fp-h3">Your own block lists</h3>
-          <p>Block specific keywords, emails, IP addresses and IP ranges, or messages that contain links.</p>
+          <h3 class="fp-h3">Block and allow lists</h3>
+          <p>Block specific keywords, phrases, emails and IP addresses, and always let trusted emails and IPs through.</p>
         </div>
         <div class="feature">
           <div class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="acc" d="M12 12c-2-3-4.5-4-6.5-4a4 4 0 0 0 0 8c2 0 4.5-1 6.5-4zm0 0c2 3 4.5 4 6.5 4a4 4 0 0 0 0-8c-2 0-4.5 1-6.5 4z"/></svg></div>
@@ -364,10 +388,50 @@
           <p>Nothing is stored on our servers unless you turn on remote logging. You can switch off checks that use personal data, and we're GDPR compliant.</p>
         </div>
       </div>
-      <figure class="shot">
-        <img loading="lazy" src="/assets/WP_SensitivyLevel.jpg" alt="oopspam Anti-Spam plugin settings in WordPress, showing usage, the API key field and the sensitivity level slider" width="1200" height="660">
-        <figcaption>The plugin's settings in WordPress, with the sensitivity level slider.</figcaption>
-      </figure>
+      <div class="gallery" data-gallery>
+        <p class="g-title">Inside the plugin</p>
+        <div class="g-tabs" role="tablist" aria-label="oopspam Anti-Spam settings screenshots">
+          <button type="button" role="tab" id="gt-1" aria-controls="gp-1" aria-selected="true">Sensitivity</button>
+          <button type="button" role="tab" id="gt-2" aria-controls="gp-2" aria-selected="false">IP filtering</button>
+          <button type="button" role="tab" id="gt-3" aria-controls="gp-3" aria-selected="false">Manual moderation</button>
+          <button type="button" role="tab" id="gt-4" aria-controls="gp-4" aria-selected="false">Privacy</button>
+        </div>
+        <figure class="shot g-panel" role="tabpanel" id="gp-1" aria-labelledby="gt-1">
+          <img loading="lazy" src="/assets/WP_SensitivyLevel.jpg" alt="oopspam Anti-Spam general settings in WordPress, showing usage, the API key field and the sensitivity level slider" width="2644" height="1254">
+          <figcaption>Choose how strict the filter is with the sensitivity level slider.</figcaption>
+        </figure>
+        <figure class="shot g-panel" role="tabpanel" id="gp-2" aria-labelledby="gt-2">
+          <img loading="lazy" src="/assets/form-plugins/settings-ip-filtering.webp" alt="IP Filtering settings with switches to block VPNs and to block over 1,500 known cloud provider IP ranges such as AWS, Google Cloud and Azure" width="1600" height="423">
+          <figcaption>Block submissions from VPNs and from 1,500+ known cloud provider IPs.</figcaption>
+        </figure>
+        <figure class="shot g-panel" role="tabpanel" id="gp-3" aria-labelledby="gt-3">
+          <img loading="lazy" src="/assets/form-plugins/settings-manual-moderation.webp" alt="Manual Moderation settings with lists of blocked emails, blocked IPs, blocked keywords and phrases, allowed emails and allowed IPs" width="1600" height="771">
+          <figcaption>Keep your own lists of blocked and allowed emails, IPs, keywords and phrases.</figcaption>
+        </figure>
+        <figure class="shot g-panel" role="tabpanel" id="gp-4" aria-labelledby="gt-4">
+          <img loading="lazy" src="/assets/form-plugins/settings-privacy.webp" alt="Privacy settings with switches to stop analyzing IP addresses, stop analyzing email addresses and remove sensitive information from messages" width="1600" height="541">
+          <figcaption>Choose what data is checked, and strip emails, addresses and phone numbers before a message is sent.</figcaption>
+        </figure>
+      </div>
+      <script>
+        (function () {
+          document.querySelectorAll('[data-gallery]').forEach(function (g) {
+            var tabs = g.querySelectorAll('[role="tab"]'), panels = g.querySelectorAll('[role="tabpanel"]');
+            function show(i) {
+              tabs.forEach(function (t, j) { t.setAttribute('aria-selected', j === i ? 'true' : 'false'); t.tabIndex = j === i ? 0 : -1; });
+              panels.forEach(function (p, j) { p.hidden = j !== i; });
+            }
+            tabs.forEach(function (t, i) {
+              t.addEventListener('click', function () { show(i); });
+              t.addEventListener('keydown', function (e) {
+                var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+                if (k) { var n = (i + k + tabs.length) % tabs.length; show(n); tabs[n].focus(); }
+              });
+            });
+            show(0);
+          });
+        })();
+      </script>
     </div>
   </section>
 
@@ -585,11 +649,13 @@
         
         <details><summary>Do I need Flamingo?</summary><div class="a"><p>No. The plugin keeps its own Spam Entries log in your WordPress database. Flamingo is optional, and if you use it, the oopspam score appears there as well.</p></div></details>
         
+        <details><summary>My form has more than one message field. Does that matter?</summary><div class="a"><p>By default, oopspam checks your form's message field. If a form has several text areas, or you use different field names across forms, enter the message field names under <strong>Content field mapping</strong>, separated by commas.</p></div></details>
+        
         <details><summary>Do I need to change my forms?</summary><div class="a"><p>No. Switch on protection once in the plugin settings and it covers every Contact Form 7 form on your site.</p></div></details>
         
         <details><summary>Will it slow down my site?</summary><div class="a"><p>No. The check happens on your server when the form is submitted. Nothing extra loads in your visitors' browsers.</p></div></details>
         
-        <details><summary>What if a real message gets blocked?</summary><div class="a"><p>Find it in the plugin's Spam Entries log, which shows why it was blocked. If it happens more than once, lower the sensitivity level or add the sender's country to your trusted countries.</p></div></details>
+        <details><summary>What if a real message gets blocked?</summary><div class="a"><p>Find it in the plugin's Spam Entries log, which shows why it was blocked. To make sure it doesn't happen again, add the sender's email or IP address to your allowed list, or lower the sensitivity level.</p></div></details>
         
         <details><summary>Is oopspam GDPR compliant?</summary><div class="a"><p>Yes. Logs stay in your own WordPress database, and nothing is stored on our servers unless you turn on remote logging. You can also switch off checks that use personal data. See our <a class="text-link" href="/gdpr">GDPR notice</a> and <a class="text-link" href="/dpa">Data Processing Agreement</a>.</p></div></details>
         
@@ -728,6 +794,14 @@
     },
     {
       "@type": "Question",
+      "name": "My form has more than one message field. Does that matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By default, oopspam checks your form's message field. If a form has several text areas, or you use different field names across forms, enter the message field names under Content field mapping , separated by commas."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Do I need to change my forms?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -747,7 +821,7 @@
       "name": "What if a real message gets blocked?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Find it in the plugin's Spam Entries log, which shows why it was blocked. If it happens more than once, lower the sensitivity level or add the sender's country to your trusted countries."
+        "text": "Find it in the plugin's Spam Entries log, which shows why it was blocked. To make sure it doesn't happen again, add the sender's email or IP address to your allowed list, or lower the sensitivity level."
       }
     },
     {

@@ -52,6 +52,12 @@
     }
   ],
   "blocked": "The visitor sees the message you wrote, and the submission is not sent to your inbox. It is saved in the plugin's Spam Entries log with its score and the reason it was blocked. If you use <a class=\"text-link\" href=\"https://wordpress.org/plugins/flamingo/\">Flamingo</a>, the oopspam score shows there too.",
+  "settings": {
+    "src": "/assets/form-plugins/settings-contact-form-7.webp",
+    "w": 1600,
+    "h": 546,
+    "alt": "The Contact Form 7 section of the oopspam Anti-Spam settings: Activate Spam Protection switched on, the spam message field and content field mapping"
+  },
   "mock": {
     "field": "Message",
     "value": "Hi! We can get your website to the first page of Google in 30 days. Reply for a free audit…",
@@ -89,6 +95,10 @@
       "a": "No. The plugin keeps its own Spam Entries log in your WordPress database. Flamingo is optional, and if you use it, the oopspam score appears there as well."
     },
     {
+      "q": "My form has more than one message field. Does that matter?",
+      "a": "By default, oopspam checks your form's message field. If a form has several text areas, or you use different field names across forms, enter the message field names under <strong>Content field mapping</strong>, separated by commas."
+    },
+    {
       "q": "Do I need to change my forms?",
       "a": "No. Switch on protection once in the plugin settings and it covers every Contact Form 7 form on your site."
     },
@@ -98,7 +108,7 @@
     },
     {
       "q": "What if a real message gets blocked?",
-      "a": "Find it in the plugin's Spam Entries log, which shows why it was blocked. If it happens more than once, lower the sensitivity level or add the sender's country to your trusted countries."
+      "a": "Find it in the plugin's Spam Entries log, which shows why it was blocked. To make sure it doesn't happen again, add the sender's email or IP address to your allowed list, or lower the sensitivity level."
     },
     {
       "q": "Is oopspam GDPR compliant?",

@@ -7,7 +7,8 @@
     why         list of paragraphs (HTML allowed)
     builtins    list of { name, text }: the plugin's own anti-spam options and their gap
     blocked     what happens to a blocked submission in this plugin (HTML allowed)
-    mock        { field, value, reason } for the hero illustration
+    mock        (not used any more; the hero shows assets/alternative/no-captcha.webp)
+    settings    { src, w, h, alt }: screenshot of this plugin's section in the oopspam settings
     guides      list of { title, url, image }
     faqs        list of { q, a } (HTML allowed in a); turned into FAQPage data by the build
   Shared copy (features, comparison, reviews, pricing) lives here so all pages stay in sync.
@@ -41,28 +42,27 @@
   .fp .trust li { font-family: 'Open Sans SemiBold', sans-serif; font-size: 15px; margin: 0; }
   .fp .trust .stars { color: #000; letter-spacing: 1px; }
 
-  /* Hero illustration: one spam blocked, one real message delivered */
-  .fp .mock-stack { display: grid; gap: 18px; }
-  .fp .mock { background: #fff; border: 1.5px solid #000; border-radius: 16px; padding: 18px 20px; }
-  .fp .mock-spam { box-shadow: 8px 9px 0 var(--yellow); }
-  .fp .mock-ok { margin-left: 40px; }
-  .fp .mock-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 10px; }
-  .fp .mock-top p { margin: 0; font-family: 'Open Sans SemiBold', sans-serif; font-size: 14px; color: #555; }
-  .fp .badge { display: inline-block; padding: 3px 12px; border-radius: 999px; font-family: 'Open Sans Bold', sans-serif; font-size: 12px; letter-spacing: .04em; border: 1px solid #000; white-space: nowrap; }
-  .fp .badge-spam { background: #FEE5E5; }
-  .fp .badge-ok { background: #DDF3EA; }
-  .fp .mock-msg { margin: 0; font-size: 16px; line-height: 1.5; }
-  .fp .mock-why { margin: 10px 0 0; font-size: 13px; color: #555; }
+  /* Hero illustration */
+  .fp .hero-art { display: block; width: 100%; max-width: 460px; height: auto; margin: 0 auto; }
 
   /* Why */
-  .fp .why-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: start; }
-  .fp .why-grid .body p:not(.eyebrow) { font-size: 18px; line-height: 1.75; margin: 0 0 16px; }
-  .fp .builtins { list-style: none; margin: 0; padding: 0; border: 1.5px solid #000; border-radius: 16px; overflow: hidden; background: #fff; }
-  .fp .builtins li { margin: 0; padding: 18px 22px; border-bottom: 1px solid var(--line); }
-  .fp .builtins li:last-child { border-bottom: 0; }
-  .fp .builtins .b-name { font-family: 'Open Sans Bold', sans-serif; font-size: 16px; margin: 0 0 4px; }
-  .fp .builtins .b-text { font-size: 15px; line-height: 1.55; margin: 0; color: #333; }
-  .fp .builtins-title { font-family: 'Open Sans Bold', sans-serif; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: #555; margin: 0; padding: 14px 22px; background: var(--cream); border-bottom: 1px solid #000; }
+  .fp .why-intro { max-width: 760px; }
+  .fp .why-intro p:not(.eyebrow) { font-size: 18px; line-height: 1.75; margin: 0 0 16px; }
+  .fp table.gaps { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 40px; }
+  .fp table.gaps thead th { text-align: left; vertical-align: bottom; padding: 0 24px 18px 0; border: 0; font-family: 'Open Sans SemiBold', sans-serif; font-size: 22px; line-height: 1.3; color: #000; }
+  .fp table.gaps tbody th { width: 30%; }
+  .fp table.gaps tbody th, .fp table.gaps tbody td { padding: 22px 26px; border-top: 1px solid #000; text-align: left; vertical-align: middle; }
+  .fp table.gaps tbody th { background: var(--cream); border-left: 1.5px solid #000; border-right: 1px solid #000; font-family: 'Open Sans Bold', sans-serif; font-size: 17px; white-space: nowrap; }
+  .fp table.gaps tbody td { background: #fff; border-right: 1.5px solid #000; font-size: 16px; line-height: 1.6; color: #222; }
+  .fp table.gaps tbody tr:first-child th, .fp table.gaps tbody tr:first-child td { border-top-width: 1.5px; }
+  .fp table.gaps tbody tr:last-child th, .fp table.gaps tbody tr:last-child td { border-bottom: 1.5px solid #000; }
+  .fp table.gaps tbody tr:first-child th { border-top-left-radius: 16px; }
+  .fp table.gaps tbody tr:first-child td { border-top-right-radius: 16px; }
+  .fp table.gaps tbody tr:last-child th { border-bottom-left-radius: 16px; }
+  .fp table.gaps tbody tr:last-child td { border-bottom-right-radius: 16px; }
+  .fp table.gaps .x { display: inline-flex; vertical-align: -5px; margin-right: 14px; }
+  .fp table.gaps .x svg { width: 20px; height: 20px; }
+  .fp table.gaps .x svg * { fill: none; stroke: #000; stroke-width: 3.2; stroke-linecap: round; }
 
   /* Steps */
   .fp .fp-steps { background: linear-gradient(180deg, #E9D9C8 0%, #FEE5E5 100%); border-top: 1px solid #000; border-bottom: 1px solid #000; }
@@ -83,6 +83,16 @@
   .fp .feature .f-icon svg .acc { fill: #FCDD56; }
   .fp .shot { margin: 48px auto 0; max-width: 900px; }
   .fp .shot img { display: block; width: 100%; height: auto; border: 1.5px solid #000; border-radius: 14px; box-shadow: 6px 7px 0 var(--yellow); }
+  .fp .shot-steps { margin: 36px auto 0; max-width: 1000px; }
+  .fp .gallery { margin: 56px auto 0; max-width: 1000px; }
+  .fp .g-title { font-family: 'Open Sans Bold', sans-serif; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: #555; text-align: center; margin: 0 0 14px; }
+  .fp .g-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 22px; }
+  .fp .g-tabs button { font-family: 'Open Sans SemiBold', sans-serif; font-size: 15px; padding: 9px 16px; border: 1.5px solid #000; border-radius: 10px; background: #fff; color: #000; cursor: pointer; }
+  .fp .g-tabs button[aria-selected="true"] { background: var(--yellow); }
+  .fp .g-tabs button:focus-visible { outline: 3px solid #000; outline-offset: 2px; }
+  .fp .gallery .shot { margin: 0; max-width: none; }
+  .fp .g-panel[hidden] { display: none !important; }
+  .fp .shot-steps img { background: #fff; padding: 10px; }
   .fp .shot figcaption { font-size: 14px; color: #555; text-align: center; margin-top: 14px; font-family: 'Open Sans Regular', sans-serif; }
 
   /* Comparison */
@@ -134,8 +144,7 @@
   .fp .fp-cta .btn-primary { background: #fff; }
 
   @media (max-width: 1023px) {
-    .fp .hero-grid, .fp .why-grid { grid-template-columns: 1fr; gap: 40px; }
-    .fp .mock-ok { margin-left: 24px; }
+    .fp .hero-grid { grid-template-columns: 1fr; gap: 40px; }
     .fp .features, .fp .reviews { grid-template-columns: 1fr 1fr; }
     .fp .guides { grid-template-columns: 1fr 1fr; }
     .fp .steps { grid-template-columns: 1fr; }
@@ -148,6 +157,13 @@
     .fp .lead { font-size: 17px; }
     .fp .features, .fp .reviews, .fp .guides { grid-template-columns: 1fr; }
     .fp .btn-row .btn { width: 100%; justify-content: center; }
+    .fp table.gaps thead th { font-size: 16px; padding-right: 12px; }
+    .fp table.gaps tbody th { width: 42%; }
+    .fp table.gaps tbody th, .fp table.gaps tbody td { padding: 16px 14px; }
+    .fp table.gaps tbody th { white-space: normal; font-size: 15px; }
+    .fp table.gaps tbody td { font-size: 14.5px; }
+    .fp table.gaps .x { margin-right: 8px; }
+    .fp table.gaps .x svg { width: 14px; height: 14px; }
   }
 </style>
 
@@ -171,35 +187,29 @@
         </ul>
       </div>
       <div>
-        <div class="mock-stack" role="img" aria-label="Illustration: oopspam blocks a spam {{ fp.name }} submission and delivers a real one">
-          <div class="mock mock-spam">
-            <div class="mock-top"><p>{{ fp.name }} submission</p><span class="badge badge-spam">Spam blocked</span></div>
-            <p class="mock-msg">{{ fp.mock.value }}</p>
-            <p class="mock-why">{{ fp.mock.reason }}</p>
-          </div>
-          <div class="mock mock-ok">
-            <div class="mock-top"><p>{{ fp.name }} submission</p><span class="badge badge-ok">Delivered</span></div>
-            <p class="mock-msg">Hi, could you send me a quote for a website redesign? We're a team of 12.</p>
-          </div>
-        </div>
+        <img class="hero-art" src="/assets/alternative/no-captcha.webp" alt="A form crossed out with a no sign, next to skull icons and a gem, showing spam blocked without a CAPTCHA" width="930" height="640">
       </div>
     </div>
   </section>
 
   <!-- Why -->
   <section class="fp-sec">
-    <div class="fp-wrap why-grid">
-      <div class="body">
+    <div class="fp-wrap">
+      <div class="why-intro">
         <p class="eyebrow">The problem</p>
         <h2 class="fp-h2">{{ fp.whyTitle }}</h2>
         {% for p in fp.why %}<p>{{ p | safe }}</p>{% endfor %}
       </div>
-      <ul class="builtins" aria-label="{{ fp.name }}'s own anti-spam options">
-        <li class="builtins-title">What {{ fp.name }} offers on its own</li>
-        {% for b in fp.builtins %}
-        <li><p class="b-name">{{ b.name }}</p><p class="b-text">{{ b.text | safe }}</p></li>
-        {% endfor %}
-      </ul>
+      <table class="gaps" aria-label="{{ fp.name }}'s own anti-spam options and their problems">
+        <tbody>
+          {% for b in fp.builtins %}
+          <tr>
+            <th scope="row"><span class="x" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></span>{{ b.name }}</th>
+            <td>{{ b.text | safe }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -214,6 +224,12 @@
         <li><h3 class="fp-h3">Add your API key</h3><p><a class="text-link" href="https://app.oopspam.com/Identity/Account/Register">Create a free account</a>, copy your API key and paste it under <strong>Settings → oopspam Anti-Spam</strong>.</p></li>
         <li><h3 class="fp-h3">Turn on {{ fp.name }}</h3><p>In the {{ fp.name }} section of the settings, switch on <strong>Activate Spam Protection</strong> and write the message spammers will see. That's it.</p></li>
       </ol>
+      {% if fp.settings %}
+      <figure class="shot shot-steps">
+        <img loading="lazy" src="{{ fp.settings.src }}" alt="{{ fp.settings.alt }}" width="{{ fp.settings.w }}" height="{{ fp.settings.h }}">
+        <figcaption>The {{ fp.name }} section in the oopspam Anti-Spam settings.</figcaption>
+      </figure>
+      {% endif %}
       <div class="blocked">
         <p><strong>What happens to a blocked submission?</strong> {{ fp.blocked | safe }}</p>
       </div>
@@ -258,8 +274,8 @@
         </div>
         <div class="feature">
           <div class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h9M4 18h6"/><circle class="acc" cx="17.5" cy="16.5" r="4"/><path d="M15.5 14.5l4 4M19.5 14.5l-4 4"/></svg></div>
-          <h3 class="fp-h3">Your own block lists</h3>
-          <p>Block specific keywords, emails, IP addresses and IP ranges, or messages that contain links.</p>
+          <h3 class="fp-h3">Block and allow lists</h3>
+          <p>Block specific keywords, phrases, emails and IP addresses, and always let trusted emails and IPs through.</p>
         </div>
         <div class="feature">
           <div class="f-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path class="acc" d="M12 12c-2-3-4.5-4-6.5-4a4 4 0 0 0 0 8c2 0 4.5-1 6.5-4zm0 0c2 3 4.5 4 6.5 4a4 4 0 0 0 0-8c-2 0-4.5 1-6.5 4z"/></svg></div>
@@ -272,10 +288,50 @@
           <p>Nothing is stored on our servers unless you turn on remote logging. You can switch off checks that use personal data, and we're GDPR compliant.</p>
         </div>
       </div>
-      <figure class="shot">
-        <img loading="lazy" src="/assets/WP_SensitivyLevel.jpg" alt="oopspam Anti-Spam plugin settings in WordPress, showing usage, the API key field and the sensitivity level slider" width="1200" height="660">
-        <figcaption>The plugin's settings in WordPress, with the sensitivity level slider.</figcaption>
-      </figure>
+      <div class="gallery" data-gallery>
+        <p class="g-title">Inside the plugin</p>
+        <div class="g-tabs" role="tablist" aria-label="oopspam Anti-Spam settings screenshots">
+          <button type="button" role="tab" id="gt-1" aria-controls="gp-1" aria-selected="true">Sensitivity</button>
+          <button type="button" role="tab" id="gt-2" aria-controls="gp-2" aria-selected="false">IP filtering</button>
+          <button type="button" role="tab" id="gt-3" aria-controls="gp-3" aria-selected="false">Manual moderation</button>
+          <button type="button" role="tab" id="gt-4" aria-controls="gp-4" aria-selected="false">Privacy</button>
+        </div>
+        <figure class="shot g-panel" role="tabpanel" id="gp-1" aria-labelledby="gt-1">
+          <img loading="lazy" src="/assets/WP_SensitivyLevel.jpg" alt="oopspam Anti-Spam general settings in WordPress, showing usage, the API key field and the sensitivity level slider" width="2644" height="1254">
+          <figcaption>Choose how strict the filter is with the sensitivity level slider.</figcaption>
+        </figure>
+        <figure class="shot g-panel" role="tabpanel" id="gp-2" aria-labelledby="gt-2">
+          <img loading="lazy" src="/assets/form-plugins/settings-ip-filtering.webp" alt="IP Filtering settings with switches to block VPNs and to block over 1,500 known cloud provider IP ranges such as AWS, Google Cloud and Azure" width="1600" height="423">
+          <figcaption>Block submissions from VPNs and from 1,500+ known cloud provider IPs.</figcaption>
+        </figure>
+        <figure class="shot g-panel" role="tabpanel" id="gp-3" aria-labelledby="gt-3">
+          <img loading="lazy" src="/assets/form-plugins/settings-manual-moderation.webp" alt="Manual Moderation settings with lists of blocked emails, blocked IPs, blocked keywords and phrases, allowed emails and allowed IPs" width="1600" height="771">
+          <figcaption>Keep your own lists of blocked and allowed emails, IPs, keywords and phrases.</figcaption>
+        </figure>
+        <figure class="shot g-panel" role="tabpanel" id="gp-4" aria-labelledby="gt-4">
+          <img loading="lazy" src="/assets/form-plugins/settings-privacy.webp" alt="Privacy settings with switches to stop analyzing IP addresses, stop analyzing email addresses and remove sensitive information from messages" width="1600" height="541">
+          <figcaption>Choose what data is checked, and strip emails, addresses and phone numbers before a message is sent.</figcaption>
+        </figure>
+      </div>
+      <script>
+        (function () {
+          document.querySelectorAll('[data-gallery]').forEach(function (g) {
+            var tabs = g.querySelectorAll('[role="tab"]'), panels = g.querySelectorAll('[role="tabpanel"]');
+            function show(i) {
+              tabs.forEach(function (t, j) { t.setAttribute('aria-selected', j === i ? 'true' : 'false'); t.tabIndex = j === i ? 0 : -1; });
+              panels.forEach(function (p, j) { p.hidden = j !== i; });
+            }
+            tabs.forEach(function (t, i) {
+              t.addEventListener('click', function () { show(i); });
+              t.addEventListener('keydown', function (e) {
+                var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+                if (k) { var n = (i + k + tabs.length) % tabs.length; show(n); tabs[n].focus(); }
+              });
+            });
+            show(0);
+          });
+        })();
+      </script>
     </div>
   </section>
 

@@ -48,6 +48,12 @@
     }
   ],
   "blocked": "The visitor sees the message you wrote at the bottom of the form, and the entry doesn't reach you. It is saved in the plugin's Spam Entries log with its score and the reason it was blocked.",
+  "settings": {
+    "src": "/assets/form-plugins/settings-gravity-forms.webp",
+    "w": 1600,
+    "h": 642,
+    "alt": "The Gravity Forms section of the oopspam Anti-Spam settings: Activate Spam Protection switched on, the spam message, form and field ID mapping and the list of forms not to protect"
+  },
   "mock": {
     "field": "Comments",
     "value": "Get 500 high-quality backlinks for $49. Boost your rankings today: https://bit.ly/…",
@@ -89,12 +95,20 @@
       "a": "No. Switch on protection once in the plugin settings and it covers every Gravity Forms form on your site."
     },
     {
+      "q": "Can I leave some forms unprotected?",
+      "a": "Yes. In the Gravity Forms section of the settings, enter their form IDs under <strong>Don't protect these forms</strong>, for example 1,5,2."
+    },
+    {
+      "q": "Which field does oopspam check?",
+      "a": "It finds the message field automatically. If your form has several, use <strong>Content field mapping</strong> to pair a form ID with the field IDs to check, and their values are joined together."
+    },
+    {
       "q": "Will it slow down my site?",
       "a": "No. The check happens on your server when the form is submitted. Nothing extra loads in your visitors' browsers."
     },
     {
       "q": "What if a real message gets blocked?",
-      "a": "Find it in the plugin's Spam Entries log, which shows why it was blocked. If it happens more than once, lower the sensitivity level or add the sender's country to your trusted countries."
+      "a": "Find it in the plugin's Spam Entries log, which shows why it was blocked. To make sure it doesn't happen again, add the sender's email or IP address to your allowed list, or lower the sensitivity level."
     },
     {
       "q": "Is oopspam GDPR compliant?",
