@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256px" height="236px" viewBox="0 0 256 236" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>linkedin-logo</title>
+    <g id="linkedin-logo" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
+        <g id="Layer_1" fill="#FFFFFF">
+            <rect id="Rectangle" x="6.6" y="75.4" width="49.9" height="159.7"></rect>
+            <path d="M30.5,0 C12.1,0 0,11.9 0,27.7 C0,43.2 11.7,55.4 29.8,55.4 L30.2,55.4 C49,55.4 60.7,43.1 60.6,27.7 C60.2,11.9 48.9,0 30.5,0 Z" id="Path"></path>
+            <path d="M192.8,73.9 C164.2,73.9 146.3,89.5 143,100.5 L143,75.4 L86.9,75.4 C87.6,88.7 86.9,235.1 86.9,235.1 L143,235.1 L143,148.8 C143,143.9 142.8,139.1 144.2,135.7 C148,126.1 156.3,116.1 171.2,116.1 C190.7,116.1 199.5,130.9 199.5,152.5 L199.5,235.1 L256.1,235.1 L256.1,146.3 C256.1,96.9 228.3,73.9 192.8,73.9 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

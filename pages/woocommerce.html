@@ -26,6 +26,12 @@
   <!-- Placeholder for head scripts (assuming Nunjucks include) -->
   {% set softwareApp = true %}
   {% include "partials/headScript.njk" %}
+  <style>
+    /* Keep wide columns and quotes inside narrow screens */
+    @media (max-width: 1023px) {
+      .app-content .columns.is-variable { --bulma-column-gap: .75rem; }
+    }
+  </style>
 </head>
 
 <body>
@@ -311,7 +317,7 @@
           <div class="has-text-centered"><div style="line-height: 33px;" class="content subtitle">
             Things happen! We pride ourselves on providing world-class customer support! 
           </div>
-          <blockquote class="is-italic is-size-5 has-text-black  box has-background-white" style=" width: max-content;">
+          <blockquote class="is-italic is-size-5 has-text-black  box has-background-white" style="max-width: 720px; margin: 0 auto;">
            " .. any time I have any sort of issue, the response time from the oops team is immediate and they always fix the problem or answer my questions. "<br>
             <a href="https://wordpress.org/support/topic/great-plugin-38290/">by @winter1</a>
           </blockquote>

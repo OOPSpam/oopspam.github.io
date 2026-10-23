@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Accessible, privacy-friendly, lightweight and accurate spam & fraud protection for WordPress">
+  <meta name="description" content="Stop form spam, fake sign-ups and card testing on WordPress without CAPTCHA. Works with 40+ form plugins and WooCommerce. Rated 4.9 on WordPress.org.">
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@oopspamapi" />
   <meta property="og:url" content="https://www.oopspam.com/wordpress" />
-  <meta property="og:title" content="oopspam for WordPress: Privacy & accessible spam protection plugin" />
-  <meta property="og:description" content="Accessible, privacy-friendly, lightweight and accurate spam & fraud protection for WordPress" />
+  <meta property="og:title" content="WordPress Spam Protection Plugin (No CAPTCHA) | oopspam" />
+  <meta property="og:description" content="Stop form spam, fake sign-ups and card testing on WordPress without CAPTCHA. Works with 40+ form plugins and WooCommerce. Rated 4.9 on WordPress.org." />
   <meta property="og:image" content="https://www.oopspam.com/assets/meta_oopspam.png" />
   <meta name="twitter:image" content="https://www.oopspam.com/assets/meta_oopspam_tw.png" />
 
-  <title>oopspam for WordPress: Privacy & accessible spam protection plugin</title>
+  <title>WordPress Spam Protection Plugin (No CAPTCHA) | oopspam</title>
   <link rel="canonical" href="https://www.oopspam.com/wordpress" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
@@ -26,6 +26,12 @@
   <!-- Placeholder for head scripts (assuming Nunjucks include) -->
   {% set softwareApp = true %}
   {% include "partials/headScript.njk" %}
+  <style>
+    /* Keep wide columns and quotes inside narrow screens */
+    @media (max-width: 1023px) {
+      .app-content .columns.is-variable { --bulma-column-gap: .75rem; }
+    }
+  </style>
 </head>
 
 <body>
@@ -48,15 +54,13 @@
           <!-- Left Column -->
           <div class="column is-8 has-text-left is-7-fullhd">
             <div class="content is-flex is-flex-direction-column mb-0">
-              <h2 class="has-text-black is-flex is-flex-direction-row is-flex-wrap-nowrap is-size-4 has-text-weight-bold mb-0">
-                <span class="is-size-4">Privacy-friendly, accessible and lightweight</span>
-              </h2>
+              <p class="has-text-black is-size-4 has-text-weight-bold mb-0 is-brico">WordPress spam protection plugin</p>
               <h1 class="has-text-black has-text-weight-bold mt-0 page-hero-title">
-                Anti-Spam Solution for WordPress
+                Stop WordPress spam without a CAPTCHA
               </h1>
             </div>
             <p class="lead-copy has-text-black pb-5">
-              Combat spam, card testing attacks and online abuse with NO CAPTCHA, no data collection, just instant results for a safer world wide web.
+              The oopspam Anti-Spam plugin blocks form spam, fake sign-ups, comment spam and WooCommerce card testing in the background. No puzzles for your visitors, and no logs on our servers by default.
             </p>
             <div class="is-flex is-flex-direction-column is-flex-wrap-wrap">
               <div class="control mb-5">
@@ -75,17 +79,17 @@
             <ul class="hero-bullets copy has-text-black mt-5 mb-0">
               <li><img loading="lazy" src="/assets/BlackCheck.svg" width="15" height="14" alt=""/>Privacy by design</li>
               <li><img loading="lazy" src="/assets/BlackCheck.svg" width="15" height="14" alt=""/>No credit card required</li>
-              <li><img loading="lazy" src="/assets/BlackCheck.svg" width="15" height="14" alt=""/>Trusted by industry leaders</li>
+              <li><img loading="lazy" src="/assets/BlackCheck.svg" width="15" height="14" alt=""/>Works with 40+ form plugins</li>
             </ul>
             <div class="hero-logos mt-5">
               <img loading="lazy" src="/assets/home/UsedByLogos2026.webp" alt="Webflow, Harvard Medical School and Better Business Bureau"/>
             </div>
-            <p class="mt-4"><a href="/reviews/">See what WordPress users say</a></p>
+            <p class="mt-4 has-text-black wp-rating"><a class="has-text-black" href="https://wordpress.org/support/plugin/oopspam-anti-spam/reviews/"><span aria-hidden="true">★★★★★</span> 4.9 on WordPress.org</a> · 6,000+ active installs · <a class="has-text-black" href="/reviews/">Read reviews</a></p>
           </div>
           
           <!-- Right Column Illustration -->
           <div class="column is-flex is-justify-content-center" style="padding-right: 0;">
-            <img class="" loading="lazy" src="/assets/WordpressHero2026.webp" alt="oopspam illustration" style="width: 100%; max-width: 600px;">
+            <img src="/assets/WordpressHero2026.webp" fetchpriority="high" width="1010" height="922" alt="oopspam Anti-Spam plugin illustration: a protected WordPress form" style="width: 100%; max-width: 600px; height: auto;">
           </div>
         </div>
       </div>
@@ -293,7 +297,7 @@
           <div class="has-text-centered"><div style="line-height: 33px;" class="content subtitle">
             Things happen! We pride ourselves on providing world-class customer support! 
           </div>
-          <blockquote class="is-italic is-size-5 has-text-black  box has-background-white" style=" width: max-content;">
+          <blockquote class="is-italic is-size-5 has-text-black  box has-background-white" style="max-width: 720px; margin: 0 auto;">
            " .. any time I have any sort of issue, the response time from the oops team is immediate and they always fix the problem or answer my questions. "<br>
             <a href="https://wordpress.org/support/topic/great-plugin-38290/">by @winter1</a>
           </blockquote>
@@ -306,6 +310,32 @@
    <!-- Pricing -->
      {% set pricingIncludes = ["Unlimited websites", "Spam Protection API", "Domain Reputation API", "Context-aware spam detection", "API key rotation", "Misdetection Reporting API", "No logs by default", "WordPress, WooCommerce, Zapier and Make integrations", '<a class="has-text-black" style="text-decoration: underline;" href="/wordpress/oopvulns">OOPVulns vulnerability scanner</a>'] %}
   {% include "partials/pricing.njk" %}
+  <!-- Guides -->
+  <section id="guides" class="section">
+    <style>
+      #guides .wp-guides { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 2rem; }
+      #guides a.wp-guide { display: flex; flex-direction: column; border: 1.5px solid #000; border-radius: 14px; overflow: hidden; background: #fff; color: #000; background-image: none; transition: transform .15s, box-shadow .15s; }
+      #guides a.wp-guide:hover { transform: translateY(-2px); box-shadow: 4px 5px 0 #fcdd56; }
+      #guides a.wp-guide img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-bottom: 1px solid #000; background: #fbf6ed; display: block; }
+      #guides a.wp-guide span { padding: 14px 16px 18px; font-family: 'Open Sans SemiBold', sans-serif; font-size: 15px; line-height: 1.4; color: #000 !important; }
+      #guides .wp-plugins { margin-top: 1.75rem; font-size: 16px; }
+      #guides .wp-plugins a { color: #000; text-decoration: underline; text-underline-offset: .15em; }
+      @media (max-width: 1023px) { #guides .wp-guides { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 600px) { #guides .wp-guides { grid-template-columns: 1fr; } }
+      .wp-rating a { text-decoration: underline; text-underline-offset: .15em; }
+    </style>
+    <div class="container">
+      <h2 class="title has-text-black">WordPress spam guides</h2>
+      <div class="wp-guides">
+        <a class="wp-guide" href="https://www.oopspam.com/blog/7-best-anti-spam-plugins-for-wordpress"><img loading="lazy" src="https://www.oopspam.com/blog/assets/posts/social-media-meta.png" alt="" width="400" height="225"><span>Best Anti-Spam Plugins for WordPress in 2026</span></a>
+        <a class="wp-guide" href="https://www.oopspam.com/blog/honeypot-spam-protection-for-wordpress-how-it-works-when-it-fails-and-better-alternatives"><img loading="lazy" src="https://www.oopspam.com/blog/assets/posts/meta_honeypot_spam.png" alt="" width="400" height="225"><span>Honeypot Spam Protection for WordPress: How It Works and When It Fails</span></a>
+        <a class="wp-guide" href="https://www.oopspam.com/blog/why-legitimate-form-submissions-get-flagged-as-spam-and-how-to-reduce-false-positives"><img loading="lazy" src="https://www.oopspam.com/blog/assets/posts/false_orders_meta.png" alt="" width="400" height="225"><span>Why Legitimate Form Submissions Get Flagged as Spam</span></a>
+        <a class="wp-guide" href="https://www.oopspam.com/blog/so-youre-using-oopspam-and-still-getting-spam"><img loading="lazy" src="https://www.oopspam.com/blog/assets/posts/header-oopspam.png" alt="" width="400" height="225"><span>So, you're using oopspam and still getting spam?</span></a>
+      </div>
+      <p class="wp-plugins has-text-black">Setting up a specific form plugin? See <a href="/spam-filter-for-contactform7">Contact Form 7</a>, <a href="/anti-spam-filter-for-gravity-forms">Gravity Forms</a>, <a href="/anti-spam-filter-for-ninja-forms">Ninja Forms</a> and <a href="/woocommerce">WooCommerce</a>.</p>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section id="faq" class="section">
     <div class="container">
@@ -339,8 +369,36 @@
                Check out the <a href="https://help.oopspam.com/wordpress/configuration/">Configuration</a> page on <a href="https://help.oopspam.com/">the knowledge base</a>. If something isn't working as expected, see <a href="https://help.oopspam.com/wordpress/troubleshooting/">Troubleshooting</a>.
               </p>
             </details>
-          
- 
+            <details>
+              <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
+                class="has-text-weight-bold not-selectable">Is the oopspam WordPress plugin free?</summary>
+              <p>The plugin is free to install from WordPress.org. It needs an oopspam API key, and every account includes 40 free spam checks a month. Paid plans are priced by number of checks, not by number of sites.</p>
+            </details>
+            <details>
+              <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
+                class="has-text-weight-bold not-selectable">Will it slow down my website?</summary>
+              <p>No. Checks run on your server when a form is submitted, so nothing extra loads in your visitors' browsers and there is no CAPTCHA script on your pages.</p>
+            </details>
+            <details>
+              <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
+                class="has-text-weight-bold not-selectable">Does it protect WooCommerce, logins and registrations?</summary>
+              <p>Yes. Besides contact forms and comments, it protects WordPress login, registration and lost-password forms, WooCommerce orders and registrations, and membership plugins. In WooCommerce it also helps stop card testing on checkout.</p>
+            </details>
+            <details>
+              <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
+                class="has-text-weight-bold not-selectable">Is it GDPR compliant? Where are submissions stored?</summary>
+              <p>Logs are kept in your own WordPress database, and nothing is stored on oopspam's servers unless you turn on remote logging. You can stop IP and email checks and strip sensitive details from messages in the Privacy settings. See our <a href="/gdpr">GDPR notice</a> and <a href="/dpa">Data Processing Agreement</a>.</p>
+            </details>
+            <details>
+              <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
+                class="has-text-weight-bold not-selectable">What if a real message is blocked?</summary>
+              <p>Find it in the plugin's spam entries log, which shows why it was blocked. Add the sender's email or IP to your allowed lists, or lower the sensitivity level.</p>
+            </details>
+            <details>
+              <summary unselectable="on" onselectstart="return false;" onmousedown="return false;"
+                class="has-text-weight-bold not-selectable">Can I keep reCAPTCHA or a honeypot?</summary>
+              <p>Yes. oopspam works alongside them. If you remove reCAPTCHA, your pages no longer load Google's script.</p>
+            </details>
           </div>
         </div>
       </div>
