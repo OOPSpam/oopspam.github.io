@@ -11,9 +11,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="oopspam is fully compliant with GDPR. Here we explain how GDPR affects you as an anti spam filter and how we help.">
-    <meta property="og:description" content="oopspam is fully compliant with GDPR. Here we explain how GDPR affects you as an anti spam filter and how we help.">
-    <meta name="twitter:description" content="oopspam is fully compliant with GDPR. Here we explain how GDPR affects you as an anti spam filter and how we help.">
+    <meta name="description" content="How oopspam handles personal data under GDPR: what the spam detection API processes, where, for how long, and our Standard Contractual Clauses.">
+    <meta property="og:description" content="How oopspam handles personal data under GDPR: what the spam detection API processes, where, for how long, and our Standard Contractual Clauses.">
+    <meta name="twitter:description" content="How oopspam handles personal data under GDPR: what the spam detection API processes, where, for how long, and our Standard Contractual Clauses.">
     <meta property="og:image" content="https://www.oopspam.com/assets/oopspam-og-image.png" />
     <meta property="og:url" content="https://www.oopspam.com/gdpr" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -146,11 +146,19 @@
                         <p>Registering for a free trial requires acceptance of our publicly available <a
                                 href="https://www.oopspam.com/terms">terms &amp; conditions</a>.</p>
                         <h3 id="on-our-apis">On our APIs:</h3>
-                        <p>Our API servers are hosted with <a href="https://www.fly.io/">Fly.io</a> a US-based cloud
-                            provider. Here is <a href="https://fly.io/legal/privacy-policy/">Fly.io privacy policy</a>.</p>
-                        <p>We use API Gateway to rate-limit API usage. API Gateway keeps meta log of your requests so that
-                            it knows how many requests you made. We do not store request bodies. These details are hosted by DigitalOcean in the United States. Here is <a href="https://www.digitalocean.com/legal/privacy-policy">DigitalOcean privacy policy</a>.</p>
-                            If a customer chooses to store request and response logs with us, this information will be stored by Supabase in the EU (region: eu-central-1). Here is <a href="https://supabase.com/privacy">Supabase privacy policy</a>
+                        <p>When you check a submission, we receive its content and, if you send them, the IP address and email address (optional, but recommended for accurate detection, and used only for spam detection). With our WordPress plugin, we also receive technical details of the HTTP request. We process this data in memory to return the verdict and <strong>do not store it by default</strong>. We don&rsquo;t add data from your spam checks to our network-wide lists or use it for other customers.</p>
+                        <ul>
+                            <li><strong>API servers:</strong> hosted with <a href="https://fly.io/">Fly.io</a>. Each request is served by the nearest region: Frankfurt (Germany), London (UK), Secaucus NJ and San Jose CA (US), S&atilde;o Paulo (Brazil) or Sydney (Australia). Requests from the EU are normally served in Frankfurt; if that region is unavailable, another region, including the US, may be used. Our detection models run on our own servers in the same regions. Traffic reaches us through <a href="https://www.cloudflare.com/">Cloudflare</a>. <a href="https://fly.io/legal/privacy-policy/">Fly.io privacy policy</a>.</li>
+                            <li><strong>Detection microservices:</strong> some run on <a href="https://www.hetzner.com/">Hetzner</a> in Germany or the US and process IP addresses and email addresses in real time, without storing them.</li>
+                            <li><strong>Contextual detection:</strong> only when it is used, the submission content (no IP address or email address) is sent through <a href="https://openrouter.ai/">OpenRouter</a> in the US, with zero data retention.</li>
+                            <li><strong>API gateway:</strong> to rate-limit usage, our API gateway on DigitalOcean in the US keeps request counts per API key and the IP address the API call comes from (normally your server) for 30 days. It does not store request bodies. <a href="https://www.digitalocean.com/legal/privacy-policy">DigitalOcean privacy policy</a>.</li>
+                            <li><strong>Logs (optional):</strong> only if you switch logging on, request and response logs are stored by <a href="https://supabase.com/privacy">Supabase</a> in the EU (Frankfurt, eu-central-1) for your plan&rsquo;s retention period (Freelance 2 months, Agency 4 months, Scale 6 months). Daily backups stay in Frankfurt for up to 7 days.</li>
+                            <li><strong>Reports:</strong> when you mark a submission as spam or not spam, the report is stored in Frankfurt, Germany, and deleted 7 days after it is resolved. Reports are applied to our network-wide block and allow lists, which protect all customers. If you don&rsquo;t want this, don&rsquo;t use the report function; we will remove a report on request.</li>
+                            <li><strong>Error monitoring:</strong> if a request causes an error, technical details of it may be sent to <a href="https://sentry.io/">Sentry</a> in the US and kept for up to 90 days.</li>
+                        </ul>
+                        <p>The full list of sub-processors for the API is in <a href="/dpa#annex-sub-processors">Annex 1 of our DPA</a>. We will email customers at least 30 days before adding or replacing one.</p>
+                        <h2 id="international-transfers">International transfers</h2>
+                        <p>Some of this processing takes place outside the EEA, including in the United States. For these transfers we rely on the European Commission&rsquo;s Standard Contractual Clauses (Module Two, controller to processor), which are part of our <a href="/dpa#international-transfers">DPA</a>. A signed copy with completed annexes is available on request at <a href="mailto:contact@oopspam.com">contact@oopspam.com</a>. OOPSpam LLC is not certified under the EU-U.S. Data Privacy Framework.</p>
                         <h2 id="customerfinancial-transaction-information">Customer/Financial transaction information:
                         </h2>
                         <p>If you become a paying customer (as opposed to just using our free trial) you will need to
@@ -163,7 +171,7 @@
                             understanding our growth, churn, and all kinds of financial metrics. ProfitWell is directly
                             connected to Paddle, so they have access to customer billing history.</p>
                         <ul>
-                            <li><a href="https://stripe.com/en-fr/privacy">Paddle privacy policy</a></li>
+                            <li><a href="https://www.paddle.com/legal/privacy">Paddle privacy policy</a></li>
                             <li><a href="https://www.profitwell.com/gdpr">ProfitWell GDPR policy</a></li>
                         </ul>
                         <h2 id="data-processing-agreement" tabindex="-1">Data Processing Agreement</h2>
@@ -177,7 +185,7 @@
                                 page</a> on our dashboard. For paying customers we of course have to keep records of all
                             completed transactions for tax purposes.</p>
                         <h2 id="stay-informed">Stay informed</h2>
-                        <p>Meaningful changes to this document will be announced on our Twitter account and via email.
+                        <p>Meaningful changes to this document, including changes to our sub-processors, will be announced by email and on our Twitter account.
                         </p>
                     </div>
 
@@ -190,7 +198,7 @@
                     <p>If you have questions about GDPR compliant or anything else about oopspam, please don't hesitate
                         to contact us:</p>
                     <p>
-                        oopspam LLC <br>
+                        OOPSpam LLC <br>
                         1118 6th St NE, <br>
                         MINNEAPOLIS, MN <br>
                         USA <br>
