@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/styles/main.min.css" />
+  <style>
+    h1.legal-title { font-size: 60px !important; line-height: 65px !important; }
+    @media screen and (max-width: 768px) { h1.legal-title { font-size: 40px !important; line-height: 48px !important; } }
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="How oopspam secures the spam detection API: hosting, encryption, access control, testing, incident response, sub-processors, data retention and security documents.">
+    <meta property="og:description" content="How oopspam secures the spam detection API: hosting, encryption, access control, testing, incident response, sub-processors, data retention and security documents.">
+    <meta name="twitter:description" content="How oopspam secures the spam detection API: hosting, encryption, access control, testing, incident response, sub-processors, data retention and security documents.">
+    <meta property="og:image" content="https://www.oopspam.com/assets/oopspam-og-image.png" />
+    <meta property="og:url" content="https://www.oopspam.com/security" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.oopspam.com/assets/oopspam-og-image.png" />
+    <meta property="og:title" content="Security | oopspam Anti-Spam API">
+    <meta name="twitter:title" content="Security | oopspam Anti-Spam API">
+    <title>Security | oopspam Anti-Spam API</title>
+  <link rel="canonical" href="https://www.oopspam.com/security" />
+    {% include "partials/headScript.njk" %}
+</head>
+
+<body>
+    {% include "partials/navigation.njk" %}
+
+    <section class="section">
+        <div class="columns">
+            <div class="column is-three-quarters">
+                <div class="container">
+
+                    <style>
+                      .sec-glance{border-top:1px solid #e5e5e5;margin:0 0 1.5rem}
+                      .sec-glance div{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;padding:.8rem 0;border-bottom:1px solid #e5e5e5}
+                      .sec-glance dt{flex:0 0 130px;font-weight:600}
+                      .sec-glance dd{flex:1 1 300px;margin:0}
+                      .sec-nav{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 2rem}
+                      .sec-nav a{border:1px solid #dbdbdb;border-radius:999px;padding:.35rem .9rem;font-size:.9rem;text-decoration:none}
+                      .sec-nav a:hover{border-color:#363636}
+                      .sec-section{scroll-margin-top:90px;margin-top:2.5rem}
+                      .sec-section h2,#documents h2{font-size:1.6rem !important;line-height:1.3 !important;margin-bottom:.75rem !important}
+                    </style>
+                    <h1 class="title has-text-centered legal-title" style="padding-bottom:12px;">Security</h1>
+                    <p class="subtitle has-text-centered">How oopspam protects the data you send to our API</p>
+                    <p class="has-text-centered is-size-7" style="margin-bottom:2rem">Last reviewed: 18 November 2026</p>
+
+                    <dl class="sec-glance" aria-label="At a glance">
+                        <div><dt>Data</dt><dd>Requests are processed in memory to return a verdict and are not stored unless you switch logging on.</dd></div>
+                        <div><dt>Hosting</dt><dd>EU requests are normally served in Frankfurt, Germany. Optional logs are stored in the EU.</dd></div>
+                        <div><dt>Encryption</dt><dd>TLS for all traffic. Stored data and backups are encrypted at rest.</dd></div>
+                        <div><dt>Compliance</dt><dd>CSA STAR Level 1. A DPA with EU Standard Contractual Clauses applies to every account.</dd></div>
+                    </dl>
+
+                    <nav class="sec-nav" aria-label="On this page">
+                        <a href="#infrastructure">Infrastructure</a>
+                        <a href="#access-control">Access control</a>
+                        <a href="#testing">Testing</a>
+                        <a href="#incident-response">Incidents</a>
+                        <a href="#retention">Retention</a>
+                        <a href="#compliance">Compliance</a>
+                        <a href="#documents">Documents</a>
+                        <a href="#report-vulnerability">Report a vulnerability</a>
+                    </nav>
+
+                    <div class="content">
+                        <section class="sec-section" id="infrastructure">
+                        <h2>Infrastructure and hosting</h2>
+                        <p>The API runs in six regions worldwide and fails over automatically if a region becomes unavailable. EU requests are normally served in Frankfurt; if that region is unavailable, another region, including the United States, may be used. All production systems run with established cloud providers, whose physical security is covered by their own certifications. See our <a href="/dpa#annex-sub-processors">sub-processors</a>.</p>
+                        </section>
+
+                        <section class="sec-section" id="access-control">
+                        <h2>Access control</h2>
+                        <ul>
+                            <li>Production access is limited to named team members who need it, on a least-privilege basis.</li>
+                            <li>Multi-factor authentication is mandatory on every administrative account, and the administrative area sits behind an additional access layer, so administrators authenticate twice.</li>
+                            <li>Access is removed on the same day someone leaves and reviewed at least once a year.</li>
+                            <li>Everyone with access is bound by confidentiality and completes security, privacy and phishing training every year.</li>
+                        </ul>
+                        <p><strong>Your account:</strong> passwords of at least 12 characters, optional two-factor authentication, and lockout after repeated failed sign-ins. Each account has its own API key, which you can rotate; IP restrictions for API keys are available on higher plans.</p>
+                        </section>
+
+                        <section class="sec-section" id="testing">
+                        <h2>Application security and testing</h2>
+                        <ul>
+                            <li>Every code change goes through automated checks before deployment.</li>
+                            <li>Dependencies are monitored continuously for known vulnerabilities.</li>
+                            <li>Security patches are applied within 24 hours of our becoming aware of a vulnerability; critical dependency vulnerabilities the same day.</li>
+                            <li>We penetration-test the API and dashboard every year, following the OWASP Testing Guide. Most recent: September 2026.</li>
+                        </ul>
+                        </section>
+
+                        <section class="sec-section" id="incident-response">
+                        <h2>Incident response and continuity</h2>
+                        <p>We follow a documented incident response process. If a personal data breach affects your data, we notify you without undue delay, as set out in our <a href="/dpa">DPA</a>.</p>
+                        <p>Databases are backed up daily and backups are kept for 7 days. We test disaster recovery every year, including regional failover and restoring from backup. Our recovery time objective is 24 hours or less.</p>
+                        </section>
+
+                        <section class="sec-section" id="retention">
+                        <h2>Data retention and deletion</h2>
+                        <div class="table-container">
+                        <table class="table is-fullwidth">
+                            <tbody>
+                                <tr><td>Data sent for spam checks</td><td><strong>Not stored</strong> (processed in memory)</td></tr>
+                                <tr><td>Request/response logs, only if you switch logging on</td><td><strong>Starter 1 month · Freelance 2 · Agency 4 · Scale 6 months</strong></td></tr>
+                                <tr><td>API gateway metadata (request counts, calling IP)</td><td><strong>30 days</strong></td></tr>
+                                <tr><td>Reports (spam / not spam)</td><td><strong>7 days</strong> after they are resolved</td></tr>
+                                <tr><td>Error reports (no request bodies or email addresses)</td><td><strong>Up to 90 days</strong></td></tr>
+                                <tr><td>Backups</td><td><strong>7 days</strong></td></tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <p>You can check your logging status and delete stored data at any time from the Trust Center in your dashboard. At the end of the service, we delete your data. Details are in our <a href="/dpa">DPA</a> and on our <a href="/gdpr">GDPR page</a>.</p>
+                        </section>
+
+                        <section class="sec-section" id="compliance">
+                        <h2>Compliance</h2>
+                        <ul>
+                            <li><strong>CSA STAR Level 1:</strong> our CAIQ self-assessment is public in the <a href="https://cloudsecurityalliance.org/star/registry/oopspam-llc/services/oopspam-llc">CSA STAR Registry</a>.</li>
+                            <li><strong>GDPR:</strong> our <a href="/dpa">Data Processing Agreement</a> applies automatically to every account. For transfers outside the EEA it includes the EU Standard Contractual Clauses (Module Two) and the UK Addendum.</li>
+                            <li><strong>PCI DSS:</strong> not applicable. We never receive card data.</li>
+                        </ul>
+                        </section>
+
+                    </div>
+                    <section class="sec-section" id="documents">
+                    <div class="content"><h2>Security documents</h2></div>
+                    <div class="content"><div class="table-container">
+                        <table class="table is-fullwidth">
+                            <thead><tr><th>Document</th><th>Access</th><th></th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Data Processing Agreement</strong><br><span class="is-size-7">Includes the EU Standard Contractual Clauses and our sub-processors</span></td><td>Public</td><td><a href="/dpa">Read</a></td></tr>
+                                <tr><td><strong>CAIQ self-assessment</strong><br><span class="is-size-7">Our answers to the Cloud Security Alliance questionnaire</span></td><td>Public</td><td><a href="https://cloudsecurityalliance.org/star/registry/oopspam-llc/services/oopspam-llc">View</a></td></tr>
+                                <tr><td><strong>Standard Contractual Clauses</strong><br><span class="is-size-7">A copy pre-signed by us, ready for your signature</span></td><td>Customers</td><td><a href="https://app.oopspam.com">Trust Center</a></td></tr>
+                                <tr><td><strong>Information Security Policy</strong><br><span class="is-size-7">Our security, access, development and incident policies</span></td><td>On request</td><td><a href="mailto:security@oopspam.com?subject=Request%3A%20Information%20Security%20Policy">Request</a></td></tr>
+                                <tr><td><strong>Penetration test summary</strong><br><span class="is-size-7">Scope, method and results of our latest yearly test (confidential)</span></td><td>On request</td><td><a href="mailto:security@oopspam.com?subject=Request%3A%20Penetration%20test%20summary">Request</a></td></tr>
+                                <tr><td><strong>Disaster recovery test</strong><br><span class="is-size-7">Results of our latest yearly failover and restore test</span></td><td>On request</td><td><a href="mailto:security@oopspam.com?subject=Request%3A%20Disaster%20recovery%20test">Request</a></td></tr>
+                                <tr><td><strong>Risk assessment summary</strong><br><span class="is-size-7">Our latest assessment of security risks and actions (confidential)</span></td><td>On request</td><td><a href="mailto:security@oopspam.com?subject=Request%3A%20Risk%20assessment%20summary">Request</a></td></tr>
+                                <tr><td><strong>Security questionnaire</strong><br><span class="is-size-7">A completed vendor security questionnaire you can reuse</span></td><td>On request</td><td><a href="mailto:security@oopspam.com?subject=Request%3A%20Security%20questionnaire">Request</a></td></tr>
+                            </tbody>
+                        </table>
+                    </div></div>
+                    </section>
+                    <div class="content">
+                        <section class="sec-section" id="report-vulnerability">
+                        <h2>Report a vulnerability</h2>
+                        <p>Found a security issue? Email <a href="mailto:security@oopspam.com">security@oopspam.com</a> with the details and steps to reproduce. Please don&rsquo;t access other customers&rsquo; data or disrupt the service while testing. We reply within 24 hours.</p>
+                        </section>
+                    </div>
+
+                </div>
+            </div>
+            <div class="column">
+                <div class="content">
+                    <h5 class="has-text-weight-normal">Have Questions?</h5>
+                    <hr>
+                    <p>For security questions, document requests or to report a vulnerability, contact us:</p>
+                    <p>
+                        OOPSpam LLC <br>
+                        1118 6th St NE, <br>
+                        MINNEAPOLIS, MN <br>
+                        USA <br>
+                        <a href="mailto:security@oopspam.com">security@oopspam.com</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% include "partials/footer.njk" %}
+    {% include "partials/footerScript.njk" %}
+
+
+</body>
+
+</html>
